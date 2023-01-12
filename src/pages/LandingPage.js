@@ -1,7 +1,13 @@
 import React from "react";
+import About from "../components/About";
 
 function LandingPage() {
-  return <h1 className="text-3xl font-bold underline">Zoth Landing Page</h1>;
+  return (
+    <div>
+      {/* About Us */}
+      <About />
+    </div>
+  );
 }
 
 export default LandingPage;
