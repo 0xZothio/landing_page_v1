@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function LandingPage() {
-  return (
-    <div>Zoth Landing Page</div>
-  )
+  return <h1 className="text-3xl font-bold underline">Zoth Landing Page</h1>;
 }
 
-export default LandingPage
+export default LandingPage;
