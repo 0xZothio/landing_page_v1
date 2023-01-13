@@ -26,6 +26,7 @@ function Backers() {
             </div>
           ))}
         </div>
+        
       </div>
     </>
   );
