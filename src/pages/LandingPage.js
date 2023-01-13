@@ -10,9 +10,9 @@ function LandingPage() {
       <Hero />
       <About />
       <Backers />
+      <Backedby />
       <Footer />
-      <Backedby/>
-      </div>
+    </div>
   );
 }
 
