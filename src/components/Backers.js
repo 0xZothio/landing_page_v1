@@ -27,7 +27,7 @@ function Backers() {
           ))}
         </div>
 
-        <div className="w-1/2 mx-auto my-24">
+        <div className="w-3/3 mx-auto my-24">
           <h5 className="text-2xl text-gray-500 text-center mb-2">Backed By</h5>
           <h1 className="text-4xl font-semibold text-center mb-4">The World's Best</h1>
           <div className=" grid grid-cols-4 gap-2 bg-white/10 p-8 rounded-xl">

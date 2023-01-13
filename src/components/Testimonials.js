@@ -3,9 +3,9 @@ import React from "react";
 function Testimonials() {
   return (
     <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full mt-[80px] py-10">
-        <div className="text-[100px] text-center font-extrabold">Testimonials</div>
+        <div className="text-[55px] text-center sm:text-[100px] font-extrabold">Testimonials</div>
 
-        <div className="flex max-w-7xl mx-auto gap-8 group my-10">
+        <div className="flex flex-col sm:flex-row max-w-7xl mx-auto gap-8 group my-10">
           <div className="bg-white/10 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 cursor-pointer p-8 rounded-xl ">
             <img src="/quote.svg" alt="" />
 
