@@ -4,7 +4,9 @@ import { teamsData } from "../data/teamData";
 function Backers() {
   return (
     <>
-      <div className="bg-black text-white w-full flex flex-col items-center justify-center h-screen">
+      <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full">
+        <div className="border-t-2 border-gray-500 w-1/2 my-24"></div>
+
         <div className="text-[55px] text-center">Meet Our Backers</div>
 
         <div className="w-2/3 flex flex-wrap justify-center items-center mt-6">

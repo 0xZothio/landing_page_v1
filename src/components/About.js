@@ -5,7 +5,7 @@ import Team from "./Team";
 function About() {
   return (
     <>
-      <div className="bg-black text-white w-full h-screen">
+      <div className="bg-black text-white w-full h-full">
         {/* About US */}
         <div className="text-[100px] text-center font-bold">About Us</div>
         <div className="mt-6">
@@ -28,6 +28,7 @@ function About() {
 
         {/* Our Backers */}
         <div className="">
+
           <Backers />
         </div>
 
