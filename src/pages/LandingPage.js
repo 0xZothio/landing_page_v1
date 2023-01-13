@@ -1,14 +1,18 @@
 import React from "react";
 import About from "../components/About";
 import Hero from "../components/HeroSection";
+import Backers from "../components/Backers";
+import Footer from "../components/Footer";
+import Backedby from "../components/Backedby";
 function LandingPage() {
   return (
     <div>
-      {/* <h1 className="text-3xl font-bold underline">Zoth Landing Page</h1> */}
       <Hero />
-      <About/>
+      <About />
+      <Backers />
+      <Footer />
+      <Backedby/>
       </div>
-
   );
 }
 
