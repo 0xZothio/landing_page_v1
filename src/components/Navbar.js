@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Dialog } from "@headlessui/react";
 import logo from "../assets/images/newlogo.png"
+
 const navigation = [
   { name: "About", href: "#" },
   { name: "Services", href: "#" },
@@ -49,7 +50,7 @@ const Navbar = () => {
           </a>
           <a
             href="#"
-            className="inline-block rounded-full px-3 py-1 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
+            className="inline-block rounded-full px-3 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
           >
             Get Exclusive Invite{" "}
           </a>
