@@ -1,8 +1,9 @@
+import "../styles/styles.css"
 const Mynews = () => {
     return (
-      <div className="container py-14 px-6 mx-auto bg-black">
+      <div className="py-14 px-6 mx-auto bg-black">
         <section className="mb-32 text-gray-800 text-center lg:text-left">
-          <div className="flex flex-wrap justify-center bg-blue-700 py-10 rounded-3xl shadow text-white">
+          <div className="flex flex-wrap justify-center py-10 rounded-3xl shadow text-white grad">
             <div className="w-full lg:w-10/12 px-3">
               <div className="grid lg:grid-cols-2 gap-x-2">
                 <div className="mb-10 lg:mb-0">
@@ -15,10 +16,10 @@ const Mynews = () => {
                   </p>
                 </div>
                 <div className="mb-6 md:mb-0">
-                  <div className="md:flex flex-row">
+                  <div className="flex flex-row">
                     <input
                       type="text"
-                      className="form-control block w-8/12 px-4 mx-auto lg:ml-40 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      className="form-control block w-8/12 px-4 mx-auto lg:ml-40 md:ml-28 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                       placeholder="Enter your email"
                     />
                     {/* <button

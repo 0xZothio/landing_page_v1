@@ -1,16 +1,12 @@
 import logo from "../assets/images/newlogo.png";
-import {
-  FaInstagramSquare,
-  FaLinkedin,
-  FaFacebook,
-} from "react-icons/fa";
+import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="relative bg-black text-white">
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-left lg:text-left">
-          <div className="w-full lg:w-6/12 px-4">
+          <div className="w-full lg:w-5/12 px-4">
             <div className="text-teal-600">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Zoth.io</span>
@@ -26,7 +22,7 @@ const Footer = () => {
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
                 >
-                  <span className="sr-only">Telegram</span>
+                  <span className="sr-only">Twitter</span>
                   <AiFillTwitterCircle size={20} color="white" />
                 </a>
               </li>
@@ -43,12 +39,12 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://www.linkedin.com/company/zoth-io/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
                 >
-                  <span className="sr-only">Telegram</span>
+                  <span className="sr-only">LinkeldIn</span>
                   <FaLinkedin size={20} color="white" />
                 </a>
               </li>
@@ -65,17 +61,18 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full lg:w-6/12 px-4 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
-            <div>
-              <p className="font-medium">Company</p>
+          <div className="w-full lg:w-7/12 px-4 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 mt-8 lg:mt-0">
+            <div className="pr-4">
+              <p className="font-medium">Office Address</p>
               <nav aria-label="Footer Navigation - Company" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      About
+                      B-23, Vaishali Nagar, Bhopal, M.P
                     </a>
                   </li>
-                  <li>
+
+                  {/* <li>
                     <a href="#" className="transition hover:opacity-75">
                       Meet the Team
                     </a>
@@ -84,54 +81,54 @@ const Footer = () => {
                     <a href="#" className=" transition hover:opacity-75">
                       Accounts Review
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
-            </div>
-            <div>
-              <p className="font-medium">Helpful Links</p>
+              <p className="font-medium mt-8">Contact</p>
               <nav aria-label="Footer Navigation - Company" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Contact
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      FAQs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      Live Chat
+                      Phone No: +91 XXXXX XXXXX
                     </a>
                   </li>
                 </ul>
               </nav>
             </div>
             <div>
-              <p className="font-medium">Legal</p>
+              <p className="font-medium">Resources</p>
+              <nav aria-label="Footer Navigation - Company" className="mt-6">
+                <ul className="space-y-4 text-sm">
+                  <li>
+                    <a href="#" className=" transition hover:opacity-75">
+                      How it works?
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className=" transition hover:opacity-75">
+                      Legal
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className=" transition hover:opacity-75">
+                      Lite Paper
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className=" transition hover:opacity-75">
+                      Blog
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <p className="font-medium">Company</p>
               <nav aria-label="Footer Navigation - Legal" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Accessibility
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      Returns Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      Refund Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      Hiring Statistics
+                      Work with us
                     </a>
                   </li>
                 </ul>
