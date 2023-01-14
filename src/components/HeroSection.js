@@ -13,7 +13,7 @@ const Hero=()=> {
           <div className="mx-auto max-w-3xl pt-0 pb-32 sm:pt-32 sm:pb-40">
             <div>
               <div>
-                <h1 className="text-4xl font-bold leading-8 sm:text-center sm:text-6xl">
+                <h1 className="text-4xl font-codec font-bold leading-8 sm:text-center sm:text-6xl">
                   A Revolutionary New Age Investment Platform
                 </h1>
                 <p className="mt-6 text-lg leading-8 sm:text-center">
