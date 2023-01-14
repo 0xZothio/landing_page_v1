@@ -11,18 +11,24 @@ function Features() {
       </div>
 
       <div className=" bg-white/10 grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8">
-        <div className="col-span-2">
-          <img src="/frame.png" alt="frame" className="w-[300px] h-[600px]"/>
+        <div className="relative col-span-2 w-[300px] h-[600px]">
+          <img src="/frame.png" alt="frame" className="" />
+          <div className="absolute top-24 left-20 p-[6px]">
+            <img src="eth.png" alt="feature" className="w-full h-full" />
+          </div>
         </div>
+
         <div className="col-span-2 self-center mt-2 p-8 ">
-          <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">Guarantee transparency and Easy exit mechanism</div>
+          <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+            Guarantee transparency and Easy exit mechanism
+          </div>
           <div className="text-lg leading-loose ">
             On the blockchain, transactions are transparent and verifiable.
             Users can monitor real-time market conditions for simple exit
-            mechanisms. 
+            mechanisms.
             <br />
-            Simple Liquidity using deFi pools On our 24/7 open
-            market, you can buy and sell at any time.
+            Simple Liquidity using deFi pools On our 24/7 open market, you can
+            buy and sell at any time.
           </div>
         </div>
       </div>
