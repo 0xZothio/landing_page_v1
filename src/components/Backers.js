@@ -30,7 +30,7 @@ function Backers() {
         <div className="w-3/3 mx-auto my-24">
           <h5 className="text-2xl text-gray-500 text-center mb-2">Backed By</h5>
           <h1 className="text-4xl font-semibold text-center mb-4">The World's Best</h1>
-          <div className=" grid grid-cols-4 gap-2 bg-white/10 p-8 rounded-xl">
+          <div className=" grid grid-cols-4 gap-2 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
             <img src="/backers/on.png" alt="backer" className="w-[125px] h-[125px]" />
             <img src="/backers/foundership.png" alt="backer" className="w-[125px] h-[125px]" />
             <img src="/backers/reflexical.png" alt="backer" className="w-[150px] h-[125px]" />

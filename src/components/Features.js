@@ -4,12 +4,13 @@ function Features() {
   return (
     <div className="my-[80px]">
       <div className="flex flex-col justify-center items-center">
-        <div className="text-[80px] text-center sm:text-[100px] font-codec font-bold">
+        <div className="text-[60px] text-center sm:text-[100px] font-codec font-bold">
           Welcome to the
         </div>
         <img src="/club.png" alt="Zoth Club" />
       </div>
 
+      {/* feature */}
       <div className=" bg-white/10 grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
@@ -42,7 +43,6 @@ function Features() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
