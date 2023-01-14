@@ -5,9 +5,9 @@ import Team from "./Team";
 function About() {
   return (
     <>
-      <div className="bg-black text-white w-full h-full">
+      <div className="bg-black text-white w-full h-full mt-[80px]">
         {/* About US */}
-        <div className="text-[100px] text-center font-bold">About Us</div>
+        <div className="text-[60px] sm:text-[100px] text-center font-codec font-bold">About Us</div>
         <div className="mt-6">
           <p className="sm:w-2/3 h-full text-[24px] text-center mx-auto ">
             Zoth is a B2B2C marketplace for tokenized assets that helps retail
