@@ -11,10 +11,20 @@ function Features() {
       </div>
 
       <div className=" bg-white/10 grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8">
-        <div className="relative col-span-2 w-[300px] h-[600px]">
-          <img src="/frame.png" alt="frame" className="" />
-          <div className="absolute top-24 left-20 p-[6px]">
-            <img src="eth.png" alt="feature" className="w-full h-full" />
+        <div className="relative col-span-2 w-[300px]">
+          <div className="w-[300px]">
+            <img src="/frame.png" alt="frame" />
+          </div>
+
+          <div className="absolute top-5 object-cover ">
+            {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+            <video
+              src="/features/eth-anim.mp4"
+              autoplay="{true}"
+              loop
+              muted
+              className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+            ></video>
           </div>
         </div>
 
@@ -32,6 +42,7 @@ function Features() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
