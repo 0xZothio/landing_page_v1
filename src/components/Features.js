@@ -2,7 +2,7 @@ import React from "react";
 
 function Features() {
   return (
-    <div className="my-[80px]">
+    <div className="mt-[80px]">
       <div className="flex flex-col justify-center items-center">
         <div className="text-[60px] text-center sm:text-[100px] font-codec font-bold">
           Welcome to the

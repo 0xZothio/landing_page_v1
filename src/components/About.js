@@ -7,9 +7,11 @@ function About() {
     <>
       <div className="bg-black text-white w-full h-full mt-[80px]">
         {/* About US */}
-        <div className="text-[60px] sm:text-[100px] text-center font-codec font-bold">About Us</div>
+        <div className="text-[60px] sm:text-[100px] text-center font-codec font-bold">
+          About Us
+        </div>
         <div className="mt-6">
-          <p className="sm:w-2/3 h-full text-[24px] text-center mx-auto ">
+          <p className="sm:w-2/3 h-full text-[24px] text-center p-4 sm:p-2 mx-auto ">
             Zoth is a B2B2C marketplace for tokenized assets that helps retail
             investors diversify their portfolios through investing in
             high-quality alternative assets such as Real Estate, Art, and
@@ -25,13 +27,10 @@ function About() {
           <Team />
         </div>
 
-
         {/* Our Backers */}
         <div className="">
-
           <Backers />
         </div>
-
       </div>
     </>
   );

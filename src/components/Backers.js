@@ -7,8 +7,9 @@ function Backers() {
       <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full">
         <div className="border-t-2 border-gray-500 w-1/2 my-24"></div>
 
-        <div className="text-[55px] text-center">Meet Our Backers</div>
+        <div className="text-[50px] sm:text-[55px] text-center">Meet Our Backers</div>
 
+        {/* Backers */}
         <div className="w-2/3 flex flex-wrap justify-center items-center mt-6">
           {backersData.map((member) => (
             <div className="flex flex-col justify-center m-6">
@@ -27,14 +28,33 @@ function Backers() {
           ))}
         </div>
 
+        {/* Backed By */}
         <div className="w-3/3 mx-auto my-24">
           <h5 className="text-2xl text-gray-500 text-center mb-2">Backed By</h5>
-          <h1 className="text-4xl font-semibold text-center mb-4">The World's Best</h1>
+          <h1 className="text-4xl font-semibold text-center mb-4">
+            The World's Best
+          </h1>
           <div className=" grid grid-cols-4 gap-2 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
-            <img src="/backers/on.png" alt="backer" className="w-[125px] h-[125px]" />
-            <img src="/backers/foundership.png" alt="backer" className="w-[125px] h-[125px]" />
-            <img src="/backers/reflexical.png" alt="backer" className="w-[150px] h-[125px]" />
-            <img src="/backers/sosv.png" alt="backer" className="w-[180px] h-[125px]" />
+            <img
+              src="/backers/on.png"
+              alt="backer"
+              className="w-[125px] h-[125px]"
+            />
+            <img
+              src="/backers/foundership.png"
+              alt="backer"
+              className="w-[125px] h-[125px]"
+            />
+            <img
+              src="/backers/reflexical.png"
+              alt="backer"
+              className="w-[150px] h-[125px]"
+            />
+            <img
+              src="/backers/sosv.png"
+              alt="backer"
+              className="w-[180px] h-[125px]"
+            />
           </div>
         </div>
       </div>

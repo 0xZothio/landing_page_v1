@@ -5,12 +5,16 @@ import Testimonials from "../components/Testimonials";
 import Hero from "../components/HeroSection";
 import NewsLetter from "../components/newsletter";
 import Footer from "../components/Footer";
+import Assets from "../components/Assets";
 
 function LandingPage() {
   return (
     <>
       {/* Hero */}
       <Hero />
+
+      {/* Assets */}
+      <Assets />
 
       {/* Features */}
       <Features />

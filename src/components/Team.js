@@ -6,14 +6,14 @@ function Team() {
   return (
     <>
       <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full my-24">
-        <div className="text-[55px] text-center">Meet Our Team</div>
+        <div className="text-[50px] sm:text-[55px] text-center">Meet Our Team</div>
 
         <div className="w-3/3 flex flex-wrap justify-center items-center mt-6">
           {teamsData.map((member) => (
             <div className="flex flex-col justify-center m-6">
               <a href={member.linkedIn} target="_blank" rel="noreferrer">
               <img
-                class="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                class="max-w-lg rounded-full w-30 h-30 object-cover transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
                 src={member.photo}
                 alt="member"
               />
