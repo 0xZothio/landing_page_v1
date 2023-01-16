@@ -5,16 +5,14 @@ const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="relative bg-black text-white">
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
-        <div className="flex flex-wrap text-left lg:text-left">
+        <div className="flex flex-wrap text-center lg:text-left">
           <div className="w-full lg:w-5/12 px-4">
-            <div className="text-teal-600">
-              <a href="#" className="-m-1.5 pt-1.5">
-                <span className="sr-only">Zoth.io</span>
-                <img className="h-60 w-60" src={logo} alt="" />
-              </a>
-            </div>
-            <p className="max-w-xs">Connect with us</p>
-            <ul className="flex gap-2 mt-2">
+            <a href="#" className="-m-1.5">
+              <span className="sr-only">Zoth.io</span>
+              <img className="h-60 w-60" src={logo} alt="" />
+            </a>
+            <p className="w-full">Connect with us</p>
+            <ul className="flex gap-2 mt-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start w-6/12 lg:w-full">
               <li>
                 <a
                   href="/"
