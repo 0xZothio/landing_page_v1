@@ -1,9 +1,18 @@
 import logo from "../assets/images/newlogo.png";
 import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { footerVariants } from "../utils/motion";
+
 const Footer = () => {
   return (
-    <footer aria-label="Site Footer" className="relative bg-black text-white">
+    <motion.footer
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="show"
+      aria-label="Site Footer"
+      className="relative bg-black text-white"
+    >
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-5/12 px-4">
@@ -160,7 +169,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

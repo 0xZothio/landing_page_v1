@@ -1,16 +1,22 @@
 import Navbar from "./Navbar";
 import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
-const Hero=()=> {
-
+const Hero = () => {
   return (
     <div className=" bg-black text-white">
       <div className="px-6 pt-6 lg:px-8">
         <Navbar />
       </div>
       <main>
-        <div className="relative px-6 lg:px-8">
-          <div className="mx-auto pt-10 pb-32 sm:pt-40 sm:pb-40">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="relative px-6 lg:px-8"
+        >
+          <div className="mx-auto pt-10 sm:pt-40 ">
             <div>
               <div>
                 <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
@@ -19,7 +25,10 @@ const Hero=()=> {
                 <p className="mt-6 leading-8 text-center text-2xl">
                   Join the Zoth Club and let your investments work for you
                 </p>
-                <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
+                <div
+                  
+                  className="flex gap-x-4 mt-8 justify-center flex-wrap items-center"
+                >
                   <div className="flex gap-x-4">
                     <a
                       href="#"
@@ -67,10 +76,10 @@ const Hero=()=> {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
     </div>
   );
-}
+};
 
 export default Hero;

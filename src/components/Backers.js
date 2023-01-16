@@ -1,5 +1,7 @@
 import React from "react";
 import { backersData } from "../data/teamData";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 function Backers() {
   return (
@@ -7,12 +9,19 @@ function Backers() {
       <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full">
         <div className="border-t-2 border-gray-500 w-1/2 my-24"></div>
 
-        <div className="text-[50px] sm:text-[55px] text-center">Meet Our Backers</div>
+        <div className="text-[50px] sm:text-[55px] text-center">
+          Meet Our Backers
+        </div>
 
         {/* Backers */}
         <div className="w-2/3 flex flex-wrap justify-center items-center mt-6">
-          {backersData.map((member) => (
-            <div className="flex flex-col justify-center m-6">
+          {backersData.map((member, index) => (
+            <motion.div
+              variants={fadeIn("left", "spring", index * 0.2, 0.75)}
+              initial="hidden"
+              whileInView="show"
+              className="flex flex-col justify-center m-6"
+            >
               <a href={member.linkedIn} target="_blank" rel="noreferrer">
                 <img
                   class="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
@@ -24,12 +33,17 @@ function Backers() {
                 <p className="text-lg text-center uppercase">{member.name}</p>
                 <p className="text-sm text-center">{member.role}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Backed By */}
-        <div className="w-3/3 mx-auto my-24">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="w-3/3 mx-auto my-24"
+        >
           <h5 className="text-2xl text-gray-500 text-center mb-2">Backed By</h5>
           <h1 className="text-4xl font-semibold text-center mb-4">
             The World's Best
@@ -56,7 +70,7 @@ function Backers() {
               className="w-[180px] h-[125px]"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

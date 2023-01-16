@@ -1,39 +1,28 @@
 import React from "react";
-import { motion, Variants } from "framer-motion";
-
-const imageAnimate = {
-  offscreen: { x: -100, opacity: 0 },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    // rotate:[0,10,0],
-    // transition: {type:"spring",
-    // bounce:0.4,
-    // duration:1}
-  },
-};
-
-const textAnimate = {
-  offscreen: { y: 100, opacity: 0 },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    // transition: {type:"spring",
-    // bounce:0.4,
-    // duration:1}
-  },
-};
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 function Features() {
   return (
     <div className="mt-[80px]">
       <div className="flex flex-col justify-center items-center">
-        <div className="text-[60px] text-center sm:text-[80px] font-codec font-bold">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="text-[60px] text-center sm:text-[80px] font-codec font-bold"
+        >
           Welcome to the
-        </div>
-        <img src="/club.png" alt="Zoth Club" />
-      </div>
+        </motion.div>
 
+        <motion.div
+          variants={fadeIn("down", "tween", 0.5, 1)}
+          initial="hidden"
+          whileInView="show"
+        >
+          <img src="/club.png" alt="Zoth Club" />
+        </motion.div>
+      </div>
 
       {/* feature 1*/}
       <div className=" bg-white/10 grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8">

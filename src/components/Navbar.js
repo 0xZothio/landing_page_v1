@@ -1,7 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
-import logo from "../assets/images/newlogo.png"
+import logo from "../assets/images/newlogo.png";
 import { FiAlignJustify } from "react-icons/fi";
+import {motion} from 'framer-motion';
+import { navVariants } from "../utils/motion";
+
 const navigation = [
   { name: "About", href: "#" },
   { name: "Services", href: "#" },
@@ -13,7 +16,10 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="bg-black text-white">
-      <nav
+      <motion.nav
+        variants={navVariants}
+        initial="hidden"
+        whileInView="show"
         className="flex h-9 items-center justify-between"
         aria-label="Global"
       >
@@ -55,7 +61,7 @@ const Navbar = () => {
             Get Exclusive Invite{" "}
           </a>
         </div>
-      </nav>
+      </motion.nav>
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel
           focus="true"
@@ -112,6 +118,6 @@ const Navbar = () => {
       </Dialog>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

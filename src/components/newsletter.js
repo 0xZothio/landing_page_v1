@@ -4,7 +4,7 @@ import Mynews from "./mynews";
 const NewsLetter = () => {
   return (
     <div className="bg-white text-black">
-      <div className="sm:text-center">
+      <div className="sm:text-center ">
           <Mynews/>
         <p className="text-lg leading-8 min-w-full max-w-none min-w-full w-atuo">
           <video
