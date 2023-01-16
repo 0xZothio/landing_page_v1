@@ -1,4 +1,4 @@
-import logo from "../assets/images/newlogo.png";
+import logo from "../assets/images/oldlogo.png";
 import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 const Footer = () => {
@@ -8,12 +8,12 @@ const Footer = () => {
         <div className="flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-5/12 px-4">
             <div className="text-teal-600">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="#" className="-m-1.5 pt-1.5">
                 <span className="sr-only">Zoth.io</span>
-                <img className="h-8" src={logo} alt="" />
+                <img className="h-60 w-60" src={logo} alt="" />
               </a>
             </div>
-            <p className="max-w-xs mt-8">Connect with us</p>
+            <p className="max-w-xs">Connect with us</p>
             <ul className="flex gap-2 mt-2">
               <li>
                 <a

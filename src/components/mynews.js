@@ -3,7 +3,7 @@ const Mynews = () => {
     return (
       <div className="py-14 px-6 mx-auto bg-black">
         <section className="mb-32 text-gray-800 text-center lg:text-left">
-          <div className="flex flex-wrap justify-center py-10 rounded-3xl shadow text-white grad">
+          <div className="flex flex-wrap justify-center lg:w-10/12 border-2 border-white mx-auto py-10 rounded-3xl shadow text-white grad">
             <div className="w-full lg:w-10/12 px-3">
               <div className="grid lg:grid-cols-2 gap-x-2">
                 <div className="mb-10 lg:mb-0">
