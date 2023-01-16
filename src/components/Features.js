@@ -4,7 +4,7 @@ function Features() {
   return (
     <div className="mt-[80px]">
       <div className="flex flex-col justify-center items-center">
-        <div className="text-[60px] text-center sm:text-[100px] font-codec font-bold">
+        <div className="text-[60px] text-center sm:text-[80px] font-codec font-bold">
           Welcome to the
         </div>
         <img src="/club.png" alt="Zoth Club" />

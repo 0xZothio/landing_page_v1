@@ -7,7 +7,7 @@ function About() {
     <>
       <div className="bg-black text-white w-full h-full mt-[80px]">
         {/* About US */}
-        <div className="text-[60px] sm:text-[100px] text-center font-codec font-bold">
+        <div className="text-[60px] sm:text-[80px] text-center font-codec font-bold">
           About Us
         </div>
         <div className="mt-6">

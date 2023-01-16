@@ -15,7 +15,7 @@ function AssetCard({ id, imgUrl, title, desc, index, active, handleClick }) {
     />
     {
       active !== id ? (
-        <h3 className='font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 sm:bottom-20 sm:rotate-[-90deg] sm:origin-[0,0]'>
+        <h3 className='font-bold sm:text-[28px] text-[18px] text-white absolute z-0 sm:bottom-20 sm:rotate-[-90deg] sm:origin-[0,0]'>
           {title}
         </h3>
       ) : (

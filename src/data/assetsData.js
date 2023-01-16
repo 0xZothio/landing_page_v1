@@ -1,19 +1,19 @@
 export const assetsData = [
   {
     id: "asset-1",
-    imgUrl: "/assets/cre.png",
+    imgUrl: "/assets/cre.jpeg",
     title: "CRE",
     desc: "Invest in Commercial Real Estate",
   },
   {
     id: "asset-2",
-    imgUrl: "/assets/farmland.png",
+    imgUrl: "/assets/farmland.jpg",
     title: "Farm Land",
     desc: "Invest in Farms.",
   },
   {
     id: "asset-3",
-    imgUrl: "/assets/ev.png",
+    imgUrl: "/assets/ev.jpeg",
     title: "Electric Vehicle",
     desc: "Invest in EV.",
   },

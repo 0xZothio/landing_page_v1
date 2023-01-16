@@ -7,7 +7,7 @@ function Assets() {
 
   return (
     <div className="bg-black text-white w-full h-full mt-[60px] sm:p-20 xs:p-8 px-8 py-14">
-      <div className="text-[40px] sm:text-[100px] text-center font-codec font-bold">
+      <div className="text-[40px] sm:text-[80px] text-center font-codec font-bold">
         World Class Assets
       </div>
 
@@ -15,7 +15,7 @@ function Assets() {
         <img src="/assets/cre.png" alt="asset" className="" />
       </div> */}
 
-      <div className="mt-[50px] flex sm:flex-row flex-col min-h-[70vh] gap-5">
+      <div className="mt-[50px] flex sm:flex-row flex-col min-h-[80vh] gap-5">
         {assetsData.map((asset, index) => (
           <AssetCard
             key={index}
