@@ -37,44 +37,37 @@ function Assets() {
 
       {/* Text */}
 
-      <div className="texteffect text-center">
-        <div className="beffect text-center">
-          <div className="spaneffect text-center">
 
-            <div className="text-[50px] sm:text-[65px] text-center italic">
-              become a <span className="text-[#F3C74E]">partial owner</span>.
+      <div className="home col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3 id="resizing-h3" className="">
+          <span>
+            <div className="stage">
+              <div className="cubespinner text-center">
+                <div className="face1">
+                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                    become a{" "}
+                    <span className="text-[#F3C74E]">partial owner</span>.
+                  </div>
+                </div>
+                <div className="face2">
+                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                    become a <span className="text-[#F3C74E]">investor</span>.
+                  </div>
+                </div>
+                <div className="face3">
+                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                    become a <span className="text-[#F3C74E]">rich</span>.
+                  </div>
+                </div>
+                <div className="face4"><div className="text-[50px] sm:text-[65px] text-center italic">
+                become a <span className="text-[#F3C74E]">zoth investor</span>.
+              </div></div>
+              </div>
             </div>
-
-            <div className="text-[50px] sm:text-[65px] text-center italic">
-              become a <span className="text-[#F3C74E]">investor</span>.
-            </div>
-
-            <div className="text-[50px] sm:text-[65px] text-center italic">
-              become a <span className="text-[#F3C74E]">rich</span>.
-            </div>
-
-            <div className="text-[50px] sm:text-[65px] text-center italic">
-              become a <span className="text-[#F3C74E]">zoth investor</span>.
-            </div>
-          </div>
-        </div>
+          </span>
+        </h3>
       </div>
 
-      {/* <div className="text-[50px] sm:text-[65px] text-center italic">
-        become a <span className="text-[#F3C74E]">partial owner</span>.
-      </div>
-
-      <div className="text-[50px] sm:text-[65px] text-center italic">
-        become a <span className="text-[#F3C74E]">investor</span>.
-      </div>
-
-      <div className="text-[50px] sm:text-[65px] text-center italic">
-        become a <span className="text-[#F3C74E]">rich</span>.
-      </div>
-
-      <div className="text-[50px] sm:text-[65px] text-center italic">
-        become a <span className="text-[#F3C74E]">zoth investor</span>.
-      </div> */}
     </div>
   );
 }
