@@ -1,3 +1,55 @@
 .grad {
-  background-image: linear-gradient(269.01deg, rgba(255, 255, 255, 0) 0%, #017FDF 70.92%, #061F5B 107.35%);
+  background-image: linear-gradient(
+    269.01deg,
+    rgba(255, 255, 255, 0) 0%,
+    #017fdf 70.92%,
+    #061f5b 107.35%
+  );
+}
+
+.texteffect {
+  padding: 2em 5em;
+  font: normal 40px/50px Arial, sans-serif;
+  color: #999;
+}
+.peffect {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.beffect {
+  float: left;
+  overflow: hidden;
+  position: absolute;
+  height: 50px;
+  /* margin-left: 125px; */
+}
+.spaneffect {
+  display: inline-block;
+  color: white;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  animation: move 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  20% {
+    top: -50px;
+  }
+  40% {
+    top: -100px;
+  }
+  60% {
+    top: -150px;
+  }
+  80% {
+    top: -200px;
+  }
 }
