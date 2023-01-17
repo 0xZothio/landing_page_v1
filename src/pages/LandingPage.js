@@ -6,7 +6,6 @@ import Hero from "../components/HeroSection";
 import NewsLetter from "../components/newsletter";
 import Footer from "../components/Footer";
 import Assets from "../components/Assets";
-import Temp from "../components/Temp";
 function LandingPage() {
   return (
     <>

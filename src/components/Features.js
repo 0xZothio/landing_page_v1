@@ -4,7 +4,6 @@ import { render } from "react-dom";
 import { motion } from "framer-motion";
 import { fadeIn, slideIn, featureIn, staggerContainer } from "../utils/motion";
 import "../styles/styles.css";
-import MyPara from "./mypara";
 function Features() {
 
   const ref = useRef(null);
@@ -80,7 +79,7 @@ function Features() {
       {/* feature 1*/}
 
       <div
-        className="absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide"
+        className="absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-20"
         ref={ref}
         id="section-1"
       >
@@ -94,27 +93,28 @@ function Features() {
             <img src="/frame.png" alt="frame" />
           </div>
 
-          {scrollvalue > 800 ? (
+          {scrollvalue <= 400 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.8, 0.3)}
-              // initial="hidden"
+              variants={featureIn("left", "tween", 0.3, 1)}
+              initial="hidden"
               whileInView="show"
-              // viewport={{ once: false, amount: 0.8 }}
+              // viewport={{amount: 0.8 }}
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
               <video
-                src={"/features/loyalty.mp4"}
+                src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
               ></video>
             </motion.div>
-          ) : scrollvalue > 400 ? (
+          )}
+          {scrollvalue > 400 && scrollvalue <= 800 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.8, 0.3)}
-              // initial="hidden"
+              variants={featureIn("left", "tween", 0.3, 1)}
+              initial="hidden"
               whileInView="show"
               // viewport={{ once: false, amount: 0.8 }}
               className="absolute top-5 object-cover z-100"
@@ -128,9 +128,10 @@ function Features() {
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
               ></video>
             </motion.div>
-          ) : (
+          )}
+          {scrollvalue > 800 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.8, 0.3)}
+              variants={featureIn("left", "tween", 0.3, 1)}
               initial="hidden"
               whileInView="show"
               // viewport={{ once: false, amount: 0.8 }}
@@ -148,39 +149,74 @@ function Features() {
           )}
         </div>
 
-        <MyPara topic={data[num].topic } description={data[num].description} />
-        {/* <motion.div
-          variants={slideIn("up", "tween", 0.3, 1)}
-          initial="hidden"
-          whileInView="show"
-          className="col-span-2 self-center mt-2 p-8 "
-        >
-          <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-            {data[num].topic}
-          </div>
-          <div className="text-lg leading-loose ">
-            {data[num].description}
-            <br />
-          </div>
-        </motion.div> */}
+        {/* <MyPara topic={data[num].topic } description={data[num].description} /> */}
+        {scrollvalue <= 400 && (
+          <motion.div
+            variants={slideIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-4 "
+          >
+            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              {data[num].topic}
+            </div>
+            <div className="text-lg leading-loose ">
+              {data[num].description}
+              <br />
+            </div>
+          </motion.div>
+        )}
+        {scrollvalue > 400 && scrollvalue <= 800 && (
+          <motion.div
+            variants={slideIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-4 "
+          >
+            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              {data[num].topic}
+            </div>
+            <div className="text-lg leading-loose ">
+              {data[num].description}
+              <br />
+            </div>
+          </motion.div>
+        )}
+        {scrollvalue > 800 && (
+          <motion.div
+            variants={slideIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-4 "
+          >
+            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              {data[num].topic}
+            </div>
+            <div className="text-lg leading-loose ">
+              {data[num].description}
+              <br />
+            </div>
+          </motion.div>
+        )}
       </div>
 
       {/* feature 2*/}
-      <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px]">
+      {/* <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px]">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
             <img src="/frame.png" alt="frame" />
           </div>
 
+          
           <motion.div
             variants={featureIn("left", "tween", 0.8, 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.8 }}
             className="absolute top-5 object-cover "
-          >
-            {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-            <video
+          > */}
+      {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+      {/* <video
               src="/features/reward.mp4"
               autoplay="{true}"
               loop
@@ -188,9 +224,9 @@ function Features() {
               className="w-[300px] h-[530px] rounded-[55px] opacity-80"
             ></video>
           </motion.div>
-        </div>
+        </div> */}
 
-        <motion.div
+      {/* <motion.div
           variants={slideIn("up", "tween", 0.5, 1)}
           initial="hidden"
           whileInView="show"
@@ -205,10 +241,10 @@ function Features() {
             products and experiences.
           </div>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* feature 3*/}
-      <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px]">
+      {/* <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px]">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
             <img src="/frame.png" alt="frame" />
@@ -220,9 +256,9 @@ function Features() {
             whileInView="show"
             viewport={{ once: false, amount: 0.8 }}
             className="absolute top-5 object-cover "
-          >
-            {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-            <video
+          > */}
+      {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+      {/* <video
               src="/features/loyalty.mp4"
               autoplay="{true}"
               loop
@@ -247,7 +283,7 @@ function Features() {
             and more.
           </div>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 }
