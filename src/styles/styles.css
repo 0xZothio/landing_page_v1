@@ -6,7 +6,7 @@
     #061f5b 107.35%
   );
 }
-  .home:before{
+  .assettext:before{
 	content: ' ';
     position: absolute;
     left: 0;
@@ -14,7 +14,7 @@
     top: 0;
     bottom: 0;
 }
-.home h3{
+.assettext h3{
 	position:absolute;
 	text-align: left;
 }
