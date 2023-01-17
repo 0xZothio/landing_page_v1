@@ -17,7 +17,7 @@ function Backers() {
         <div className="w-2/3 flex flex-wrap justify-center items-center mt-6">
           {backersData.map((member, index) => (
             <motion.div
-              variants={fadeIn("left", "spring", index * 0.2, 0.75)}
+              variants={fadeIn("up", "tween", 0.5, 1)}
               initial="hidden"
               whileInView="show"
               className="flex flex-col justify-center m-6"

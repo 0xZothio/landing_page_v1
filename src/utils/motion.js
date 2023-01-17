@@ -165,7 +165,7 @@ export const navVariants = {
   export const featureIn = (direction, type, delay, duration) => ({
     hidden: {
       opacity:0,
-      x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
+      x: direction === 'left' ? '-75%' : direction === 'right' ? '100%' : 0,
       y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
     },
     show: {

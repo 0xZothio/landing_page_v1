@@ -4,21 +4,21 @@ import { fadeIn, staggerContainer } from "../utils/motion";
 
 const Mynews = () => {
   return (
-    <div className="py-14 px-6 mx-auto bg-black">
+    <div className="py-6 px-6 mx-auto bg-black">
       <motion.section
-        variants={fadeIn("up", "tween", 0.2, 1)}
+        variants={fadeIn("up", "tween", 0.3, 1)}
         initial="hidden"
         whileInView="show"
-        className="mb-32 text-gray-800 text-center lg:text-left w-3/4 mx-auto border-solid border-2 rounded-3xl"
+        className="mb-12 text-gray-800 text-center lg:text-left w-3/4 mx-auto border-solid border-2 rounded-xl"
       >
-        <div className="flex flex-wrap justify-center py-8 rounded-3xl shadow text-white grad">
-          <div className="w-full lg:w-10/12 px-3">
+        <div className="flex flex-wrap justify-center p-6 rounded-xl shadow text-white grad">
+          <div className="w-full px-3">
             <div className="grid lg:grid-cols-2 gap-x-2">
               <div className="mb-10 lg:mb-0">
-                <p className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                <p className="text-2xl font-semibold tracking-tight sm:text-2xl">
                   Join our mailing list
                 </p>
-                <p className="max-w-3xl mt-2 text-lg">
+                <p className="max-w-3xl mt-2 text-base">
                   Be the first to hear about news offerings, relevant updates
                   and other news from zoth
                 </p>
@@ -27,7 +27,7 @@ const Mynews = () => {
                 <div className="flex flex-row mt-6">
                   <input
                     type="text"
-                    className="form-control block w-8/12 px-2 mx-auto lg:ml-40 md:ml-28 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className="form-control block w-8/12 p-1 mx-auto lg:ml-40 md:ml-28  mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Enter your email"
                   />
                   {/* <button
