@@ -13,7 +13,7 @@ export const assetsData = [
   },
   {
     id: "asset-3",
-    imgUrl: "/assets/ev.jpeg",
+    imgUrl: "/assets/ev.png",
     title: "Electric Vehicle",
     desc: "Invest in EV.",
   },
