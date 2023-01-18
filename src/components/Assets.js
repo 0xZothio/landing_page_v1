@@ -6,7 +6,7 @@ import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 import "../styles/styles.css";
 
 function Assets() {
-  const [active, setActive] = useState("asset-1");
+  const [active, setActive] = useState("1");
 
   const [scrollvalue, setScrollValue] = useState(0);
   useEffect(() => {

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { fadeIn, slideIn, featureIn, staggerContainer } from "../utils/motion";
 import "../styles/styles.css";
 function Features() {
-
   const ref = useRef(null);
 
   const [data, setData] = useState([
@@ -27,11 +26,24 @@ function Features() {
       description:
         "Get exclusive access to premium asset classes only available to you, special offers on upcoming launches, stay-cations in opulent villas, and more.",
     },
+    {
+      video: "/features/yield.mp4",
+      topic: "High Yield and Returns and Portfolio Diversification",
+      description:
+        "Data driven insights to diversify your portfolio and invest in Stable asset classes accessible only to the top 1%, to earn lifetime passive income.",
+    },
+    {
+      video: "/features/sebi.mp4",
+      topic: "Compliant and Strict Due Diligence (Stamp of SEBI)",
+      description:
+        "All our assets are listed after a strict process of due diligence and are compliant with SEC and other regulatory bodies.",
+    },
   ]);
 
   const [num, setNum] = useState(0);
-  
+
   const [scrollvalue, setScrollValue] = useState(0);
+
   useEffect(() => {
     const element = document.querySelector("#section-1");
     const handleScroll = () => {
@@ -39,9 +51,13 @@ function Features() {
       setScrollValue(element.scrollTop);
       const viewportHeight = window.innerHeight;
 
-      if (scrollvalue > 800) {
+      if (scrollvalue > 1000) {
+        setNum(4);
+      } else if (scrollvalue > 800) {
+        setNum(3);
+      } else if (scrollvalue > 600) {
         setNum(2);
-      } else if (scrollvalue >400) {
+      } else if (scrollvalue > 400) {
         setNum(1);
       } else {
         setNum(0);
@@ -74,7 +90,6 @@ function Features() {
           <img src="/club.png" alt="Zoth Club" />
         </motion.div>
       </div>
-      {/*  bg-white/10 */}
 
       {/* feature 1*/}
 
@@ -87,6 +102,7 @@ function Features() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div>
+
       <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
@@ -111,7 +127,7 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 400 && scrollvalue <= 800 && (
+          {scrollvalue > 400 && scrollvalue <= 600 && (
             <motion.div
               variants={featureIn("left", "tween", 0.3, 1)}
               initial="hidden"
@@ -129,7 +145,43 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 800 && (
+          {scrollvalue > 600 && scrollvalue <= 800 && (
+            <motion.div
+              variants={featureIn("left", "tween", 0.3, 1)}
+              initial="hidden"
+              whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover z-100"
+            >
+              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+              <video
+                src={data[num].video}
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+              ></video>
+            </motion.div>
+          )}
+          {scrollvalue > 800 && scrollvalue <= 1000 && (
+            <motion.div
+              variants={featureIn("left", "tween", 0.3, 1)}
+              initial="hidden"
+              whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover z-100"
+            >
+              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+              <video
+                src={data[num].video}
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+              ></video>
+            </motion.div>
+          )}
+          {scrollvalue > 1000 && (
             <motion.div
               variants={featureIn("left", "tween", 0.3, 1)}
               initial="hidden"
@@ -166,7 +218,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 400 && scrollvalue <= 800 && (
+        {scrollvalue > 400 && scrollvalue <= 600 && (
           <motion.div
             variants={slideIn("up", "tween", 0.3, 1)}
             initial="hidden"
@@ -182,7 +234,39 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 800 && (
+        {scrollvalue > 600 && scrollvalue <= 800 && (
+          <motion.div
+            variants={slideIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-4 "
+          >
+            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              {data[num].topic}
+            </div>
+            <div className="text-lg leading-loose ">
+              {data[num].description}
+              <br />
+            </div>
+          </motion.div>
+        )}
+         {scrollvalue > 800 && scrollvalue <= 1000 && (
+          <motion.div
+            variants={slideIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-4 "
+          >
+            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              {data[num].topic}
+            </div>
+            <div className="text-lg leading-loose ">
+              {data[num].description}
+              <br />
+            </div>
+          </motion.div>
+        )}
+        {scrollvalue > 1000 && (
           <motion.div
             variants={slideIn("up", "tween", 0.3, 1)}
             initial="hidden"
