@@ -38,7 +38,7 @@ function Assets() {
       {/* Text */}
 
 
-      <div className="assettext col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div>
         <h3 id="resizing-h3" className="">
           <span>
             <div className="stage">

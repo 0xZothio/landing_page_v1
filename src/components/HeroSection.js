@@ -46,13 +46,13 @@ const Hero = () => {
                   <div className="flex gap-x-4 pointer-events-auto">
                     <div
                       className="inline-block rounded-full px-4 py-2 text-base font-semibold leading-7 text-black shadow-sm bg-black h-8/12"
-                      onClick={() => setIsVisible(true)}
                     >
                       <button
-                        className="bg-white rounded-full px-4 py-2 mt-2"
+                        className="bg-white rounded-full px-4 py-2 mt-2 z-100"
+                        type="button"
                         onClick={() => setIsVisible(true)}
                       >
-                        Get Exclusive Invite{" "}
+                        Get Exclusive Invite
                       </button>
                     </div>
                     <p className="bg-black eft-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600"></p>
