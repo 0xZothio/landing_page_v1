@@ -55,7 +55,7 @@ const Hero = () => {
                         Get Exclusive Invite
                       </button>
                     </div>
-                    <p className="bg-black eft-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600"></p>
+                    <p className="bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600"></p>
                   </div>
                   <div>
                     <p className=" text-md mx-4 sm:text-center">
