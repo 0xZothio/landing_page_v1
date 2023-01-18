@@ -3,12 +3,12 @@ import LandingPage from "./pages/LandingPage";
 import { ToastContainer, toast } from "react-toastify";
 function App() {
   return (
-    <ToastContainer>
-      {" "}
-      <div className="bg-black text-white w-full h-full overflow-hidden">
+    
+    <div className="bg-black text-white w-full h-full overflow-hidden">
+      <ToastContainer/>
         <LandingPage />
       </div>
-    </ToastContainer>
+    
   );
 }
 
