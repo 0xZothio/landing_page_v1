@@ -16,15 +16,15 @@ function Assets() {
       setScrollValue(element.scrollTop);
 
       if (scrollvalue > 400) {
-        setActive("asset-5");
+        setActive("5");
       } else if (scrollvalue > 300) {
-        setActive("asset-4");
+        setActive("4");
       } else if (scrollvalue > 200) {
-        setActive("asset-3");
+        setActive("3");
       } else if (scrollvalue > 100) {
-        setActive("asset-2");
+        setActive("2");
       } else{
-        setActive("asset-1");
+        setActive("1");
       }
     };
 
