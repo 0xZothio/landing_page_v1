@@ -4,16 +4,24 @@ import logo from "../assets/images/newlogo.png";
 import { FiAlignJustify } from "react-icons/fi";
 import {motion} from 'framer-motion';
 import { navVariants } from "../utils/motion";
-
-const navigation = [
-  { name: "About", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Blog", href: "#" },
-  { name: "Contact", href: "#" },
-];
+import Scroll from "react-scroll";
+// const navigation = [
+//   { name: "About", href: "#" },
+//   { name: "How it works", href: "#" },
+//   { name: "Blog", href: "#" },
+//   { name: "Contact", href: "#" },
+// ];
 
 const Navbar = ({setIsVisible}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const ScrollLink = Scroll.ScrollLink;
+
+  const moveToAbout = () => {
+    const anchor = document.querySelector("#active");
+    anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  
+
   return (
     <div className="bg-black text-white z-50 relative">
       <motion.nav
@@ -39,21 +47,42 @@ const Navbar = ({setIsVisible}) => {
             <FiAlignJustify className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-center md:gap-x-12">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="font-semibold hover:text-gray-100"
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-        <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6">
-          <a href="#" className="font-semibold hover:text-gray-400">
-            Log in
+        <div className="hidden md:flex md:justify-center md:gap-x-12 md:px-8">
+          {/* {navigation.map((item) => ( */}
+          <div
+            className="font-semibold hover:text-gray-100"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              const anchor = document.querySelector("#reviews-link");
+              anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+            }}
+          >
+            About
+          </div>
+          <a href="#" className="font-semibold hover:text-gray-100">
+            How it Works
           </a>
+          <a href="#" className="font-semibold hover:text-gray-100">
+            Blog
+          </a>
+          {/* <ScrollLink
+            to="footer"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="font-semibold hover:text-gray-100"
+          >
+            Contact
+          </ScrollLink> */}
+          <a href="#" className="font-semibold hover:text-gray-100">
+            Contact
+          </a>
+          {/* ))} */}
+        </div>
+        <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
+          {/* <a href="#" className="font-semibold hover:text-gray-400">
+            Log in
+          </a> */}
           <button
             className="inline-block rounded-full px-3 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
             onClick={() => setIsVisible(true)}
@@ -62,7 +91,7 @@ const Navbar = ({setIsVisible}) => {
           </button>
         </div>
       </motion.nav>
-      <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      {/* <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel
           focus="true"
           className="fixed inset-0 z-10 overflow-y-auto bg-black text-white px-6 py-6 md:hidden"
@@ -115,7 +144,7 @@ const Navbar = ({setIsVisible}) => {
             </div>
           </div>
         </Dialog.Panel>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 };
