@@ -51,9 +51,7 @@ function Features() {
       setScrollValue(element.scrollTop);
       const viewportHeight = window.innerHeight;
 
-      if (scrollvalue > 1200) {
-        setNum(5);
-      } else if (scrollvalue > 1000) {
+      if (scrollvalue > 1000) {
         setNum(4);
       } else if (scrollvalue > 800) {
         setNum(3);
