@@ -6,7 +6,7 @@ import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 import "../styles/styles.css";
 
 function Assets() {
-  const [active, setActive] = useState("asset-1");
+  const [active, setActive] = useState("1");
 
   return (
     <div className="bg-black text-white w-full h-full mt-[60px] sm:p-20 xs:p-8 px-8 py-14 ">

@@ -15,7 +15,7 @@ const navigation = [
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white z-50 relative">
       <motion.nav
         variants={navVariants}
         initial="hidden"

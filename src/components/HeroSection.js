@@ -9,7 +9,18 @@ const Hero = () => {
       <div className="px-6 pt-6 lg:px-8">
         <Navbar />
       </div>
+
       <main>
+        <div className="absolute flex justify-center items-center z-0">
+          <video
+            src="/wave.mp4"
+            autoPlay="{true}"
+            loop
+            muted
+            className=""
+          ></video>
+        </div>
+
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
@@ -25,10 +36,7 @@ const Hero = () => {
                 <p className="mt-6 leading-8 text-center text-2xl">
                   Join the Zoth Club and let your investments work for you
                 </p>
-                <div
-                  
-                  className="flex gap-x-4 mt-8 justify-center flex-wrap items-center"
-                >
+                <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
                   <div className="flex gap-x-4">
                     <a
                       href="#"

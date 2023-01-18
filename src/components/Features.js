@@ -32,6 +32,7 @@ function Features() {
   const [num, setNum] = useState(0);
   
   const [scrollvalue, setScrollValue] = useState(0);
+  
   useEffect(() => {
     const element = document.querySelector("#section-1");
     const handleScroll = () => {
@@ -74,7 +75,6 @@ function Features() {
           <img src="/club.png" alt="Zoth Club" />
         </motion.div>
       </div>
-      {/*  bg-white/10 */}
 
       {/* feature 1*/}
 
@@ -87,6 +87,7 @@ function Features() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div>
+
       <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
