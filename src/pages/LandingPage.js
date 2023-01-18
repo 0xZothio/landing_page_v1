@@ -13,8 +13,8 @@ function LandingPage() {
   useEffect(()=>{
     setTimeout(()=>{
       setIsLoading(false);
-    },4000)
-  })
+    },3500)
+  },[])
   return (
     <>
     {isLoading?<div id="loading"></div>:null}

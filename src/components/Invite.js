@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-
+import { toast } from 'react-toastify';
 export default function Invite({ setIsVisible }) {
   
   const [inviteData, setInviteData] = useState({
@@ -25,11 +25,22 @@ export default function Invite({ setIsVisible }) {
       );
       if (res.status === 200) {
         console.log("invite success");
+        console.log(res);
+        toast.success("Go Ahead !!! Sucess",{
+           theme:"dark"
+        });
         setIsVisible(false);
         return;
+      }else{
+        toast.error("Go Ahead !!! Error",{
+          theme:"dark"
+       });
       }
     } catch (error) {
       console.log("error", error);
+      toast.error("Go Ahead !!! Error",{
+        theme:"dark"
+     });
     }
   };
 
