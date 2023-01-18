@@ -44,6 +44,15 @@ function Features() {
 
   const [scrollvalue, setScrollValue] = useState(0);
 
+  const variants = {
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.3,
+      },
+    },
+    hidden: { opacity: 0 },
+  };
   useEffect(() => {
     const element = document.querySelector("#section-1");
     const handleScroll = () => {
@@ -51,13 +60,13 @@ function Features() {
       setScrollValue(element.scrollTop);
       const viewportHeight = window.innerHeight;
 
-      if (scrollvalue > 1000) {
+      if (scrollvalue > 1200) {
         setNum(4);
-      } else if (scrollvalue > 800) {
+      } else if (scrollvalue > 900) {
         setNum(3);
       } else if (scrollvalue > 600) {
         setNum(2);
-      } else if (scrollvalue > 400) {
+      } else if (scrollvalue > 300) {
         setNum(1);
       } else {
         setNum(0);
@@ -94,10 +103,11 @@ function Features() {
       {/* feature 1*/}
 
       <div
-        className="absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-20"
+        className="absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-40"
         ref={ref}
         id="section-1"
       >
+        <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
@@ -109,12 +119,19 @@ function Features() {
             <img src="/frame.png" alt="frame" />
           </div>
 
-          {scrollvalue <= 400 && (
+          {scrollvalue <= 300 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.3, 1)}
-              initial="hidden"
-              whileInView="show"
-              // viewport={{amount: 0.8 }}
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              // variants={featureIn("right", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
+              // initial="hidden"
+              // animate="visible"
+              // variants={variants}
+              // viewport={{amount: 1 }}
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
@@ -127,11 +144,18 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 400 && scrollvalue <= 600 && (
+          {scrollvalue > 300 && scrollvalue <= 600 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.3, 1)}
-              initial="hidden"
-              whileInView="show"
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              // variants={featureIn("left", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
+              // initial="hidden"
+              // animate="visible"
+              // variants={variants}
               // viewport={{ once: false, amount: 0.8 }}
               className="absolute top-5 object-cover z-100"
             >
@@ -145,11 +169,15 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 600 && scrollvalue <= 800 && (
+          {scrollvalue > 600 && scrollvalue <= 900 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.3, 1)}
-              initial="hidden"
-              whileInView="show"
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              // variants={featureIn("left", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
               // viewport={{ once: false, amount: 0.8 }}
               className="absolute top-5 object-cover z-100"
             >
@@ -163,11 +191,15 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 800 && scrollvalue <= 1000 && (
+          {scrollvalue > 900 && scrollvalue <= 1200 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.3, 1)}
-              initial="hidden"
-              whileInView="show"
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              // variants={featureIn("left", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
               // viewport={{ once: false, amount: 0.8 }}
               className="absolute top-5 object-cover z-100"
             >
@@ -181,11 +213,15 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 1000 && (
+          {scrollvalue > 1200 && (
             <motion.div
-              variants={featureIn("left", "tween", 0.3, 1)}
-              initial="hidden"
-              whileInView="show"
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              // variants={featureIn("left", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
               // viewport={{ once: false, amount: 0.8 }}
               className="absolute top-5 object-cover z-100"
             >
@@ -202,11 +238,15 @@ function Features() {
         </div>
 
         {/* <MyPara topic={data[num].topic } description={data[num].description} /> */}
-        {scrollvalue <= 400 && (
+        {scrollvalue <= 300 && (
           <motion.div
-            variants={slideIn("up", "tween", 0.3, 1)}
-            initial="hidden"
-            whileInView="show"
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -200, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            // variants={slideIn("up", "tween", 0.3, 1)}
+            // initial="hidden"
+            // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
             <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
@@ -218,11 +258,15 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 400 && scrollvalue <= 600 && (
+        {scrollvalue > 300 && scrollvalue <= 600 && (
           <motion.div
-            variants={slideIn("up", "tween", 0.3, 1)}
-            initial="hidden"
-            whileInView="show"
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -200, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            // variants={slideIn("up", "tween", 0.3, 1)}
+            // initial="hidden"
+            // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
             <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
@@ -234,11 +278,15 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 600 && scrollvalue <= 800 && (
+        {scrollvalue > 600 && scrollvalue <= 900 && (
           <motion.div
-            variants={slideIn("up", "tween", 0.3, 1)}
-            initial="hidden"
-            whileInView="show"
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -200, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            // variants={slideIn("up", "tween", 0.3, 1)}
+            // initial="hidden"
+            // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
             <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
@@ -250,11 +298,15 @@ function Features() {
             </div>
           </motion.div>
         )}
-         {scrollvalue > 800 && scrollvalue <= 1000 && (
+        {scrollvalue > 900 && scrollvalue <= 1200 && (
           <motion.div
-            variants={slideIn("up", "tween", 0.3, 1)}
-            initial="hidden"
-            whileInView="show"
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -200, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            // variants={slideIn("up", "tween", 0.3, 1)}
+            // initial="hidden"
+            // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
             <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
@@ -266,11 +318,15 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 1000 && (
+        {scrollvalue > 1200 && (
           <motion.div
-            variants={slideIn("up", "tween", 0.3, 1)}
-            initial="hidden"
-            whileInView="show"
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -200, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            // variants={slideIn("up", "tween", 0.3, 1)}
+            // initial="hidden"
+            // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
             <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">

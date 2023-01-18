@@ -15,13 +15,13 @@ function Assets() {
       console.log("scrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
 
-      if (scrollvalue > 400) {
+      if (scrollvalue > 1200) {
         setActive("5");
-      } else if (scrollvalue > 300) {
+      } else if (scrollvalue > 900) {
         setActive("4");
-      } else if (scrollvalue > 200) {
+      } else if (scrollvalue > 600) {
         setActive("3");
-      } else if (scrollvalue > 100) {
+      } else if (scrollvalue > 300) {
         setActive("2");
       } else{
         setActive("1");
@@ -53,6 +53,8 @@ function Assets() {
         className="absolute bg-transparent w-11/12 h-screen overflow-y-scroll scrollbar-hide z-10"
         id="section-2"
       >
+        <div className="h-screen w-full"></div>
+        <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div>
