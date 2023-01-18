@@ -5,10 +5,36 @@ import asset_trust from "../assets/images/Asset_trust.png"
 import premium_asset from "../assets/images/Quality_premium_asset.png"
 import tokenisation from "../assets/images/Tokenization.png"
 import marketplace from "../assets/images/zoth_marketplace.png"
-function HowToInvest() {
-    const [num, setNum] = useState(1);
+import "../styles/styles.css";
+const crouselData = [
+  {
+    image: asset_trust,
+    title: "Quality Premium Assets",
+    description: "Zoth curates real world assets with high net worth and yield",
+  },
+  {
+    image: premium_asset,
+    title: "Asset Trust",
+    description: "The asset is transferred to a Trust or LLC",
+  },
+  {
+    image: tokenisation,
+    title: "Tokenisation as a Service (TaaS)",
+    description: "Trust shares are tokenized using Zoth TaaS module",
+  },
+  {
+    image: marketplace,
+    title: "Zoth Marketplace",
+    description:
+      "Zoth marketplace provides investors access to aggregated tokenized assets",
+  },
+];
 
-    const [scrollvalue, setScrollValue] = useState(0);
+function HowToInvest() {
+    let slides = crouselData;
+    const [current, setCurrent] = useState(3);
+
+    const [scrollvalue, setScrollValue] = useState(10);
     useEffect(() => {
       const element = document.querySelector("#section-3");
       const handleScroll = () => {
@@ -16,13 +42,13 @@ function HowToInvest() {
         setScrollValue(element.scrollTop);
 
         if (scrollvalue > 900) {
-          setNum(4);
+          setCurrent(3);
         } else if (scrollvalue > 600) {
-          setNum(3);
+          setCurrent(2);
         } else if (scrollvalue > 300) {
-          setNum(2);
+          setCurrent(1);
         } else {
-          setNum(1);
+          setCurrent(0);
         }
       };
 
@@ -34,7 +60,7 @@ function HowToInvest() {
 
 
   return (
-    <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full mt-[80px] pb-10">
+    <div className="bg-black text-white w-full h-full mt-[80px] pb-10">
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
@@ -45,100 +71,97 @@ function HowToInvest() {
       </motion.div>
 
       <div
-        className="absolute bg-transparent w-11/12 overflow-y-scroll scrollbar-hide z-10 h-3/4 mt-40"
+        className="absolute bg-transparent w-full overflow-y-scroll scrollbar-hide z-10 h-3/4"
         id="section-3"
       >
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div>
-      <motion.div
-        variants={fadeIn("up", "tween", 0.4, 1)}
-        initial="hidden"
-        whileInView="show"
-        className="flex flex-col sm:flex-row max-w-6xl mx-auto gap-8 group my-10"
-      >
-        <div
-          className={
-            num === 1
-              ? "scale-100 duration-500 cursor-pointer h-10/12"
-              : "blur scale-[0.85] duration-500 cursor-pointer"
-          }
-        >
-          <img src={asset_trust} alt="" className="w-full h-10/12" />
-          {num === 1 && (
-            <motion.div
-              initial={{ y: 200, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -200, opacity: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-[30px] text-center font-codec mt-4"
-            >
-              Join the Zoth Club
-            </motion.div>
-          )}
-        </div>
-        <div
-          className={
-            num === 2
-              ? "scale-100 duration-500 cursor-pointer h-10/12"
-              : "blur scale-[0.85] duration-500 cursor-pointer"
-          }
-        >
-          <img src={premium_asset} alt="" className="w-full h-10/12" />
-          {num === 2 && (
-            <motion.div
-              initial={{ y: 200, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -200, opacity: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-[30px] text-center font-codec mt-4"
-            >
-              Join the Zoth Club
-            </motion.div>
-          )}
-        </div>
-        <div
-          className={
-            num === 3
-              ? "scale-100 duration-500 cursor-pointer h-10/12"
-              : "blur scale-[0.85] duration-500 cursor-pointer"
-          }
-        >
-          <img src={tokenisation} alt="" className="w-full h-10/12" />
-          {num === 3 && (
-            <motion.div
-              initial={{ y: 200, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -200, opacity: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-[30px] text-center font-codec mt-4"
-            >
-              Join the Zoth Club
-            </motion.div>
-          )}
-        </div>
-        <div
-          className={
-            num === 4
-              ? "scale-100 duration-500 cursor-pointer h-10/12"
-              : "blur scale-[0.85] duration-500 cursor-pointer"
-          }
-        >
-          <img src={marketplace} alt="" className="w-full h-10/12" />
-          {num === 4 && (
-            <motion.div
-              initial={{ y: 200, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -200, opacity: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-[30px] text-center font-codec mt-4"
-            >
-              Join the Zoth Club
-            </motion.div>
-          )}
-        </div>
-      </motion.div>
+      <div className="Carousel">
+        <section className="slider">
+          {slides.map((img, indx) => {
+            return (
+              <div
+                className={`slide ${indx === current ? "active " : ""}${
+                  (indx < current && `prevImg${current - indx}`) ||
+                  (indx > current && `nextImg${indx - current}`) ||
+                  (indx === current && "currentImg")
+                }`}
+                key={indx}
+              >
+                <img src={img.image} alt="travel" className={`Img`} />
+                <div className="text-[30px] text-center font-codec mt-8 mb-2">
+                  {img.title}
+                </div>
+                {current === 0 && (
+                  <motion.div
+                    initial={{ y: 200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -200, opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className={
+                      current === indx
+                        ? "text-center font-codec w-2/3 mx-auto"
+                        : "text-center font-codec w-2/3 mx-auto hidden"
+                    }
+                  >
+                    {img.description}
+                  </motion.div>
+                )}
+                {current === 1 && (
+                  <motion.div
+                    initial={{ y: 200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -200, opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className={
+                      current === indx
+                        ? "text-center font-codec w-1/2 mx-auto"
+                        : "text-center font-codec w-1/2 mx-auto hidden"
+                    }
+                  >
+                    {img.description}
+                  </motion.div>
+                )}
+                {current === 2 && (
+                  <motion.div
+                    initial={{ y: 200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -200, opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className={
+                      current === indx
+                        ? "text-center font-codec w-1/2 mx-auto"
+                        : "text-center font-codec w-1/2 mx-auto hidden"
+                    }
+                  >
+                    {img.description}
+                  </motion.div>
+                )}
+                {current === 3 && (
+                  <motion.div
+                    initial={{ y: 200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -200, opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className={
+                      current === indx
+                        ? "text-center font-codec w-1/2 mx-auto"
+                        : "text-center font-codec w-1/2 mx-auto hidden"
+                    }
+                  >
+                    {img.description}
+                  </motion.div>
+                )}
+              </div>
+            );
+          })}
+          
+        </section>
+      </div>
+
+      
     </div>
   );
 }

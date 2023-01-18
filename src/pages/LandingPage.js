@@ -7,12 +7,14 @@ import NewsLetter from "../components/newsletter";
 import Footer from "../components/Footer";
 import Assets from "../components/Assets";
 import HowToInvest from "../components/HowToInvest";
+import Crousel from "../components/Carousel";
 function LandingPage() {
   return (
     <>
       {/* Hero */}
       <Hero />
 
+      {/* <Crousel/> */}
       <HowToInvest/>
       {/* Assets */}
       <Assets />
