@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className=" bg-black text-white">
       <div className="px-6 pt-6 lg:px-8">
-        <Navbar setIsVisible={setIsVisible}  />
+        <Navbar setIsVisible={setIsVisible} />
       </div>
 
       <main>
@@ -24,9 +24,7 @@ const Hero = () => {
         </div>
 
         {/* signup popup */}
-        {isVisible && (
-          <Invite setIsVisible={setIsVisible}/>
-        )}
+        {isVisible && <Invite setIsVisible={setIsVisible} />}
 
         {/* signup popup */}
         <motion.div
@@ -46,17 +44,17 @@ const Hero = () => {
                 </p>
                 <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
                   <div className="flex gap-x-4 pointer-events-auto">
-                    <p
+                    <div
                       className="inline-block rounded-full px-4 py-2 text-base font-semibold leading-7 text-black shadow-sm bg-black h-8/12"
                       onClick={() => setIsVisible(true)}
                     >
                       <button
                         className="bg-white rounded-full px-4 py-2 mt-2"
-                        onClick={() => console.log("clicked")}
+                        onClick={() => setIsVisible(true)}
                       >
                         Get Exclusive Invite{" "}
                       </button>
-                    </p>
+                    </div>
                     <p className="bg-black eft-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600"></p>
                   </div>
                   <div>

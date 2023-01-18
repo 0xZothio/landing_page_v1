@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function Invite({setIsVisible}) {
+export default function Invite({ setIsVisible }) {
   return (
     <div
       id="authentication-modal"
@@ -27,82 +27,129 @@ export default function Invite({setIsVisible}) {
             </svg>
             <span className="sr-only">Close modal</span>
           </button>
-          <div className="px-6 py-6 lg:px-8">
-            <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-              Sign in to our platform
-            </h3>
-            <form className="space-y-6" action="#">
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Your email
-                </label>
+
+          {/* form */}
+
+          <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
+            <form>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group mb-6">
+                  <input
+                    type="text"
+                    class="form-control
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
+                    id="exampleInput123"
+                    aria-describedby="emailHelp123"
+                    placeholder="First name"
+                  />
+                </div>
+
+                <div class="form-group mb-6">
+                  <input
+                    type="text"
+                    class="form-control
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
+                    id="exampleInput124"
+                    aria-describedby="emailHelp124"
+                    placeholder="Last name"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group mb-6">
                 <input
                   type="email"
-                  name="email"
-                  id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="name@company.com"
-                  required=""
+                  class="form-control block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
+                  id="exampleInput125"
+                  placeholder="Email address"
                 />
               </div>
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Your password
-                </label>
+
+              <div class="form-group mb-6">
                 <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                  required=""
+                  type="text"
+                  class="form-control block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
+                  id="exampleInput126"
+                  placeholder="mobile"
                 />
               </div>
-              <div className="flex justify-between">
-                <div className="flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="remember"
-                      type="checkbox"
-                      defaultValue=""
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-                      required=""
-                    />
-                  </div>
-                  <label
-                    htmlFor="remember"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >
-                    Remember me
-                  </label>
-                </div>
-                <a
-                  href="#"
-                  className="text-sm text-blue-700 hover:underline dark:text-blue-500"
+
+              <div class="mx-auto flex justify-center items-center">
+                <button
+                  type="submit"
+                  class="
+      w-1/2
+      px-6
+      py-2.5
+      bg-black
+      text-white
+      font-medium
+      text-xs
+      leading-tight
+      uppercase
+      rounded-lg
+      shadow-md
+      hover:bg-gray-800 hover:shadow-lg
+      focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0
+      active:bg-gray-800 active:shadow-lg
+      transition
+      duration-150
+      ease-in-out"
                 >
-                  Lost Password?
-                </a>
-              </div>
-              <button
-                type="submit"
-                className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Login to your account
-              </button>
-              <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                Not registered?{" "}
-                <a
-                  href="#"
-                  className="text-blue-700 hover:underline dark:text-blue-500"
-                >
-                  Create account
-                </a>
+                  Get Invite
+                </button>
               </div>
             </form>
           </div>
