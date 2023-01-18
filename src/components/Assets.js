@@ -14,15 +14,18 @@ function Assets() {
     const handleScroll = () => {
       console.log("scrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
-      const viewportHeight = window.innerHeight;
 
-      // if (scrollvalue > 800) {
-      //   setNum(2);
-      // } else if (scrollvalue > 400) {
-      //   setNum(1);
-      // } else {
-      //   setNum(0);
-      // }
+      if (scrollvalue > 400) {
+        setActive("asset-5");
+      } else if (scrollvalue > 300) {
+        setActive("asset-4");
+      } else if (scrollvalue > 200) {
+        setActive("asset-3");
+      } else if (scrollvalue > 100) {
+        setActive("asset-2");
+      } else{
+        setActive("asset-1");
+      }
     };
 
     element.addEventListener("scroll", handleScroll);
