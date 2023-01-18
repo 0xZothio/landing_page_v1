@@ -7,10 +7,10 @@ export default function Invite({ setIsVisible }) {
       className="fixed top-0 left-0 right-0 z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
     >
       <div className="relative w-full h-full max-w-md md:h-auto">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div className="relative  rounded-lg shadow bg-gray-700">
           <button
             type="button"
-            className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+            className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
             onClick={() => setIsVisible(false)}
           >
             <svg
@@ -28,129 +28,69 @@ export default function Invite({ setIsVisible }) {
             <span className="sr-only">Close modal</span>
           </button>
 
-          {/* form */}
-
-          <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
-            <form>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="form-group mb-6">
-                  <input
-                    type="text"
-                    class="form-control
-          block
-          w-full
-          px-3
-          py-1.5
-          text-base
-          font-normal
-          text-gray-700
-          bg-white bg-clip-padding
-          border border-solid border-gray-300
-          rounded
-          transition
-          ease-in-out
-          m-0
-          focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
-                    id="exampleInput123"
-                    aria-describedby="emailHelp123"
-                    placeholder="First name"
-                  />
-                </div>
-
-                <div class="form-group mb-6">
-                  <input
-                    type="text"
-                    class="form-control
-          block
-          w-full
-          px-3
-          py-1.5
-          text-base
-          font-normal
-          text-gray-700
-          bg-white bg-clip-padding
-          border border-solid border-gray-300
-          rounded
-          transition
-          ease-in-out
-          m-0
-          focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
-                    id="exampleInput124"
-                    aria-describedby="emailHelp124"
-                    placeholder="Last name"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group mb-6">
-                <input
-                  type="email"
-                  class="form-control block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
-                  id="exampleInput125"
-                  placeholder="Email address"
-                />
-              </div>
-
-              <div class="form-group mb-6">
+          <div className="px-6 py-6 lg:px-8">
+            <h3 className="mb-4 text-2xl font-semibold  text-white">
+              Get Your Exclusive Invite
+            </h3>
+            <form className="space-y-6" action="#">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-sm font-medium  text-white"
+                >
+                  Your Name
+                </label>
                 <input
                   type="text"
-                  class="form-control block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none"
-                  id="exampleInput126"
-                  placeholder="mobile"
+                  name="name"
+                  id="name"
+                  className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+                  placeholder="Enter name"
+                  required=""
                 />
               </div>
 
-              <div class="mx-auto flex justify-center items-center">
-                <button
-                  type="submit"
-                  class="
-      w-1/2
-      px-6
-      py-2.5
-      bg-black
-      text-white
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      rounded-lg
-      shadow-md
-      hover:bg-gray-800 hover:shadow-lg
-      focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0
-      active:bg-gray-800 active:shadow-lg
-      transition
-      duration-150
-      ease-in-out"
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
-                  Get Invite
-                </button>
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+                  placeholder="name@company.com"
+                  required=""
+                />
               </div>
+
+              <div>
+                <label
+                  htmlFor="mobile"
+                  className="block mb-2 text-sm font-medium text-white"
+                >
+                  Your Mobile Number
+                </label>
+                <input
+                  type="text"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="Enter mobile"
+                  className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+                  required=""
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              >
+                Get Invite
+              </button>
+           
             </form>
           </div>
         </div>
