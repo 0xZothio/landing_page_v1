@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { assetsData } from "../data/assetsData";
 import AssetCard from "./AssetCard";
 import { motion } from "framer-motion";
@@ -7,6 +7,29 @@ import "../styles/styles.css";
 
 function Assets() {
   const [active, setActive] = useState("asset-1");
+
+  const [scrollvalue, setScrollValue] = useState(0);
+  useEffect(() => {
+    const element = document.querySelector("#section-2");
+    const handleScroll = () => {
+      console.log("scrollToTop", element.scrollTop);
+      setScrollValue(element.scrollTop);
+      const viewportHeight = window.innerHeight;
+
+      // if (scrollvalue > 800) {
+      //   setNum(2);
+      // } else if (scrollvalue > 400) {
+      //   setNum(1);
+      // } else {
+      //   setNum(0);
+      // }
+    };
+
+    element.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => element.removeEventListener("scroll", handleScroll);
+  }, [scrollvalue]);
 
   return (
     <div className="bg-black text-white w-full h-full mt-[60px] sm:p-20 xs:p-8 px-8 py-14 ">
@@ -23,6 +46,13 @@ function Assets() {
         <img src="/assets/cre.png" alt="asset" className="" />
       </div> */}
 
+      <div
+        className="absolute bg-transparent w-11/12 h-screen overflow-y-scroll scrollbar-hide z-10"
+        id="section-2"
+      >
+        <div className="h-screen w-full"></div>
+        <div className="h-screen w-full"></div>
+      </div>
       <div className="mt-[50px] flex sm:flex-row flex-col min-h-[70vh] gap-5">
         {assetsData.map((asset, index) => (
           <AssetCard
@@ -36,7 +66,6 @@ function Assets() {
       </div>
 
       {/* Text */}
-
 
       <div className="assettext col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h3 id="resizing-h3" className="">
@@ -59,15 +88,17 @@ function Assets() {
                     become a <span className="text-[#F3C74E]">rich</span>.
                   </div>
                 </div>
-                <div className="face4"><div className="text-[50px] sm:text-[65px] text-center italic">
-                become a <span className="text-[#F3C74E]">zoth investor</span>.
-              </div></div>
+                <div className="face4">
+                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                    become a{" "}
+                    <span className="text-[#F3C74E]">zoth investor</span>.
+                  </div>
+                </div>
               </div>
             </div>
           </span>
         </h3>
       </div>
-
     </div>
   );
 }
