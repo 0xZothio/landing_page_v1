@@ -27,7 +27,7 @@ const Mynews = () => {
                 <div className="flex flex-row mt-6">
                   <input
                     type="text"
-                    className="form-control block w-8/12 p-1 mx-auto lg:ml-40 md:ml-28  mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className="form-control block w-8/12 p-1 mx-auto lg:ml-40 md:ml-28  mb-2 md:mb-0 md:mr-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Enter your email"
                   />
                   {/* <button
