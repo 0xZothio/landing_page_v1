@@ -1,10 +1,41 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 export default function Invite({ setIsVisible }) {
+  const [inviteData, setInviteData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    mobile: "",
+  });
+
+  const onChangeData = async (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    setInviteData({ ...inviteData, [name]: value });
+  };
+
+  const invite = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await axios.post(
+        `https://script.google.com/macros/s/AKfycbzx9JNec48UWX2QQr25I5WkLr7WnyszdcLq0nMaTFLe4-lmjeIv25AUS3T6B3YN30Gb/exec?first_name=${inviteData.first_name}&last_name=${inviteData.last_name}&mobile=${inviteData.mobile}&email=${inviteData.email}&function=subscribe`
+      );
+      if (res.status === 200) {
+        console.log("invite success");
+        setIsVisible(false);
+        return;
+      }
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
   return (
     <div
       id="authentication-modal"
-      className="fixed top-0 left-0 right-0 flex justify-center items-center bg-white/30 z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+      className="fixed top-0 left-0 right-0 flex justify-center items-center bg-white/50 z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
     >
       <div className="relative w-full h-full max-w-md md:h-auto">
         <div className="relative  rounded-lg shadow bg-gray-700">
@@ -33,21 +64,44 @@ export default function Invite({ setIsVisible }) {
               Get Your Exclusive Invite
             </h3>
             <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block mb-2 text-sm font-medium  text-white"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
-                  placeholder="Enter name"
-                  required=""
-                />
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label
+                    htmlFor="first_name"
+                    className="block mb-2 text-sm font-medium  text-white"
+                  >
+                    Your First Name
+                  </label>
+                  <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+                    placeholder="First name"
+                    required=""
+                    value={inviteData.first_name}
+                    onChange={(e) => onChangeData(e)}
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="last_name"
+                    className="block mb-2 text-sm font-medium  text-white"
+                  >
+                    Your Last Name
+                  </label>
+                  <input
+                    type="text"
+                    name="last_name"
+                    id="last_name"
+                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+                    placeholder="Last name"
+                    required=""
+                    value={inviteData.last_name}
+                    onChange={(e) => onChangeData(e)}
+                  />
+                </div>
               </div>
 
               <div>
@@ -64,6 +118,8 @@ export default function Invite({ setIsVisible }) {
                   className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                   placeholder="name@company.com"
                   required=""
+                  value={inviteData.email}
+                  onChange={(e) => onChangeData(e)}
                 />
               </div>
 
@@ -81,17 +137,20 @@ export default function Invite({ setIsVisible }) {
                   placeholder="Enter mobile"
                   className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                   required=""
+                  max="10"
+                  min="10"
+                  value={inviteData.mobile}
+                  onChange={(e) => onChangeData(e)}
                 />
               </div>
-              
+
               <button
                 type="button"
-                onClick={() => setIsVisible(false)}
+                onClick={invite}
                 className="w-full text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               >
                 Get Invite
               </button>
-           
             </form>
           </div>
         </div>
