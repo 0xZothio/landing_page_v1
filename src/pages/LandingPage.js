@@ -6,12 +6,14 @@ import Hero from "../components/HeroSection";
 import NewsLetter from "../components/newsletter";
 import Footer from "../components/Footer";
 import Assets from "../components/Assets";
+import HowToInvest from "../components/HowToInvest";
 function LandingPage() {
   return (
     <>
       {/* Hero */}
       <Hero />
 
+      <HowToInvest/>
       {/* Assets */}
       <Assets />
 
