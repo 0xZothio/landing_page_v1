@@ -12,7 +12,7 @@ const navigation = [
   { name: "Contact", href: "#" },
 ];
 
-const Navbar = () => {
+const Navbar = ({setIsVisible}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="bg-black text-white z-50 relative">
@@ -54,12 +54,12 @@ const Navbar = () => {
           <a href="#" className="font-semibold hover:text-gray-400">
             Log in
           </a>
-          <a
-            href="#"
+          <button
             className="inline-block rounded-full px-3 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
+            onClick={() => setIsVisible(true)}
           >
             Get Exclusive Invite{" "}
-          </a>
+          </button>
         </div>
       </motion.nav>
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

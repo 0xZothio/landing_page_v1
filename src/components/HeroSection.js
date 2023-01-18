@@ -2,12 +2,14 @@ import Navbar from "./Navbar";
 import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
-
+import { useState } from "react";
+import Invite from "./Invite";
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <div className=" bg-black text-white">
       <div className="px-6 pt-6 lg:px-8">
-        <Navbar />
+        <Navbar setIsVisible={setIsVisible}  />
       </div>
 
       <main>
@@ -21,6 +23,12 @@ const Hero = () => {
           ></video>
         </div>
 
+        {/* signup popup */}
+        {isVisible && (
+          <Invite setIsVisible={setIsVisible}/>
+        )}
+
+        {/* signup popup */}
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
@@ -37,15 +45,18 @@ const Hero = () => {
                   Join the Zoth Club and let your investments work for you
                 </p>
                 <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
-                  <div className="flex gap-x-4">
-                    <a
-                      href="#"
+                  <div className="flex gap-x-4 pointer-events-auto">
+                    <p
                       className="inline-block rounded-full px-4 py-2 text-base font-semibold leading-7 text-black shadow-sm bg-black h-8/12"
+                      onClick={() => setIsVisible(true)}
                     >
-                      <div className="bg-white rounded-full px-4 py-2 mt-2">
+                      <button
+                        className="bg-white rounded-full px-4 py-2 mt-2"
+                        onClick={() => console.log("clicked")}
+                      >
                         Get Exclusive Invite{" "}
-                      </div>
-                    </a>
+                      </button>
+                    </p>
                     <p className="bg-black eft-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600"></p>
                   </div>
                   <div>
