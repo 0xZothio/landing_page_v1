@@ -7,7 +7,7 @@ import { fadeIn, staggerContainer } from "../utils/motion";
 function About() {
   return (
     <>
-      <div className="bg-black text-white w-full h-full mt-[80px]">
+      <div id="about" className="bg-black text-white w-full h-full mt-[80px]">
         {/* About US */}
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}

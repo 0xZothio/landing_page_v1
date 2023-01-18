@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 
 export default function Invite({ setIsVisible }) {
+  
   const [inviteData, setInviteData] = useState({
     first_name: "",
     last_name: "",
@@ -131,7 +132,7 @@ export default function Invite({ setIsVisible }) {
                   Your Mobile Number
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   name="mobile"
                   id="mobile"
                   placeholder="Enter mobile"
@@ -153,6 +154,7 @@ export default function Invite({ setIsVisible }) {
               </button>
             </form>
           </div>
+
         </div>
       </div>
     </div>

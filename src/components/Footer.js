@@ -7,6 +7,7 @@ import { footerVariants } from "../utils/motion";
 const Footer = () => {
   return (
     <motion.footer
+      id="contact"
       variants={footerVariants}
       initial="hidden"
       whileInView="show"

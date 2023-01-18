@@ -14,12 +14,6 @@ import Scroll from "react-scroll";
 
 const Navbar = ({setIsVisible}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const ScrollLink = Scroll.ScrollLink;
-
-  const moveToAbout = () => {
-    const anchor = document.querySelector("#active");
-    anchor.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
   
 
   return (
@@ -49,32 +43,18 @@ const Navbar = ({setIsVisible}) => {
         </div>
         <div className="hidden md:flex md:justify-center md:gap-x-12 md:px-8">
           {/* {navigation.map((item) => ( */}
-          <div
+          <a href="#about"
             className="font-semibold hover:text-gray-100"
-            style={{ cursor: "pointer" }}
-            onClick={() => {
-              const anchor = document.querySelector("#reviews-link");
-              anchor.scrollIntoView({ behavior: "smooth", block: "center" });
-            }}
           >
             About
-          </div>
+          </a>
           <a href="#" className="font-semibold hover:text-gray-100">
             How it Works
           </a>
           <a href="#" className="font-semibold hover:text-gray-100">
             Blog
           </a>
-          {/* <ScrollLink
-            to="footer"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="font-semibold hover:text-gray-100"
-          >
-            Contact
-          </ScrollLink> */}
-          <a href="#" className="font-semibold hover:text-gray-100">
+          <a href="#contact" className="font-semibold hover:text-gray-100">
             Contact
           </a>
           {/* ))} */}
