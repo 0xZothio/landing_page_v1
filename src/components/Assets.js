@@ -35,7 +35,7 @@ function Assets() {
   }, [scrollvalue]);
 
   return (
-    <div className="bg-black text-white w-full h-full mt-[60px] sm:p-20 xs:p-8 px-8 py-14 ">
+    <div className="bg-black text-white w-full h-full sm:mt-[60px] sm:p-20 xs:p-8 px-8 pb-14 ">
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
@@ -72,7 +72,7 @@ function Assets() {
 
       {/* Text */}
 
-      <div className="mt-12 sm:mt-4">
+      <div className="mt-20 sm:mt-4">
         <h3 id="resizing-h3">
           <span>
             <div className="stage">

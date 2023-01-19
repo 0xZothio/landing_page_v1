@@ -96,7 +96,7 @@ const Navbar = ({setIsVisible}) => {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 py-6 text-center">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
@@ -108,7 +108,7 @@ const Navbar = ({setIsVisible}) => {
                   </a>
                 ))}
               </div>
-              <div className="py-6 space-y-2">
+              <div className="py-6 space-y-2 text-center">
                 <p
                   className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 hover:bg-white hover:text-black"
                   onClick={() => setIsVisible(true)}
