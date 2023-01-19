@@ -72,7 +72,7 @@ function Assets() {
 
       {/* Text */}
 
-      <div className="mt-4">
+      <div className="mt-12 sm:mt-4">
         <h3 id="resizing-h3">
           <span>
             <div className="stage">

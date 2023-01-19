@@ -306,13 +306,14 @@
   .img__descp {
     width: 80%;
   }
-}
+} */
 
 @media screen and (max-width: 600px) {
   .slide {
     display: none;
     overflow: hide;
     height: 90%;
+    width: 100%;
   }
   .slide.active {
     display: block;
@@ -320,7 +321,7 @@
     left: 0;
     transform: translateX(0%);
   }
-} */
+}
 
 
 

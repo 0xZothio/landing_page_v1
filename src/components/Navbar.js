@@ -5,12 +5,12 @@ import { FiAlignJustify } from "react-icons/fi";
 import {motion} from 'framer-motion';
 import { navVariants } from "../utils/motion";
 import Scroll from "react-scroll";
-// const navigation = [
-//   { name: "About", href: "#" },
-//   { name: "How it works", href: "#" },
-//   { name: "Blog", href: "#" },
-//   { name: "Contact", href: "#" },
-// ];
+const navigation = [
+  { name: "About", href: "#about" },
+  { name: "How it works", href: "#howItWorks" },
+  { name: "Blog", href: "#" },
+  { name: "Contact", href: "#contact" },
+];
 
 const Navbar = ({setIsVisible}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,60 +18,60 @@ const Navbar = ({setIsVisible}) => {
 
   return (
     <div className="bg-black text-white z-50 relative">
-      <motion.nav
-        variants={navVariants}
-        initial="hidden"
-        whileInView="show"
-        className="flex h-9 items-center justify-between"
-        aria-label="Global"
-      >
-        <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Zoth.io</span>
-            <img className="h-8" src={logo} alt="" />
-          </a>
-        </div>
-        <div className="flex md:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <FiAlignJustify className="h-6 w-6 text-white" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden md:flex md:justify-center md:items-center md:gap-x-12 md:px-8 md:ml-24">
-          {/* {navigation.map((item) => ( */}
-          <a href="#about"
-            className="font-semibold hover:text-gray-100"
-          >
-            About
-          </a>
-          <a href="#howItWorks" className="font-semibold hover:text-gray-100">
-            How it Works
-          </a>
-          <a href="#" className="font-semibold hover:text-gray-100">
-            Blog
-          </a>
-          <a href="#contact" className="font-semibold hover:text-gray-100">
-            Contact
-          </a>
-          {/* ))} */}
-        </div>
-        <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
-          {/* <a href="#" className="font-semibold hover:text-gray-400">
-            Log in
-          </a> */}
-          <button
-            className="inline-block rounded-full px-3 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
-            onClick={() => setIsVisible(true)}
-          >
-            Get Exclusive Invite{" "}
-          </button>
-        </div>
-      </motion.nav>
-      {/* <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      {!mobileMenuOpen && (
+        <motion.nav
+          variants={navVariants}
+          initial="hidden"
+          whileInView="show"
+          className="flex h-9 items-center justify-between"
+          aria-label="Global"
+        >
+          <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Zoth.io</span>
+              <img className="h-8" src={logo} alt="" />
+            </a>
+          </div>
+          <div className="flex md:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <FiAlignJustify
+                className="h-6 w-6 text-white"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+          <div className="hidden md:flex md:justify-center md:items-center md:gap-x-12 md:px-8 md:ml-24">
+            {/* {navigation.map((item) => ( */}
+            <a href="#about" className="font-semibold hover:text-gray-100">
+              About
+            </a>
+            <a href="#howItWorks" className="font-semibold hover:text-gray-100">
+              How it Works
+            </a>
+            <a href="#" className="font-semibold hover:text-gray-100">
+              Blog
+            </a>
+            <a href="#contact" className="font-semibold hover:text-gray-100">
+              Contact
+            </a>
+            {/* ))} */}
+          </div>
+          <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
+            <button
+              className="inline-block rounded-full px-3 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
+              onClick={() => setIsVisible(true)}
+            >
+              Get Exclusive Invite{" "}
+            </button>
+          </div>
+        </motion.nav>
+      )}
+      <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel
           focus="true"
           className="fixed inset-0 z-10 overflow-y-auto bg-black text-white px-6 py-6 md:hidden"
@@ -87,7 +87,7 @@ const Navbar = ({setIsVisible}) => {
               <button
                 type="button"
                 className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 <span className="sr-only">Close menu</span>
                 <FiAlignJustify className="h-6 w-6" aria-hidden="true" />
@@ -101,6 +101,7 @@ const Navbar = ({setIsVisible}) => {
                   <a
                     key={item.name}
                     href={item.href}
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 hover:bg-white hover:text-black"
                   >
                     {item.name}
@@ -108,23 +109,17 @@ const Navbar = ({setIsVisible}) => {
                 ))}
               </div>
               <div className="py-6 space-y-2">
-                <a
-                  href="#"
+                <p
                   className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 hover:bg-white hover:text-black"
+                  onClick={() => setIsVisible(true)}
                 >
-                  Log in
-                </a>
-                <a
-                  href="#"
-                  className="inline-block rounded-full px-3 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
-                >
-                  Get Exclusive Invite{" "}
-                </a>
+                  Get Exclusive Invite
+                </p>
               </div>
             </div>
           </div>
         </Dialog.Panel>
-      </Dialog> */}
+      </Dialog>
     </div>
   );
 };

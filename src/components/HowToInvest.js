@@ -160,7 +160,7 @@ function HowToInvest() {
         </section>
       </div>
 
-      <ol className="items-center sm:flex mx-auto w-4/6">
+      <ol className="items-center sm:flex mx-auto w-4/6 hidden">
         <li className="relative mb-6 sm:mb-0">
           <div className="mt-3 sm:pr-8 w-40" />
           <div className="flex items-center">
