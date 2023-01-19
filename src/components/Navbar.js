@@ -41,7 +41,7 @@ const Navbar = ({setIsVisible}) => {
             <FiAlignJustify className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden md:flex md:justify-center md:gap-x-12 md:px-8">
+        <div className="hidden md:flex md:justify-center md:items-center md:gap-x-12 md:px-8 md:ml-24">
           {/* {navigation.map((item) => ( */}
           <a href="#about"
             className="font-semibold hover:text-gray-100"
