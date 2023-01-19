@@ -1,29 +1,17 @@
-import logo from "../assets/images/newlogo.png";
+import logo from "../assets/images/oldlogo.png";
 import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { motion } from "framer-motion";
-import { footerVariants } from "../utils/motion";
-
 const Footer = () => {
   return (
-    <motion.footer
-      id="contact"
-      variants={footerVariants}
-      initial="hidden"
-      whileInView="show"
-      aria-label="Site Footer"
-      className="relative bg-black text-white"
-    >
+    <footer aria-label="Site Footer" className="relative bg-black text-white">
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-center lg:text-left">
-          <div className="w-full lg:w-5/12 px-4 ">
-            <div>
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Zoth.io</span>
-                <img className="h-8" src={logo} alt="" />
-              </a>
-            </div>
-            <p className="max-w-xs mt-8">Connect with us</p>
+          <div className="w-full lg:w-5/12 px-4">
+            <a href="#" className="-m-1.5">
+              <span className="sr-only">Zoth.io</span>
+              <img className="h-60 w-60" src={logo} alt="" />
+            </a>
+            <p className="w-full">Connect with us</p>
             <ul className="flex gap-2 mt-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start w-6/12 lg:w-full">
               <li>
                 <a
@@ -170,7 +158,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 
