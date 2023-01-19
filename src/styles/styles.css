@@ -227,10 +227,7 @@
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   aspect-ratio: 596/358;
 }
-/* .slide.prevImg0 {
-  transform: translateX(-125%) scale(0.6);
-  z-index: 0;
-} */
+
 
 .slide.prevImg1 {
   transform: translateX(-150%) scale(0.6);
@@ -247,13 +244,9 @@
   z-index: 3;
 }
 
-/* .slide.prevImg4 {
-  transform: translateX(0%) scale(0.6);
-  z-index: 4;
-} */
 
 .slide.nextImg1 {
-  transform: translateX(60%) scale(0.6);
+  transform: translateX(50%) scale(0.6);
   z-index: 4;
 }
 
@@ -267,10 +260,6 @@
   z-index: 3;
 }
 
-/* .slide.nextImg4 {
-  transform: translateX(-100%) scale(0.6);
-  z-index: 4;
-} */
 
 .slide.active {
   z-index: 5;
@@ -332,3 +321,6 @@
     transform: translateX(0%);
   }
 } */
+
+
+
