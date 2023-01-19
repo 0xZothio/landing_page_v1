@@ -157,11 +157,69 @@ function HowToInvest() {
               </div>
             );
           })}
-          
         </section>
       </div>
 
-      
+      <ol className="items-center sm:flex mx-auto w-4/5">
+        <li className="relative mb-6 sm:mb-0">
+          <div className="mt-3 sm:pr-8 w-40" />
+          <div className="flex items-center">
+            <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
+          </div>
+        </li>
+        <li className="relative mb-6 sm:mb-0">
+          <div className="mt-3 sm:pr-8 w-60" />
+          <div className="flex items-center">
+            <div
+              className={
+                current === 0
+                  ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
+                  : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
+              }
+            ></div>
+            <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
+          </div>
+        </li>
+        <li className="relative mb-6 sm:mb-0">
+          <div className="mt-3 sm:pr-8 w-60" />
+          <div className="flex items-center">
+            <div
+              className={
+                current === 1
+                  ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
+                  : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
+              }
+            ></div>
+            <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
+          </div>
+        </li>
+        <li className="relative mb-6 sm:mb-0">
+          <div className="mt-3 sm:pr-8 w-60" />
+          <div className="flex items-center">
+            <div
+              className={
+                current === 2
+                  ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
+                  : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
+              }
+            ></div>
+            <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
+          </div>
+        </li>
+        <li className="relative mb-6 sm:mb-0">
+          <div className="mt-3 sm:pr-8 w-40" />
+          <div className="flex items-center">
+            <div
+              className={
+                current === 3
+                  ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
+                  : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
+              }
+            ></div>
+            <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
+          </div>
+        </li>
+      </ol>
     </div>
   );
 }
