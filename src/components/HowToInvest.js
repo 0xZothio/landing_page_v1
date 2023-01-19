@@ -26,7 +26,7 @@ const crouselData = [
     image: marketplace,
     title: "Zoth Marketplace",
     description:
-      "Zoth marketplace provides investors access to aggregated tokenized assets",
+      "Provides investors access to aggregated tokenized assets",
   },
 ];
 
@@ -147,7 +147,7 @@ function HowToInvest() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className={
                       current === indx
-                        ? "text-center font-codec w-1/2 mx-auto"
+                        ? "text-center font-codec w-1/2 mx-auto text-sm"
                         : "text-center font-codec w-1/2 mx-auto hidden"
                     }
                   >

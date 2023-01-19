@@ -46,7 +46,7 @@ export default function Invite({ setIsVisible }) {
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
       <div className="relative w-3/3 h-full  md:h-auto">
-        <div className="relative  rounded shadow bg-black">
+        <div className="relative  rounded shadow bg-[#171717]">
           <button
             type="button"
             className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
@@ -91,9 +91,9 @@ export default function Invite({ setIsVisible }) {
                     type="text"
                     name="first_name"
                     id="first_name"
-                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-800 border-gray-700 placeholder-gray-400 text-white"
+                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                     placeholder=""
-                    required=""
+                    required="true"
                     value={inviteData.first_name}
                     onChange={(e) => onChangeData(e)}
                   />
@@ -110,9 +110,9 @@ export default function Invite({ setIsVisible }) {
                     type="email"
                     name="email"
                     id="email"
-                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-800 border-gray-700 placeholder-gray-400 text-white"
+                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                     placeholder=""
-                    required=""
+                    required="true"
                     value={inviteData.email}
                     onChange={(e) => onChangeData(e)}
                   />
@@ -130,8 +130,8 @@ export default function Invite({ setIsVisible }) {
                     name="mobile"
                     id="mobile"
                     placeholder=""
-                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-800 border-gray-700 placeholder-gray-400 text-white"
-                    required=""
+                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                    required="true"
                     max="10"
                     min="10"
                     value={inviteData.mobile}

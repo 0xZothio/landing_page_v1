@@ -72,31 +72,30 @@ function Assets() {
 
       {/* Text */}
 
-      <div>
-        <h3 id="resizing-h3" className="">
+      <div className="mt-4">
+        <h3 id="resizing-h3">
           <span>
             <div className="stage">
               <div className="cubespinner text-center">
                 <div className="face1">
                   <div className="text-[50px] sm:text-[65px] text-center italic">
                     become a{" "}
-                    <span className="text-[#F3C74E]">partial owner</span>.
+                    <span className="text-[#F3C74E]">Partial Owner</span>
                   </div>
                 </div>
                 <div className="face2">
                   <div className="text-[50px] sm:text-[65px] text-center italic">
-                    become a <span className="text-[#F3C74E]">investor</span>.
+                    Invest like a <span className="text-[#F3C74E]">Millionaire</span>
                   </div>
                 </div>
                 <div className="face3">
                   <div className="text-[50px] sm:text-[65px] text-center italic">
-                    become a <span className="text-[#F3C74E]">rich</span>.
+                    A new way to <span className="text-[#F3C74E]">Find and Invest</span>
                   </div>
                 </div>
                 <div className="face4">
                   <div className="text-[50px] sm:text-[65px] text-center italic">
-                    become a{" "}
-                    <span className="text-[#F3C74E]">zoth investor</span>.
+                   Bringing real world assets <span className="text-[#F3C74E]">On Chain</span>
                   </div>
                 </div>
               </div>
