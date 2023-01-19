@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 
 export default function Invite({ setIsVisible }) {
-  
   const [inviteData, setInviteData] = useState({
     first_name: "",
     last_name: "",
@@ -34,12 +33,9 @@ export default function Invite({ setIsVisible }) {
   };
 
   return (
-    <div
-      id="authentication-modal"
-      className="fixed top-0 left-0 right-0 flex justify-center items-center bg-white/50 z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
-    >
-      <div className="relative w-full h-full max-w-md md:h-auto">
-        <div className="relative  rounded-lg shadow bg-gray-700">
+    <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+      <div className="relative w-3/3 h-full  md:h-auto">
+        <div className="relative  rounded shadow bg-black">
           <button
             type="button"
             className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
@@ -60,25 +56,32 @@ export default function Invite({ setIsVisible }) {
             <span className="sr-only">Close modal</span>
           </button>
 
-          <div className="px-6 py-6 lg:px-8">
-            <h3 className="mb-4 text-2xl font-semibold  text-white">
-              Get Your Exclusive Invite
-            </h3>
-            <form className="space-y-6">
-              <div class="grid grid-cols-2 gap-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center">
+
+            <img src="invite.png" alt="invite" className="hidden sm:flex w-[485px] h-[585px]" />
+
+            {/* form */}
+            <div className="px-6 py-6 lg:px-8">
+              <h3 className="mb-4 text-3xl font-semibold  text-white">
+                Thanks for getting in touch!
+              </h3>
+              <p className="mb-4 text-white">
+                Our team is will contact you soon 😀
+              </p>
+              <form className="space-y-6">
                 <div>
                   <label
                     htmlFor="first_name"
-                    className="block mb-2 text-sm font-medium  text-white"
+                    className="block mb-2 text-sm   text-gray-300"
                   >
-                    Your First Name
+                    Enter Your Name
                   </label>
                   <input
                     type="text"
                     name="first_name"
                     id="first_name"
-                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
-                    placeholder="First name"
+                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-800 border-gray-700 placeholder-gray-400 text-white"
+                    placeholder=""
                     required=""
                     value={inviteData.first_name}
                     onChange={(e) => onChangeData(e)}
@@ -87,74 +90,54 @@ export default function Invite({ setIsVisible }) {
 
                 <div>
                   <label
-                    htmlFor="last_name"
-                    className="block mb-2 text-sm font-medium  text-white"
+                    htmlFor="email"
+                    className="block mb-2 text-sm text-gray-300"
                   >
-                    Your Last Name
+                    Enter Your Email
                   </label>
                   <input
-                    type="text"
-                    name="last_name"
-                    id="last_name"
-                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
-                    placeholder="Last name"
+                    type="email"
+                    name="email"
+                    id="email"
+                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-800 border-gray-700 placeholder-gray-400 text-white"
+                    placeholder=""
                     required=""
-                    value={inviteData.last_name}
+                    value={inviteData.email}
                     onChange={(e) => onChangeData(e)}
                   />
                 </div>
-              </div>
 
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-white"
+                <div>
+                  <label
+                    htmlFor="mobile"
+                    className="block mb-2 text-sm text-gray-300"
+                  >
+                    Enter Your Phone No.
+                  </label>
+                  <input
+                    type="number"
+                    name="mobile"
+                    id="mobile"
+                    placeholder=""
+                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-800 border-gray-700 placeholder-gray-400 text-white"
+                    required=""
+                    max="10"
+                    min="10"
+                    value={inviteData.mobile}
+                    onChange={(e) => onChangeData(e)}
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  onClick={invite}
+                  className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
                 >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
-                  placeholder="name@company.com"
-                  required=""
-                  value={inviteData.email}
-                  onChange={(e) => onChangeData(e)}
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="mobile"
-                  className="block mb-2 text-sm font-medium text-white"
-                >
-                  Your Mobile Number
-                </label>
-                <input
-                  type="number"
-                  name="mobile"
-                  id="mobile"
-                  placeholder="Enter mobile"
-                  className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
-                  required=""
-                  max="10"
-                  min="10"
-                  value={inviteData.mobile}
-                  onChange={(e) => onChangeData(e)}
-                />
-              </div>
-
-              <button
-                type="button"
-                onClick={invite}
-                className="w-full text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-              >
-                Get Invite
-              </button>
-            </form>
+                  Get Your Exclusive Invite
+                </button>
+              </form>
+            </div>
           </div>
-
         </div>
       </div>
     </div>
