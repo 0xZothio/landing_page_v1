@@ -23,7 +23,7 @@ function Assets() {
         setActive("3");
       } else if (scrollvalue > 300) {
         setActive("2");
-      } else{
+      } else {
         setActive("1");
       }
     };
@@ -79,23 +79,26 @@ function Assets() {
               <div className="cubespinner text-center">
                 <div className="face1">
                   <div className="text-[40px] sm:text-[65px] text-center italic">
-                    become a{" "}
-                    <span className="text-[#F3C74E]">Partial Owner</span>
+                    Democratising{" "}
+                    <span className="text-[#F3C74E]">Investment</span>
                   </div>
                 </div>
                 <div className="face2">
                   <div className="text-[40px] sm:text-[65px] text-center italic">
-                    Invest like a <span className="text-[#F3C74E]">Millionaire</span>
+                    Democratising{" "}
+                    <span className="text-[#F3C74E]">Wealth Creation</span>
                   </div>
                 </div>
                 <div className="face3">
                   <div className="text-[40px] sm:text-[65px] text-center italic">
-                    A new way to <span className="text-[#F3C74E]">Find and Invest</span>
+                    Democratising{" "}
+                    <span className="text-[#F3C74E]">Future of Finance</span>
                   </div>
                 </div>
                 <div className="face4">
                   <div className="text-[40px] sm:text-[65px] text-center italic">
-                   Bringing real world assets <span className="text-[#F3C74E]">On Chain</span>
+                    Democratising{" "}
+                    <span className="text-[#F3C74E]">Access to Top Assets</span>
                   </div>
                 </div>
               </div>
