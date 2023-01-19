@@ -64,7 +64,7 @@ const Hero = () => {
                     <ul className="flex gap-6 mx-8 mt-2">
                       <li>
                         <a
-                          href="/"
+                          href="https://t.me/+nFUrC_I1hA1iNWU9"
                           rel="noreferrer"
                           target="_blank"
                           className="text-gray-700 transition hover:opacity-75"

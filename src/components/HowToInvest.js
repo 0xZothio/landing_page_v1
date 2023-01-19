@@ -60,14 +60,14 @@ function HowToInvest() {
 
 
   return (
-    <div className="bg-black text-white w-full h-full mt-[80px] pb-10">
+    <div id="howItWorks" className="bg-black text-white w-full h-full mt-[80px] pb-10">
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
         className="text-[55px] text-center sm:text-[80px] font-codec font-extrabold"
       >
-        How To Invest
+        How It Works
       </motion.div>
 
       <div

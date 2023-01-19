@@ -48,7 +48,7 @@ const Navbar = ({setIsVisible}) => {
           >
             About
           </a>
-          <a href="#" className="font-semibold hover:text-gray-100">
+          <a href="#howItWorks" className="font-semibold hover:text-gray-100">
             How it Works
           </a>
           <a href="#" className="font-semibold hover:text-gray-100">
