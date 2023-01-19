@@ -65,7 +65,7 @@ function HowToInvest() {
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-[55px] text-center sm:text-[80px] font-codec font-extrabold"
+        className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"
       >
         How It Works
       </motion.div>
@@ -160,7 +160,7 @@ function HowToInvest() {
         </section>
       </div>
 
-      <ol className="items-center sm:flex mx-auto w-4/5">
+      <ol className="items-center sm:flex mx-auto w-4/6">
         <li className="relative mb-6 sm:mb-0">
           <div className="mt-3 sm:pr-8 w-40" />
           <div className="flex items-center">

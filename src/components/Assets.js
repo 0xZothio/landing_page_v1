@@ -78,23 +78,23 @@ function Assets() {
             <div className="stage">
               <div className="cubespinner text-center">
                 <div className="face1">
-                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center italic">
                     become a{" "}
                     <span className="text-[#F3C74E]">Partial Owner</span>
                   </div>
                 </div>
                 <div className="face2">
-                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center italic">
                     Invest like a <span className="text-[#F3C74E]">Millionaire</span>
                   </div>
                 </div>
                 <div className="face3">
-                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center italic">
                     A new way to <span className="text-[#F3C74E]">Find and Invest</span>
                   </div>
                 </div>
                 <div className="face4">
-                  <div className="text-[50px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center italic">
                    Bringing real world assets <span className="text-[#F3C74E]">On Chain</span>
                   </div>
                 </div>
