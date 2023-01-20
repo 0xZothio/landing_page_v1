@@ -4,6 +4,7 @@ import { fadeIn } from "../utils/motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useState } from "react";
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 const Mynews = () => {
   const [subscribeData, setSubscribeData] = useState({
@@ -20,17 +21,28 @@ const Mynews = () => {
   const subscribe = async (e) => {
     e.preventDefault();
     console.log("news letter", subscribeData);
-    // try {
-    //   let res = await axios.post(
-    //     `https://script.google.com/macros/s/AKfycbzjhVDfu39nvYYrsj0XHnZMkP5qDqDZhDoQtuy_vMpjPZXcry_gfFiT7-xT85I4CL8x/exec?first_name=${subscribeData.first_name}&last_name=${subscribeData.last_name}&mobile=${subscribeData.mobile}&email=${subscribeData.email}&function=subscribe`
-    //   );
-    //   if (res.status === 200) {
-    //     console.log("newsletter success")
-    //     return;
-    //   }
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      let res = await axios.post(
+        `https://script.google.com/macros/s/AKfycbwQcwNDLdnbHpM-Je59N_VSfSndy4eXap1W5VtNq_-77R3-azBMujnEr0M4v2OP-1o6oQ/exec?email=${subscribeData.email}`
+      );
+      if (res.data.result === 'success') {
+        console.log("subscribe success");
+        console.log(res);
+        toast.success("Go Ahead !!! Sucess",{
+           theme:"dark"
+        });
+        return;
+      }else{
+        toast.error("Go Ahead !!! Error",{
+          theme:"dark"
+       });
+      }
+    } catch (error) {
+      console.log("error", error);
+      toast.error("Go Ahead !!! Error",{
+        theme:"dark"
+     });
+    }
   };
 
   return (
