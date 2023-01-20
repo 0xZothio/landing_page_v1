@@ -6,12 +6,12 @@ import { fadeIn } from "../utils/motion";
 function Team() {
   return (
     <>
-      <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full my-24">
+      <div className="text-[20px] bg-black text-white w-full flex flex-col items-center justify-center h-full my-24">
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="text-[50px] sm:text-[55px] text-center"
+          className="text-[20px] sm:text-[55px] text-center"
         >
           Meet Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Team</span>
         </motion.div>
