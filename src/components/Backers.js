@@ -51,10 +51,10 @@ function Backers() {
           whileInView="show"
           className="w-3/3 mx-auto my-24"
         >
-          <h5 className="text-2xl text-gray-100 text-center mb-2">Backed By</h5>
+         {/*  <h5 className="text-2xl text-gray-100 text-center mb-2">Backed By</h5>
           <h1 className="text-4xl font-semibold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             The World's Best
-          </h1>
+          </h1> */}
           <div className=" grid grid-cols-4 gap-2 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
             <img
               src="/backers/on.png"
