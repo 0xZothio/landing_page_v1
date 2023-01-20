@@ -10,7 +10,7 @@ function Features() {
   const [data, setData] = useState([
     {
       video: "/features/reward.mp4",
-      topic: "Exclusive rewards for investing in your assets",
+      topic: "Earn Zoth Coins for investing in your assets",
       description:
         "Every time you invest on Zoth, you receive Zoth coins. You can use these to win exclusive rewards or get special access to curated products and experiences.",
     },
@@ -19,18 +19,18 @@ function Features() {
       video: "/features/eth.mp4",
       topic: "Guarantee transparency and Easy exit mechanism",
       description:
-        "On the blockchain, transactions are transparent and verifiable. Users can monitor real-time market conditions for simple exit mechanisms.",
+        "On the blockchain, transactions are transparent and verifiable. Zoth provides liquidity for on chain assets through its unique real-time market based exit mechanism.",
     },
     
     {
       video: "/features/loyalty.mp4",
-      topic: "Loyalty Program",
+      topic: "Governance model for, of and by the users ",
       description:
-        "Get exclusive access to premium asset classes only available to you, special offers on upcoming launches, stay-cations in opulent villas, and more.",
+        "Zoth Governance and Loyalty program gives you exclusive access to premium asset classes, special offers on upcoming launches, stay-cations in opulent villas, and more.",
     },
     {
       video: "/features/yield.mp4",
-      topic: "High Yield and Returns and Portfolio Diversification",
+      topic: "High Yield, Returns and Portfolio Diversification",
       description:
         "Data-driven insights to diversify your portfolio and invest in stable asset classes accessible only to the top 1%, to earn lifetime passive income.",
     },
@@ -38,7 +38,7 @@ function Features() {
       video: "/features/sebi.mp4",
       topic: "Compliant and Strict Due Diligence",
       description:
-        "All our assets are listed after a strict process of due diligence and are compliant with the sec and other regulatory bodies.",
+        "All our assets are listed after a strict process of due diligence and are compliant with local and other global regulatory bodies.",
     },
   ]);
 
