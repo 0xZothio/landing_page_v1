@@ -32,7 +32,7 @@ function Features() {
       video: "/features/yield.mp4",
       topic: "High Yield, Returns and Portfolio Diversification",
       description:
-        "Data-driven insights to diversify your portfolio and invest in stable asset classes accessible only to the top 1%, to earn lifetime passive income.",
+        "Data-driven insights to diversify your portfolio and invest in stable asset classes accessible only to the top 0.1%, to earn lifetime passive income.",
     },
     {
       video: "/features/sebi.mp4",
