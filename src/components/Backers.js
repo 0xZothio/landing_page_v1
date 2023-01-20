@@ -10,7 +10,7 @@ function Backers() {
         <div className="border-t-2 border-gray-500 w-1/2 my-24"></div>
 
         <div className="text-[50px] sm:text-[55px] text-center">
-          Meet Our Backers
+          Meet Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Backers</span>
         </div>
 
         {/* Backers */}
@@ -44,8 +44,8 @@ function Backers() {
           whileInView="show"
           className="w-3/3 mx-auto my-24"
         >
-          <h5 className="text-2xl text-gray-500 text-center mb-2">Backed By</h5>
-          <h1 className="text-4xl font-semibold text-center mb-4">
+          <h5 className="text-2xl text-gray-100 text-center mb-2">Backed By</h5>
+          <h1 className="text-4xl font-semibold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             The World's Best
           </h1>
           <div className=" grid grid-cols-4 gap-2 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">

@@ -13,7 +13,7 @@ function Team() {
           whileInView="show"
           className="text-[50px] sm:text-[55px] text-center"
         >
-          Meet Our Team
+          Meet Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Team</span>
         </motion.div>
 
         <div className="w-3/3 flex flex-wrap justify-center items-center mt-6">
