@@ -41,11 +41,11 @@ function HowToInvest() {
         console.log("scrollToTop", element.scrollTop);
         setScrollValue(element.scrollTop);
 
-        if (scrollvalue > 900) {
+        if (scrollvalue > 1500) {
           setCurrent(3);
-        } else if (scrollvalue > 600) {
+        } else if (scrollvalue > 1000) {
           setCurrent(2);
-        } else if (scrollvalue > 300) {
+        } else if (scrollvalue > 500) {
           setCurrent(1);
         } else {
           setCurrent(0);
@@ -60,20 +60,27 @@ function HowToInvest() {
 
 
   return (
-    <div id="howItWorks" className="bg-black text-white w-full h-full mt-[150px] sm:pb-10">
+    <div
+      id="howItWorks"
+      className="bg-black text-white w-full h-full mt-[150px] sm:pb-10"
+    >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
         className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"
       >
-        How It <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Works?</span>
+        How It{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          Works?
+        </span>
       </motion.div>
 
       <div
         className="absolute bg-transparent w-full overflow-y-scroll scrollbar-hide z-10 h-3/4"
         id="section-3"
       >
+        <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>

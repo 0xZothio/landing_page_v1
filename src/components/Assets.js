@@ -15,13 +15,13 @@ function Assets() {
       console.log("scrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
 
-      if (scrollvalue > 1200) {
+      if (scrollvalue > 2000) {
         setActive("5");
-      } else if (scrollvalue > 900) {
+      } else if (scrollvalue > 1500) {
         setActive("4");
-      } else if (scrollvalue > 600) {
+      } else if (scrollvalue > 1000) {
         setActive("3");
-      } else if (scrollvalue > 300) {
+      } else if (scrollvalue > 500) {
         setActive("2");
       } else {
         setActive("1");
@@ -42,7 +42,10 @@ function Assets() {
         whileInView="show"
         className="text-[40px] sm:text-[80px] text-center font-codec font-bold"
       >
-        World Class <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Assets</span>
+        World Class{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          Assets
+        </span>
       </motion.div>
 
       {/* <div className="flex justify-center items-center">
@@ -53,6 +56,8 @@ function Assets() {
         className="absolute bg-transparent w-11/12 h-screen overflow-y-scroll scrollbar-hide z-10"
         id="section-2"
       >
+        <div className="h-screen w-full"></div>
+        <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
