@@ -178,7 +178,6 @@ export default function Invite({ setIsVisible }) {
                 {isLoading ? (
                   <button
                     type="button"
-                    onClick={invite}
                     className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
                   >
                     <div class="flex items-center justify-center ">
