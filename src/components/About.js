@@ -17,22 +17,16 @@ function About() {
         >
           About <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Us</span>
         </motion.div>
-        <div className="mt-6">
+       {/*  <div className="mt-6">
           <motion.p
             variants={fadeIn("up", "tween", 0.5, 1)}
             initial="hidden"
             whileInView="show"
             className="sm:w-2/3 h-full text-[24px] text-center p-4 sm:p-2 mx-auto "
           >
-            Zoth is a B2B2C marketplace for tokenized assets that helps retail
-            investors diversify their portfolios through investing in
-            high-quality alternative assets such as Real Estate, Art, and
-            Private Equity, just like Stocks. Zoth offers comprehensively vetted
-            properties for fractional ownership, provides asset owners with
-            quick capital and has global investor reach. Investors can Buy,
-            Sell, and Earn a rental yield on Zoth.
+            
           </motion.p>
-        </div>
+        </div> */}
 
         {/* Our Teams */}
         <div className="">
