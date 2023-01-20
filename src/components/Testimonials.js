@@ -48,7 +48,7 @@ function Testimonials() {
             />
             <span class="flex-grow flex flex-col pl-4">
               <span class="title-font font-medium text-white">
-                SURESH KUMAR
+                Suresh Kumar
               </span>
               <span class="text-gray-500 text-sm">
                 Real Estate, start-up, stocks
@@ -78,7 +78,7 @@ function Testimonials() {
               class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
             />
             <span class="flex-grow flex flex-col pl-4">
-              <span class="title-font font-medium text-white">ALI SAJWANI</span>
+              <span class="title-font font-medium text-white">Naresh Rati</span>
               <span class="text-gray-500 text-sm">
                 Top property developer in dubai
               </span>
