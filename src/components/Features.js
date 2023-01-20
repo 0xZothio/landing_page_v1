@@ -2,24 +2,26 @@ import React, { useEffect, useRef } from "react";
 import { useLayoutEffect, useState } from "react";
 import { render } from "react-dom";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn, featureIn } from "../utils/motion";
+import { fadeIn, slideIn, featureIn, staggerContainer } from "../utils/motion";
 import "../styles/styles.css";
 function Features() {
   const ref = useRef(null);
 
   const [data, setData] = useState([
     {
-      video: "/features/eth.mp4",
-      topic: "Guarantee transparency and Easy exit mechanism",
-      description:
-        "On the blockchain, transactions are transparent and verifiable.Users can monitor real-time market conditions for simple exitmechanisms.\n Simple Liquidity using deFi pools On our 24/7 open market, you can buy and sell at any time.",
-    },
-    {
       video: "/features/reward.mp4",
       topic: "Exclusive rewards for investing in your assets",
       description:
-        "every time you invest on ZOTH, you receive ZOTH coins. you can use these to win exclusive rewards or get special access to curated products and experiences.",
+        "Every time you invest on Zoth, you receive Zoth coins. You can use these to win exclusive rewards or get special access to curated products and experiences.",
     },
+
+    {
+      video: "/features/eth.mp4",
+      topic: "Guarantee transparency and Easy exit mechanism",
+      description:
+        "On the blockchain, transactions are transparent and verifiable. Users can monitor real-time market conditions for simple exit mechanisms.",
+    },
+    
     {
       video: "/features/loyalty.mp4",
       topic: "Loyalty Program",
@@ -30,13 +32,13 @@ function Features() {
       video: "/features/yield.mp4",
       topic: "High Yield and Returns and Portfolio Diversification",
       description:
-        "Data driven insights to diversify your portfolio and invest in Stable asset classes accessible only to the top 1%, to earn lifetime passive income.",
+        "Data-driven insights to diversify your portfolio and invest in stable asset classes accessible only to the top 1%, to earn lifetime passive income.",
     },
     {
       video: "/features/sebi.mp4",
-      topic: "Compliant and Strict Due Diligence (Stamp of SEBI)",
+      topic: "Compliant and Strict Due Diligence",
       description:
-        "All our assets are listed after a strict process of due diligence and are compliant with SEC and other regulatory bodies.",
+        "All our assets are listed after a strict process of due diligence and are compliant with the sec and other regulatory bodies.",
     },
   ]);
 
