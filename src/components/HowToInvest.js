@@ -67,7 +67,7 @@ function HowToInvest() {
         whileInView="show"
         className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"
       >
-        How It Works
+        How It <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Works?</span>
       </motion.div>
 
       <div
