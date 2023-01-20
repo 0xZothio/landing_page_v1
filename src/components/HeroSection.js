@@ -37,10 +37,10 @@ const Hero = () => {
             <div>
               <div>
                 <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-                  A Revolutionary New Age Investment Platform
+                  <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">A Revolutionary New Age</span> Investment Platform
                 </h1>
                 <p className="mt-6 leading-8 text-center text-2xl">
-                  Join the Zoth Club and let your investments work for you
+                  Join the <span className="text-[#F3C74E] font-bold ">Zoth Club</span> and let your investments work for you
                 </p>
                 <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
                   <div className="flex gap-x-4 pointer-events-auto">
@@ -87,7 +87,7 @@ const Hero = () => {
                     </ul>
                   </div>
                 </div>
-                <p className="mt-6 text-sm leading-8 text-center">
+                <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
                   Accept your invite to earn exclusive Zoth Coins
                 </p>
               </div>
