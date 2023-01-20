@@ -21,13 +21,15 @@ function LandingPage() {
       {/* Hero */}
       <Hero />
 
-      <HowToInvest />
+      
       {/* Assets */}
       <Assets />
 
       {/* <Temp/> */}
       {/* Features */}
       <Features />
+
+      <HowToInvest />
 
       {/* About Us */}
       <About />
