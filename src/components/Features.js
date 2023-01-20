@@ -62,13 +62,13 @@ function Features() {
       setScrollValue(element.scrollTop);
       const viewportHeight = window.innerHeight;
 
-      if (scrollvalue > 1200) {
+      if (scrollvalue > 2000) {
         setNum(4);
-      } else if (scrollvalue > 900) {
+      } else if (scrollvalue > 1400) {
         setNum(3);
-      } else if (scrollvalue > 600) {
+      } else if (scrollvalue > 800) {
         setNum(2);
-      } else if (scrollvalue > 300) {
+      } else if (scrollvalue > 200) {
         setNum(1);
       } else {
         setNum(0);
@@ -121,7 +121,7 @@ function Features() {
             <img src="/frame.png" alt="frame" />
           </div>
 
-          {scrollvalue <= 300 && (
+          {scrollvalue <= 200 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -146,7 +146,7 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 300 && scrollvalue <= 600 && (
+          {scrollvalue > 200 && scrollvalue <= 800 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -171,7 +171,7 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 600 && scrollvalue <= 900 && (
+          {scrollvalue > 800 && scrollvalue <= 1400 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -193,7 +193,7 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 900 && scrollvalue <= 1200 && (
+          {scrollvalue > 1400 && scrollvalue <= 2000 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -215,7 +215,7 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 1200 && (
+          {scrollvalue > 2000 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -240,7 +240,7 @@ function Features() {
         </div>
 
         {/* <MyPara topic={data[num].topic } description={data[num].description} /> */}
-        {scrollvalue <= 300 && (
+        {scrollvalue <= 200 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -260,7 +260,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 300 && scrollvalue <= 600 && (
+        {scrollvalue > 200 && scrollvalue <= 800 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -280,7 +280,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 600 && scrollvalue <= 900 && (
+        {scrollvalue > 800 && scrollvalue <= 1400 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -300,7 +300,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 900 && scrollvalue <= 1200 && (
+        {scrollvalue > 1400 && scrollvalue <= 2000 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -320,7 +320,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 1200 && (
+        {scrollvalue > 2000 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 export default function Invite({ setIsVisible }) {
   const [inviteData, setInviteData] = useState({
@@ -10,6 +10,7 @@ export default function Invite({ setIsVisible }) {
   });
 
   const [formErrors, setFormErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChangeData = async (e) => {
     let name = e.target.name;
@@ -20,6 +21,7 @@ export default function Invite({ setIsVisible }) {
 
   const invite = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     setFormErrors(validate(inviteData));
 
     try {
@@ -31,21 +33,24 @@ export default function Invite({ setIsVisible }) {
 
       if (res.data.result === "success") {
         console.log("invite success");
-        toast.success("Go Ahead !!! Sucess",{
-           theme:"dark"
+        toast.success("Go Ahead !!! Sucess", {
+          theme: "dark",
         });
+        setIsLoading(false);
         setIsVisible(false);
         return;
       } else {
-          toast.error("Go Ahead !!! Error",{
-            theme:"dark"
-         });
+        setIsLoading(false);
+
+        toast.error("Go Ahead !!! Error", {
+          theme: "dark",
+        });
       }
     } catch (error) {
       console.log("error", error);
-        toast.error("Go Ahead !!! Error",{
-          theme:"dark"
-       });
+      toast.error("Go Ahead !!! Error", {
+        theme: "dark",
+      });
     }
   };
 
@@ -63,7 +68,7 @@ export default function Invite({ setIsVisible }) {
 
     if (!values.mobile) {
       errors.mobile = "* Mobile no. is required";
-    } 
+    }
 
     return errors;
   };
@@ -170,13 +175,25 @@ export default function Invite({ setIsVisible }) {
                   <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={invite}
-                  className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
-                >
-                  Get Your Exclusive Invite
-                </button>
+                {isLoading ? (
+                  <button
+                    type="button"
+                    onClick={invite}
+                    className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                  >
+                    <div class="flex items-center justify-center ">
+                      <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                    </div>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={invite}
+                    className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                  >
+                    Get Exclusive Invite
+                  </button>
+                )}
               </form>
             </div>
           </div>
