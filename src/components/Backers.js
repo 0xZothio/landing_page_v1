@@ -8,10 +8,17 @@ function Backers() {
     <>
       <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full">
         <div className="border-t-2 border-gray-500 w-1/2 my-24"></div>
-
-        <div className="text-[50px] sm:text-[55px] text-center">
-          Meet Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Backers</span>
-        </div>
+        <div className="mx-auto mb-4 lg:max-w-xl sm:text-center">
+        <p className=" text-3xl tracking-tight sm:text-4xl tect-indigo-300">
+          Backed by
+        </p>
+      </div>
+      <div className="text-[50px] sm:text-[55px] text-center">
+        <p className=" text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          The World's Best
+        </p>
+      </div>
+       
 
         {/* Backers */}
         <div className="w-2/3 flex flex-wrap justify-center items-center mt-6">
