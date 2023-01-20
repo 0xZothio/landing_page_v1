@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { assetsData } from "../data/assetsData";
 import AssetCard from "./AssetCard";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 import "../styles/styles.css";
 
 function Assets() {

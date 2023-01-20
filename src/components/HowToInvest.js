@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import asset_trust from "../assets/images/Asset_trust.png"
 import premium_asset from "../assets/images/Quality_premium_asset.png"
 import tokenisation from "../assets/images/Tokenization.png"

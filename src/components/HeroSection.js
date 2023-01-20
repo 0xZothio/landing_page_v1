@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 import Invite from "./Invite";
 const Hero = () => {

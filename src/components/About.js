@@ -2,7 +2,7 @@ import React from "react";
 import Backers from "./Backers";
 import Team from "./Team";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 
 function About() {
   return (

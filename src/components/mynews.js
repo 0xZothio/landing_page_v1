@@ -1,6 +1,6 @@
 import "../styles/styles.css";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useState } from "react";
 import axios from "axios";

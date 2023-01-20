@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useLayoutEffect, useState } from "react";
 import { render } from "react-dom";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn, featureIn, staggerContainer } from "../utils/motion";
+import { fadeIn, slideIn, featureIn } from "../utils/motion";
 import "../styles/styles.css";
 function Features() {
   const ref = useRef(null);
