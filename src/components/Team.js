@@ -11,9 +11,12 @@ function Team() {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="text-[20px] sm:text-[55px] text-center"
+          className="text-3xl font-bold tracking-tight sm:text-4xl text-center"
         >
-          Meet Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Team</span>
+          Meet Our{" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+            Team
+          </span>
         </motion.div>
 
         <div className="w-3/3 flex flex-wrap justify-center items-center mt-6">

@@ -53,7 +53,7 @@ function Assets() {
       </div> */}
 
       <div
-        className="absolute bg-transparent w-11/12 h-screen overflow-y-scroll scrollbar-hide z-10"
+        className="absolute bg-transparent w-full h-screen overflow-y-scroll scrollbar-hide z-10 left-0"
         id="section-2"
       >
         <div className="h-screen w-full"></div>

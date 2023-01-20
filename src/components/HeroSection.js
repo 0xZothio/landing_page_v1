@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
+import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
@@ -37,16 +37,19 @@ const Hero = () => {
             <div>
               <div>
                 <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-                  <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">A Revolutionary New Age</span> Investment Platform
+                  <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                    A Revolutionary New Age
+                  </span>{" "}
+                  Investment Platform
                 </h1>
                 <p className="mt-6 leading-8 text-center text-2xl">
-                  Join the <span className="text-[#F3C74E] font-bold ">Zoth Club</span> and let your investments work for you
+                  Join the{" "}
+                  <span className="text-[#F3C74E] font-bold ">Zoth Club</span>{" "}
+                  and let your investments work for you
                 </p>
                 <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
                   <div className="flex gap-x-4 pointer-events-auto">
-                    <div
-                      className="inline-block rounded-full py-2 text-base font-semibold leading-7 text-black shadow-sm bg-transparent h-8/12"
-                    >
+                    <div className="inline-block rounded-full py-2 text-base font-semibold leading-7 text-black shadow-sm bg-transparent h-8/12">
                       <button
                         className="bg-white rounded-full px-8 sm:px-4 py-2 mt-2 z-100"
                         type="button"
@@ -75,20 +78,20 @@ const Hero = () => {
                       </li>
                       <li>
                         <a
-                          href="https://discord.gg/d7b6BcxB"
+                          href="https://twitter.com/zothio"
                           rel="noreferrer"
                           target="_blank"
                           className="text-gray-700 transition hover:opacity-75"
                         >
-                          <span className="sr-only">Discord</span>
-                          <FaDiscord size={40} color="white" />
+                          <span className="sr-only">Twitter</span>
+                          <FaTwitter size={40} color="white" />
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
-                Accept your early invite to earn $100 worth Zoth coins
+                  Accept your early invite to earn $100 worth Zoth coins
                 </p>
               </div>
             </div>

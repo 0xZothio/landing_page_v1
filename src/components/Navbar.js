@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { Dialog } from "@headlessui/react";
+import React, { useState, Fragment } from "react";
+import { Dialog, Menu, Transition } from "@headlessui/react";
 import logo from "../assets/images/newlogo.png";
 import { FiAlignJustify } from "react-icons/fi";
 import {motion} from 'framer-motion';
 import { navVariants } from "../utils/motion";
 import Scroll from "react-scroll";
+import { FaAngleDown } from "react-icons/fa";
 const navigation = [
   { name: "About", href: "#about" },
   { name: "How it works", href: "#howItWorks" },
@@ -15,6 +16,9 @@ const navigation = [
 const Navbar = ({setIsVisible}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
 
   return (
     <div className="bg-black text-white z-50 relative">
@@ -59,6 +63,63 @@ const Navbar = ({setIsVisible}) => {
             <a href="#contact" className="font-semibold hover:text-gray-100">
               Contact
             </a>
+
+            <Menu as="div" className="relative inline-block text-left">
+              <div>
+                <Menu.Button className="inline-flex w-full justify-center font-semibold hover:text-gray-100">
+                  Solutions
+                  <FaAngleDown
+                    className="-mr-1 ml-2 mt-1 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                </Menu.Button>
+              </div>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 mx-auto origin-top-right rounded-md bg-black shadow-lg ring-1 ring-white focus:outline-none">
+                  <div className="py-1">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
+                        >
+                          For Institutions
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
+                        >
+                          Zoth Token
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
+                        >
+                          Zoth DeFi
+                        </a>
+                      )}
+                    </Menu.Item>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
             {/* ))} */}
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">

@@ -47,6 +47,18 @@ export const teamsData = [
     role: "Full Stack Developer",
     linkedIn: "https://www.linkedin.com/in/karthikeya-kotegar/",
   },
+  {
+    name: "Parshav Jain",
+    photo: "/teams/karthikeya.jpg",
+    role: "Legal Officer",
+    linkedIn: "https://www.linkedin.com/in/iamparshavjain/",
+  },
+  {
+    name: "Ekank Jatwani",
+    photo: "/teams/karthikeya.jpg",
+    role: "Real Estate Developer",
+    linkedIn: "https://www.linkedin.com/in/ekankjatwani/",
+  },
 ];
 
 export const backersData = [
