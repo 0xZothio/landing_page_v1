@@ -4,8 +4,6 @@ import logo from "../assets/images/newlogo.png";
 import { FiAlignJustify } from "react-icons/fi";
 import {motion} from 'framer-motion';
 import { navVariants } from "../utils/motion";
-import Scroll from "react-scroll";
-import { FaAngleDown } from "react-icons/fa";
 const navigation = [
   { name: "About", href: "#about" },
   { name: "How it works", href: "#howItWorks" },
@@ -16,9 +14,9 @@ const navigation = [
 const Navbar = ({setIsVisible}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
+  // function classNames(...classes) {
+  //   return classes.filter(Boolean).join(" ");
+  // }
 
   return (
     <div className="bg-black text-white z-50 relative">
@@ -64,62 +62,52 @@ const Navbar = ({setIsVisible}) => {
               Contact
             </a>
 
-            <Menu as="div" className="relative inline-block text-left">
+            <div className="relative inline-block text-left">
               <div>
-                <Menu.Button className="inline-flex w-full justify-center font-semibold hover:text-gray-100">
+                <button className="peer inline-flex w-full justify-center font-semibold hover:text-gray-100">
                   Solutions
-                  <FaAngleDown
-                    className="-mr-1 ml-2 mt-1 h-5 w-5"
-                    aria-hidden="true"
-                  />
-                </Menu.Button>
-              </div>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 mx-auto origin-top-right rounded-md bg-black shadow-lg ring-1 ring-white focus:outline-none">
-                  <div className="py-1">
-                    <Menu.Item>
-                      {({ active }) => (
+                </button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                  show={true}
+                >
+                  <div className="hidden peer-hover:flex absolute right-0 z-10 w-56 mx-auto origin-top-right pt-2 bg-black text-white shadow-lg hover:flex flex-col">
+                    <div className="mt-2 rounded-md bg-black text-white ring-1 ring-gray-100 focus:outline-none hover:flex flex-col">
+                      <div>
                         <a
                           href="#"
                           className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
                         >
                           For Institutions
                         </a>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
+                      </div>
+                      <div>
                         <a
                           href="#"
                           className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
                         >
                           Zoth Token
                         </a>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
+                      </div>
+                      <div>
                         <a
                           href="#"
                           className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
                         >
                           Zoth DeFi
                         </a>
-                      )}
-                    </Menu.Item>
+                      </div>
+                    </div>
                   </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
+                </Transition>
+              </div>
+            </div>
             {/* ))} */}
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
