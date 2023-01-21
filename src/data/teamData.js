@@ -49,13 +49,13 @@ export const teamsData = [
   },
   {
     name: "Parshav Jain",
-    photo: "/teams/karthikeya.jpg",
+    photo: "/teams/parshav.png",
     role: "Legal Officer",
     linkedIn: "https://www.linkedin.com/in/iamparshavjain/",
   },
   {
     name: "Ekank Jatwani",
-    photo: "/teams/karthikeya.jpg",
+    photo: "/teams/ekank.png",
     role: "Real Estate Developer",
     linkedIn: "https://www.linkedin.com/in/ekankjatwani/",
   },

@@ -13,6 +13,11 @@
   src: url("../public/fonts/Codec-Cold-ExtraBold-trial.ttf");
 }
 
+@font-face {
+  font-family: "ROOBERT";
+  src: url("../public/fonts/Roobert-Regular.ttf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

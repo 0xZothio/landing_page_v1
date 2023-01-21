@@ -37,7 +37,7 @@ function Backers() {
                 />
               </a>
               <div className="w-[200px] break-words">
-                <p className="text-lg text-center uppercase">{member.name}</p>
+                <p className="text-lg text-center">{member.name}</p>
                 <p className="text-sm text-center">{member.role}</p>
               </div>
             </motion.div>

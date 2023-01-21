@@ -40,7 +40,7 @@ function Assets() {
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-[40px] sm:text-[80px] text-center font-codec font-bold"
+        className="text-[40px] sm:text-[80px] text-center font-roobert font-bold"
       >
         World Class{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
@@ -83,25 +83,25 @@ function Assets() {
             <div className="stage">
               <div className="cubespinner text-center">
                 <div className="face1">
-                  <div className="text-[40px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center">
                     Democratising{" "}
                     <span className="text-[#F3C74E]">Investment</span>
                   </div>
                 </div>
                 <div className="face2">
-                  <div className="text-[40px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center">
                     Democratising{" "}
                     <span className="text-[#F3C74E]">Wealth Creation</span>
                   </div>
                 </div>
                 <div className="face3">
-                  <div className="text-[40px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center">
                     Democratising{" "}
                     <span className="text-[#F3C74E]">Future of Finance</span>
                   </div>
                 </div>
                 <div className="face4">
-                  <div className="text-[40px] sm:text-[65px] text-center italic">
+                  <div className="text-[40px] sm:text-[65px] text-center">
                     Democratising{" "}
                     <span className="text-[#F3C74E]">Access to Top Assets</span>
                   </div>

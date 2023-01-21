@@ -36,7 +36,7 @@ function Team() {
               </a>
 
               <div className="w-[270px] break-words">
-                <p className="text-2xl text-center uppercase">{member.name}</p>
+                <p className="text-2xl text-center">{member.name}</p>
                 <p className="text-sm text-center">{member.role}</p>
               </div>
             </motion.div>

@@ -68,7 +68,7 @@ function HowToInvest() {
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"
+        className="text-[40px] text-center sm:text-[80px] font-roobert font-extrabold"
       >
         How It{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
@@ -98,7 +98,7 @@ function HowToInvest() {
                 key={indx}
               >
                 <img src={img.image} alt="travel" className={`Img`} />
-                <div className="text-[30px] text-center font-codec mt-8 mb-2">
+                <div className="text-[30px] text-center font-roobert mt-8 mb-2">
                   {img.title}
                 </div>
                 {current === 0 && (
@@ -109,8 +109,8 @@ function HowToInvest() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className={
                       current === indx
-                        ? "text-center font-codec w-2/3 mx-auto"
-                        : "text-center font-codec w-2/3 mx-auto hidden"
+                        ? "text-center font-roobert w-2/3 mx-auto"
+                        : "text-center font-roobert w-2/3 mx-auto hidden"
                     }
                   >
                     {img.description}
@@ -124,8 +124,8 @@ function HowToInvest() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className={
                       current === indx
-                        ? "text-center font-codec w-1/2 mx-auto"
-                        : "text-center font-codec w-1/2 mx-auto hidden"
+                        ? "text-center font-roobert w-1/2 mx-auto"
+                        : "text-center font-roobert w-1/2 mx-auto hidden"
                     }
                   >
                     {img.description}
@@ -139,8 +139,8 @@ function HowToInvest() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className={
                       current === indx
-                        ? "text-center font-codec w-1/2 mx-auto"
-                        : "text-center font-codec w-1/2 mx-auto hidden"
+                        ? "text-center font-roobert w-1/2 mx-auto"
+                        : "text-center font-roobert w-1/2 mx-auto hidden"
                     }
                   >
                     {img.description}
@@ -154,8 +154,8 @@ function HowToInvest() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className={
                       current === indx
-                        ? "text-center font-codec w-1/2 mx-auto text-sm"
-                        : "text-center font-codec w-1/2 mx-auto hidden"
+                        ? "text-center font-roobert w-1/2 mx-auto text-sm"
+                        : "text-center font-roobert w-1/2 mx-auto hidden"
                     }
                   >
                     {img.description}

@@ -88,7 +88,7 @@ function Features() {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="text-[55px] text-center sm:text-[80px] font-codec font-bold"
+          className="text-[55px] text-center sm:text-[80px] font-roobert font-bold"
         >
           Welcome to the
         </motion.div>
@@ -251,7 +251,7 @@ function Features() {
             // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+            <div className="sm:text-6xl text-4xl font-extrabold font-roobert mb-4">
               {data[num].topic}
             </div>
             <div className="text-lg leading-loose ">
@@ -271,7 +271,7 @@ function Features() {
             // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+            <div className="sm:text-6xl text-4xl font-extrabold font-roobert mb-4">
               {data[num].topic}
             </div>
             <div className="text-lg leading-loose ">
@@ -291,7 +291,7 @@ function Features() {
             // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+            <div className="sm:text-6xl text-4xl font-extrabold font-roobert mb-4">
               {data[num].topic}
             </div>
             <div className="text-lg leading-loose ">
@@ -311,7 +311,7 @@ function Features() {
             // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+            <div className="sm:text-6xl text-4xl font-extrabold font-roobert mb-4">
               {data[num].topic}
             </div>
             <div className="text-lg leading-loose ">
@@ -331,7 +331,7 @@ function Features() {
             // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+            <div className="sm:text-6xl text-4xl font-extrabold font-roobert mb-4">
               {data[num].topic}
             </div>
             <div className="text-lg leading-loose ">
@@ -374,7 +374,7 @@ function Features() {
           whileInView="show"
           className="col-span-2 self-center mt-2 p-8 "
         >
-          <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+          <div className="sm:text-6xl text-4xl font-extrabold font-roobert mb-4">
             Exclusive rewards for investing in your assets
           </div>
           <div className="text-lg leading-loose">
@@ -416,7 +416,7 @@ function Features() {
           whileInView="show"
           className="col-span-2 self-center mt-2 p-8 "
         >
-          <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+          <div className="sm:text-6xl text-4xl font-extrabold font-roobert mb-4">
             Loyalty Program
           </div>
           <div className="text-lg leading-loose">
