@@ -14,7 +14,7 @@ function Testimonials() {
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-[55px] text-center sm:text-[80px] font-roobert font-extrabold"
+        className="text-[55px] text-center sm:text-[80px] font-codec font-extrabold"
       >
         Testimonials
       </motion.div>

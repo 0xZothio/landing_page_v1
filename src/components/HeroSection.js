@@ -36,8 +36,8 @@ const Hero = () => {
           <div className="mx-auto pt-10 sm:pt-40 ">
             <div>
               <div>
-                <h1 className="text-4xl font-roobert sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-                  <span className="text-4xl font-roobert sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
+                  <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                     A Revolutionary New Age
                   </span>{" "}
                   Investment Platform

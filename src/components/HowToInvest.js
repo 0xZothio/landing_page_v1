@@ -68,7 +68,7 @@ function HowToInvest() {
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="text-[40px] text-center sm:text-[80px] font-roobert font-extrabold"
+        className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"
       >
         How It{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">

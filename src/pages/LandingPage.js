@@ -20,7 +20,6 @@ function LandingPage() {
     {isLoading?<div id="loading"></div>:null}
       {/* Hero */}
       <Hero />
-
       
       {/* Assets */}
       <Assets />
