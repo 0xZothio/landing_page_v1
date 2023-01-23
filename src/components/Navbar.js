@@ -31,7 +31,7 @@ const Navbar = ({ setIsVisible }) => {
           <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Zoth.io</span>
-              <img className="h-8" src="/logo2.png" alt="" />
+              <img className="h-8" src="/logo.png" alt="" />
             </a>
           </div>
           <div className="flex md:hidden">
