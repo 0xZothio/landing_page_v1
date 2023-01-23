@@ -91,7 +91,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
-                  Accept your early invite to earn $100 worth Zoth coins
+                  Accept your early invite to earn <span className="text-[#F3C74E] font-medium ">$100 worth Zoth coins</span> 
                 </p>
               </div>
             </div>

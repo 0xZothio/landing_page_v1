@@ -55,26 +55,26 @@ function Backers() {
           <h1 className="text-4xl font-semibold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             The World's Best
           </h1> */}
-          <div className=" grid grid-cols-4 gap-2 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
+          <div className=" grid grid-cols-4 gap-10 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
             <img
               src="/backers/on.png"
               alt="backer"
-              className="w-[125px] h-[125px]"
+              className="w-[125px] h-[125px] rounded-full"
             />
             <img
               src="/backers/foundership.png"
               alt="backer"
-              className="w-[125px] h-[125px]"
+              className="w-[125px] h-[125px] rounded-full"
             />
             <img
-              src="/backers/reflexical.png"
+              src="/backers/reflexical.jpg"
               alt="backer"
-              className="w-[150px] h-[125px]"
+              className="w-[125px] h-[125px] rounded-full"
             />
             <img
-              src="/backers/sosv.png"
+              src="/backers/sosv.jpg"
               alt="backer"
-              className="w-[180px] h-[125px]"
+              className="w-[125px] h-[125px] rounded-full"
             />
           </div>
         </motion.div>

@@ -13,19 +13,19 @@ export const assetsData = [
   },
   {
     id: "3",
-    imgUrl: "/assets/ev.png",
+    imgUrl: "/assets/ev.jpg",
     title: "Electric Vehicle Financing",
     desc: "Join the EV growth story and earn upto 22% APR.",
   },
   {
     id: "4",
-    imgUrl: "/assets/island.png",
+    imgUrl: "/assets/Gold.jpg",
     title: "Gold",
     desc: "Buy Gold at globally competitive prices and earn upto 3.5% interest.",
   },
   {
     id: "5",
-    imgUrl: "/assets/planet.png",
+    imgUrl: "/assets/lease.jpg",
     title: "Asset Leasing ",
     desc: "Invest in asset leased to top unicorns and earn 18% APR.",
   },
