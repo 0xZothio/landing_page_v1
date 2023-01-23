@@ -20,7 +20,7 @@ const Footer = () => {
             <div>
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Zoth.io</span>
-                <img className="h-8" src={logo} alt="" />
+                <img className="h-8" src="logo.png" alt="" />
               </a>
             </div>
             <p className="max-w-xs mt-8">Connect with us</p>
@@ -78,7 +78,8 @@ const Footer = () => {
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      B-23, Vaishali Nagar, Bhopal, M.P
+                      119, 4th Cross, 2nd Main Rd, NGEF Layout, Sadanandanagar,
+                      Bennigana Halli, Bengaluru, Karnataka 560038
                     </a>
                   </li>
 
@@ -99,7 +100,7 @@ const Footer = () => {
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Phone No: +91 XXXXX XXXXX
+                      Phone No: +91 9739986665
                     </a>
                   </li>
                 </ul>
@@ -110,7 +111,7 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Company" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="#" className=" transition hover:opacity-75">
+                    <a href="#howItWorks" className=" transition hover:opacity-75">
                       How it works?
                     </a>
                   </li>

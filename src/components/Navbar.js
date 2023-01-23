@@ -61,8 +61,13 @@ const Navbar = ({ setIsVisible }) => {
             <a href="#contact" className="font-semibold hover:text-gray-100">
               Contact
             </a>
+            <a href="#" className="font-semibold hover:text-gray-100">
+            Institutions <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
+            </a>
 
-            <div className="relative inline-block text-left">
+
+            {/* Solution dropdown */}
+            {/* <div className="relative inline-block text-left">
               <div>
                 <button className="peer inline-flex w-full justify-center font-semibold hover:text-gray-100">
                   Solutions <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
@@ -107,8 +112,7 @@ const Navbar = ({ setIsVisible }) => {
                   </div>
                 </Transition>
               </div>
-            </div>
-            {/* ))} */}
+            </div> */}
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
             <button
