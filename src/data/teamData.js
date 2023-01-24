@@ -38,7 +38,7 @@ export const teamsData = [
     name: "Vedant Moktali",
     photo: "/teams/vedant.jpg",
     role: "Project Manager",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/vedantmoktali/",
   },
 
   {
@@ -115,6 +115,7 @@ export const backersData = [
     name: "Ayyappan R",
     photo: "/teams/ayyappan.jpg",
     role: "CEO, Cleartrip",
+    linkedIn: "https://www.linkedin.com/in/ayyappan-r/"
   },
 
   {
