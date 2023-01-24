@@ -90,13 +90,22 @@ function Backers() {
               whileInView="show"
               className="flex flex-col justify-center m-6"
             >
-              <a href={member.linkedIn} target="_blank" rel="noreferrer">
-                <img
-                  class="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
-                  src={member.photo}
-                  alt="member"
-                />
-              </a>
+              <div className="relative">
+                <a href={member.linkedIn} target="_blank" rel="noreferrer">
+                  <img
+                    src={member.logo}
+                    className="absolute bottom-2 right-6 z-50 rounded-full"
+                    alt="logo"
+                  />
+
+                  <img
+                    class="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                    src={member.photo}
+                    alt="member"
+                  />
+                </a>
+              </div>
+
               <div className="w-[200px] break-words">
                 <p className="text-lg text-center">{member.name}</p>
                 <p className="text-sm text-center">{member.role}</p>
