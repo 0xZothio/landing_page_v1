@@ -14,7 +14,7 @@ export const assetsData = [
   {
     id: "3",
     imgUrl: "/assets/ev.jpg",
-    title: "Electric Vehicle Financing",
+    title: "E V Financing",
     desc: "Join the EV growth story and earn upto 22% APR.",
   },
   {

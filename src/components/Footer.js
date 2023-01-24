@@ -100,7 +100,7 @@ const Footer = () => {
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Phone No: +91 9739986665
+                      Email: contact@zoth.io
                     </a>
                   </li>
                 </ul>
@@ -117,17 +117,17 @@ const Footer = () => {
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Legal
+                      Terms of Use
                     </a>
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Lite Paper
+                      Lite Paper (Coming soon)
                     </a>
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Blog
+                      Blog (Coming soon)
                     </a>
                   </li>
                 </ul>

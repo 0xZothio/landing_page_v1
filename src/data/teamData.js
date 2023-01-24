@@ -116,4 +116,25 @@ export const backersData = [
     photo: "/teams/ayyappan.jpg",
     role: "CEO, Cleartrip",
   },
+
+  {
+    name: "David Atkinson",
+    photo: "/teams/david.png",
+    role: "Co-Founder, Holochain",
+    linkedIn: "https://www.linkedin.com/in/davidcatkinson/"
+  },
+
+  {
+    name: "Viram Shah",
+    photo: "/teams/viram.png",
+    role: "Co-Founder & CEO at Vested Finance",
+    linkedIn: "https://www.linkedin.com/in/viram-shah/ "
+  },
+
+  {
+    name: "Sidd Gandhi",
+    photo: "/teams/sidd.png",
+    role: " Venture Investor",
+    linkedIn:"https://www.linkedin.com/in/gandhis/"
+  },
 ];
