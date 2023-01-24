@@ -1,7 +1,7 @@
 export const assetsData = [
   {
     id: "1",
-    imgUrl: "/assets/cre.jpeg",
+    imgUrl: "/assets/cre.jpg",
     title: "Commercial Real Estate",
     desc: "'A grade' commercial real estate generating 12% + APR.",
   },
