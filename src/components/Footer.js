@@ -74,7 +74,7 @@ const Footer = () => {
           <div className="w-full lg:w-7/12 px-4 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 mt-8 lg:mt-0">
             <div className="pr-4">
               <p className="font-medium">Office Address</p>
-              <nav aria-label="Footer Navigation - Company" className="mt-6">
+              <nav aria-label="Footer Navigation - Company" className="mt-5">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
@@ -96,7 +96,7 @@ const Footer = () => {
                 </ul>
               </nav>
               <p className="font-medium mt-8">Contact</p>
-              <nav aria-label="Footer Navigation - Company" className="mt-6">
+              <nav aria-label="Footer Navigation - Company" className="mt-5">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
