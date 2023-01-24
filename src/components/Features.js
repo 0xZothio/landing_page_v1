@@ -17,7 +17,7 @@ function Features() {
 
     {
       video: "/features/eth.mp4",
-      topic: "Guarantee transparency and Easy exit mechanism",
+      topic: "Guaranteed transparency and Easy exit mechanism",
       description:
         "On the blockchain, transactions are transparent and verifiable. Zoth provides liquidity for on chain assets through its unique real-time market based exit mechanism.",
     },
