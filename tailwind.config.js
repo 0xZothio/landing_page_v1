@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        codec: ["CODEC", "Helvetica Neue"],
+        roobert: ["ROOBERT", "Helvetica Neue"]
+      },
+    },
   },
   plugins: [],
 };
