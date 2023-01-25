@@ -65,29 +65,24 @@ const Mynews = () => {
                   and other news from zoth
                 </p>
               </div>
-              <div className="mb-6 md:mb-0">
-                <div className="flex flex-row mt-6">
+              <div className="mb-6 md:mb-0 ">
+                <div className="flex flex-col border-red-700 mt-6  justify-center items-center">
                   <input
                     type="text"
-                    className="form-control block w-8/12 p-1 mx-auto text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className="form-control block p-2 mx-auto text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Enter your email"
                     name="email"
                     onChange={(e) => onChangeData(e)}
                     value={subscribeData.email}
                   />
 
-                  <span className="absolute  mt-1 right-[23%] text-black cursor-pointer" onClick={subscribe}>
-                    <AiOutlineArrowRight size={25} />
-                  </span>
+                  <button className="  mt-2  text-black cursor-pointer" onClick={subscribe}>
+                  <AiOutlineArrowRight size={25} />
+                  </button>
 
                   {/* lg:left-96 */}
 
-                  {/* <button
-                      type="submit"
-                      className="inline-block py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                    >
-                      Subscribe
-                    </button> */}
+                  
                 </div>
               </div>
             </div>

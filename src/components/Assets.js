@@ -41,8 +41,9 @@ function Assets() {
           initial="hidden"
           whileInView="show"
           className="text-[40px] sm:text-[80px] text-center font-codec font-bold"
+          style={{marginTop:"80px"}}
         >
-          World Class{" "}
+          World Class{" "} 
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             Assets
           </span>

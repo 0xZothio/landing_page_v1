@@ -9,6 +9,7 @@ const navigation = [
   { name: "How it works", href: "#howItWorks" },
   { name: "Blog", href: "#" },
   { name: "Contact", href: "#contact" },
+  { name: "Institutions Coming Soon", href: "#" },
 ];
 
 const Navbar = ({ setIsVisible }) => {
