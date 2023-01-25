@@ -142,7 +142,7 @@ function Features() {
         <div className="h-screen w-full"></div>
       </div> */}
 
-      <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 hidden">
+      <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-10 hidden">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
             <img src="/frame.png" alt="frame" />
@@ -179,7 +179,7 @@ function Features() {
                 initial={{ x: 0, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: 100, opacity: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.3 }}
                 // variants={featureIn("left", "tween", 0.3, 1)}
                 // initial="hidden"
                 // whileInView="show"
@@ -205,7 +205,7 @@ function Features() {
                 initial={{ x: 0, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: 100, opacity: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.3 }}
                 // variants={featureIn("left", "tween", 0.3, 1)}
                 // initial="hidden"
                 // whileInView="show"
@@ -228,7 +228,7 @@ function Features() {
                 initial={{ x: 0, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: 100, opacity: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.3 }}
                 // variants={featureIn("left", "tween", 0.3, 1)}
                 // initial="hidden"
                 // whileInView="show"
@@ -250,7 +250,7 @@ function Features() {
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.3 }}
               // variants={featureIn("left", "tween", 0.3, 1)}
               // initial="hidden"
               // whileInView="show"
@@ -275,7 +275,7 @@ function Features() {
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.3 }}
             // variants={slideIn("up", "tween", 0.3, 1)}
             // initial="hidden"
             // whileInView="show"
@@ -295,7 +295,7 @@ function Features() {
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.3 }}
             // variants={slideIn("up", "tween", 0.3, 1)}
             // initial="hidden"
             // whileInView="show"
@@ -315,7 +315,7 @@ function Features() {
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.3 }}
             // variants={slideIn("up", "tween", 0.3, 1)}
             // initial="hidden"
             // whileInView="show"
@@ -335,7 +335,7 @@ function Features() {
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.3 }}
             // variants={slideIn("up", "tween", 0.3, 1)}
             // initial="hidden"
             // whileInView="show"
@@ -355,7 +355,7 @@ function Features() {
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.3 }}
             // variants={slideIn("up", "tween", 0.3, 1)}
             // initial="hidden"
             // whileInView="show"

@@ -145,6 +145,13 @@ function LandingPage() {
       <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+
+
       
       
       
