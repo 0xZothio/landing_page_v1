@@ -55,56 +55,82 @@ function Features() {
     },
     hidden: { opacity: 0 },
   };
-  useEffect(() => {
-    const element = document.querySelector("#section-1");
-    const handleScroll = () => {
-      console.log("scrollToTop", element.scrollTop);
-      setScrollValue(element.scrollTop);
-      const viewportHeight = window.innerHeight;
+  // useEffect(() => {
+  //   const element = document.querySelector("#section-1");
+  //   const handleScroll = () => {
+  //     console.log("scrollToTop", element.scrollTop);
+  //     setScrollValue(element.scrollTop);
+  //     const viewportHeight = window.innerHeight;
 
-      if (scrollvalue > 2000) {
+  //     if (scrollvalue > 2000) {
+  //       setNum(4);
+  //     } else if (scrollvalue > 1400) {
+  //       setNum(3);
+  //     } else if (scrollvalue > 800) {
+  //       setNum(2);
+  //     } else if (scrollvalue > 200) {
+  //       setNum(1);
+  //     } else {
+  //       setNum(0);
+  //     }
+  //   };
+
+  //   element.addEventListener("scroll", handleScroll);
+  //   handleScroll();
+
+  //   return () => element.removeEventListener("scroll", handleScroll);
+  // }, [scrollvalue]);
+
+  const windowheight = window.innerHeight;
+  useEffect(() => {
+    const element = document.documentElement;
+    // const element = document.querySelector("#section-3");
+    const handleScroll = () => {
+      // console.log("windowscrollToTop", element.scrollTop);
+      setScrollValue(element.scrollTop);
+
+      if (scrollvalue > 11 * windowheight) {
         setNum(4);
-      } else if (scrollvalue > 1400) {
+      } else if (scrollvalue > 10 * windowheight) {
         setNum(3);
-      } else if (scrollvalue > 800) {
+      } else if (scrollvalue > 9 * windowheight) {
         setNum(2);
-      } else if (scrollvalue > 200) {
+      } else if (scrollvalue > 8 * windowheight) {
         setNum(1);
-      } else {
+      } else if (scrollvalue > 7*windowheight) {
         setNum(0);
       }
     };
 
-    element.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    return () => element.removeEventListener("scroll", handleScroll);
+    // return () => element.removeEventListener("scroll", handleScroll);
   }, [scrollvalue]);
-
   return (
-    <div className="mt-[80px]">
+    <div>
       <div className="flex flex-col justify-center items-center">
-        <motion.div
+        {/* <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
           className="text-[55px] text-center sm:text-[80px] font-roobert font-bold"
         >
           Welcome to the
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           variants={fadeIn("down", "tween", 0.5, 1)}
           initial="hidden"
           whileInView="show"
         >
           <img src="/club.png" alt="Zoth Club" />
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* feature 1*/}
 
-      <div
+      {/* <div
         className="absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-40"
         ref={ref}
         id="section-1"
@@ -113,7 +139,7 @@ function Features() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
-      </div>
+      </div> */}
 
       <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8">
         <div className="relative col-span-2 w-[300px]">
@@ -121,7 +147,7 @@ function Features() {
             <img src="/frame.png" alt="frame" />
           </div>
 
-          {scrollvalue <= 200 && (
+          {scrollvalue <= 7 * windowheight && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -146,76 +172,79 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 200 && scrollvalue <= 800 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 1 }}
-              // variants={featureIn("left", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // initial="hidden"
-              // animate="visible"
-              // variants={variants}
-              // viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
-            </motion.div>
-          )}
-          {scrollvalue > 800 && scrollvalue <= 1400 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 1 }}
-              // variants={featureIn("left", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
-            </motion.div>
-          )}
-          {scrollvalue > 1400 && scrollvalue <= 2000 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 1 }}
-              // variants={featureIn("left", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
-            </motion.div>
-          )}
-          {scrollvalue > 2000 && (
+          {scrollvalue > 7 * windowheight &&
+            scrollvalue <= 8 * windowheight && (
+              <motion.div
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 1 }}
+                // variants={featureIn("left", "tween", 0.3, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // initial="hidden"
+                // animate="visible"
+                // variants={variants}
+                // viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover z-100"
+              >
+                {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+                <video
+                  src={data[num].video}
+                  autoplay="{true}"
+                  loop
+                  muted
+                  className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                ></video>
+              </motion.div>
+            )}
+          {scrollvalue > 8 * windowheight &&
+            scrollvalue <= 9 * windowheight && (
+              <motion.div
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 1 }}
+                // variants={featureIn("left", "tween", 0.3, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover z-100"
+              >
+                {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+                <video
+                  src={data[num].video}
+                  autoplay="{true}"
+                  loop
+                  muted
+                  className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                ></video>
+              </motion.div>
+            )}
+          {scrollvalue > 9 * windowheight &&
+            scrollvalue <= 10 * windowheight && (
+              <motion.div
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 1 }}
+                // variants={featureIn("left", "tween", 0.3, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover z-100"
+              >
+                {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+                <video
+                  src={data[num].video}
+                  autoplay="{true}"
+                  loop
+                  muted
+                  className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                ></video>
+              </motion.div>
+            )}
+          {scrollvalue > 10 * windowheight && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -240,7 +269,7 @@ function Features() {
         </div>
 
         {/* <MyPara topic={data[num].topic } description={data[num].description} /> */}
-        {scrollvalue <= 200 && (
+        {scrollvalue <= 7 * windowheight && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -260,7 +289,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 200 && scrollvalue <= 800 && (
+        {scrollvalue > 7 * windowheight && scrollvalue <= 8 * windowheight && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -280,7 +309,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 800 && scrollvalue <= 1400 && (
+        {scrollvalue > 8 * windowheight && scrollvalue <= 9 * windowheight && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -300,7 +329,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 1400 && scrollvalue <= 2000 && (
+        {scrollvalue > 9 * windowheight && scrollvalue <= 10 * windowheight && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -320,7 +349,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 2000 && (
+        {scrollvalue > 10 * windowheight && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
