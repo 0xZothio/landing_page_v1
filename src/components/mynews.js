@@ -46,17 +46,17 @@ const Mynews = () => {
   };
 
   return (
-    <div className="py-6 px-6 mx-auto bg-black">
+    <div className="py-6 px-6 mx-auto bg-black justify-center items-center ">
       <motion.section
         variants={fadeIn("up", "tween", 0.3, 1)}
         initial="hidden"
         whileInView="show"
         className="mb-12 text-gray-800 text-center lg:text-left w-3/4 mx-auto border-solid border-2 rounded-xl"
       >
-        <div className="flex flex-wrap justify-center p-6 rounded-xl shadow text-white grad">
-          <div className="w-full px-3">
-            <div className="grid lg:grid-cols-2 gap-x-2">
-              <div className="mb-10 lg:mb-0">
+        <div className="flex flex-wrap justify-center p-6 rounded-xl shadow text-white grad justify-center items-center">
+          <div className="w-full px-3 justify-center items-center">
+            <div className="grid lg:grid-cols-2 gap-x-2 justify-center items-center">
+              <div className="mb-10 lg:mb-0 justify-center items-center">
                 <p className="text-2xl font-semibold tracking-tight sm:text-2xl">
                   Join our mailing list
                 </p>
@@ -75,8 +75,8 @@ const Mynews = () => {
                     onChange={(e) => onChangeData(e)}
                     value={subscribeData.email}
                   />
-
-                  <button className="  btn btn-primary mt-3  text-black cursor-pointer" onClick={subscribe}>
+                
+                  <button className="px-10 sm:px-4 py-1 mt-2 z-100 btn mt-3  text-white cursor-pointer border border-gray-50" onClick={subscribe}>
                   Submit
                   </button>
 
