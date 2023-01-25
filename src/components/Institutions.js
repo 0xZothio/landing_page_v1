@@ -23,11 +23,9 @@ function Institutions() {
             class="card-image p-6"
           ></img>
           <div class="card-content">
-            <h3 class="card-title">Tokenization</h3>
+            <h3 class="card-title">TAS</h3>
             <p class="card-text">
-              Tokenize commodities, securities and other real world assets via
-              the Rooba tokenization engine ensuring unbroken chain of custody
-              from off-chain to on-chain
+              ZOTH TAAS Platform helps global funds to Tokenize their assets, which also can be listed on ZOTH marketplace. Zoth TAAS platform is highly customizable and chain agnostic.
             </p>
             <a href="#" class="btns font-semibold">
               Coming Soon
@@ -41,11 +39,9 @@ function Institutions() {
             class="card-image p-6"
           ></img>
           <div class="card-content">
-            <h3 class="card-title">Custody</h3>
+            <h3 class="card-title">Complian</h3>
             <p class="card-text">
-              Tokenize commodities, securities and other real world assets via
-              the Rooba tokenization engine ensuring unbroken chain of custody
-              from off-chain to on-chain
+              Zoth TAAS platform provides tokens that are compliant across several jurisdictions globally.Zoth has third party partners that audit the tokenization process regularly.
             </p>
             <a href="#" class="btns font-semibold">
               Coming Soon
@@ -59,11 +55,9 @@ function Institutions() {
             class="card-image p-6"
           ></img>
           <div class="card-content">
-            <h3 class="card-title">Exchange</h3>
+            <h3 class="card-title">Fund as a Service</h3>
             <p class="card-text">
-              Tokenize commodities, securities and other real world assets via
-              the Rooba tokenization engine ensuring unbroken chain of custody
-              from off-chain to on-chain
+              Zoth marketplace connecting  lowering the acquisition costs, minimum investment size and legal hassles.
             </p>
             <a href="#" class="btns font-semibold">
               Coming Soon
