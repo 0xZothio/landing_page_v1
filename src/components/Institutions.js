@@ -23,9 +23,9 @@ function Institutions() {
             class="card-image p-6"
           ></img>
           <div class="card-content">
-            <h3 class="card-title">TAS</h3>
+            <h3 class="card-title">TAAS</h3>
             <p class="card-text">
-              ZOTH TAAS Platform helps global funds to Tokenize their assets, which also can be listed on ZOTH marketplace. Zoth TAAS platform is highly customizable and chain agnostic.
+            Zoth Tokenization as a Service (TAAS) platform provides tokens that are compliant across several jurisdictions globally.Zoth has third party partners that audit the tokenization process regularly.
             </p>
             <a href="#" class="btns font-semibold">
               Coming Soon
@@ -39,7 +39,7 @@ function Institutions() {
             class="card-image p-6"
           ></img>
           <div class="card-content">
-            <h3 class="card-title">Complian</h3>
+            <h3 class="card-title">Compliant</h3>
             <p class="card-text">
               Zoth TAAS platform provides tokens that are compliant across several jurisdictions globally.Zoth has third party partners that audit the tokenization process regularly.
             </p>

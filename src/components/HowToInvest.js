@@ -6,7 +6,7 @@ import premium_asset from "../assets/images/Quality_premium_asset.png";
 import tokenisation from "../assets/images/Tokenization.png";
 import marketplace from "../assets/images/zoth_marketplace.png";
 import "../styles/styles.css";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 
 const crouselData = [
   {
