@@ -30,12 +30,12 @@ function Backers() {
           <h1 className="text-4xl font-semibold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             The World's Best
           </h1> */}
-          <div className=" grid grid-cols-5  gap-8 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
+          <div className=" grid grid-cols-3  gap-8 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
             <a href="https://sosv.com/" target="_blank" rel="noreferrer">
               <img
                 src="/backers/sosv.jpg"
                 alt="backer"
-                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -47,7 +47,7 @@ function Backers() {
               <img
                 src="/backers/on.png"
                 alt="backer"
-                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -59,7 +59,7 @@ function Backers() {
               <img
                 src="/backers/foundership.png"
                 alt="backer"
-                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -67,7 +67,7 @@ function Backers() {
               <img
                 src="/backers/reflexical.jpg"
                 alt="backer"
-                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -75,7 +75,14 @@ function Backers() {
               <img
                 src="/backers/amesten.png"
                 alt="backer"
-                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
+              />
+            </a>
+            <a href="https://orbitstartups.com/" target="_blank" rel="noreferrer">
+              <img
+                src="/backers/orbit.png"
+                alt="backer"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
           </div>
