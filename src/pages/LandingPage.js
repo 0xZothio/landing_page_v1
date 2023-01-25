@@ -7,6 +7,7 @@ import NewsLetter from "../components/newsletter";
 import Footer from "../components/Footer";
 import Assets from "../components/Assets";
 import HowToInvest from "../components/HowToInvest";
+import Institutions from "../components/Institutions";
 
 function LandingPage() {
   const [isLoading,setIsLoading]=useState(true);
@@ -32,6 +33,9 @@ function LandingPage() {
 
       {/* About Us */}
       <About />
+
+      {/* institutions */}
+      <Institutions/>
 
       {/* Testimonials */}
       <Testimonials />
