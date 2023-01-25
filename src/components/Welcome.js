@@ -32,25 +32,25 @@ function Welcome() {
               <div className="h-100 mt-4">
                 <div className="cubespinner text-center ">
                   <div className="face1">
-                    <div className="text-[40px] sm:text-[55px] text-center">
+                    <div className="text-[35px] sm:text-[55px] text-center">
                       Democratising{" "}
                       <span className="text-[#F3C74E]">Investment</span>
                     </div>
                   </div>
                   <div className="face2">
-                    <div className="text-[40px] sm:text-[55px] text-center">
+                    <div className="text-[35px] sm:text-[55px] text-center">
                       Democratising{" "}
                       <span className="text-[#F3C74E]">Wealth Creation</span>
                     </div>
                   </div>
                   <div className="face3">
-                    <div className="text-[40px] sm:text-[55px] text-center">
+                    <div className="text-[35px] sm:text-[55px] text-center">
                       Democratising{" "}
                       <span className="text-[#F3C74E]">Future of Finance</span>
                     </div>
                   </div>
                   <div className="face4">
-                    <div className="text-[40px] sm:text-[55px] text-center">
+                    <div className="text-[35px] sm:text-[55px] text-center">
                       Democratising{" "}
                       <span className="text-[#F3C74E]">
                         Access to Top Assets
