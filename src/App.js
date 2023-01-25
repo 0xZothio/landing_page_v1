@@ -5,7 +5,6 @@ function App() {
   return (
     
     <div className="bg-black text-white w-full h-full overflow-hidden">
-     
         <LandingPage />
       </div>
     

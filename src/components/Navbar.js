@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import logo from "../assets/images/newlogo.png";
 import { FiAlignJustify } from "react-icons/fi";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 const navigation = [
   { name: "About", href: "#about" },
@@ -11,9 +11,9 @@ const navigation = [
   { name: "Contact", href: "#contact" },
 ];
 
-const Navbar = ({setIsVisible}) => {
+const Navbar = ({ setIsVisible }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   // function classNames(...classes) {
   //   return classes.filter(Boolean).join(" ");
   // }
@@ -31,7 +31,7 @@ const Navbar = ({setIsVisible}) => {
           <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Zoth.io</span>
-              <img className="h-8" src={logo} alt="" />
+              <img className="h-8" src="/logo.png" alt="" />
             </a>
           </div>
           <div className="flex md:hidden">
@@ -61,11 +61,16 @@ const Navbar = ({setIsVisible}) => {
             <a href="#contact" className="font-semibold hover:text-gray-100">
               Contact
             </a>
+            <a href="#" className="font-semibold hover:text-gray-100">
+            Institutions <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
+            </a>
 
-            <div className="relative inline-block text-left">
+
+            {/* Solution dropdown */}
+            {/* <div className="relative inline-block text-left">
               <div>
                 <button className="peer inline-flex w-full justify-center font-semibold hover:text-gray-100">
-                  Solutions
+                  Solutions <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
                 </button>
                 <Transition
                   as={Fragment}
@@ -84,7 +89,7 @@ const Navbar = ({setIsVisible}) => {
                           href="#"
                           className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
                         >
-                          For Institutions
+                          For Institutions{" "}
                         </a>
                       </div>
                       <div>
@@ -92,7 +97,7 @@ const Navbar = ({setIsVisible}) => {
                           href="#"
                           className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
                         >
-                          Zoth Token
+                          Zoth Token{" "}
                         </a>
                       </div>
                       <div>
@@ -100,19 +105,18 @@ const Navbar = ({setIsVisible}) => {
                           href="#"
                           className="block rounded-lg py-2 px-3 text-base font-semibold leading-7"
                         >
-                          Zoth DeFi
+                          Zoth DeFi{" "}
                         </a>
                       </div>
                     </div>
                   </div>
                 </Transition>
               </div>
-            </div>
-            {/* ))} */}
+            </div> */}
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
             <button
-              className="inline-block rounded-full px-3 text-base font-semibold text-white shadow-sm ring-1 ring-white hover:ring-white"
+              className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
               onClick={() => setIsVisible(true)}
             >
               Get Exclusive Invite{" "}

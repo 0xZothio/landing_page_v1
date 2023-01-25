@@ -80,7 +80,7 @@ function Assets({ isHidden }) {
         </span>
       </motion.div>
 
-      {/* <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
         <img src="/assets/cre.png" alt="asset" className="" />
       </div> */}
 
@@ -106,42 +106,44 @@ function Assets({ isHidden }) {
         ))}
       </div>
 
-      {/* Text */}
+        {/* Text */}
 
-      <div className="mt-20 sm:mt-4">
-        <h3 id="resizing-h3">
-          <span>
-            <div className="stage">
-              <div className="cubespinner text-center">
-                <div className="face1">
-                  <div className="text-[40px] sm:text-[65px] text-center">
-                    Democratising{" "}
-                    <span className="text-[#F3C74E]">Investment</span>
+        <div className="mt-20 sm:mt-4">
+          <h3 id="resizing-h3">
+            <span>
+              <div className="stage">
+                <div className="cubespinner text-center">
+                  <div className="face1">
+                    <div className="text-[40px] sm:text-[55px] text-center">
+                      Democratising{" "}
+                      <span className="text-[#F3C74E]">Investment</span>
+                    </div>
                   </div>
-                </div>
-                <div className="face2">
-                  <div className="text-[40px] sm:text-[65px] text-center">
-                    Democratising{" "}
-                    <span className="text-[#F3C74E]">Wealth Creation</span>
+                  <div className="face2">
+                    <div className="text-[40px] sm:text-[55px] text-center">
+                      Democratising{" "}
+                      <span className="text-[#F3C74E]">Wealth Creation</span>
+                    </div>
                   </div>
-                </div>
-                <div className="face3">
-                  <div className="text-[40px] sm:text-[65px] text-center">
-                    Democratising{" "}
-                    <span className="text-[#F3C74E]">Future of Finance</span>
+                  <div className="face3">
+                    <div className="text-[40px] sm:text-[55px] text-center">
+                      Democratising{" "}
+                      <span className="text-[#F3C74E]">Future of Finance</span>
+                    </div>
                   </div>
-                </div>
-                <div className="face4">
-                  <div className="text-[40px] sm:text-[65px] text-center">
-                    Democratising{" "}
-                    <span className="text-[#F3C74E]">Access to Top Assets</span>
+                  <div className="face4">
+                    <div className="text-[40px] sm:text-[55px] text-center">
+                      Democratising{" "}
+                      <span className="text-[#F3C74E]">
+                        Access to Top Assets
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </span>
-        </h3>
-      </div>
+            </span>
+          </h3>
+        </div>
     </div>
   );
 }

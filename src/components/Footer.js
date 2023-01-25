@@ -20,7 +20,7 @@ const Footer = () => {
             <div>
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Zoth.io</span>
-                <img className="h-8" src={logo} alt="" />
+                <img className="h-8" src="logo.png" alt="" />
               </a>
             </div>
             <p className="max-w-xs mt-8">Connect with us</p>
@@ -74,11 +74,12 @@ const Footer = () => {
           <div className="w-full lg:w-7/12 px-4 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 mt-8 lg:mt-0">
             <div className="pr-4">
               <p className="font-medium">Office Address</p>
-              <nav aria-label="Footer Navigation - Company" className="mt-6">
+              <nav aria-label="Footer Navigation - Company" className="mt-5">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      B-23, Vaishali Nagar, Bhopal, M.P
+                      119, 4th Cross, 2nd Main Rd, NGEF Layout, Sadanandanagar,
+                      Bennigana Halli, Bengaluru, Karnataka 560038
                     </a>
                   </li>
 
@@ -95,11 +96,11 @@ const Footer = () => {
                 </ul>
               </nav>
               <p className="font-medium mt-8">Contact</p>
-              <nav aria-label="Footer Navigation - Company" className="mt-6">
+              <nav aria-label="Footer Navigation - Company" className="mt-5">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Phone No: +91 XXXXX XXXXX
+                      Email: contactus@zoth.io
                     </a>
                   </li>
                 </ul>
@@ -110,23 +111,23 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Company" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="#" className=" transition hover:opacity-75">
+                    <a href="#howItWorks" className=" transition hover:opacity-75">
                       How it works?
                     </a>
                   </li>
                   <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      Legal
+                    <a href="https://zoth.notion.site/Risk-Disclosure-09fda36daa224ea286b3b96c2a735da4" target="_blank" className=" transition hover:opacity-75">
+                      Risk Disclosure
                     </a>
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Lite Paper
+                      Lite Paper (Coming soon)
                     </a>
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75">
-                      Blog
+                      Blog (Coming soon)
                     </a>
                   </li>
                 </ul>
@@ -137,7 +138,7 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Legal" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="#" className=" transition hover:opacity-75">
+                    <a href="https://zoth.notion.site/Work-at-Zoth-io-f4a20295a7564b619aab50624d798b0b" target="_blank" className=" transition hover:opacity-75">
                       Work with us
                     </a>
                   </li>
@@ -152,14 +153,14 @@ const Footer = () => {
             <p className="text-sm">
               <a
                 className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                href="/"
+                href="https://zoth.notion.site/Privacy-Policy-256a0366ab6748a0bed9b0f336ecc6ef" target="_blank"
               >
                 Privacy Policy
               </a>
               <span>{" | "}</span>
               <a
                 className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                href="/"
+                href="https://zoth.notion.site/Terms-of-Use-a4023cc1e3c14a6ebf905499fe3bb24e" target="_blank"
               >
                 Terms of use
               </a>

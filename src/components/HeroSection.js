@@ -36,8 +36,8 @@ const Hero = ({isHidden}) => {
           <div className="mx-auto pt-10 sm:pt-40 ">
             <div>
               <div>
-                <h1 className="text-4xl font-roobert sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-                  <span className="text-4xl font-roobert sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
+                  <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                     A Revolutionary New Age
                   </span>{" "}
                   Investment Platform
@@ -91,7 +91,7 @@ const Hero = ({isHidden}) => {
                   </div>
                 </div>
                 <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
-                  Accept your early invite to earn $100 worth Zoth coins
+                  Accept your early invite to earn <span className="text-[#F3C74E] font-medium ">$100 worth Zoth coins</span> 
                 </p>
               </div>
             </div>
