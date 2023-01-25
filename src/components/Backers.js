@@ -30,12 +30,12 @@ function Backers() {
           <h1 className="text-4xl font-semibold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             The World's Best
           </h1> */}
-          <div className=" grid grid-cols-5 gap-8 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
+          <div className=" grid grid-cols-3 sm:grid-cols-6 gap-8 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
             <a href="https://sosv.com/" target="_blank" rel="noreferrer">
               <img
                 src="/backers/sosv.jpg"
                 alt="backer"
-                className="w-[125px] h-[125px] rounded-full"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -47,7 +47,7 @@ function Backers() {
               <img
                 src="/backers/on.png"
                 alt="backer"
-                className="w-[125px] h-[125px] rounded-full"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -59,7 +59,7 @@ function Backers() {
               <img
                 src="/backers/foundership.png"
                 alt="backer"
-                className="w-[125px] h-[125px] rounded-full"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -67,7 +67,7 @@ function Backers() {
               <img
                 src="/backers/reflexical.jpg"
                 alt="backer"
-                className="w-[125px] h-[125px] rounded-full"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -75,7 +75,14 @@ function Backers() {
               <img
                 src="/backers/amesten.png"
                 alt="backer"
-                className="w-[125px] h-[125px] rounded-full"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
+              />
+            </a>
+            <a href="https://orbitstartups.com/" target="_blank" rel="noreferrer">
+              <img
+                src="/backers/orbit.png"
+                alt="backer"
+                className="w-[70px] h-[70px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
           </div>
@@ -90,13 +97,22 @@ function Backers() {
               whileInView="show"
               className="flex flex-col justify-center m-6"
             >
-              <a href={member.linkedIn} target="_blank" rel="noreferrer">
-                <img
-                  class="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
-                  src={member.photo}
-                  alt="member"
-                />
-              </a>
+              <div className="relative">
+                <a href={member.linkedIn} target="_blank" rel="noreferrer">
+                  <img
+                    src={member.logo}
+                    className="absolute bottom-2 right-6 z-50 rounded-full"
+                    alt="logo"
+                  />
+
+                  <img
+                    class="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                    src={member.photo}
+                    alt="member"
+                  />
+                </a>
+              </div>
+
               <div className="w-[200px] break-words">
                 <p className="text-lg text-center">{member.name}</p>
                 <p className="text-sm text-center">{member.role}</p>

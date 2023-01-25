@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 import Invite from "./Invite";
-const Hero = () => {
+const Hero = ({isHidden}) => {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <div className=" bg-black text-white">
+    <div className={isHidden ? " bg-black text-white collapse" : " bg-black text-white w-full"}>
       <div className="px-6 pt-6 lg:px-8">
         <Navbar setIsVisible={setIsVisible} />
       </div>
@@ -33,7 +33,7 @@ const Hero = () => {
           whileInView="show"
           className="relative px-6 lg:px-8"
         >
-          <div className="mx-auto pt-10 sm:pt-40 ">
+          <div className="mx-auto pt-10 sm:pt-20 ">
             <div>
               <div>
                 <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
@@ -58,10 +58,10 @@ const Hero = () => {
                         Get Exclusive Invite
                       </button>
                     </div>
-                    <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600"></p>
+                    <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600 "></p>
                   </div>
                   <div>
-                    <p className=" text-md mx-4 sm:text-center">
+                    <p className=" text-md mx-4 sm:text-center mt-10">
                       Join Our Community
                     </p>
                     <ul className="flex gap-6 mx-8 mt-2">

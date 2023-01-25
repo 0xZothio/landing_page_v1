@@ -32,40 +32,64 @@ const crouselData = [
 
 function HowToInvest() {
     let slides = crouselData;
-    const [current, setCurrent] = useState(3);
+    const [current, setCurrent] = useState(0);
 
     const [scrollvalue, setScrollValue] = useState(10);
-    useEffect(() => {
-      const element = document.querySelector("#section-3");
-      const handleScroll = () => {
-        console.log("scrollToTop", element.scrollTop);
-        setScrollValue(element.scrollTop);
+    // useEffect(() => {
+    //   const element = document.querySelector("#section-3");
+    //   const handleScroll = () => {
+    //     console.log("scrollToTop", element.scrollTop);
+    //     setScrollValue(element.scrollTop);
 
-        if (scrollvalue > 1500) {
-          setCurrent(3);
-        } else if (scrollvalue > 1000) {
-          setCurrent(2);
-        } else if (scrollvalue > 500) {
-          setCurrent(1);
-        } else {
-          setCurrent(0);
-        }
-      };
+    //     if (scrollvalue > 1500) {
+    //       setCurrent(3);
+    //     } else if (scrollvalue > 1000) {
+    //       setCurrent(2);
+    //     } else if (scrollvalue > 500) {
+    //       setCurrent(1);
+    //     } else {
+    //       setCurrent(0);
+    //     }
+    //   };
 
-      element.addEventListener("scroll", handleScroll);
-      handleScroll();
+    //   element.addEventListener("scroll", handleScroll);
+    //   handleScroll();
 
-      return () => element.removeEventListener("scroll", handleScroll);
-    }, [scrollvalue]);
+    //   return () => element.removeEventListener("scroll", handleScroll);
+    // }, [scrollvalue]);
+    const windowheight = 1.5*window.innerHeight;
+  useEffect(() => {
+    const element = document.documentElement;
+    // const element = document.querySelector("#section-3");
+    const handleScroll = () => {
+      // console.log("windowscrollToTop", element.scrollTop);
+      setScrollValue(element.scrollTop);
+
+      if (scrollvalue > 17 * windowheight) {
+        setCurrent(3);
+      } else if (scrollvalue > 16 * windowheight) {
+        setCurrent(2);
+      } else if (scrollvalue > 15 * windowheight) {
+        setCurrent(1);
+      } else if (scrollvalue > 14 * windowheight) {
+        setCurrent(0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    // return () => element.removeEventListener("scroll", handleScroll);
+  }, [scrollvalue]);
 
 
   return (
     <div
       id="howItWorks"
-      className="bg-black text-white w-full h-full mt-[150px] sm:pb-10"
+      className="bg-black text-white w-full h-full sm:pb-10"
     >
       <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
+        variants={fadeIn("up", "tween", 0, 0.1)}
         initial="hidden"
         whileInView="show"
         className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"
@@ -76,7 +100,7 @@ function HowToInvest() {
         </span>
       </motion.div>
 
-      <div
+      {/* <div
         className="absolute bg-transparent w-full overflow-y-scroll scrollbar-hide z-10 h-3/4"
         id="section-3"
       >
@@ -84,7 +108,7 @@ function HowToInvest() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
-      </div>
+      </div> */}
       <div className="Carousel">
         <section className="slider">
           {slides.map((img, indx) => {
@@ -106,7 +130,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-2/3 mx-auto"
@@ -121,7 +145,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-1/2 mx-auto"
@@ -136,7 +160,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-1/2 mx-auto"
@@ -151,7 +175,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-1/2 mx-auto text-sm"

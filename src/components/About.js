@@ -7,7 +7,7 @@ import { fadeIn } from "../utils/motion";
 function About() {
   return (
     <>
-      <div id="about" className="bg-black text-white w-full h-full mt-[80px]">
+      <div id="about" className="bg-black text-white w-full h-full">
         {/* About US */}
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
