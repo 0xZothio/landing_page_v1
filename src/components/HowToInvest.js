@@ -35,28 +35,52 @@ function HowToInvest() {
     const [current, setCurrent] = useState(3);
 
     const [scrollvalue, setScrollValue] = useState(10);
-    useEffect(() => {
-      const element = document.querySelector("#section-3");
-      const handleScroll = () => {
-        console.log("scrollToTop", element.scrollTop);
-        setScrollValue(element.scrollTop);
+    // useEffect(() => {
+    //   const element = document.querySelector("#section-3");
+    //   const handleScroll = () => {
+    //     console.log("scrollToTop", element.scrollTop);
+    //     setScrollValue(element.scrollTop);
 
-        if (scrollvalue > 1500) {
-          setCurrent(3);
-        } else if (scrollvalue > 1000) {
-          setCurrent(2);
-        } else if (scrollvalue > 500) {
-          setCurrent(1);
-        } else {
-          setCurrent(0);
-        }
-      };
+    //     if (scrollvalue > 1500) {
+    //       setCurrent(3);
+    //     } else if (scrollvalue > 1000) {
+    //       setCurrent(2);
+    //     } else if (scrollvalue > 500) {
+    //       setCurrent(1);
+    //     } else {
+    //       setCurrent(0);
+    //     }
+    //   };
 
-      element.addEventListener("scroll", handleScroll);
-      handleScroll();
+    //   element.addEventListener("scroll", handleScroll);
+    //   handleScroll();
 
-      return () => element.removeEventListener("scroll", handleScroll);
-    }, [scrollvalue]);
+    //   return () => element.removeEventListener("scroll", handleScroll);
+    // }, [scrollvalue]);
+    const windowheight = window.innerHeight;
+  useEffect(() => {
+    const element = document.documentElement;
+    // const element = document.querySelector("#section-3");
+    const handleScroll = () => {
+      // console.log("windowscrollToTop", element.scrollTop);
+      setScrollValue(element.scrollTop);
+
+      if (scrollvalue > 16 * windowheight) {
+        setCurrent(3);
+      } else if (scrollvalue > 15 * windowheight) {
+        setCurrent(2);
+      } else if (scrollvalue > 14 * windowheight) {
+        setCurrent(1);
+      } else if (scrollvalue > 13 * windowheight) {
+        setCurrent(0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    // return () => element.removeEventListener("scroll", handleScroll);
+  }, [scrollvalue]);
 
 
   return (
@@ -76,7 +100,7 @@ function HowToInvest() {
         </span>
       </motion.div>
 
-      <div
+      {/* <div
         className="absolute bg-transparent w-full overflow-y-scroll scrollbar-hide z-10 h-3/4"
         id="section-3"
       >
@@ -84,7 +108,7 @@ function HowToInvest() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
-      </div>
+      </div> */}
       <div className="Carousel">
         <section className="slider">
           {slides.map((img, indx) => {

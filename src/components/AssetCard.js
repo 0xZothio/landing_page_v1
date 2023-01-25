@@ -11,7 +11,6 @@ function AssetCard({ id, imgUrl, title, desc, index, active, handleClick }) {
       className={`relative ${
         active === id ? "sm:flex-[3.5] flex-[10]" : "sm:flex-[0.5] flex-[2]"
       } flex items-center justify-center min-w-[170px] h-[500px] transition-[flex] duration-[0.75s] ease-out-flex cursor-pointer`}
-      onHoverStart={() => handleClick(id)}
     >
       <img
         src={imgUrl}

@@ -35,14 +35,16 @@ function LandingPage() {
         setCurrent(1);
       } else if (scrollvalue < 12 * windowheight) {
         setCurrent(2);
-      } else if (scrollvalue < 13 * windowheight) {
+      } else if (scrollvalue < 17 * windowheight) {
         setCurrent(3);
-      } else if (scrollvalue < 14 * windowheight) {
+      } else if (scrollvalue < 18 * windowheight) {
         setCurrent(4);
-      } else if (scrollvalue < 15 * windowheight) {
+      } else if (scrollvalue < 19 * windowheight) {
         setCurrent(5);
-      } else {
+      } else if (scrollvalue < 20 * windowheight) {
         setCurrent(6);
+      } else {
+        setCurrent(7);
       }
         // else if (scrollvalue > 1000) {
         //   setCurrent(2);
@@ -67,14 +69,15 @@ function LandingPage() {
   return (
     <div className="z-10 bg-black">
       {isLoading ? <div id="loading"></div> : null}
-      <div className="fixed bg-transparent w-full h-screen z-100 left-0">
+      <div className="fixed bg-black w-full h-screen z-100 left-0">
         {current === 0 && <Hero isHidden={false} />}
         {current === 1 && <Assets isHidden={false} />}
-        {current === 2 && <Features/>}
+        {current === 2 && <Features />}
         {current === 3 && <HowToInvest />}
         {current === 4 && <About />}
         {current === 5 && <Testimonials />}
         {current === 6 && <NewsLetter />}
+        {current === 7 && <Footer />}
       </div>
       {/* <div className="snap-current">
         <Hero isHidden={current !== 0} />
