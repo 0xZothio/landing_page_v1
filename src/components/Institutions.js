@@ -57,7 +57,7 @@ function Institutions() {
           <div class="card-content">
             <h3 class="card-title">Fund as a Service</h3>
             <p class="card-text">
-              Zoth marketplace connecting  lowering the acquisition costs, minimum investment size and legal hassles.
+              Zoth allows institutions and funds to invest in the tokenized asset pools and liquidity pools. Zoth curates these assets from quality locations that provide competitive yield.
             </p>
             <a href="#" class="btns font-semibold">
               Coming Soon
