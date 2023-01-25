@@ -30,7 +30,7 @@ function Backers() {
           <h1 className="text-4xl font-semibold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             The World's Best
           </h1> */}
-          <div className=" grid grid-cols-3  gap-8 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
+          <div className=" grid grid-cols-3 sm:grid-cols-6 gap-8 bg-[#D9D9D9]/10 ring-[#D9D9D9] backdrop-blur-sm p-8 rounded-[30px]">
             <a href="https://sosv.com/" target="_blank" rel="noreferrer">
               <img
                 src="/backers/sosv.jpg"
