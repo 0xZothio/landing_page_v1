@@ -17,13 +17,13 @@ const Footer = () => {
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-center lg:text-left">
           <div className="w-full lg:w-5/12 px-4 ">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center sm:justify-start">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Zoth.io</span>
                 <img className="h-8" src="logo.png" alt="" />
               </a>
             </div>
-            <p className=" mt-4 text-center">Connect with us</p>
+            <p className=" mt-4 text-center sm:text-left">Connect with us</p>
             <ul className="flex gap-2 mt-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start w-6/12 lg:w-full">
               <li>
                 <a
@@ -100,7 +100,7 @@ const Footer = () => {
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="mailto:contact@zoth.io" className=" transition hover:opacity-75">
-                      Email: contact@zoth.io
+                      Email: contactus@zoth.io
                     </a>
                   </li>
                 </ul>
@@ -116,8 +116,8 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      Terms of Use
+                    <a href="https://zoth.notion.site/Risk-Disclosure-09fda36daa224ea286b3b96c2a735da4" target="_blank" className=" transition hover:opacity-75">
+                      Risk Disclosure
                     </a>
                   </li>
                   <li>
@@ -138,7 +138,7 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Legal" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="#" className=" transition hover:opacity-75">
+                    <a href="https://zoth.notion.site/Work-at-Zoth-io-f4a20295a7564b619aab50624d798b0b" target="_blank" className=" transition hover:opacity-75">
                       Work with us
                     </a>
                   </li>
@@ -153,14 +153,14 @@ const Footer = () => {
             <p className="text-sm">
               <a
                 className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                href="/"
+                href="https://zoth.notion.site/Privacy-Policy-256a0366ab6748a0bed9b0f336ecc6ef" target="_blank"
               >
                 Privacy Policy
               </a>
               <span>{" | "}</span>
               <a
                 className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                href="/"
+                href="https://zoth.notion.site/Terms-of-Use-a4023cc1e3c14a6ebf905499fe3bb24e" target="_blank"
               >
                 Terms of use
               </a>

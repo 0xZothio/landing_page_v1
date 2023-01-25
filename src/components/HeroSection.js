@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 import Invite from "./Invite";
-const Hero = () => {
+const Hero = ({isHidden}) => {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <div className=" bg-black text-white">
+    <div className={isHidden ? " bg-black text-white collapse" : " bg-black text-white w-full"}>
       <div className="px-6 pt-6 lg:px-8">
         <Navbar setIsVisible={setIsVisible} />
       </div>
@@ -15,7 +15,7 @@ const Hero = () => {
       <main>
         <div className="absolute flex justify-center items-center z-0">
           <video
-            src="/wave.mp4"
+            src="https://resources.zoth.in/landingpage/wave.mp4"
             autoPlay="{true}"
             loop
             muted
@@ -31,9 +31,9 @@ const Hero = () => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="relative px-6 lg:px-8"
+          className="relative px-6 lg:px-8 sm:mt-4"
         >
-          <div className="mx-auto pt-10 sm:pt-40 ">
+          <div className="mx-auto pt-10 sm:pt-20 ">
             <div>
               <div>
                 <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
@@ -61,10 +61,10 @@ const Hero = () => {
                     <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600 "></p>
                   </div>
                   <div>
-                    <p className=" text-md mx-4 sm:text-center mt-10">
+                    <p className=" text-md mx-4 sm:text-center">
                       Join Our Community
                     </p>
-                    <ul className="flex gap-6 mx-8 mt-2">
+                    <ul className="flex gap-6 mx-8 ">
                       <li>
                         <a
                           href="https://t.me/+nFUrC_I1hA1iNWU9"

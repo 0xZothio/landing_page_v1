@@ -19,10 +19,10 @@
 	text-align: left;
 }
 
-.stage{
+/* .stage{
 	margin-top: 15px;
   height: 100px;
-  }
+  } */
   .cubespinner{
 	-webkit-animation-name:spincube;
 	-webkit-animation-timing-function:ease-in-out;
@@ -170,7 +170,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 0 0;
   width: 100%;
 }
 
@@ -204,7 +203,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.5rem;
 }
 
 /* .left-arrow,
@@ -269,8 +267,8 @@
 }
 
 .Img {
-  width: 35%;
-  height: 60%;
+  width: 30%;
+  height: 50%;
   margin: 0 auto;
 }
 
