@@ -32,7 +32,7 @@ const crouselData = [
 
 function HowToInvest() {
     let slides = crouselData;
-    const [current, setCurrent] = useState(3);
+    const [current, setCurrent] = useState(0);
 
     const [scrollvalue, setScrollValue] = useState(10);
     // useEffect(() => {
@@ -57,7 +57,7 @@ function HowToInvest() {
 
     //   return () => element.removeEventListener("scroll", handleScroll);
     // }, [scrollvalue]);
-    const windowheight = window.innerHeight;
+    const windowheight = 2*window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -86,7 +86,7 @@ function HowToInvest() {
   return (
     <div
       id="howItWorks"
-      className="bg-black text-white w-full h-full mt-[150px] sm:pb-10"
+      className="bg-black text-white w-full h-full sm:pb-10"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}

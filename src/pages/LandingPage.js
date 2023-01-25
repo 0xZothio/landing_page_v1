@@ -12,14 +12,14 @@ function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [current, setCurrent] = useState(0);
   const [scrollvalue, setScrollValue] = useState(0);
-  const [initialScrollvalue, setInitialScrollValue] = useState(0);
+  // const [initialScrollvalue, setInitialScrollValue] = useState(0);
   useEffect(()=>{
     setTimeout(()=>{
       setIsLoading(false);
     },3500)
   }, [])
   
-  const windowheight = window.innerHeight;
+  const windowheight = 2*window.innerHeight;
   // console.log(window.innerHeight, "window.innerHeight");
   useEffect(() => {
     const element = document.documentElement;

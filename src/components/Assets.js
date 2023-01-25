@@ -9,7 +9,7 @@ function Assets({ isHidden }) {
   const [active, setActive] = useState("1");
 
   const [scrollvalue, setScrollValue] = useState(0);
-  const windowheight = window.innerHeight;
+  const windowheight = 2*window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -94,7 +94,7 @@ function Assets({ isHidden }) {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div> */}
-      <div className="mt-[50px] flex sm:flex-row flex-col min-h-[70vh] gap-5">
+      <div className="mt-[10px] flex sm:flex-row flex-col min-h-[70vh] gap-5">
         {assetsData.map((asset, index) => (
           <AssetCard
             key={index}
