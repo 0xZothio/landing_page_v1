@@ -144,9 +144,7 @@ function LandingPage() {
       <div className="h-screen w-screen"></div>
       <div className="h-screen w-screen"></div>
       <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
+      <div className="h-12 w-screen"></div>
 
 
       {/* <Assets isHidden={true} />
