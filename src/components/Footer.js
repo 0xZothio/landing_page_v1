@@ -23,7 +23,7 @@ const Footer = () => {
                 <img className="h-8" src="logo.png" alt="" />
               </a>
             </div>
-            <p className="max-w-xs mt-8">Connect with us</p>
+            <p className="max-w-xs mt-1 text-center">Connect with us</p>
             <ul className="flex gap-2 mt-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start w-6/12 lg:w-full">
               <li>
                 <a

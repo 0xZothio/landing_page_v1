@@ -47,7 +47,7 @@ function Backers() {
               <img
                 src="/backers/on.png"
                 alt="backer"
-                className="w-[75px] h-[75px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -59,7 +59,7 @@ function Backers() {
               <img
                 src="/backers/foundership.png"
                 alt="backer"
-                className="w-[75px] h-[75px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -67,7 +67,7 @@ function Backers() {
               <img
                 src="/backers/reflexical.jpg"
                 alt="backer"
-                className="w-[75px] h-[75px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
 
@@ -75,7 +75,7 @@ function Backers() {
               <img
                 src="/backers/amesten.png"
                 alt="backer"
-                className="w-[75px] h-[75px] rounded-full md:w-[125px] md:h-[125px]"
+                className="w-[80px] h-[80px] rounded-full md:w-[125px] md:h-[125px]"
               />
             </a>
           </div>
