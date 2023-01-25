@@ -100,7 +100,7 @@ const Footer = () => {
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a href="mailto:contact@zoth.io" className=" transition hover:opacity-75">
-                      Email: contact@zoth.io
+                      Email: contactus@zoth.io
                     </a>
                   </li>
                 </ul>

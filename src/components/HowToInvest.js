@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import asset_trust from "../assets/images/Asset_trust.png"
-import premium_asset from "../assets/images/Quality_premium_asset.png"
-import tokenisation from "../assets/images/Tokenization.png"
-import marketplace from "../assets/images/zoth_marketplace.png"
+import asset_trust from "../assets/images/Asset_trust.png";
+import premium_asset from "../assets/images/Quality_premium_asset.png";
+import tokenisation from "../assets/images/Tokenization.png";
+import marketplace from "../assets/images/zoth_marketplace.png";
 import "../styles/styles.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 const crouselData = [
   {
     image: asset_trust,
@@ -25,39 +27,38 @@ const crouselData = [
   {
     image: marketplace,
     title: "Zoth Marketplace",
-    description:
-      "Provides investors access to aggregated tokenized assets",
+    description: "Provides investors access to aggregated tokenized assets",
   },
 ];
 
 function HowToInvest() {
-    let slides = crouselData;
-    const [current, setCurrent] = useState(0);
+  let slides = crouselData;
+  const [current, setCurrent] = useState(0);
 
-    const [scrollvalue, setScrollValue] = useState(10);
-    // useEffect(() => {
-    //   const element = document.querySelector("#section-3");
-    //   const handleScroll = () => {
-    //     console.log("scrollToTop", element.scrollTop);
-    //     setScrollValue(element.scrollTop);
+  const [scrollvalue, setScrollValue] = useState(10);
+  // useEffect(() => {
+  //   const element = document.querySelector("#section-3");
+  //   const handleScroll = () => {
+  //     console.log("scrollToTop", element.scrollTop);
+  //     setScrollValue(element.scrollTop);
 
-    //     if (scrollvalue > 1500) {
-    //       setCurrent(3);
-    //     } else if (scrollvalue > 1000) {
-    //       setCurrent(2);
-    //     } else if (scrollvalue > 500) {
-    //       setCurrent(1);
-    //     } else {
-    //       setCurrent(0);
-    //     }
-    //   };
+  //     if (scrollvalue > 1500) {
+  //       setCurrent(3);
+  //     } else if (scrollvalue > 1000) {
+  //       setCurrent(2);
+  //     } else if (scrollvalue > 500) {
+  //       setCurrent(1);
+  //     } else {
+  //       setCurrent(0);
+  //     }
+  //   };
 
-    //   element.addEventListener("scroll", handleScroll);
-    //   handleScroll();
+  //   element.addEventListener("scroll", handleScroll);
+  //   handleScroll();
 
-    //   return () => element.removeEventListener("scroll", handleScroll);
-    // }, [scrollvalue]);
-    const windowheight = 1.5*window.innerHeight;
+  //   return () => element.removeEventListener("scroll", handleScroll);
+  // }, [scrollvalue]);
+  const windowheight = 1.5 * window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -82,17 +83,13 @@ function HowToInvest() {
     // return () => element.removeEventListener("scroll", handleScroll);
   }, [scrollvalue]);
 
-
   return (
-    <div
-      id="howItWorks"
-      className="bg-black text-white w-full h-full sm:pb-10"
-    >
+    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block">
       <motion.div
         variants={fadeIn("up", "tween", 0, 0.1)}
         initial="hidden"
         whileInView="show"
-        className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"
+        className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold "
       >
         How It{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
@@ -109,86 +106,88 @@ function HowToInvest() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div> */}
-      <div className="Carousel mt-10">
-        <section className="slider">
-          {slides.map((img, indx) => {
-            return (
-              <div
-                className={`slide ${indx === current ? "active " : ""}${
-                  (indx < current && `prevImg${current - indx}`) ||
-                  (indx > current && `nextImg${indx - current}`) ||
-                  (indx === current && "currentImg")
-                }`}
-                key={indx}
-              >
-                <img src={img.image} alt="travel" className={`Img`} />
-                <div className="text-[30px] text-[#F3C74E] text-center font-roobert mt-8 mb-2">
-                  {img.title}
+      <div className="hidden sm:flex">
+        <div className="Carousel mt-10 hidden">
+          <section className="slider">
+            {slides.map((img, indx) => {
+              return (
+                <div
+                  className={`slide ${indx === current ? "active " : ""}${
+                    (indx < current && `prevImg${current - indx}`) ||
+                    (indx > current && `nextImg${indx - current}`) ||
+                    (indx === current && "currentImg")
+                  }`}
+                  key={indx}
+                >
+                  <img src={img.image} alt="travel" className={`Img`} />
+                  <div className="text-[30px] text-[#F3C74E] font-semibold text-center font-roobert mt-8 mb-2">
+                    {img.title}
+                  </div>
+                  {current === 0 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-2/3 mx-auto"
+                          : "text-center font-roobert w-2/3 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
+                  {current === 1 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-1/2 mx-auto"
+                          : "text-center font-roobert w-1/2 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
+                  {current === 2 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-1/2 mx-auto"
+                          : "text-center font-roobert w-1/2 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
+                  {current === 3 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-1/2 mx-auto text-sm"
+                          : "text-center font-roobert w-1/2 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
                 </div>
-                {current === 0 && (
-                  <motion.div
-                    initial={{ y: 200, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className={
-                      current === indx
-                        ? "text-center font-roobert w-2/3 mx-auto"
-                        : "text-center font-roobert w-2/3 mx-auto hidden"
-                    }
-                  >
-                    {img.description}
-                  </motion.div>
-                )}
-                {current === 1 && (
-                  <motion.div
-                    initial={{ y: 200, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className={
-                      current === indx
-                        ? "text-center font-roobert w-1/2 mx-auto"
-                        : "text-center font-roobert w-1/2 mx-auto hidden"
-                    }
-                  >
-                    {img.description}
-                  </motion.div>
-                )}
-                {current === 2 && (
-                  <motion.div
-                    initial={{ y: 200, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className={
-                      current === indx
-                        ? "text-center font-roobert w-1/2 mx-auto"
-                        : "text-center font-roobert w-1/2 mx-auto hidden"
-                    }
-                  >
-                    {img.description}
-                  </motion.div>
-                )}
-                {current === 3 && (
-                  <motion.div
-                    initial={{ y: 200, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className={
-                      current === indx
-                        ? "text-center font-roobert w-1/2 mx-auto text-sm"
-                        : "text-center font-roobert w-1/2 mx-auto hidden"
-                    }
-                  >
-                    {img.description}
-                  </motion.div>
-                )}
-              </div>
-            );
-          })}
-        </section>
+              );
+            })}
+          </section>
+        </div>
       </div>
 
       <ol className="items-center sm:flex mx-auto justify-center w-4/6 hidden">
@@ -251,6 +250,24 @@ function HowToInvest() {
           </div>
         </li>
       </ol>
+
+      {/* mobile */}
+      {/* <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        speed={500}
+        loop={true}
+        touchRatio={1.5}
+        navigation={true}
+        effect={"flip"}
+        pagination={{ clickable: true }}
+        className="mySwiper sm:hidden flex"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+      </Swiper> */}
     </div>
   );
 }

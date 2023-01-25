@@ -113,7 +113,7 @@ export default function Invite({ setIsVisible }) {
               Sustainable Long Term 
               </h3>
               <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
-              Wealth Creation 
+              Wealth Creation!
               </h3>
               
               <form className="space-y-6">
@@ -192,7 +192,7 @@ export default function Invite({ setIsVisible }) {
                   <button
                     type="button"
                     onClick={invite}
-                    className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                    className="w-full bg-[#F3C74E] rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
                   >
                     Enter the Zoth Club
                   </button>

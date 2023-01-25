@@ -4,9 +4,9 @@ import { fadeIn } from "../utils/motion";
 
 function Testimonials() {
   return (
-    <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full py-10">
+    <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full py-10 mt-24">
       
-      <div className="absolute left-0">
+      <div className="absolute left-0 ">
         <img src="/bg-quote.png" alt="quote" />
       </div>
 
