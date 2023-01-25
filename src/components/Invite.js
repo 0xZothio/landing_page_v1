@@ -107,10 +107,13 @@ export default function Invite({ setIsVisible }) {
             {/* form */}
             <div className="px-6 py-6 lg:px-8">
               <h3 className="mb-4 text-3xl font-semibold  text-white">
-                Here is your Exclusive Invite for
+                Start your journey into
               </h3>
               <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
-              Sustainable Long Term Wealth Creation 
+              Sustainable Long Term 
+              </h3>
+              <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
+              Wealth Creation 
               </h3>
               
               <form className="space-y-6">
