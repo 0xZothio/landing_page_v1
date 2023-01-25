@@ -130,7 +130,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-2/3 mx-auto"
@@ -145,7 +145,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-1/2 mx-auto"
@@ -160,7 +160,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-1/2 mx-auto"
@@ -175,7 +175,7 @@ function HowToInvest() {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -200, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className={
                       current === indx
                         ? "text-center font-roobert w-1/2 mx-auto text-sm"

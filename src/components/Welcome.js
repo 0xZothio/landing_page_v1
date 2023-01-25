@@ -7,7 +7,7 @@ function Welcome() {
   return (
     <>
       {/* welcome */}
-      <div className="mt-10">
+      <div className="mt-20">
         <div className="flex flex-col justify-center items-center">
           <motion.div
             variants={fadeIn("up", "tween", 0, 0.1)}
@@ -26,7 +26,7 @@ function Welcome() {
             <img src="/club.png" alt="Zoth Club" />
           </motion.div>
         </div>
-        <div className="mt-4 sm:ml-10">
+        <div className="mt-4 sm:ml-12">
           <h3 id="resizing-h3">
             <span>
               <div className="h-100 mt-4">
