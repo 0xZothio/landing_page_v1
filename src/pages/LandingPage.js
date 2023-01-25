@@ -7,6 +7,7 @@ import NewsLetter from "../components/newsletter";
 import Footer from "../components/Footer";
 import Assets from "../components/Assets";
 import HowToInvest from "../components/HowToInvest";
+import Welcome from "../components/Welcome";
 
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -82,6 +83,7 @@ function LandingPage() {
       {/* <div className="snap-current">
         <Hero isHidden={current !== 0} />
       </div> */}
+
 
       {/* Assets */}
       {/* <div className="snap-current"> */}
