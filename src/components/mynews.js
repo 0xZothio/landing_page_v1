@@ -66,7 +66,7 @@ const Mynews = () => {
                 </p>
               </div>
               <div className="mb-6 md:mb-0 ">
-                <div className="flex flex-col border-red-700 mt-6  justify-center items-center">
+                <div className="flex flex-col border-red-700 mt-1  justify-center items-center">
                   <input
                     type="text"
                     className="form-control block p-2 mx-auto text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -76,8 +76,8 @@ const Mynews = () => {
                     value={subscribeData.email}
                   />
 
-                  <button className="  mt-2  text-black cursor-pointer" onClick={subscribe}>
-                  <AiOutlineArrowRight size={25} />
+                  <button className="  btn btn-primary mt-3  text-black cursor-pointer" onClick={subscribe}>
+                  Submit
                   </button>
 
                   {/* lg:left-96 */}
