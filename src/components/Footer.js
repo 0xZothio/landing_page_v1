@@ -17,13 +17,13 @@ const Footer = () => {
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-center lg:text-left">
           <div className="w-full lg:w-5/12 px-4 ">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center sm:justify-start">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Zoth.io</span>
                 <img className="h-8" src="logo.png" alt="" />
               </a>
             </div>
-            <p className=" mt-4 text-center">Connect with us</p>
+            <p className=" mt-4 text-center sm:text-left">Connect with us</p>
             <ul className="flex gap-2 mt-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start w-6/12 lg:w-full">
               <li>
                 <a

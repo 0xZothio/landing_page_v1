@@ -17,7 +17,7 @@ function Institutions() {
         <div class="paragraph--type--card-row">
 
         <div class="card">
-            <img src="https://cdn.pixabay.com/photo/2016/02/23/00/05/pizza-1216737_960_720.png" alt="Card image" class="card-image"></img>
+            <img src="/institution/tokenization.png" alt="Card image" class="card-image p-4"></img>
             <div class="card-content">
                 <h3 class="card-title">Tokenization</h3>
                 <p class="card-text">Tokenize commodities, securities and other real world assets via the Rooba tokenization engine ensuring unbroken chain of custody from off-chain to on-chain</p>
@@ -25,7 +25,7 @@ function Institutions() {
             </div>
         </div>
         <div class="card">
-            <img src="https://cdn.pixabay.com/photo/2016/02/23/00/05/pizza-1216737_960_720.png" alt="Card image" class="card-image"></img>
+            <img src="/institution/custody.png" alt="Card image" class="card-image p-4"></img>
             <div class="card-content">
                 <h3 class="card-title">Custody</h3>
                 <p class="card-text">Tokenize commodities, securities and other real world assets via the Rooba tokenization engine ensuring unbroken chain of custody from off-chain to on-chain</p>
@@ -33,7 +33,7 @@ function Institutions() {
             </div>
         </div>
         <div class="card">
-            <img src="https://cdn.pixabay.com/photo/2016/02/23/00/05/pizza-1216737_960_720.png" alt="Card image" class="card-image"></img>
+            <img src="/institution/xchange.png" alt="Card image" class="card-image p-4"></img>
             <div class="card-content">
                 <h3 class="card-title">Exchange</h3>
                 <p class="card-text">Tokenize commodities, securities and other real world assets via the Rooba tokenization engine ensuring unbroken chain of custody from off-chain to on-chain</p>
