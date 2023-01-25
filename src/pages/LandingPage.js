@@ -116,7 +116,40 @@ function LandingPage() {
           <Footer />
         </>
       )} */}
-      {/* <div></div> */}
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
+
+
+      {/* <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
