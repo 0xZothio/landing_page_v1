@@ -57,7 +57,7 @@ function HowToInvest() {
 
     //   return () => element.removeEventListener("scroll", handleScroll);
     // }, [scrollvalue]);
-    const windowheight = 2*window.innerHeight;
+    const windowheight = 1.5*window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -65,13 +65,13 @@ function HowToInvest() {
       // console.log("windowscrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
 
-      if (scrollvalue > 16 * windowheight) {
+      if (scrollvalue > 17 * windowheight) {
         setCurrent(3);
-      } else if (scrollvalue > 15 * windowheight) {
+      } else if (scrollvalue > 16 * windowheight) {
         setCurrent(2);
-      } else if (scrollvalue > 14 * windowheight) {
+      } else if (scrollvalue > 15 * windowheight) {
         setCurrent(1);
-      } else if (scrollvalue > 13 * windowheight) {
+      } else if (scrollvalue > 14 * windowheight) {
         setCurrent(0);
       }
     };
@@ -89,7 +89,7 @@ function HowToInvest() {
       className="bg-black text-white w-full h-full sm:pb-10"
     >
       <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
+        variants={fadeIn("up", "tween", 0, 0.1)}
         initial="hidden"
         whileInView="show"
         className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold"

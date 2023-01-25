@@ -69,7 +69,7 @@ function Assets({ isHidden }) {
       }
     >
       <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
+        variants={fadeIn("up", "tween", 0, 0.2)}
         initial="hidden"
         whileInView="show"
         className="text-[40px] sm:text-[80px] text-center font-roobert font-bold"

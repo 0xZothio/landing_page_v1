@@ -19,10 +19,10 @@
 	text-align: left;
 }
 
-.stage{
+/* .stage{
 	margin-top: 15px;
   height: 100px;
-  }
+  } */
   .cubespinner{
 	-webkit-animation-name:spincube;
 	-webkit-animation-timing-function:ease-in-out;
@@ -268,7 +268,7 @@
 
 .Img {
   width: 35%;
-  height: 60%;
+  height: 50%;
   margin: 0 auto;
 }
 

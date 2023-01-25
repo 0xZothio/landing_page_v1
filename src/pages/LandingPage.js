@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Assets from "../components/Assets";
 import HowToInvest from "../components/HowToInvest";
 import Welcome from "../components/Welcome";
-
+import "../styles/styles.css"
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [current, setCurrent] = useState(0);
@@ -20,7 +20,7 @@ function LandingPage() {
     },3500)
   }, [])
   
-  const windowheight = 2*window.innerHeight;
+  const windowheight = 1.5*window.innerHeight;
   // console.log(window.innerHeight, "window.innerHeight");
   useEffect(() => {
     const element = document.documentElement;
@@ -34,21 +34,22 @@ function LandingPage() {
         setCurrent(0);
       } else if (scrollvalue < 6 * windowheight) {
         setCurrent(1);
-      } else if (scrollvalue < 13 * windowheight) {
+      } else if (scrollvalue < 7 * windowheight) {
         setCurrent(2);
-      } else if (scrollvalue < 18 * windowheight) {
+      } else if (scrollvalue < 13 * windowheight) {
         setCurrent(3);
-      } else if (scrollvalue < 19 * windowheight) {
+      } else if (scrollvalue < 18 * windowheight) {
         setCurrent(4);
-      } else if (scrollvalue < 20 * windowheight) {
-        setCurrent(5);
-      } else if (scrollvalue < 21 * windowheight) {
-        setCurrent(6);
-      } else if (scrollvalue < 22 * windowheight) {
-        setCurrent(7);
       } else {
-        setCurrent(8);
+        setCurrent(5);
       }
+      // else if (scrollvalue < 21 * windowheight) {
+      //   setCurrent(6);
+      // } else if (scrollvalue < 22 * windowheight) {
+      //   setCurrent(7);
+      // } else {
+      //   setCurrent(8);
+      // }
         // else if (scrollvalue > 1000) {
         //   setCurrent(2);
         // } else if (scrollvalue > 500) {
@@ -72,23 +73,50 @@ function LandingPage() {
   return (
     <div className="z-10 bg-black">
       {isLoading ? <div id="loading"></div> : null}
-      <div className="fixed bg-black w-full h-screen z-100 left-0">
+      <div
+        className={
+          current < 5
+            ? "fixed bg-black w-full h-screen z-100 left-0"
+            : "fixed bg-black w-full h-full left-0 overflow-y-scroll scrollbar-hide"
+        }
+      >
         {current === 0 && <Hero isHidden={false} />}
         {current === 1 && <Assets isHidden={false} />}
         {current === 2 && <Welcome />}
         {current === 3 && <Features />}
         {current === 4 && <HowToInvest />}
-        {current === 5 && <About />}
-        {current === 6 && <Testimonials />}
-        {current === 7 && <NewsLetter />}
-        {current === 8 && <Footer />}
+        {current === 5 && (
+          <div>
+            <About />
+            <Testimonials />
+            <NewsLetter />
+            <Footer />
+          </div>
+        )}
       </div>
+      {/* {scrollvalue > 20 * windowheight && (
+        <>
+          <About />
+          <Testimonials />
+          <NewsLetter />
+          <Footer />
+        </>
+      )} */}
       {/* <div className="snap-current">
         <Hero isHidden={current !== 0} />
       </div> */}
 
       {/* Assets */}
       {/* <div className="snap-current"> */}
+      {/* {current === 5 && (
+        <>
+          <About />
+          <Testimonials />
+          <NewsLetter />
+          <Footer />
+        </>
+      )} */}
+      {/* <div></div> */}
       <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
@@ -117,17 +145,9 @@ function LandingPage() {
       <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
-      <Assets isHidden={true} />
+      
+      
+      
       {/* </div> */}
 
       {/* <Temp/> */}

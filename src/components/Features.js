@@ -82,7 +82,7 @@ function Features() {
   //   return () => element.removeEventListener("scroll", handleScroll);
   // }, [scrollvalue]);
 
-  const windowheight = 2*window.innerHeight;
+  const windowheight = 1.5*window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -90,15 +90,15 @@ function Features() {
       // console.log("windowscrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
 
-      if (scrollvalue > 11 * windowheight) {
+      if (scrollvalue > 12 * windowheight) {
         setNum(4);
-      } else if (scrollvalue > 10 * windowheight) {
+      } else if (scrollvalue > 11 * windowheight) {
         setNum(3);
-      } else if (scrollvalue > 9 * windowheight) {
+      } else if (scrollvalue > 10 * windowheight) {
         setNum(2);
-      } else if (scrollvalue > 8 * windowheight) {
+      } else if (scrollvalue > 9 * windowheight) {
         setNum(1);
-      } else if (scrollvalue > 7*windowheight) {
+      } else if (scrollvalue > 8*windowheight) {
         setNum(0);
       }
     };

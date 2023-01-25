@@ -6,11 +6,30 @@ import "../styles/styles.css";
 function Welcome() {
   return (
     <>
-      <div className="mt-20 sm:mt-4">
+      {/* welcome */}
+      <div className="flex flex-col justify-center items-center">
+        <motion.div
+          variants={fadeIn("up", "tween", 0, 0.1)}
+          initial="hidden"
+          whileInView="show"
+          className="text-[55px] text-center sm:text-[80px] font-codec font-bold"
+        >
+          Welcome to the
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn("down", "tween", 0, 0.1)}
+          initial="hidden"
+          whileInView="show"
+        >
+          <img src="/club.png" alt="Zoth Club" />
+        </motion.div>
+      </div>
+      <div className="mt-4 sm:mt-4">
         <h3 id="resizing-h3">
           <span>
-            <div className="stage">
-              <div className="cubespinner text-center">
+            <div className="h-100 mt-4">
+              <div className="cubespinner text-center ">
                 <div className="face1">
                   <div className="text-[40px] sm:text-[55px] text-center">
                     Democratising{" "}
@@ -39,26 +58,6 @@ function Welcome() {
             </div>
           </span>
         </h3>
-      </div>
-
-      {/* welcome */}
-      <div className="flex flex-col justify-center items-center">
-        <motion.div
-          variants={fadeIn("up", "tween", 0.2, 1)}
-          initial="hidden"
-          whileInView="show"
-          className="text-[55px] text-center sm:text-[80px] font-codec font-bold"
-        >
-          Welcome to the
-        </motion.div>
-
-        <motion.div
-          variants={fadeIn("down", "tween", 0.5, 1)}
-          initial="hidden"
-          whileInView="show"
-        >
-          <img src="/club.png" alt="Zoth Club" />
-        </motion.div>
       </div>
     </>
   );
