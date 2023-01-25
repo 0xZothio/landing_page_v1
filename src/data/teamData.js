@@ -122,7 +122,8 @@ export const backersData = [
     name: "Ayyappan R",
     photo: "/teams/ayyappan.jpg",
     role: "CEO, Cleartrip",
-    linkedIn: "https://www.linkedin.com/in/ayyappan-r/"
+    linkedIn: "https://www.linkedin.com/in/ayyappan-r/",
+    logo: "/backers-logo/cleartrip.png"
   },
 
   {
