@@ -44,8 +44,10 @@ function LandingPage() {
         setCurrent(5);
       } else if (scrollvalue < 21 * windowheight) {
         setCurrent(6);
-      } else {
+      } else if (scrollvalue < 22 * windowheight) {
         setCurrent(7);
+      } else {
+        setCurrent(8);
       }
         // else if (scrollvalue > 1000) {
         //   setCurrent(2);
@@ -87,6 +89,13 @@ function LandingPage() {
 
       {/* Assets */}
       {/* <div className="snap-current"> */}
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
+      <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
