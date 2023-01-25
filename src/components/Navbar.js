@@ -9,6 +9,7 @@ const navigation = [
   { name: "How it works", href: "#howItWorks" },
   { name: "Blog", href: "#" },
   { name: "Contact", href: "#contact" },
+  { name: "Institutions Coming Soon", href: "#" },
 ];
 
 const Navbar = ({ setIsVisible }) => {
@@ -162,12 +163,12 @@ const Navbar = ({ setIsVisible }) => {
                 ))}
               </div>
               <div className="py-6 space-y-2 text-center">
-                <p
-                  className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 hover:bg-white hover:text-black"
-                  onClick={() => setIsVisible(true)}
-                >
-                  Get Exclusive Invite
-                </p>
+              <button
+              className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
+              onClick={() => setIsVisible(true)}
+            >
+              Get Exclusive Invite{" "}
+            </button>
               </div>
             </div>
           </div>

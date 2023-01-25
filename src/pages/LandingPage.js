@@ -9,6 +9,8 @@ import Assets from "../components/Assets";
 import HowToInvest from "../components/HowToInvest";
 import Welcome from "../components/Welcome";
 import "../styles/styles.css"
+import Institutions from "../components/Institutions";
+
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [current, setCurrent] = useState(0);
@@ -196,6 +198,9 @@ function LandingPage() {
 
       {/* About Us */}
       {/* <About /> */}
+
+      {/* institutions */}
+      <Institutions/>
 
       {/* Testimonials */}
       {/* <Testimonials /> */}
