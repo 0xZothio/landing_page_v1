@@ -26,7 +26,8 @@ function Welcome() {
             <img src="/club.png" alt="Zoth Club" />
           </motion.div>
         </div>
-        <div className="mt-4 sm:ml-12">
+
+        <div className="sm:mx-12 mx-4">
           <h3 id="resizing-h3">
             <span>
               <div className="h-100 mt-4">
