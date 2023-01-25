@@ -106,7 +106,7 @@ function Features() {
       {/* feature 1*/}
 
       <div
-        className="sm:absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-40 hidden"
+        className="sm:block absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-40 hidden"
         ref={ref}
         id="section-1"
       >
