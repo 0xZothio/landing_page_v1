@@ -148,7 +148,7 @@ function Features() {
             <img src="/frame.png" alt="frame" />
           </div>
 
-          {scrollvalue <= 7 * windowheight && (
+          {num===0 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -173,8 +173,7 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {scrollvalue > 7 * windowheight &&
-            scrollvalue <= 8 * windowheight && (
+          {num===1 && (
               <motion.div
                 initial={{ x: 0, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -199,8 +198,7 @@ function Features() {
                 ></video>
               </motion.div>
             )}
-          {scrollvalue > 8 * windowheight &&
-            scrollvalue <= 9 * windowheight && (
+          {num===2 && (
               <motion.div
                 initial={{ x: 0, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -222,8 +220,7 @@ function Features() {
                 ></video>
               </motion.div>
             )}
-          {scrollvalue > 9 * windowheight &&
-            scrollvalue <= 10 * windowheight && (
+          {num===3 && (
               <motion.div
                 initial={{ x: 0, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -245,7 +242,7 @@ function Features() {
                 ></video>
               </motion.div>
             )}
-          {scrollvalue > 10 * windowheight && (
+          {num===4 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -270,7 +267,7 @@ function Features() {
         </div>
 
         {/* <MyPara topic={data[num].topic } description={data[num].description} /> */}
-        {scrollvalue <= 7 * windowheight && (
+        {num===0 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -290,7 +287,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 7 * windowheight && scrollvalue <= 8 * windowheight && (
+        {num===1 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -310,7 +307,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 8 * windowheight && scrollvalue <= 9 * windowheight && (
+        {num===2 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -330,7 +327,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 9 * windowheight && scrollvalue <= 10 * windowheight && (
+        {num===3 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -350,7 +347,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {scrollvalue > 10 * windowheight && (
+        {num===4 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

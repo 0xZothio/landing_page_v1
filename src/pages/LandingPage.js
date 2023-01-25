@@ -78,23 +78,36 @@ function LandingPage() {
       <div
         className={
           current < 5
-            ? "fixed bg-black w-full h-screen z-100 left-0"
-            : "fixed bg-black w-full h-full left-0 overflow-y-scroll scrollbar-hide"
+            ? "fixed bg-black w-full h-screen z-100 left-0 hidden sm:block"
+            : "fixed bg-black w-full h-full left-0 overflow-y-scroll scrollbar-hide hidden sm:block"
         }
       >
-        {current === 0 && <Hero isHidden={false} />}
-        {current === 1 && <Assets isHidden={false} />}
+        {current === 0 && <Hero />}
+        {current === 1 && <Assets />}
         {current === 2 && <Welcome />}
         {current === 3 && <Features />}
         {current === 4 && <HowToInvest />}
         {current === 5 && (
           <div>
             <About />
+            <Institutions />
             <Testimonials />
             <NewsLetter />
             <Footer />
           </div>
         )}
+      </div>
+      <div className="block sm:hidden">
+        <Hero />
+        <Assets />
+        <Welcome />
+        <Features />
+        <HowToInvest />
+        <About />
+        <Institutions />
+        <Testimonials />
+        <NewsLetter />
+        <Footer />
       </div>
       {/* {scrollvalue > 20 * windowheight && (
         <>
@@ -118,37 +131,37 @@ function LandingPage() {
           <Footer />
         </>
       )} */}
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-screen w-screen"></div>
-      <div className="h-12 w-screen"></div>
-
-
+      <div className="hidden sm:block">
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-screen w-screen"></div>
+        <div className="h-12 w-screen"></div>
+      </div>
       {/* <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
@@ -200,7 +213,7 @@ function LandingPage() {
       {/* <About /> */}
 
       {/* institutions */}
-      <Institutions/>
+      {/* <Institutions/> */}
 
       {/* Testimonials */}
       {/* <Testimonials /> */}
