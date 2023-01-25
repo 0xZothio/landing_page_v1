@@ -17,17 +17,17 @@ const Footer = () => {
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-center lg:text-left">
           <div className="w-full lg:w-5/12 px-4 ">
-            <div>
+            <div className="flex justify-center items-center">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Zoth.io</span>
                 <img className="h-8" src="logo.png" alt="" />
               </a>
             </div>
-            <p className="max-w-xs mt-8">Connect with us</p>
+            <p className=" mt-4 text-center">Connect with us</p>
             <ul className="flex gap-2 mt-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start w-6/12 lg:w-full">
               <li>
                 <a
-                  href="/"
+                  href="https://twitter.com/zothio"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
@@ -36,17 +36,17 @@ const Footer = () => {
                   <AiFillTwitterCircle size={20} color="white" />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
-                  href="/"
+                  href="https://twitter.com/zothio"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
                 >
-                  <span className="sr-only">Telegram</span>
+                  <span className="sr-only">Instagram</span>
                   <FaInstagramSquare size={20} color="white" />
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="https://www.linkedin.com/company/zoth-io/"
@@ -58,17 +58,17 @@ const Footer = () => {
                   <FaLinkedin size={20} color="white" />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
                 >
-                  <span className="sr-only">Telegram</span>
+                  <span className="sr-only">Facebook</span>
                   <FaFacebook size={20} color="white" />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="w-full lg:w-7/12 px-4 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 mt-8 lg:mt-0">
@@ -99,8 +99,8 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Company" className="mt-5">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="#" className=" transition hover:opacity-75">
-                      Email: contactus@zoth.io
+                    <a href="mailto:contact@zoth.io" className=" transition hover:opacity-75">
+                      Email: contact@zoth.io
                     </a>
                   </li>
                 </ul>

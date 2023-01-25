@@ -46,17 +46,17 @@ const Mynews = () => {
   };
 
   return (
-    <div className="py-6 px-6 mx-auto bg-black">
+    <div className="py-6 px-6 mx-auto bg-black justify-center items-center ">
       <motion.section
         variants={fadeIn("up", "tween", 0.3, 1)}
         initial="hidden"
         whileInView="show"
         className="mb-12 text-gray-800 text-center lg:text-left w-3/4 mx-auto border-solid border-2 rounded-xl"
       >
-        <div className="flex flex-wrap justify-center p-6 rounded-xl shadow text-white grad">
-          <div className="w-full px-3">
-            <div className="grid lg:grid-cols-2 gap-x-2">
-              <div className="mb-10 lg:mb-0">
+        <div className="flex flex-wrap justify-center p-6 rounded-xl shadow text-white grad justify-center items-center">
+          <div className="w-full px-3 justify-center items-center">
+            <div className="grid lg:grid-cols-2 gap-x-2 justify-center items-center">
+              <div className="mb-10 lg:mb-0 justify-center items-center">
                 <p className="text-2xl font-semibold tracking-tight sm:text-2xl">
                   Join our mailing list
                 </p>
@@ -65,29 +65,24 @@ const Mynews = () => {
                   and other news from zoth
                 </p>
               </div>
-              <div className="mb-6 md:mb-0">
-                <div className="flex flex-row mt-6">
+              <div className="mb-6 md:mb-0 ">
+                <div className="flex flex-col sm:flex-row border-red-700 justify-center items-center">
                   <input
                     type="text"
-                    className="form-control block w-8/12 p-1 mx-auto text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className="form-control block p-2 text-base sm:mr-5 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Enter your email"
                     name="email"
                     onChange={(e) => onChangeData(e)}
                     value={subscribeData.email}
                   />
-
-                  <span className="absolute  mt-1 right-[23%] text-black cursor-pointer" onClick={subscribe}>
-                    <AiOutlineArrowRight size={25} />
-                  </span>
+                
+                  <button className="px-10 sm:px-4 py-1 sm:m-0 mt-3 z-100 btn text-white cursor-pointer border border-gray-50" onClick={subscribe}>
+                  Submit
+                  </button>
 
                   {/* lg:left-96 */}
 
-                  {/* <button
-                      type="submit"
-                      className="inline-block py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                    >
-                      Subscribe
-                    </button> */}
+                  
                 </div>
               </div>
             </div>

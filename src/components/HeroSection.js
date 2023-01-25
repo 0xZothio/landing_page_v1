@@ -58,10 +58,10 @@ const Hero = ({isHidden}) => {
                         Get Exclusive Invite
                       </button>
                     </div>
-                    <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600"></p>
+                    <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600 "></p>
                   </div>
                   <div>
-                    <p className=" text-md mx-4 sm:text-center">
+                    <p className=" text-md mx-4 sm:text-center mt-10">
                       Join Our Community
                     </p>
                     <ul className="flex gap-6 mx-8 mt-2">
