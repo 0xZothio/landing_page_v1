@@ -107,11 +107,12 @@ export default function Invite({ setIsVisible }) {
             {/* form */}
             <div className="px-6 py-6 lg:px-8">
               <h3 className="mb-4 text-3xl font-semibold  text-white">
-                Thanks for getting in touch!
+                Here is your Exclusive Invite for
               </h3>
-              <p className="mb-4 text-white">
-                Our team will contact you soon 😀
-              </p>
+              <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
+              Sustainable Long Term Wealth Creation 
+              </h3>
+              
               <form className="space-y-6">
                 <div>
                   <label
@@ -190,7 +191,7 @@ export default function Invite({ setIsVisible }) {
                     onClick={invite}
                     className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
                   >
-                    Get Exclusive Invite
+                    Enter the Zoth Club
                   </button>
                 )}
               </form>
