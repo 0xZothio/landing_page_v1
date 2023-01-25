@@ -122,7 +122,7 @@ function HowToInvest() {
                 key={indx}
               >
                 <img src={img.image} alt="travel" className={`Img`} />
-                <div className="text-[30px] text-[#F3C74E] text-center font-roobert mt-8 mb-2">
+                <div className="text-[30px] text-[#F3C74E] font-semibold text-center font-roobert mt-8 mb-2">
                   {img.title}
                 </div>
                 {current === 0 && (

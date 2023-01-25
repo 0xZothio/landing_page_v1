@@ -15,7 +15,7 @@ const Hero = ({isHidden}) => {
       <main>
         <div className="absolute flex justify-center items-center z-0">
           <video
-            src="/wave.mp4"
+            src="https://resources.zoth.in/landingpage/wave.mp4"
             autoPlay="{true}"
             loop
             muted
@@ -31,7 +31,7 @@ const Hero = ({isHidden}) => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="relative px-6 lg:px-8"
+          className="relative px-6 lg:px-8 sm:mt-4"
         >
           <div className="mx-auto pt-10 sm:pt-20 ">
             <div>
@@ -61,10 +61,10 @@ const Hero = ({isHidden}) => {
                     <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600 "></p>
                   </div>
                   <div>
-                    <p className=" text-md mx-4 sm:text-center mt-10">
+                    <p className=" text-md mx-4 sm:text-center">
                       Join Our Community
                     </p>
-                    <ul className="flex gap-6 mx-8 mt-2">
+                    <ul className="flex gap-6 mx-8 ">
                       <li>
                         <a
                           href="https://t.me/+nFUrC_I1hA1iNWU9"
