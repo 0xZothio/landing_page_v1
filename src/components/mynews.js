@@ -23,7 +23,7 @@ const Mynews = () => {
     console.log("news letter", subscribeData);
     try {
       let res = await axios.post(
-        `https://script.google.com/macros/s/AKfycbwQcwNDLdnbHpM-Je59N_VSfSndy4eXap1W5VtNq_-77R3-azBMujnEr0M4v2OP-1o6oQ/exec?email=${subscribeData.email}`
+        `https://script.google.com/macros/s/AKfycbz1wTUy2M-ChUqGgSVfAapfFT_ZXoreUU1N_PwWkSPaciNf0-sKK3FPjKDaRULNYG-Y1Q/exec?email=${subscribeData.email}`
       );
       if (res.data.result === 'success') {
         console.log("subscribe success");

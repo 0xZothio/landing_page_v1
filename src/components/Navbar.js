@@ -7,9 +7,8 @@ import { navVariants } from "../utils/motion";
 const navigation = [
   { name: "About", href: "#about" },
   { name: "How it works", href: "#howItWorks" },
-  { name: "Blog", href: "#" },
   { name: "Contact", href: "#contact" },
-  { name: "Institutions Coming Soon", href: "#" },
+  { name: "Institutions (Coming Soon)", href: "#" },
 ];
 
 const Navbar = ({ setIsVisible }) => {
@@ -56,9 +55,7 @@ const Navbar = ({ setIsVisible }) => {
             <a href="#howItWorks" className="font-semibold hover:text-gray-100">
               How it Works
             </a>
-            <a href="#" className="font-semibold hover:text-gray-100">
-              Blog
-            </a>
+          
             <a href="#contact" className="font-semibold hover:text-gray-100">
               Contact
             </a>
