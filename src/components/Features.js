@@ -110,7 +110,7 @@ function Features() {
   }, [scrollvalue]);
   return (
     <div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center sm:mt-0 mt-40">
         {/* <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
@@ -358,7 +358,7 @@ function Features() {
             // whileInView="show"
             className="col-span-2 self-center mt-2 p-4 "
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4 ">
               {data[num].topic}
             </div>
             <div className="text-lg leading-loose ">
@@ -391,7 +391,7 @@ function Features() {
           </div>
 
           <div className="col-span-2 self-center mt-2 p-8 ">
-            <div className="sm:text-6xl text-3xl font-extrabold font-roobert mb-4">
+            <div className="sm:text-6xl text-3xl font-extrabold font-roobert mb-4 text-[#F3C74E]">
               {feature.topic}
             </div>
             <div className="text-lg leading-loose">{feature.description}</div>
