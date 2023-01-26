@@ -151,10 +151,7 @@ function LandingPage() {
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
+        
         
       </div>
       {<div className="hidden sm:block">
