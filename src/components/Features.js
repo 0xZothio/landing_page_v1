@@ -113,7 +113,7 @@ function Features() {
   return (
     <div>
       {/* <div className="flex flex-col justify-center items-center sm:mt-0 mt-40"> */}
-        {/* <motion.div
+      {/* <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -122,7 +122,7 @@ function Features() {
           Welcome to the
         </motion.div> */}
 
-        {/* <motion.div
+      {/* <motion.div
           variants={fadeIn("down", "tween", 0.5, 1)}
           initial="hidden"
           whileInView="show"
@@ -399,16 +399,17 @@ function Features() {
 
       {/* mobile */}
       {/* feature 2*/}
-      {data.map((feature) => (
-        <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px] sm:hidden">
-          <div className="relative col-span-2 w-[300px]">
-            <div className="w-[300px]">
-              <img src="/frame.png" alt="frame" />
-            </div>
+      <div className="mt-32">
+        {data.map((feature) => (
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px] sm:hidden">
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
 
-            <div className="absolute top-5 object-cover ">
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              {/* <video
+              <div className="absolute top-5 object-cover ">
+                {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+                {/* <video
                 src={feature.video}
                 autoplay="{true}"
                 loop
@@ -416,22 +417,23 @@ function Features() {
                 className="w-[300px] h-[530px] rounded-[55px] opacity-80"
               ></video> */}
 
-              <img
-                src={feature.video}
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                alt=""
-              />
+                <img
+                  src={feature.video}
+                  className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                  alt=""
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="col-span-2 self-center mt-2 p-8 ">
-            <div className="sm:text-6xl text-3xl font-extrabold font-roobert mb-4 text-[#F3C74E]">
-              {feature.topic}
+            <div className="col-span-2 self-center mt-2 p-8 ">
+              <div className="sm:text-6xl text-3xl font-extrabold font-roobert mb-4 text-[#F3C74E]">
+                {feature.topic}
+              </div>
+              <div className="text-lg leading-loose">{feature.description}</div>
             </div>
-            <div className="text-lg leading-loose">{feature.description}</div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       {/* feature 3*/}
       {/* <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px]">
