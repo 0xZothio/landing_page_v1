@@ -82,7 +82,7 @@ function LandingPage() {
             : "fixed bg-black w-full h-full left-0 overflow-y-scroll scrollbar-hide hidden sm:block"
         }
       >
-        {current === 0 && <Hero />}
+        {current === 0 && <Hero setScrollValue={setScrollValue} />}
         {current === 1 && <Assets />}
         {current === 2 && <Welcome />}
         {current === 3 && <Features />}

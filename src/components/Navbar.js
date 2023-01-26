@@ -14,6 +14,22 @@ const navigation = [
 const Navbar = ({ setIsVisible }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const windowheight = 1.5 * window.innerHeight;
+  const element = document.documentElement;
+  const handleScroll = (length) => {
+    element.scrollTo(0, length);
+  };
+
+  const handleAboutScroll = (length) => {
+    element.scrollTo(0, length);
+    // const contactform = document.querySelector("about");
+    // contactform.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleContactScroll = (length) => {
+    element.scrollTo(0, length);
+    // const contactform = document.querySelector("about");
+    // contactform.scrollIntoView({ behavior: "smooth" });
+  };
   // function classNames(...classes) {
   //   return classes.filter(Boolean).join(" ");
   // }
@@ -49,20 +65,38 @@ const Navbar = ({ setIsVisible }) => {
           </div>
           <div className="hidden md:flex md:justify-center md:items-center md:gap-x-12 md:px-8 md:ml-24">
             {/* {navigation.map((item) => ( */}
-            <a href="#about" className="font-semibold hover:text-gray-100">
+            <a
+              href="#about"
+              className="font-semibold hover:text-gray-100"
+              onClick={() => {
+                handleAboutScroll(18 * windowheight + 10);
+              }}
+            >
               About
             </a>
-            <a href="#howItWorks" className="font-semibold hover:text-gray-100">
+            <a
+              href="#howitworks"
+              className="font-semibold hover:text-gray-100"
+              onClick={() => {
+                handleScroll(13 * windowheight + 10);
+              }}
+            >
               How it Works
             </a>
-          
-            <a href="#contact" className="font-semibold hover:text-gray-100">
+
+            <a
+              href="#contact"
+              className="font-semibold hover:text-gray-100"
+              onClick={() => {
+                handleContactScroll(18 * windowheight + 10);
+              }}
+            >
               Contact
             </a>
             <a href="#" className="font-semibold hover:text-gray-100">
-            Institutions <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
+              Institutions{" "}
+              <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
             </a>
-
 
             {/* Solution dropdown */}
             {/* <div className="relative inline-block text-left">
@@ -160,12 +194,12 @@ const Navbar = ({ setIsVisible }) => {
                 ))}
               </div>
               <div className="py-6 space-y-2 text-center">
-              <button
-              className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
-              onClick={() => setIsVisible(true)}
-            >
-              Get Exclusive Invite{" "}
-            </button>
+                <button
+                  className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
+                  onClick={() => setIsVisible(true)}
+                >
+                  Get Exclusive Invite{" "}
+                </button>
               </div>
             </div>
           </div>
