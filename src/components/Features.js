@@ -144,7 +144,7 @@ function Features() {
         <div className="h-screen w-full"></div>
       </div> */}
 
-      <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-24 hidden">
+      <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-20 hidden">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
             <img src="/frame.png" alt="frame" />
