@@ -84,7 +84,7 @@ function HowToInvest() {
   }, [scrollvalue]);
 
   return (
-    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-12">
+    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-10">
       <motion.div
         variants={fadeIn("up", "tween", 0, 0.1)}
         initial="hidden"
@@ -107,7 +107,7 @@ function HowToInvest() {
         <div className="h-screen w-full"></div>
       </div> */}
       <div className="hidden sm:flex">
-        <div className="Carousel mt-10 hidden">
+        <div className="Carousel mt-6 hidden">
           <section className="slider">
             {slides.map((img, indx) => {
               return (
