@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Assets from "../components/Assets";
 import HowToInvest from "../components/HowToInvest";
 import Welcome from "../components/Welcome";
-import "../styles/styles.css"
+import "../styles/styles.css";
 import Institutions from "../components/Institutions";
 
 function LandingPage() {
@@ -16,13 +16,13 @@ function LandingPage() {
   const [current, setCurrent] = useState(0);
   const [scrollvalue, setScrollValue] = useState(0);
   // const [initialScrollvalue, setInitialScrollValue] = useState(0);
-  useEffect(()=>{
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       setIsLoading(false);
-    },3500)
-  }, [])
-  
-  const windowheight = 1.2*window.innerHeight;
+    }, 3500);
+  }, []);
+
+  const windowheight = 1 * window.innerHeight;
   // console.log(window.innerHeight, "window.innerHeight");
   useEffect(() => {
     const element = document.documentElement;
@@ -31,7 +31,6 @@ function LandingPage() {
       console.log("windowscrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
 
-      
       if (scrollvalue < windowheight) {
         setCurrent(0);
       } else if (scrollvalue < 6 * windowheight) {
@@ -52,13 +51,13 @@ function LandingPage() {
       // } else {
       //   setCurrent(8);
       // }
-        // else if (scrollvalue > 1000) {
-        //   setCurrent(2);
-        // } else if (scrollvalue > 500) {
-        //   setCurrent(1);
-        // } else {
-        //   setCurrent(0);
-        // }
+      // else if (scrollvalue > 1000) {
+      //   setCurrent(2);
+      // } else if (scrollvalue > 500) {
+      //   setCurrent(1);
+      // } else {
+      //   setCurrent(0);
+      // }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -152,10 +151,7 @@ function LandingPage() {
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
+        
         
       </div>
       {<div className="hidden sm:block">
