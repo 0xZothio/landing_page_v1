@@ -74,36 +74,15 @@ function LandingPage() {
   return (
     <div className="z-10 bg-black">
       {isLoading ? <div id="loading"></div> : null}
-      <div
-        className={
-          current < 5
-            ? "fixed bg-black w-full h-screen z-100 left-0 hidden sm:block"
-            : "fixed bg-black w-full h-full left-0 overflow-y-scroll scrollbar-hide collapse"
-        }
-      >
-        {current === 0 && <Hero setScrollValue={setScrollValue} />}
-        {current === 1 && <Assets />}
-        {current === 2 && <Welcome />}
-        {current === 3 && <Features />}
-        {current === 4 && <HowToInvest />}
-        {/* {current === 5 && (
-          <div>
-            <About />
-            <Institutions />
-            <Testimonials />
-            <NewsLetter />
-            <Footer />
-          </div>
-        )} */}
-      </div>
-      <div className="block sm:hidden">
+
+      <div className="block">
         <Hero />
         <Assets />
         <Welcome />
         <Features />
-        <HowToInvest />
-        <About />
         <Institutions />
+        <About />
+        <HowToInvest />
         <Testimonials />
         <NewsLetter />
         <Footer />
@@ -131,7 +110,7 @@ function LandingPage() {
         </>
       )} */}
 
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
@@ -160,7 +139,7 @@ function LandingPage() {
         <Testimonials />
         <NewsLetter />
         <Footer />
-      </div>}
+      </div>} */}
       {/* <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />
