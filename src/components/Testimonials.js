@@ -4,7 +4,7 @@ import { fadeIn } from "../utils/motion";
 
 function Testimonials() {
   return (
-    <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full py-10 mt-24">
+    <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full py-10 mt-28">
       
       <div className="absolute left-0 ">
         <img src="/bg-quote.png" alt="quote" />
@@ -23,7 +23,7 @@ function Testimonials() {
         variants={fadeIn("up", "tween", 0.4, 1)}
         initial="hidden"
         whileInView="show"
-        className="flex flex-col sm:flex-row max-w-6xl mx-auto gap-8 group"
+        className="flex flex-col sm:flex-row max-w-6xl mx-auto gap-10 group sm:mt-10"
       >
         <div className="bg-white/10 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 cursor-pointer p-8 rounded-xl ">
           <img src="/quote.svg" alt="" />

@@ -62,7 +62,7 @@ function Assets({ isHidden }) {
 
   return (
     <div
-      className="sm:mt-36"
+      className="sm:mt-28"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
