@@ -14,7 +14,7 @@ const navigation = [
 const Navbar = ({ setIsVisible }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const windowheight = 1.2 * window.innerHeight;
+  const windowheight = 1 * window.innerHeight;
   const element = document.documentElement;
   const handleScroll = (length) => {
     element.scrollTo(0, length);
