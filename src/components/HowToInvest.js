@@ -54,13 +54,13 @@ function HowToInvest() {
   //   func();
   // }, [])
   
-  setInterval(function () {
-    let temp = current + 1;
-    if (temp > 3) {
-      temp = 0;
-    }
-    setCurrent(temp);
-  }, 7000);
+  // setInterval(function () {
+  //   let temp = current + 1;
+  //   if (temp > 3) {
+  //     temp = 0;
+  //   }
+  //   setCurrent(temp);
+  // }, 70000);
   // useEffect(() => {
   //   const element = document.querySelector("#section-3");
   //   const handleScroll = () => {
