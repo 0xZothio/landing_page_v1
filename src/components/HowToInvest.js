@@ -58,7 +58,7 @@ function HowToInvest() {
 
   //   return () => element.removeEventListener("scroll", handleScroll);
   // }, [scrollvalue]);
-  const windowheight = 1.5 * window.innerHeight;
+  const windowheight = 1.2 * window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");

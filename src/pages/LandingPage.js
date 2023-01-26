@@ -22,7 +22,7 @@ function LandingPage() {
     },3500)
   }, [])
   
-  const windowheight = 1.5*window.innerHeight;
+  const windowheight = 1.2*window.innerHeight;
   // console.log(window.innerHeight, "window.innerHeight");
   useEffect(() => {
     const element = document.documentElement;

@@ -19,13 +19,14 @@ const Hero = ({ setScrollValue }) => {
 
       <main>
         <div className="absolute flex justify-center items-center z-0">
-          <video
+          {/* <video
             src="https://resources.zoth.in/landingpage/wave.mp4"
             autoPlay="{true}"
             loop
             muted
             className=""
-          ></video>
+          ></video> */}
+          <img src="/wave.gif" alt="" />
         </div>
 
         {/* signup popup */}
