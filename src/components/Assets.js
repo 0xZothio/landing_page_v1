@@ -9,7 +9,7 @@ function Assets({ isHidden }) {
   const [active, setActive] = useState("1");
 
   const [scrollvalue, setScrollValue] = useState(0);
-  const windowheight = 1.2*window.innerHeight;
+  const windowheight = 1 * window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -17,17 +17,17 @@ function Assets({ isHidden }) {
       // console.log("windowscrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
 
-          if (scrollvalue > 5*windowheight) {
-            setActive("5");
-          } else if (scrollvalue > 4*windowheight) {
-            setActive("4");
-          } else if (scrollvalue > 3*windowheight) {
-            setActive("3");
-          } else if (scrollvalue > 2 * windowheight) {
-            setActive("2");
-          } else if (scrollvalue > windowheight) {
-            setActive("1");
-          }
+      if (scrollvalue > 5 * windowheight) {
+        setActive("5");
+      } else if (scrollvalue > 4 * windowheight) {
+        setActive("4");
+      } else if (scrollvalue > 3 * windowheight) {
+        setActive("3");
+      } else if (scrollvalue > 2 * windowheight) {
+        setActive("2");
+      } else if (scrollvalue > windowheight) {
+        setActive("1");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -80,7 +80,7 @@ function Assets({ isHidden }) {
         </span>
       </motion.div>
 
-        {/* <div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center">
         <img src="/assets/cre.png" alt="asset" className="" />
       </div> */}
 
@@ -94,7 +94,7 @@ function Assets({ isHidden }) {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div> */}
-      <div className="mt-[80px] flex sm:flex-row flex-col min-h-[70vh] gap-5">
+      <div className="mt-12 flex sm:flex-row flex-col min-h-[70vh] gap-5">
         {assetsData.map((asset, index) => (
           <AssetCard
             key={index}
@@ -106,9 +106,7 @@ function Assets({ isHidden }) {
         ))}
       </div>
 
-        {/* Text */}
-
-        
+      {/* Text */}
     </div>
   );
 }

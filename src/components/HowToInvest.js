@@ -58,7 +58,7 @@ function HowToInvest() {
 
   //   return () => element.removeEventListener("scroll", handleScroll);
   // }, [scrollvalue]);
-  const windowheight = 1.2 * window.innerHeight;
+  const windowheight = 1 * window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -84,7 +84,7 @@ function HowToInvest() {
   }, [scrollvalue]);
 
   return (
-    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-12">
+    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-10">
       <motion.div
         variants={fadeIn("up", "tween", 0, 0.1)}
         initial="hidden"
