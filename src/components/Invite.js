@@ -26,10 +26,10 @@ export default function Invite({ setIsVisible }) {
 
     try {
       let res = await axios.post(
-        `https://script.google.com/macros/s/AKfycbzx9JNec48UWX2QQr25I5WkLr7WnyszdcLq0nMaTFLe4-lmjeIv25AUS3T6B3YN30Gb/exec?first_name=${inviteData.first_name}&last_name=${inviteData.last_name}&mobile=${inviteData.mobile}&email=${inviteData.email}&function=subscribe`
+        `https://script.google.com/macros/s/AKfycbz1wTUy2M-ChUqGgSVfAapfFT_ZXoreUU1N_PwWkSPaciNf0-sKK3FPjKDaRULNYG-Y1Q/exec?first_name=${inviteData.first_name}&last_name=${inviteData.last_name}&mobile=${inviteData.mobile}&email=${inviteData.email}&function=subscribe`
       );
 
-      console.log(res);
+      
 
       if (res.data.result === "success") {
         console.log("invite success");
