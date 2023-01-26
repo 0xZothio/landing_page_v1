@@ -291,6 +291,37 @@ function HowToInvest() {
         </li>
       </ol>
 
+       {/* text */}
+        <div className="sm:ml-12 ml-4 mt-20">
+          <h3 id="resizing-h3">
+            <span>
+              <div className="h-100 mt-4">
+                <div className="cubespinner text-center ">
+                  <div className="face1">
+                    <div className="text-[35px] sm:text-[55px] text-center">
+                      Democratising{" "}
+                      <span className="text-[#F3C74E]">Investment</span>
+                    </div>
+                  </div>
+                  <div className="face2">
+                    <div className="text-[35px] sm:text-[55px] text-center">
+                      Democratising{" "}
+                      <span className="text-[#F3C74E]">Wealth Creation</span>
+                    </div>
+                  </div>
+                  <div className="face3">
+                    <div className="text-[35px] sm:text-[55px] text-center">
+                      Democratising{" "}
+                      <span className="text-[#F3C74E]">Future of Finance</span>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </span>
+          </h3>
+        </div>
+
       {/* mobile */}
       {/* <Swiper
         spaceBetween={0}

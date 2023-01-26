@@ -80,9 +80,9 @@ function LandingPage() {
         <Assets />
         <Welcome />
         <Features />
+        <Institutions />
         <About />
         <HowToInvest />
-        <Institutions />
         <Testimonials />
         <NewsLetter />
         <Footer />
