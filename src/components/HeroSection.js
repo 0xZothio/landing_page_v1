@@ -4,14 +4,13 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 import Invite from "./Invite";
-const Hero = ({ isHidden }) => {
+const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
+  
   return (
     <div
       className={
-        isHidden
-          ? " bg-black text-white collapse"
-          : " bg-black text-white w-full"
+        " bg-black text-white w-full"
       }
     >
       <div className="px-6 pt-6 lg:px-8">

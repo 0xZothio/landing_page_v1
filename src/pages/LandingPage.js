@@ -78,15 +78,15 @@ function LandingPage() {
         className={
           current < 5
             ? "fixed bg-black w-full h-screen z-100 left-0 hidden sm:block"
-            : "fixed bg-black w-full h-full left-0 overflow-y-scroll scrollbar-hide hidden sm:block"
+            : "fixed bg-black w-full h-full left-0 overflow-y-scroll scrollbar-hide collapse"
         }
       >
-        {current === 0 && <Hero />}
+        {current === 0 && <Hero setScrollValue={setScrollValue} />}
         {current === 1 && <Assets />}
         {current === 2 && <Welcome />}
         {current === 3 && <Features />}
         {current === 4 && <HowToInvest />}
-        {current === 5 && (
+        {/* {current === 5 && (
           <div>
             <About />
             <Institutions />
@@ -94,7 +94,7 @@ function LandingPage() {
             <NewsLetter />
             <Footer />
           </div>
-        )}
+        )} */}
       </div>
       <div className="block sm:hidden">
         <Hero />
@@ -130,6 +130,7 @@ function LandingPage() {
           <Footer />
         </>
       )} */}
+
       <div className="hidden sm:block">
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
@@ -154,13 +155,15 @@ function LandingPage() {
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
         <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-screen w-screen"></div>
-        <div className="h-12 w-screen"></div>
+        
       </div>
+      {<div className="hidden sm:block">
+        <About />
+        <Institutions />
+        <Testimonials />
+        <NewsLetter />
+        <Footer />
+      </div>}
       {/* <Assets isHidden={true} />
       <Assets isHidden={true} />
       <Assets isHidden={true} />

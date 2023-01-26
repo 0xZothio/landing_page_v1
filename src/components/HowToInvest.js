@@ -66,13 +66,13 @@ function HowToInvest() {
       // console.log("windowscrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
 
-      if (scrollvalue > 17 * windowheight) {
+      if (scrollvalue > 16 * windowheight) {
         setCurrent(3);
-      } else if (scrollvalue > 16 * windowheight) {
-        setCurrent(2);
       } else if (scrollvalue > 15 * windowheight) {
-        setCurrent(1);
+        setCurrent(2);
       } else if (scrollvalue > 14 * windowheight) {
+        setCurrent(1);
+      } else if (scrollvalue > 13 * windowheight) {
         setCurrent(0);
       }
     };
