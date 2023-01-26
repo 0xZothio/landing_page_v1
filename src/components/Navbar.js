@@ -14,7 +14,7 @@ const navigation = [
 const Navbar = ({ setIsVisible }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const windowheight = 1.5 * window.innerHeight;
+  const windowheight = 1.2 * window.innerHeight;
   const element = document.documentElement;
   const handleScroll = (length) => {
     element.scrollTo(0, length);
@@ -23,7 +23,7 @@ const Navbar = ({ setIsVisible }) => {
   const handleAboutScroll = (length) => {
     element.scrollTo(0, length);
     setTimeout(() => {
-      element.scrollTo(0, length + 300);
+      element.scrollTo(0, length + windowheight);
     }, 100);
     
     // const contactform = document.querySelector("about");
@@ -31,6 +31,9 @@ const Navbar = ({ setIsVisible }) => {
   };
   const handleContactScroll = (length) => {
     element.scrollTo(0, length);
+    setTimeout(() => {
+      element.scrollTo(0, length+7.3*windowheight);
+    }, 100);
     // const contactform = document.querySelector("about");
     // contactform.scrollIntoView({ behavior: "smooth" });
   };
