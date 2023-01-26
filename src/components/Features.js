@@ -408,13 +408,19 @@ function Features() {
 
             <div className="absolute top-5 object-cover ">
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={feature.video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-              ></video>
+              ></video> */}
+
+              <img
+                src={feature.video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </div>
           </div>
 
