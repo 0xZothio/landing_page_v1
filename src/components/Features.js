@@ -84,7 +84,7 @@ function Features() {
   //   return () => element.removeEventListener("scroll", handleScroll);
   // }, [scrollvalue]);
 
-  const windowheight = 1.2 * window.innerHeight;
+  const windowheight = 1 * window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -112,7 +112,7 @@ function Features() {
   }, [scrollvalue]);
   return (
     <div>
-      <div className="flex flex-col justify-center items-center sm:mt-0 mt-40">
+      {/* <div className="flex flex-col justify-center items-center sm:mt-0 mt-40"> */}
         {/* <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
@@ -129,7 +129,7 @@ function Features() {
         >
           <img src="/club.png" alt="Zoth Club" />
         </motion.div> */}
-      </div>
+      {/* </div> */}
 
       {/* feature 1*/}
 
@@ -144,7 +144,7 @@ function Features() {
         <div className="h-screen w-full"></div>
       </div> */}
 
-      <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-32 hidden">
+      <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-20 hidden">
         <div className="relative col-span-2 w-[300px]">
           <div className="w-[300px]">
             <img src="/frame.png" alt="frame" />

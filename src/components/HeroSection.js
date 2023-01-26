@@ -18,7 +18,7 @@ const Hero = ({ setScrollValue }) => {
       </div>
 
       <main>
-        <div className="absolute flex justify-center items-center z-0">
+        <div className="absolute sm:top-5 flex justify-center items-center z-0">
           {/* <video
             src="https://resources.zoth.in/landingpage/wave.mp4"
             autoPlay="{true}"
@@ -36,7 +36,7 @@ const Hero = ({ setScrollValue }) => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="relative px-6 lg:px-8 sm:mt-20"
+          className="relative px-6 lg:px-8 sm:mt-14"
         >
           <div className="mx-auto pt-10 sm:pt-20 ">
             <div>
