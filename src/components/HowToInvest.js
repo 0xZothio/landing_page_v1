@@ -35,11 +35,32 @@ function HowToInvest() {
   let slides = crouselData;
   const [current, setCurrent] = useState(0);
 
-  const [scrollvalue, setScrollValue] = useState(10);
+  // const [scrollvalue, setScrollValue] = useState(10);
 
-  const handleCick = (num) => {
-    setCurrent(0);
-  }
+  // const handleCick = (num) => {
+  //   setCurrent(0);
+  // }
+
+  // const func = () => {
+  //   let temp = current + 1;
+  //   if (temp > 3) {
+  //     temp = 0;
+  //   }
+  //   setCurrent(temp);
+  //   setTimeout(func, 5000);
+  // }
+// func();
+  // useEffect(() => {
+  //   func();
+  // }, [])
+  
+  setInterval(function () {
+    let temp = current + 1;
+    if (temp > 3) {
+      temp = 0;
+    }
+    setCurrent(temp);
+  }, 7000);
   // useEffect(() => {
   //   const element = document.querySelector("#section-3");
   //   const handleScroll = () => {
