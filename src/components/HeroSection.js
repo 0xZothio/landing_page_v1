@@ -4,23 +4,30 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 import Invite from "./Invite";
-const Hero = ({isHidden}) => {
+const Hero = ({ isHidden }) => {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <div className={isHidden ? " bg-black text-white collapse" : " bg-black text-white w-full"}>
+    <div
+      className={
+        isHidden
+          ? " bg-black text-white collapse"
+          : " bg-black text-white w-full"
+      }
+    >
       <div className="px-6 pt-6 lg:px-8">
         <Navbar setIsVisible={setIsVisible} />
       </div>
 
       <main>
         <div className="absolute flex justify-center items-center z-0">
-          <video
+          {/* <video
             src="https://resources.zoth.in/landingpage/wave.mp4"
             autoPlay="{true}"
             loop
             muted
             className=""
-          ></video>
+          ></video> */}
+          <img src="/wave.gif" alt="" />
         </div>
 
         {/* signup popup */}
@@ -90,7 +97,10 @@ const Hero = ({isHidden}) => {
                   </div>
                 </div>
                 <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
-                  Accept your early invite to earn <span className="text-[#F3C74E] font-medium ">$100 worth Zoth coins</span> 
+                  Accept your early invite to earn{" "}
+                  <span className="text-[#F3C74E] font-medium ">
+                    $100 worth Zoth coins
+                  </span>
                 </p>
               </div>
             </div>
