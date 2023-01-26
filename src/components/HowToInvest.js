@@ -146,6 +146,7 @@ function HowToInvest() {
                     (indx === current && "currentImg")
                   }`}
                   key={indx}
+                  onClick={() => setCurrent(indx)}
                 >
                   <img src={img.image} alt="travel" className={`Img`} />
                   <div className="text-[30px] text-[#F3C74E] font-semibold text-center font-roobert mt-8 mb-2">
