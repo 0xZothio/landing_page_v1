@@ -148,7 +148,7 @@ function Features() {
             <img src="/frame.png" alt="frame" />
           </div>
 
-          {num===0 && (
+          {num === 0 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -173,76 +173,76 @@ function Features() {
               ></video>
             </motion.div>
           )}
-          {num===1 && (
-              <motion.div
-                initial={{ x: 0, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: 100, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                // variants={featureIn("left", "tween", 0.3, 1)}
-                // initial="hidden"
-                // whileInView="show"
-                // initial="hidden"
-                // animate="visible"
-                // variants={variants}
-                // viewport={{ once: false, amount: 0.8 }}
-                className="absolute top-5 object-cover z-100"
-              >
-                {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-                <video
-                  src={data[num].video}
-                  autoplay="{true}"
-                  loop
-                  muted
-                  className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                ></video>
-              </motion.div>
-            )}
-          {num===2 && (
-              <motion.div
-                initial={{ x: 0, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: 100, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                // variants={featureIn("left", "tween", 0.3, 1)}
-                // initial="hidden"
-                // whileInView="show"
-                // viewport={{ once: false, amount: 0.8 }}
-                className="absolute top-5 object-cover z-100"
-              >
-                {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-                <video
-                  src={data[num].video}
-                  autoplay="{true}"
-                  loop
-                  muted
-                  className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                ></video>
-              </motion.div>
-            )}
-          {num===3 && (
-              <motion.div
-                initial={{ x: 0, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: 100, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                // variants={featureIn("left", "tween", 0.3, 1)}
-                // initial="hidden"
-                // whileInView="show"
-                // viewport={{ once: false, amount: 0.8 }}
-                className="absolute top-5 object-cover z-100"
-              >
-                {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-                <video
-                  src={data[num].video}
-                  autoplay="{true}"
-                  loop
-                  muted
-                  className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                ></video>
-              </motion.div>
-            )}
-          {num===4 && (
+          {num === 1 && (
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              // variants={featureIn("left", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
+              // initial="hidden"
+              // animate="visible"
+              // variants={variants}
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover z-100"
+            >
+              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+              <video
+                src={data[num].video}
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+              ></video>
+            </motion.div>
+          )}
+          {num === 2 && (
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              // variants={featureIn("left", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover z-100"
+            >
+              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+              <video
+                src={data[num].video}
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+              ></video>
+            </motion.div>
+          )}
+          {num === 3 && (
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              // variants={featureIn("left", "tween", 0.3, 1)}
+              // initial="hidden"
+              // whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover z-100"
+            >
+              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
+              <video
+                src={data[num].video}
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+              ></video>
+            </motion.div>
+          )}
+          {num === 4 && (
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -267,7 +267,7 @@ function Features() {
         </div>
 
         {/* <MyPara topic={data[num].topic } description={data[num].description} /> */}
-        {num===0 && (
+        {num === 0 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -287,7 +287,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {num===1 && (
+        {num === 1 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -307,7 +307,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {num===2 && (
+        {num === 2 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -327,7 +327,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {num===3 && (
+        {num === 3 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -347,7 +347,7 @@ function Features() {
             </div>
           </motion.div>
         )}
-        {num===4 && (
+        {num === 4 && (
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -371,7 +371,7 @@ function Features() {
 
       {/* mobile */}
       {/* feature 2*/}
-      {featureData.map((feature) => (
+      {data.map((feature) => (
         <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px] sm:hidden">
           <div className="relative col-span-2 w-[300px]">
             <div className="w-[300px]">
@@ -394,9 +394,7 @@ function Features() {
             <div className="sm:text-6xl text-3xl font-extrabold font-roobert mb-4">
               {feature.topic}
             </div>
-            <div className="text-lg leading-loose">
-              {feature.description}
-            </div>
+            <div className="text-lg leading-loose">{feature.description}</div>
           </div>
         </div>
       ))}
