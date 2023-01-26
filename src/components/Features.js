@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { fadeIn, slideIn, featureIn, staggerContainer } from "../utils/motion";
 import "../styles/styles.css";
 import { featureData } from "../data/featuresData";
+import reward from "../assets/features-gif/reward.gif";
+import etherium from "../assets/features-gif/etherium.gif";
 function Features() {
   const ref = useRef(null);
 
@@ -164,13 +166,19 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 1 && (
@@ -189,13 +197,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 2 && (
@@ -211,13 +224,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 3 && (
@@ -233,13 +251,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 4 && (
@@ -255,13 +278,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
         </div>
