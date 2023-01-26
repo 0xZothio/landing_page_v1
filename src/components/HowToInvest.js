@@ -107,7 +107,7 @@ function HowToInvest() {
         <div className="h-screen w-full"></div>
       </div> */}
       <div className="hidden sm:flex">
-        <div className="Carousel mt-10 hidden">
+        <div className="Carousel mt-6 hidden">
           <section className="slider">
             {slides.map((img, indx) => {
               return (
