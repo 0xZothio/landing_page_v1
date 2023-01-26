@@ -58,58 +58,58 @@ function Features() {
     },
     hidden: { opacity: 0 },
   };
-  // useEffect(() => {
-  //   const element = document.querySelector("#section-1");
-  //   const handleScroll = () => {
-  //     console.log("scrollToTop", element.scrollTop);
-  //     setScrollValue(element.scrollTop);
-  //     const viewportHeight = window.innerHeight;
-
-  //     if (scrollvalue > 2000) {
-  //       setNum(4);
-  //     } else if (scrollvalue > 1400) {
-  //       setNum(3);
-  //     } else if (scrollvalue > 800) {
-  //       setNum(2);
-  //     } else if (scrollvalue > 200) {
-  //       setNum(1);
-  //     } else {
-  //       setNum(0);
-  //     }
-  //   };
-
-  //   element.addEventListener("scroll", handleScroll);
-  //   handleScroll();
-
-  //   return () => element.removeEventListener("scroll", handleScroll);
-  // }, [scrollvalue]);
-
-  const windowheight = 1 * window.innerHeight;
   useEffect(() => {
-    const element = document.documentElement;
-    // const element = document.querySelector("#section-3");
+    const element = document.querySelector("#section-1");
     const handleScroll = () => {
-      // console.log("windowscrollToTop", element.scrollTop);
+      console.log("scrollToTop", element.scrollTop);
       setScrollValue(element.scrollTop);
+      // const viewportHeight = window.innerHeight;
 
-      if (scrollvalue > 12 * windowheight) {
+      if (scrollvalue > 2000) {
         setNum(4);
-      } else if (scrollvalue > 11 * windowheight) {
+      } else if (scrollvalue > 1500) {
         setNum(3);
-      } else if (scrollvalue > 10 * windowheight) {
+      } else if (scrollvalue > 1000) {
         setNum(2);
-      } else if (scrollvalue > 9 * windowheight) {
+      } else if (scrollvalue > 500) {
         setNum(1);
-      } else if (scrollvalue > 8 * windowheight) {
+      } else {
         setNum(0);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    element.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    // return () => element.removeEventListener("scroll", handleScroll);
+    return () => element.removeEventListener("scroll", handleScroll);
   }, [scrollvalue]);
+
+  // const windowheight = 1 * window.innerHeight;
+  // useEffect(() => {
+  //   const element = document.documentElement;
+  //   // const element = document.querySelector("#section-3");
+  //   const handleScroll = () => {
+  //     // console.log("windowscrollToTop", element.scrollTop);
+  //     setScrollValue(element.scrollTop);
+
+  //     if (scrollvalue > 12 * windowheight) {
+  //       setNum(4);
+  //     } else if (scrollvalue > 11 * windowheight) {
+  //       setNum(3);
+  //     } else if (scrollvalue > 10 * windowheight) {
+  //       setNum(2);
+  //     } else if (scrollvalue > 9 * windowheight) {
+  //       setNum(1);
+  //     } else if (scrollvalue > 8 * windowheight) {
+  //       setNum(0);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   handleScroll();
+
+  //   // return () => element.removeEventListener("scroll", handleScroll);
+  // }, [scrollvalue]);
   return (
     <div>
       {/* <div className="flex flex-col justify-center items-center sm:mt-0 mt-40"> */}
@@ -133,7 +133,7 @@ function Features() {
 
       {/* feature 1*/}
 
-      {/* <div
+      <div
         className="absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-40"
         ref={ref}
         id="section-1"
@@ -142,7 +142,7 @@ function Features() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
-      </div> */}
+      </div>
 
       <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-20 hidden">
         <div className="relative col-span-2 w-[300px]">

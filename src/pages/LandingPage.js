@@ -74,14 +74,14 @@ function LandingPage() {
   return (
     <div className="z-10 bg-black">
       {isLoading ? <div id="loading"></div> : null}
-     
+
       <div className="block">
         <Hero />
         <Assets />
         <Welcome />
         <Features />
-        <HowToInvest />
         <About />
+        <HowToInvest />
         <Institutions />
         <Testimonials />
         <NewsLetter />

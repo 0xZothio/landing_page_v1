@@ -36,6 +36,10 @@ function HowToInvest() {
   const [current, setCurrent] = useState(0);
 
   const [scrollvalue, setScrollValue] = useState(10);
+
+  const handleCick = (num) => {
+    setCurrent(0);
+  }
   // useEffect(() => {
   //   const element = document.querySelector("#section-3");
   //   const handleScroll = () => {
@@ -58,33 +62,36 @@ function HowToInvest() {
 
   //   return () => element.removeEventListener("scroll", handleScroll);
   // }, [scrollvalue]);
-  const windowheight = 1 * window.innerHeight;
-  useEffect(() => {
-    const element = document.documentElement;
-    // const element = document.querySelector("#section-3");
-    const handleScroll = () => {
-      // console.log("windowscrollToTop", element.scrollTop);
-      setScrollValue(element.scrollTop);
+  // const windowheight = 1 * window.innerHeight;
+  // useEffect(() => {
+  //   const element = document.documentElement;
+  //   // const element = document.querySelector("#section-3");
+  //   const handleScroll = () => {
+  //     // console.log("windowscrollToTop", element.scrollTop);
+  //     setScrollValue(element.scrollTop);
 
-      if (scrollvalue > 16 * windowheight) {
-        setCurrent(3);
-      } else if (scrollvalue > 15 * windowheight) {
-        setCurrent(2);
-      } else if (scrollvalue > 14 * windowheight) {
-        setCurrent(1);
-      } else if (scrollvalue > 13 * windowheight) {
-        setCurrent(0);
-      }
-    };
+  //     if (scrollvalue > 16 * windowheight) {
+  //       setCurrent(3);
+  //     } else if (scrollvalue > 15 * windowheight) {
+  //       setCurrent(2);
+  //     } else if (scrollvalue > 14 * windowheight) {
+  //       setCurrent(1);
+  //     } else if (scrollvalue > 13 * windowheight) {
+  //       setCurrent(0);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+  //   window.addEventListener("scroll", handleScroll);
+  //   handleScroll();
 
-    // return () => element.removeEventListener("scroll", handleScroll);
-  }, [scrollvalue]);
+  //   // return () => element.removeEventListener("scroll", handleScroll);
+  // }, [scrollvalue]);
 
   return (
-    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-10">
+    <div
+      id="howItWorks"
+      className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-10"
+    >
       <motion.div
         variants={fadeIn("up", "tween", 0, 0.1)}
         initial="hidden"
@@ -206,6 +213,9 @@ function HowToInvest() {
                   ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
                   : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
               }
+              onClick={() => {
+                setCurrent(0);
+              }}
             ></div>
             <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
           </div>
@@ -219,6 +229,9 @@ function HowToInvest() {
                   ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
                   : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
               }
+              onClick={() => {
+                setCurrent(1);
+              }}
             ></div>
             <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
           </div>
@@ -232,6 +245,9 @@ function HowToInvest() {
                   ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
                   : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
               }
+              onClick={() => {
+                setCurrent(2);
+              }}
             ></div>
             <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
           </div>
@@ -245,6 +261,9 @@ function HowToInvest() {
                   ? "z-10 flex items-center justify-center w-6 h-6 bg-white-200 rounded-full ring-0 ring-white dark:bg-white-900 sm:ring-8 dark:ring-white-100 shrink-0"
                   : "z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-gray dark:bg-white-900 sm:ring-8 dark:ring-gray-900 shrink-0"
               }
+              onClick={() => {
+                setCurrent(3);
+              }}
             ></div>
             <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700" />
           </div>
