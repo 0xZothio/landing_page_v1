@@ -144,7 +144,7 @@ function HowToInvest() {
                     (indx < current && `prevImg${current - indx}`) ||
                     (indx > current && `nextImg${indx - current}`) ||
                     (indx === current && "currentImg")
-                  }`}
+                  } cursor-pointer`}
                   key={indx}
                   onClick={() => setCurrent(indx)}
                 >
