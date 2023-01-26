@@ -22,6 +22,10 @@ const Navbar = ({ setIsVisible }) => {
 
   const handleAboutScroll = (length) => {
     element.scrollTo(0, length);
+    setTimeout(() => {
+      element.scrollTo(0, length + 300);
+    }, 100);
+    
     // const contactform = document.querySelector("about");
     // contactform.scrollIntoView({ behavior: "smooth" });
   };
