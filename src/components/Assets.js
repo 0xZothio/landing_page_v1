@@ -9,7 +9,7 @@ function Assets({ isHidden }) {
   const [active, setActive] = useState("1");
 
   const [scrollvalue, setScrollValue] = useState(0);
-  const windowheight = 1.5*window.innerHeight;
+  const windowheight = 1.2*window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");

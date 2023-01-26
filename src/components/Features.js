@@ -5,38 +5,40 @@ import { motion } from "framer-motion";
 import { fadeIn, slideIn, featureIn, staggerContainer } from "../utils/motion";
 import "../styles/styles.css";
 import { featureData } from "../data/featuresData";
+import reward from "../assets/features-gif/reward.gif";
+import etherium from "../assets/features-gif/etherium.gif";
 function Features() {
   const ref = useRef(null);
 
   const [data, setData] = useState([
     {
-      video: "https://resources.zoth.in/landingpage/reward.mp4",
+      video: "https://resources.zoth.in/landingpage/reward.gif",
       topic: "Earn Zoth Coins for investing in your assets",
       description:
         "Every time you invest on Zoth, you receive Zoth coins. You can use these to win exclusive rewards or get special access to curated products and experiences.",
     },
 
     {
-      video: "https://resources.zoth.in/landingpage/eth.mp4",
+      video: "https://resources.zoth.in/landingpage/etherium.gif",
       topic: "Guaranteed transparency and Easy exit mechanism",
       description:
         "On the blockchain, transactions are transparent and verifiable. Zoth provides liquidity for on chain assets through its unique real-time market based exit mechanism.",
     },
 
     {
-      video: "https://resources.zoth.in/landingpage/loyalty.mp4",
+      video: "https://resources.zoth.in/landingpage/loyalty.gif",
       topic: "Governance model for, of and by the users ",
       description:
         "Zoth Governance and Loyalty program gives you exclusive access to premium asset classes, special offers on upcoming launches, stay-cations in opulent villas, and more.",
     },
     {
-      video: "https://resources.zoth.in/landingpage/yield.mp4",
+      video: "https://resources.zoth.in/landingpage/high.gif",
       topic: "High Yield, Returns and Portfolio Diversification",
       description:
         "Data-driven insights to diversify your portfolio and invest in stable asset classes accessible only to the top 0.1%, to earn lifetime passive income.",
     },
     {
-      video: "https://resources.zoth.in/landingpage/sebi.mp4",
+      video: "https://resources.zoth.in/landingpage/return.gif",
       topic: "Compliant and Strict Due Diligence",
       description:
         "All our assets are listed after a strict process of due diligence and are compliant with local and other global regulatory bodies.",
@@ -82,7 +84,7 @@ function Features() {
   //   return () => element.removeEventListener("scroll", handleScroll);
   // }, [scrollvalue]);
 
-  const windowheight = 1.5 * window.innerHeight;
+  const windowheight = 1.2 * window.innerHeight;
   useEffect(() => {
     const element = document.documentElement;
     // const element = document.querySelector("#section-3");
@@ -164,13 +166,19 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 1 && (
@@ -189,13 +197,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 2 && (
@@ -211,13 +224,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 3 && (
@@ -233,13 +251,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
           {num === 4 && (
@@ -255,13 +278,18 @@ function Features() {
               className="absolute top-5 object-cover z-100"
             >
               {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              <video
+              {/* <video
                 src={data[num].video}
                 autoplay="{true}"
                 loop
                 muted
                 className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video>
+              ></video> */}
+              <img
+                src={data[num].video}
+                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
+                alt=""
+              />
             </motion.div>
           )}
         </div>
