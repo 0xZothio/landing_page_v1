@@ -84,7 +84,7 @@ function HowToInvest() {
   }, [scrollvalue]);
 
   return (
-    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block">
+    <div id="howItWorks" className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-12">
       <motion.div
         variants={fadeIn("up", "tween", 0, 0.1)}
         initial="hidden"

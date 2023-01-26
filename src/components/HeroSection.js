@@ -26,12 +26,11 @@ const Hero = ({isHidden}) => {
         {/* signup popup */}
         {isVisible && <Invite setIsVisible={setIsVisible} />}
 
-        {/* signup popup */}
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="relative px-6 lg:px-8 sm:mt-4"
+          className="relative px-6 lg:px-8 sm:mt-20"
         >
           <div className="mx-auto pt-10 sm:pt-20 ">
             <div>

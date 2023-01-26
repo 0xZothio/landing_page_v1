@@ -6,7 +6,7 @@ import { fadeIn } from "../utils/motion";
 function Team() {
   return (
     <>
-      <div className="text-[20px] bg-black text-white w-full flex flex-col items-center justify-center h-full my-24">
+      <div className="text-[20px] bg-black text-white w-full flex flex-col items-center justify-center h-full my-14">
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
