@@ -90,7 +90,7 @@ function Assets({ isHidden }) {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
       </div> */}
-      <div className="mt-10 flex sm:flex-row flex-col min-h-[70vh] gap-5">
+      <div className="mt-10 flex sm:flex-row flex-col min-h-[70vh] gap-5 p-10">
         {assetsData.map((asset, index) => (
           <AssetCard
             key={index}
