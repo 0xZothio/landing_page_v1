@@ -5,7 +5,7 @@ import { fadeIn } from "../utils/motion";
 function AssetCard({ id, imgUrl, title, desc, index, active, handleClick }) {
   return (
     <motion.div
-      variants={fadeIn("right", "spring", 0, 0.1)}
+      variants={fadeIn("right", "spring", index * 0.5, 1)}
       initial="hidden"
       whileInView="show"
       className={`relative ${

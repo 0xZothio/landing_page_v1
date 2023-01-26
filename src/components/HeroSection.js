@@ -36,9 +36,9 @@ const Hero = ({ setScrollValue }) => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="relative px-6 lg:px-8 sm:mt-10"
+          className="relative px-6 lg:px-8"
         >
-          <div className="mx-auto pt-10 sm:pt-20 ">
+          <div className="mx-auto pt-10 sm:pt-32 ">
             <div>
               <div>
                 <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">

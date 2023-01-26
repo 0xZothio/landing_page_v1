@@ -75,18 +75,13 @@ const Navbar = ({ setIsVisible }) => {
             <a
               href="#about"
               className="font-semibold hover:text-gray-100"
-              onClick={() => {
-                handleAboutScroll(18 * windowheight + 10);
-              }}
+              
             >
               About
             </a>
             <a
-              href="#howitworks"
+              href="#howItWorks"
               className="font-semibold hover:text-gray-100"
-              onClick={() => {
-                handleScroll(13 * windowheight + 10);
-              }}
             >
               How it Works
             </a>
@@ -94,9 +89,6 @@ const Navbar = ({ setIsVisible }) => {
             <a
               href="#contact"
               className="font-semibold hover:text-gray-100"
-              onClick={() => {
-                handleContactScroll(18 * windowheight + 10);
-              }}
             >
               Contact
             </a>

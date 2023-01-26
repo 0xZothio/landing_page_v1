@@ -62,14 +62,10 @@ function Assets({ isHidden }) {
 
   return (
     <div
-      className={
-        isHidden
-          ? "bg-black text-white w-full h-full px-8 pb-14 collapse"
-          : "bg-black text-white w-full h-full px-8 pb-14"
-      }
+      className="sm:mt-36"
     >
       <motion.div
-        variants={fadeIn("up", "tween", 0, 0.2)}
+        variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
         className="text-[40px] sm:text-[80px] text-center font-roobert font-bold mt-10"
