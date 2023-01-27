@@ -141,7 +141,7 @@ function Features() {
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
         <div className="h-screen w-full"></div>
-        {/* <div className="h-screen w-full"></div> */}
+        <div className="h-screen w-full"></div>
       </div>
 
       <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-20 hidden">
