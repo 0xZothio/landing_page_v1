@@ -7,7 +7,6 @@ import tokenisation from "../assets/images/Tokenization.png";
 import marketplace from "../assets/images/zoth_marketplace.png";
 import "../styles/styles.css";
 
-
 const crouselData = [
   {
     image: asset_trust,
@@ -49,11 +48,11 @@ function HowToInvest() {
   //   setCurrent(temp);
   //   setTimeout(func, 5000);
   // }
-// func();
+  // func();
   // useEffect(() => {
   //   func();
   // }, [])
-  
+
   // setInterval(function () {
   //   let temp = current + 1;
   //   if (temp > 3) {
@@ -114,7 +113,7 @@ function HowToInvest() {
       className="bg-black text-white w-full h-full sm:pb-10 hidden sm:block sm:mt-20"
     >
       <motion.div
-        variants={fadeIn("up", "tween", 0, 0.1)}
+        variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
         className="text-[40px] text-center sm:text-[80px] font-codec font-extrabold "
@@ -292,36 +291,35 @@ function HowToInvest() {
         </li>
       </ol>
 
-       {/* text */}
-        <div className="sm:ml-12 ml-4 mt-20">
-          <h3 id="resizing-h3">
-            <span>
-              <div className="h-100 mt-4">
-                <div className="cubespinner text-center ">
-                  <div className="face1">
-                    <div className="text-[35px] sm:text-[55px] text-center">
-                      Democratising{" "}
-                      <span className="text-[#F3C74E]">Investment</span>
-                    </div>
+      {/* text */}
+      <div className="sm:ml-12 ml-4 mt-20">
+        <h3 id="resizing-h3">
+          <span>
+            <div className="h-100 mt-4">
+              <div className="cubespinner text-center ">
+                <div className="face1">
+                  <div className="text-[35px] sm:text-[55px] text-center">
+                    Democratising{" "}
+                    <span className="text-[#F3C74E]">Investment</span>
                   </div>
-                  <div className="face2">
-                    <div className="text-[35px] sm:text-[55px] text-center">
-                      Democratising{" "}
-                      <span className="text-[#F3C74E]">Wealth Creation</span>
-                    </div>
+                </div>
+                <div className="face2">
+                  <div className="text-[35px] sm:text-[55px] text-center">
+                    Democratising{" "}
+                    <span className="text-[#F3C74E]">Wealth Creation</span>
                   </div>
-                  <div className="face3">
-                    <div className="text-[35px] sm:text-[55px] text-center">
-                      Democratising{" "}
-                      <span className="text-[#F3C74E]">Future of Finance</span>
-                    </div>
+                </div>
+                <div className="face3">
+                  <div className="text-[35px] sm:text-[55px] text-center">
+                    Democratising{" "}
+                    <span className="text-[#F3C74E]">Future of Finance</span>
                   </div>
-                 
                 </div>
               </div>
-            </span>
-          </h3>
-        </div>
+            </div>
+          </span>
+        </h3>
+      </div>
 
       {/* mobile */}
       {/* <Swiper
