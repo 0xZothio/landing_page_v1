@@ -77,8 +77,8 @@ function LandingPage() {
 
       <div className="block">
         <Hero />
-        <Assets />
         <Welcome />
+        <Assets />
         <Features />
         <Institutions />
         <About />

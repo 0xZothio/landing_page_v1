@@ -86,16 +86,18 @@ const Navbar = ({ setIsVisible }) => {
               How it Works
             </a>
 
+            <a href="#institutions" className="font-semibold hover:text-gray-100">
+              Institutions{" "}
+              <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
+            </a>
+
             <a
               href="#contact"
               className="font-semibold hover:text-gray-100"
             >
               Contact
             </a>
-            <a href="#" className="font-semibold hover:text-gray-100">
-              Institutions{" "}
-              <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
-            </a>
+           
 
             {/* Solution dropdown */}
             {/* <div className="relative inline-block text-left">
