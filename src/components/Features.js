@@ -131,6 +131,18 @@ function Features() {
         </motion.div> */}
       {/* </div> */}
 
+      <motion.div
+        variants={fadeIn("up", "tween", 0.2, 1)}
+        initial="hidden"
+        whileInView="show"
+        className="text-[60px] sm:text-[80px] text-center font-codec font-bold sm:mt-20"
+      >
+        Member{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          Benefits
+        </span>
+      </motion.div>
+
       {/* feature 1*/}
 
       <div

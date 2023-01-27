@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 function Institutions() {
   return (
-    <div className="bg-black text-white w-full flex flex-col items-center justify-center h-full mt-[80px] py-10">
+    <div id="institutions" className="bg-black text-white w-full flex flex-col items-center justify-center h-full mt-[80px] py-10">
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
