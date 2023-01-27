@@ -11,6 +11,7 @@ export default function Invite({ setIsVisible }) {
 
   const [formErrors, setFormErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [message, showMessage] = useState(false);
 
   const onChangeData = async (e) => {
     let name = e.target.name;
@@ -29,15 +30,14 @@ export default function Invite({ setIsVisible }) {
         `https://script.google.com/macros/s/AKfycbz1wTUy2M-ChUqGgSVfAapfFT_ZXoreUU1N_PwWkSPaciNf0-sKK3FPjKDaRULNYG-Y1Q/exec?first_name=${inviteData.first_name}&last_name=${inviteData.last_name}&mobile=${inviteData.mobile}&email=${inviteData.email}&function=subscribe`
       );
 
-      
-
       if (res.data.result === "success") {
         console.log("invite success");
         toast.success("Go Ahead !!! Sucess", {
           theme: "dark",
         });
         setIsLoading(false);
-        setIsVisible(false);
+        // setIsVisible(false);
+        showMessage(true);
         return;
       } else {
         setIsLoading(false);
@@ -104,101 +104,109 @@ export default function Invite({ setIsVisible }) {
               className="hidden sm:flex w-[485px] h-[585px]"
             />
 
-            {/* form */}
-            <div className="px-6 py-6 lg:px-8">
-              <h3 className="mb-4 text-3xl font-semibold  text-white">
-                Start your journey into
-              </h3>
-              <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
-              Sustainable Long Term 
-              </h3>
-              <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
-              Wealth Creation!
-              </h3>
-              
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="first_name"
-                    className="block mb-2 text-sm   text-gray-300"
-                  >
-                    Enter Your Name
-                  </label>
-                  <input
-                    type="text"
-                    name="first_name"
-                    id="first_name"
-                    className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                    placeholder=""
-                    required={true}
-                    value={inviteData.first_name}
-                    onChange={(e) => onChangeData(e)}
-                  />
-                  <p className="text-sm text-red-500 ">{formErrors.name}</p>
+            {message ? (
+              <div className="flex flex-col justify-center items-center ">
+                <div className="text-4xl font-codec text-[#F3C74E]">Thank you!</div>
+                <div className="text-xl p-4 font-roobert">
+                  Our Team Will Contact You soon.
                 </div>
+              </div>
+            ) : (
+              <div className="px-6 py-6 lg:px-8">
+                <h3 className="mb-4 text-3xl font-semibold  text-white">
+                  Start your journey into
+                </h3>
+                <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
+                  Sustainable Long Term
+                </h3>
+                <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
+                  Wealth Creation!
+                </h3>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm text-gray-300"
-                  >
-                    Enter Your Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                    placeholder=""
-                    required={true}
-                    value={inviteData.email}
-                    onChange={(e) => onChangeData(e)}
-                  />
-                  <p className="text-sm text-red-500 ">{formErrors.email}</p>
-                </div>
+                <form className="space-y-6">
+                  <div>
+                    <label
+                      htmlFor="first_name"
+                      className="block mb-2 text-sm   text-gray-300"
+                    >
+                      Enter Your Name
+                    </label>
+                    <input
+                      type="text"
+                      name="first_name"
+                      id="first_name"
+                      className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      placeholder=""
+                      required={true}
+                      value={inviteData.first_name}
+                      onChange={(e) => onChangeData(e)}
+                    />
+                    <p className="text-sm text-red-500 ">{formErrors.name}</p>
+                  </div>
 
-                <div>
-                  <label
-                    htmlFor="mobile"
-                    className="block mb-2 text-sm text-gray-300"
-                  >
-                    Enter Your Phone No.
-                  </label>
-                  <input
-                    type="number"
-                    name="mobile"
-                    id="mobile"
-                    placeholder=""
-                    className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                    required={true}
-                    max="10"
-                    min="10"
-                    value={inviteData.mobile}
-                    onChange={(e) => onChangeData(e)}
-                  />
-                  <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
-                </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm text-gray-300"
+                    >
+                      Enter Your Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      placeholder=""
+                      required={true}
+                      value={inviteData.email}
+                      onChange={(e) => onChangeData(e)}
+                    />
+                    <p className="text-sm text-red-500 ">{formErrors.email}</p>
+                  </div>
 
-                {isLoading ? (
-                  <button
-                    type="button"
-                    className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
-                  >
-                    <div class="flex items-center justify-center ">
-                      <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
-                    </div>
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={invite}
-                    className="w-full bg-[#F3C74E] rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
-                  >
-                    Enter the Zoth Club
-                  </button>
-                )}
-              </form>
-            </div>
+                  <div>
+                    <label
+                      htmlFor="mobile"
+                      className="block mb-2 text-sm text-gray-300"
+                    >
+                      Enter Your Phone No.
+                    </label>
+                    <input
+                      type="number"
+                      name="mobile"
+                      id="mobile"
+                      placeholder=""
+                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      required={true}
+                      max="10"
+                      min="10"
+                      value={inviteData.mobile}
+                      onChange={(e) => onChangeData(e)}
+                    />
+                    <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
+                  </div>
+
+                  {isLoading ? (
+                    <button
+                      type="button"
+                      className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                    >
+                      <div class="flex items-center justify-center ">
+                        <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                      </div>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={invite}
+                      className="w-full bg-[#F3C74E] rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                    >
+                      Enter the Zoth Club
+                    </button>
+                  )}
+                </form>
+              </div>
+            )}
           </div>
         </div>
       </div>
