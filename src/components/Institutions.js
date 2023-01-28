@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
+import NewsLetter from "./newsletter";
 function Institutions() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <>
-
       <div
         id="institutions"
         className="bg-black text-white w-full flex flex-col items-center justify-center h-full mt-[80px] py-10"
@@ -24,7 +25,7 @@ function Institutions() {
           Offerings
         </motion.div>
 
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col sm:flex-row mb-10">
           {/* cards 1 */}
           <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out ">
             <div class="rounded-lg shadow-lg bg-black border border-slate-500	 max-w-sm">
@@ -113,6 +114,10 @@ function Institutions() {
             </div>
           </div>
         </div>
+
+        {/* Newsletter and footer */}
+        <NewsLetter />
+        <Footer />
       </div>
     </>
   );
