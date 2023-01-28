@@ -4,6 +4,7 @@ import { fadeIn, slideIn } from "../utils/motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import NewsLetter from "./newsletter";
+import Offerings from "./Offerings";
 function Institutions() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -147,7 +148,6 @@ function Institutions() {
         {/* market */}
         <div className="flex flex-col items-center justify-center mb-10">
           {/* first */}
-          
 
           {/* Second */}
           <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
@@ -191,6 +191,8 @@ function Institutions() {
           </div>
         </div>
 
+        {/* offerings */}
+        <Offerings />
         {/* Newsletter and footer */}
         <NewsLetter />
         <Footer />
