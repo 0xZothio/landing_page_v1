@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+import { fadeIn, slideIn } from "../utils/motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import NewsLetter from "./newsletter";
@@ -14,8 +14,7 @@ function Institutions() {
         className="bg-black text-white w-full h-full mt-[70px] py-10"
       >
         {/* heading */}
-        <div className="sm:ml-14 mb-10 p-4 sm:p-10" >
-
+        <div className="sm:ml-14 mb-10 p-4 sm:p-10">
           <div className="text-4xl sm:text-8xl font-codec text-left">
             Redesigning
           </div>
@@ -37,11 +36,10 @@ function Institutions() {
             Tokenize, Self-Custody and Trade digital assets ‍on our full stack
             blockchain financial infrastructure.
           </div>
-
         </div>
 
         {/* offers */}
-        <div className="flex flex-col items-center justify-center ">
+        <div className="flex flex-col items-center justify-center mb-10">
           <motion.div
             variants={fadeIn("up", "tween", 0.2, 1)}
             initial="hidden"
@@ -147,6 +145,51 @@ function Institutions() {
         </div>
 
         {/* market */}
+        <div className="flex flex-col items-center justify-center mb-10">
+          {/* first */}
+          
+
+          {/* Second */}
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
+
+              {/* animation */}
+              {/* <motion.div
+              variants={fadeIn("up", "tween", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover "
+            >
+              <video
+                src="/features/reward.mp4"
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              ></video>
+            </motion.div> */}
+            </div>
+
+            <motion.div
+              variants={slideIn("up", "tween", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              className="col-span-2 self-center mt-2 p-8 "
+            >
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+                Trade
+              </div>
+              <div className="text-lg leading-loose sm:w-3/4">
+                Secure transaction mapping accomplished in real-time provides
+                for immediate settlement and irrefutable data.
+              </div>
+            </motion.div>
+          </div>
+        </div>
 
         {/* Newsletter and footer */}
         <NewsLetter />
