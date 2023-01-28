@@ -4,6 +4,7 @@ import logo from "../assets/images/newlogo.png";
 import { FiAlignJustify } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
+import { Link } from "react-router-dom";
 const navigation = [
   { name: "About", href: "#about" },
   { name: "How it works", href: "#howItWorks" },
@@ -25,14 +26,14 @@ const Navbar = ({ setIsVisible }) => {
     setTimeout(() => {
       element.scrollTo(0, length + windowheight);
     }, 100);
-    
+
     // const contactform = document.querySelector("about");
     // contactform.scrollIntoView({ behavior: "smooth" });
   };
   const handleContactScroll = (length) => {
     element.scrollTo(0, length);
     setTimeout(() => {
-      element.scrollTo(0, length+7.3*windowheight);
+      element.scrollTo(0, length + 7.3 * windowheight);
     }, 100);
     // const contactform = document.querySelector("about");
     // contactform.scrollIntoView({ behavior: "smooth" });
@@ -52,7 +53,7 @@ const Navbar = ({ setIsVisible }) => {
           aria-label="Global"
         >
           <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Zoth.io</span>
               <img className="h-8" src="/logo.png" alt="" />
             </a>
@@ -72,32 +73,24 @@ const Navbar = ({ setIsVisible }) => {
           </div>
           <div className="hidden md:flex md:justify-center md:items-center md:gap-x-12 md:px-8 md:ml-24">
             {/* {navigation.map((item) => ( */}
-            <a
-              href="#about"
-              className="font-semibold hover:text-gray-100"
-              
-            >
+            <a href="#about" className="font-semibold hover:text-gray-100">
               About
             </a>
-            <a
-              href="#howItWorks"
-              className="font-semibold hover:text-gray-100"
-            >
+            <a href="#howItWorks" className="font-semibold hover:text-gray-100">
               How it Works
             </a>
 
-            <a href="#institutions" className="font-semibold hover:text-gray-100">
-              Institutions{" "}
-              <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
-            </a>
-
-            <a
-              href="#contact"
+            <Link
+              to="/institutions"
               className="font-semibold hover:text-gray-100"
             >
+              Institutions{" "}
+              <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
+            </Link>
+
+            <a href="#contact" className="font-semibold hover:text-gray-100">
               Contact
             </a>
-           
 
             {/* Solution dropdown */}
             {/* <div className="relative inline-block text-left">
