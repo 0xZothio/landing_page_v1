@@ -107,7 +107,6 @@ const Navbar = ({ setIsVisible }) => {
             <a
               href="#contact"
               className="font-semibold hover:text-gray-100"
-              onClick={() => setSection(true)}
             >
               Contact
             </a>
