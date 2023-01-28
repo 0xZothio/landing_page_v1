@@ -26,7 +26,7 @@ const Hero = ({ setScrollValue }) => {
             muted
             className=""
           ></video> */}
-          {/* <img src="/wave.gif" alt="" /> */}
+          <img src="/wave.gif" alt="" />
         </div>
 
         {/* signup popup */}

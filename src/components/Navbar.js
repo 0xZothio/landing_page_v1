@@ -46,8 +46,8 @@ const Navbar = ({ setIsVisible }) => {
     <div
       className={
         section
-          ? "bg-black text-white z-50 pt-20"
-          : "bg-black text-white z-50 pt-8"
+          ? "bg-black text-white z-50 pt-20 relative"
+          : "bg-black text-white z-50 pt-8 relative"
       }
     >
       {console.log(section)}
