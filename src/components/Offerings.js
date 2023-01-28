@@ -1,5 +1,6 @@
 import OfferingCard from "./OfferingCard";
-
+import { motion } from "framer-motion";
+import { fadeIn, slideIn } from "../utils/motion";
 const data = [
   {
     id: 1,
@@ -59,20 +60,26 @@ const data = [
 const Offerings = () => {
   return (
     <div className="mx-auto pt-10 sm:pt-32 w-5/6 mb-10">
-      <div>
-        <p className="mt-6 leading-8 text-center font-roobert text-2xl">
-          Our Offerings across Sectors
-        </p>
-      </div>
-      <div className="mt-12 font-codec">
-        <h1 className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-          We Enable{" "}
-          <span className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-            Our Clients
-          </span>{" "}
-          To Manage And Trade Their Digital Assets
-        </h1>
-      </div>
+      <motion.div
+        variants={fadeIn("up", "tween", 0.3, 1)}
+        initial="hidden"
+        whileInView="show"
+      >
+        <div>
+          <p className="mt-6 leading-8 text-center font-roobert text-2xl">
+            Our Offerings across Sectors
+          </p>
+        </div>
+        <div className="mt-12 font-codec">
+          <h1 className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider">
+            We Enable{" "}
+            <span className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+              Our Clients
+            </span>{" "}
+            To Manage And Trade Their Digital Assets
+          </h1>
+        </div>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 pt-12">
         {data.map((item) => {
           return (
