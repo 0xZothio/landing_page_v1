@@ -53,9 +53,9 @@ const Navbar = ({ setIsVisible }) => {
       {console.log(section)}
       {!mobileMenuOpen && (
         <motion.nav
-          // variants={navVariants}
-          // initial="hidden"
-          // whileInView="show"
+          variants={navVariants}
+          initial="hidden"
+          whileInView="show"
           className="flex h-9 items-center justify-between"
           aria-label="Global"
         >
