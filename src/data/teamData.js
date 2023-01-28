@@ -9,7 +9,7 @@ export const teamsData = [
   {
     name: "Prashant Pansare",
     photo: "/teams/prashant.png",
-    role: "COO & Head of GTM",
+    role: "Head of GTM",
     linkedIn: "https://www.linkedin.com/in/prashantpansare/",
   },
 
