@@ -4,6 +4,7 @@ import { fadeIn } from "../utils/motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import NewsLetter from "./newsletter";
+import Offerings from "./Offerings"
 function Institutions() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -115,6 +116,7 @@ function Institutions() {
           </div>
         </div>
 
+        <Offerings/>
         {/* Newsletter and footer */}
         <NewsLetter />
         <Footer />
