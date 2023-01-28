@@ -7,9 +7,6 @@ function Institutions() {
 
   return (
     <>
-      {/* <div className="px-6 pt-6 lg:px-8"> */}
-      {/* <Navbar setIsVisible={setIsVisible} /> */}
-      {/* </div> */}
 
       <div
         id="institutions"

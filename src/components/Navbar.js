@@ -14,36 +14,44 @@ const navigation = [
 
 const Navbar = ({ setIsVisible }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [section, setSection] = useState(false);
 
-  const windowheight = 1 * window.innerHeight;
-  const element = document.documentElement;
-  const handleScroll = (length) => {
-    element.scrollTo(0, length);
-  };
+  // const windowheight = 1 * window.innerHeight;
+  // const element = document.documentElement;
+  // const handleScroll = (length) => {
+  //   element.scrollTo(0, length);
+  // };
 
-  const handleAboutScroll = (length) => {
-    element.scrollTo(0, length);
-    setTimeout(() => {
-      element.scrollTo(0, length + windowheight);
-    }, 100);
+  // const handleAboutScroll = (length) => {
+  //   element.scrollTo(0, length);
+  //   setTimeout(() => {
+  //     element.scrollTo(0, length + windowheight);
+  //   }, 100);
 
-    // const contactform = document.querySelector("about");
-    // contactform.scrollIntoView({ behavior: "smooth" });
-  };
-  const handleContactScroll = (length) => {
-    element.scrollTo(0, length);
-    setTimeout(() => {
-      element.scrollTo(0, length + 7.3 * windowheight);
-    }, 100);
-    // const contactform = document.querySelector("about");
-    // contactform.scrollIntoView({ behavior: "smooth" });
-  };
+  // const contactform = document.querySelector("about");
+  // contactform.scrollIntoView({ behavior: "smooth" });
+  // };
+  // const handleContactScroll = (length) => {
+  //   element.scrollTo(0, length);
+  //   setTimeout(() => {
+  //     element.scrollTo(0, length+7.3*windowheight);
+  //   }, 100);
+  //   // const contactform = document.querySelector("about");
+  //   // contactform.scrollIntoView({ behavior: "smooth" });
+  // };
   // function classNames(...classes) {
   //   return classes.filter(Boolean).join(" ");
   // }
 
   return (
-    <div className="bg-black text-white z-50 relative">
+    <div
+      className={
+        section
+          ? "bg-black text-white z-50 pt-20 relative"
+          : "bg-black text-white z-50 pt-8 relative"
+      }
+    >
+      {console.log(section)}
       {!mobileMenuOpen && (
         <motion.nav
           variants={navVariants}
@@ -73,22 +81,35 @@ const Navbar = ({ setIsVisible }) => {
           </div>
           <div className="hidden md:flex md:justify-center md:items-center md:gap-x-12 md:px-8 md:ml-24">
             {/* {navigation.map((item) => ( */}
-            <a href="#about" className="font-semibold hover:text-gray-100">
+            <a
+              href="#about"
+              className="font-semibold hover:text-gray-100"
+              onClick={() => setSection(true)}
+            >
               About
             </a>
-            <a href="#howItWorks" className="font-semibold hover:text-gray-100">
+            <a
+              href="#howItWorks"
+              className="font-semibold hover:text-gray-100"
+              onClick={() => setSection(true)}
+            >
               How it Works
             </a>
 
             <Link
               to="/institutions"
               className="font-semibold hover:text-gray-100"
+              // onClick={() => setSection(true)}
             >
               Institutions{" "}
               <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
             </Link>
 
-            <a href="#contact" className="font-semibold hover:text-gray-100">
+            <a
+              href="#contact"
+              className="font-semibold hover:text-gray-100"
+              onClick={() => setSection(true)}
+            >
               Contact
             </a>
 
@@ -180,7 +201,10 @@ const Navbar = ({ setIsVisible }) => {
                   <a
                     key={item.name}
                     href={item.href}
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    onClick={() => {
+                      setMobileMenuOpen(!mobileMenuOpen);
+                      setSection(true);
+                    }}
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 hover:bg-white hover:text-black"
                   >
                     {item.name}

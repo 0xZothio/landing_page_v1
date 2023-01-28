@@ -13,7 +13,7 @@ const Hero = ({ setScrollValue }) => {
         " bg-black text-white w-full"
       }
     >
-      <div className="px-6 pt-6 lg:px-8">
+      <div className="px-6 lg:px-8">
         <Navbar setIsVisible={setIsVisible} />
       </div>
 
