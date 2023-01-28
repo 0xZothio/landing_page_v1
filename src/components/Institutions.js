@@ -156,7 +156,7 @@ function Institutions() {
         </div>
 
         {/* market */}
-        <div className="flex flex-col items-center justify-center mb-10">
+        <div className="sm:flex flex-col items-center justify-center mb-10 hidden">
           {/* first */}
 
           <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
@@ -282,6 +282,178 @@ function Institutions() {
                 ></video>
               </motion.div> */}
             </div>
+          </div>
+
+          {/* fourth */}
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
+
+              {/* animation */}
+              {/* <motion.div
+              variants={fadeIn("up", "tween", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover "
+            >
+              <video
+                src="/features/reward.mp4"
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              ></video>
+            </motion.div> */}
+            </div>
+
+            <motion.div
+              variants={slideIn("up", "tween", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              className="col-span-2 self-center mt-2 p-8 "
+            >
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+                Custody/Security Services
+              </div>
+              <div className="text-lg leading-loose sm:w-3/4">
+                Regular reporting and supervision of the entire market is made
+                redundant due to the presence of an immutable transaction
+                database. Multiple rounds of cross-system reconciliation are
+                obviated.
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* market for mobile */}
+        <div className="flex flex-col items-center justify-center mb-10 sm:hidden">
+          {/* first */}
+
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
+
+              {/* <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.3)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <video
+                  src="/features/loyalty.mp4"
+                  autoplay="{true}"
+                  loop
+                  muted
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                ></video>
+              </motion.div> */}
+            </div>
+            <motion.div
+              variants={slideIn("up", "tween", 0.3, 1)}
+              initial="hidden"
+              whileInView="show"
+              className="col-span-2 self-center mt-2 p-8 "
+            >
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+                Pre-Trade
+              </div>
+              <div className="text-lg leading-loose">
+                Counterparties, regulators and market researchers are assured
+                complete transparency through verification of holdings. Our
+                robust pre-trade processes ensure transparency through
+                verification of holdings. Our automated KYC/KYB and AML checks
+                make for zero counterparty risks and quick onboarding.
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Second */}
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
+
+              {/* animation */}
+              {/* <motion.div
+              variants={fadeIn("up", "tween", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover "
+            >
+              <video
+                src="/features/reward.mp4"
+                autoplay="{true}"
+                loop
+                muted
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              ></video>
+            </motion.div> */}
+            </div>
+
+            <motion.div
+              variants={slideIn("up", "tween", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              className="col-span-2 self-center mt-2 p-8 "
+            >
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+                Trade
+              </div>
+              <div className="text-lg leading-loose sm:w-3/4">
+                Secure transaction mapping accomplished in real-time provides
+                for immediate settlement and irrefutable data.
+              </div>
+            </motion.div>
+          </div>
+
+          {/* third */}
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
+
+              {/* <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.3)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <video
+                  src="/features/loyalty.mp4"
+                  autoplay="{true}"
+                  loop
+                  muted
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                ></video>
+              </motion.div> */}
+            </div>
+
+            <motion.div
+              variants={slideIn("up", "tween", 0.3, 1)}
+              initial="hidden"
+              whileInView="show"
+              className="col-span-2 self-center mt-2 p-8 "
+            >
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+                Post-Trade
+              </div>
+              <div className="text-lg leading-loose">
+                Regular reporting and supervision of the entire market is made
+                redundant due to the presence of an immutable transaction
+                database. Multiple rounds of cross-system reconciliation are
+                obviated.
+              </div>
+            </motion.div>
           </div>
 
           {/* fourth */}
