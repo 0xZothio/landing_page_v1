@@ -15,7 +15,12 @@ function Institutions() {
         className="bg-black text-white w-full h-full mt-[70px] py-10"
       >
         {/* heading */}
-        <div className="sm:ml-14 mb-10 p-4 sm:p-10">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="sm:ml-14 mb-10 p-4 sm:p-10"
+        >
           <div className="text-4xl sm:text-8xl font-codec text-left">
             Redesigning
           </div>
@@ -37,12 +42,12 @@ function Institutions() {
             Tokenize, Self-Custody and Trade digital assets ‍on our full stack
             blockchain financial infrastructure.
           </div>
-        </div>
+        </motion.div>
 
         {/* offers */}
         <div className="flex flex-col items-center justify-center mb-10">
           <motion.div
-            variants={fadeIn("up", "tween", 0.2, 1)}
+            variants={fadeIn("up", "tween", 0.3, 1)}
             initial="hidden"
             whileInView="show"
             className="text-[50px] text-center sm:text-6xl font-codec font-extrabold mb-10"
@@ -53,7 +58,12 @@ function Institutions() {
             Offerings
           </motion.div>
 
-          <div className="flex flex-col sm:flex-row mb-10">
+          <motion.div
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="flex flex-col sm:flex-row mb-10"
+          >
             {/* cards 1 */}
             <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out ">
               <div class="rounded-lg shadow-lg bg-black border border-slate-500	 max-w-sm">
@@ -142,7 +152,7 @@ function Institutions() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* market */}
