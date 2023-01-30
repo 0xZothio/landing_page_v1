@@ -248,10 +248,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -271,10 +275,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -327,10 +335,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -350,10 +362,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -408,10 +424,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -458,10 +478,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -498,10 +522,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -538,10 +566,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -577,10 +609,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
@@ -617,10 +653,14 @@ function Institutions() {
               </div>
 
               <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.8 }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 100, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                // variants={fadeIn("left", "tween", 0.8, 0.2)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
                 <img
