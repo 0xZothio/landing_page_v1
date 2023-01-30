@@ -13,42 +13,45 @@ function Institutions() {
     <>
       <div
         id="institutions"
-        className="bg-black text-white w-full h-full mt-[70px] py-10"
+        className="bg-black text-white w-full h-full mt-[60px] py-10"
       >
         {/* heading */}
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="sm:ml-14 mb-10 p-4 sm:p-10"
+          className="mb-28 p-4 sm:p-10"
         >
-          <div className="text-4xl sm:text-8xl font-codec text-left">
-            Redesigning
+          <div className="text-4xl sm:text-7xl font-codec text-center">
+            Redesigning 
           </div>
-
-          <div className="text-2xl sm:text-4xl font-roobert text-left mb-5">
+          <div className="text-4xl sm:text-7xl font-codec text-center">
             Financial Markets
           </div>
+
+         {/*  <div className="text-2xl sm:text-4xl font-roobert text-center mb-5">
+            Financial Markets
+          </div> */}
 
           <div class="flex space-x-2">
             <button
               type="button"
-              class="inline-block px-6 py-2.5 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-medium text-xs leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
+              class="inline-block px-6 py-2.5 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
             >
               Join The Revolution
             </button>
           </div>
 
-          <div className="sm:w-1/4 font-roobert">
+          <div className="sm:w-1/4 font-roobert mt-2 text-center mx-auto">
             Tokenize, Self-Custody and Trade digital assets on our full stack
             blockchain financial infrastructure.
           </div>
         </motion.div>
 
         {/* offers */}
-        <div className="flex flex-col items-center justify-center mb-10">
+        <div className="flex flex-col mt-32  mb-10 px-4 sm:px-24">
           <motion.div
-            variants={fadeIn("up", "tween", 0.3, 1)}
+            variants={fadeIn("up", "tween", 0.2, 1)}
             initial="hidden"
             whileInView="show"
             className="text-[50px] text-center sm:text-6xl font-codec font-extrabold mb-10"
@@ -60,14 +63,14 @@ function Institutions() {
           </motion.div>
 
           <motion.div
-            variants={fadeIn("up", "tween", 0.3, 1)}
+            variants={fadeIn("up", "tween", 0.2, 1)}
             initial="hidden"
             whileInView="show"
-            className="flex flex-col sm:flex-row mb-10"
+            className="flex flex-col justify-between  sm:flex-row mb-10"
           >
             {/* cards 1 */}
             <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out ">
-              <div class="rounded-lg shadow-lg bg-black border border-slate-500	 max-w-sm">
+              <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
                 <div>
                   <img
                     class="rounded-t-lg px-4 py-8"
@@ -97,7 +100,7 @@ function Institutions() {
 
             {/* cards 2 */}
             <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out">
-              <div class="rounded-lg shadow-lg bg-black border border-slate-500	 max-w-sm">
+              <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
                 <div>
                   <img
                     class="rounded-t-lg px-4 py-8"
@@ -126,7 +129,7 @@ function Institutions() {
 
             {/* cards 3 */}
             <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out">
-              <div class="rounded-lg shadow-lg bg-black border border-slate-500	 max-w-sm">
+              <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
                 <div>
                   <img
                     class="rounded-t-lg px-4 py-8"
@@ -157,12 +160,34 @@ function Institutions() {
         </div>
 
         {/* market */}
-        <div className="sm:flex flex-col items-center justify-center mb-10 hidden">
+        <div className="sm:flex flex-col items-center justify-center mt-32 mb-10 hidden">
+          <motion.div
+            variants={fadeIn("up", "tween", 0.2, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="text-[50px] text-center sm:text-6xl font-codec font-extrabold mb-10"
+          >
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+              Recreating markets
+            </span>{" "}
+            block by block
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="w-1/2 mb-4 leading-8 text-center font-roobert text-2xl"
+          >
+            Rooba’s stage-by-stage elimination of redundancies and inefficient
+            processes from a trade’s life cycle.
+          </motion.div>
+
           {/* first */}
 
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
             <motion.div
-              variants={slideIn("up", "tween", 0.3, 1)}
+              variants={slideIn("up", "tween", 0.2, 1)}
               initial="hidden"
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
@@ -185,7 +210,7 @@ function Institutions() {
               </div>
 
               {/* <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.3)}
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
@@ -203,7 +228,7 @@ function Institutions() {
           </div>
 
           {/* Second */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
@@ -244,9 +269,9 @@ function Institutions() {
           </div>
 
           {/* third */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
             <motion.div
-              variants={slideIn("up", "tween", 0.3, 1)}
+              variants={slideIn("up", "tween", 0.2, 1)}
               initial="hidden"
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
@@ -268,7 +293,7 @@ function Institutions() {
               </div>
 
               {/* <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.3)}
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
@@ -286,7 +311,7 @@ function Institutions() {
           </div>
 
           {/* fourth */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
@@ -330,17 +355,39 @@ function Institutions() {
         </div>
 
         {/* market for mobile */}
-        <div className="flex flex-col items-center justify-center mb-10 sm:hidden">
+        <div className="flex flex-col items-center justify-center my-16 sm:hidden">
+          <motion.div
+            variants={fadeIn("up", "tween", 0.2, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="text-4xl p-4 text-center sm:text-6xl font-codec font-extrabold mb-10"
+          >
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+              Recreating markets
+            </span>{" "}
+            block by block
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="sm:w-1/2 mb-4 leading-8 text-center font-roobert text-2xl"
+          >
+            Rooba’s stage-by-stage elimination of redundancies and inefficient
+            processes from a trade’s life cycle.
+          </motion.div>
+
           {/* first */}
 
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 my-20">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
               </div>
 
               {/* <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.3)}
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
@@ -356,7 +403,7 @@ function Institutions() {
               </motion.div> */}
             </div>
             <motion.div
-              variants={slideIn("up", "tween", 0.3, 1)}
+              variants={slideIn("up", "tween", 0.2, 0.8)}
               initial="hidden"
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
@@ -375,7 +422,7 @@ function Institutions() {
           </div>
 
           {/* Second */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 my-20">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
@@ -400,7 +447,7 @@ function Institutions() {
             </div>
 
             <motion.div
-              variants={slideIn("up", "tween", 0.2, 1)}
+              variants={slideIn("up", "tween", 0.2, 0.8)}
               initial="hidden"
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
@@ -416,14 +463,14 @@ function Institutions() {
           </div>
 
           {/* third */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 my-20">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
               </div>
 
               {/* <motion.div
-                variants={fadeIn("left", "tween", 0.8, 0.3)}
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
@@ -440,7 +487,7 @@ function Institutions() {
             </div>
 
             <motion.div
-              variants={slideIn("up", "tween", 0.3, 1)}
+              variants={slideIn("up", "tween", 0.2, 0.8)}
               initial="hidden"
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
@@ -458,7 +505,7 @@ function Institutions() {
           </div>
 
           {/* fourth */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 ">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 my-20">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
@@ -483,7 +530,7 @@ function Institutions() {
             </div>
 
             <motion.div
-              variants={slideIn("up", "tween", 0.2, 1)}
+              variants={slideIn("up", "tween", 0.2, 0.8)}
               initial="hidden"
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
@@ -491,7 +538,7 @@ function Institutions() {
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
                 Custody/Security Services
               </div>
-              <div className="text-lg leading-loose sm:w-3/4">
+              <div className="text-lg leading-loose">
                 Regular reporting and supervision of the entire market is made
                 redundant due to the presence of an immutable transaction
                 database. Multiple rounds of cross-system reconciliation are
@@ -506,6 +553,11 @@ function Institutions() {
         <Contact_institutions/>
         {/* Newsletter and footer */}
         <NewsLetter />
+
+        {/* contact */}
+        
+
+        {/* footer */}
         <Footer />
       </div>
     </>
