@@ -75,8 +75,8 @@ export default function Contact_popup({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
-      <div className="relative w-3/3 h-full  md:h-auto">
-        <div className="relative  rounded shadow bg-[#171717]">
+      <div className="relative h-screen  md:h-auto w-3/4">
+        <div className="relative  rounded shadow bg-[#171717] w-full">
           <button
             type="button"
             className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
@@ -97,15 +97,15 @@ export default function Contact_popup({ setIsVisible }) {
             <span className="sr-only">Close modal</span>
           </button>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center">
+          <div className="flex flex-col sm:flex-row justify-center items-center w-full">
             <img
-              src="invite.png"
+              src="contact_popup_image.png"
               alt="invite"
-              className="hidden sm:flex w-[485px] h-[585px]"
+              className="hidden sm:flex w-1/4 h-[650px]"
             />
 
             {message ? (
-              <div className="flex flex-col justify-center items-center ">
+              <div className="flex flex-col justify-center items-center w-3/4">
                 <div className="text-4xl font-codec text-[#F3C74E]">
                   Thank you!
                 </div>
@@ -114,7 +114,7 @@ export default function Contact_popup({ setIsVisible }) {
                 </div>
               </div>
             ) : (
-              <div className="px-6 py-6 lg:px-8">
+              <div className="px-6 py-6 lg:px-8 w-3/4">
                 <h3 className="mb-4 text-3xl font-semibold  text-white">
                   Contact Us
                 </h3>
@@ -124,85 +124,133 @@ export default function Contact_popup({ setIsVisible }) {
                 </h3>
 
                 <form className="space-y-6 mt-10">
-                  <div>
-                    <label
-                      htmlFor="first_name"
-                      className="block mb-2 text-sm   text-gray-300"
-                    >
-                      Enter Your Name
-                    </label>
-                    <input
-                      type="text"
-                      name="first_name"
-                      id="first_name"
-                      className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                      placeholder=""
-                      required={true}
-                      value={inviteData.first_name}
-                      onChange={(e) => onChangeData(e)}
-                    />
-                    <p className="text-sm text-red-500 ">{formErrors.name}</p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="first_name"
+                        className="block mb-2 text-sm   text-gray-300"
+                      >
+                        Enter Your Name
+                      </label>
+                      <input
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                        className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        placeholder=""
+                        required={true}
+                        value={inviteData.first_name}
+                        onChange={(e) => onChangeData(e)}
+                      />
+                      <p className="text-sm text-red-500 ">{formErrors.name}</p>
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block mb-2 text-sm text-gray-300"
+                      >
+                        Enter Your Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        placeholder=""
+                        required={true}
+                        value={inviteData.email}
+                        onChange={(e) => onChangeData(e)}
+                      />
+                      <p className="text-sm text-red-500 ">
+                        {formErrors.email}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block mb-2 text-sm text-gray-300"
-                    >
-                      Enter Your Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                      placeholder=""
-                      required={true}
-                      value={inviteData.email}
-                      onChange={(e) => onChangeData(e)}
-                    />
-                    <p className="text-sm text-red-500 ">{formErrors.email}</p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="mobile"
+                        className="block mb-2 text-sm text-gray-300"
+                      >
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        name="company_name"
+                        id="company_name"
+                        placeholder=""
+                        className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        required={true}
+                        value={inviteData.mobile}
+                        onChange={(e) => onChangeData(e)}
+                      />
+                      <p className="text-sm text-red-500 ">
+                        {formErrors.mobile}
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="mobile"
+                        className="block mb-2 text-sm text-gray-300"
+                      >
+                        Enter Your Phone No.
+                      </label>
+                      <input
+                        type="number"
+                        name="mobile"
+                        id="mobile"
+                        placeholder=""
+                        className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        required={true}
+                        max="10"
+                        min="10"
+                        value={inviteData.mobile}
+                        onChange={(e) => onChangeData(e)}
+                      />
+                      <p className="text-sm text-red-500 ">
+                        {formErrors.mobile}
+                      </p>
+                    </div>
                   </div>
-
                   <div>
                     <label
                       htmlFor="mobile"
                       className="block mb-2 text-sm text-gray-300"
                     >
-                      Enter Your Phone No.
+                      Message (Optional)
                     </label>
-                    <input
-                      type="number"
-                      name="mobile"
-                      id="mobile"
+                    <textarea
+                      type="text"
+                      name="message"
+                      id="message"
                       placeholder=""
-                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                      required={true}
-                      max="10"
-                      min="10"
+                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-40 p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      
                       value={inviteData.mobile}
                       onChange={(e) => onChangeData(e)}
                     />
                     <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
                   </div>
-
-                  {isLoading ? (
-                    <button
-                      type="button"
-                      className="w-full bg-white rounded-full px-4 py-4 mt-12 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
-                    >
-                      <div class="flex items-center justify-center ">
-                        <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
-                      </div>
-                    </button>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={invite}
-                      className="w-full rounded-full px-4 py-4 mt-12 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
-                    >
-                      Submit
-                    </button>
-                  )}
+                  <div className="w-1/2 mx-auto mt-4">
+                    {isLoading ? (
+                      <button
+                        type="button"
+                        className="w-full mx-auto bg-white rounded-full px-4 py-4 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+                      >
+                        <div class="flex items-center justify-center ">
+                          <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                        </div>
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={invite}
+                        className="w-full mx-auto rounded-full px-4 py-4 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+                      >
+                        Submit
+                      </button>
+                    )}
+                  </div>
                 </form>
               </div>
             )}
