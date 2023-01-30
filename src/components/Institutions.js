@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import NewsLetter from "./newsletter";
 import Offerings from "./Offerings";
+import Contact_institutions from "./Contactus_institutions";
 function Institutions() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -502,6 +503,7 @@ function Institutions() {
 
         {/* offerings */}
         <Offerings />
+        <Contact_institutions/>
         {/* Newsletter and footer */}
         <NewsLetter />
         <Footer />
