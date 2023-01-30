@@ -551,8 +551,8 @@ function Institutions() {
         {/* offerings */}
         <Offerings />
 
-        {/* Newsletter and footer */}
-        <NewsLetter />
+        {/*footer */}
+
 
         {/* contact */}
         <Contact_institutions />
