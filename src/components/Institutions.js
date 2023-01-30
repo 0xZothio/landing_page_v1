@@ -94,14 +94,17 @@ function Institutions() {
                   <h5 class="text-white text-3xl font-medium mb-2 font-codec">
                     Zoth TaaS
                   </h5>
-                  <p class="text-gray-500 text-base mb-8 font-roobert">
-                    By utilizing the cutting-edge blockchain technology, Zoth's
-                    TaaS (Tokenization-as-a-Service)platform allows for a secure
-                    and transparent way to invest in tokenized assets. With its
-                    commitment to compliance and its ability to offer
-                    high-yielding investment opportunities, Zoth is transforming
-                    the field of tokenization and asset management.
-                  </p>
+                  <div className="sm:h-[230px]">
+                    <p class="text-gray-500 text-base mb-8 font-roobert h-4/5">
+                      By utilizing the cutting-edge blockchain technology,
+                      Zoth's TaaS (Tokenization-as-a-Service)platform allows for
+                      a secure and transparent way to invest in tokenized
+                      assets. With its commitment to compliance and its ability
+                      to offer high-yielding investment opportunities, Zoth is
+                      transforming the field of tokenization and asset
+                      management.
+                    </p>
+                  </div>
                   <button
                     type="button"
                     class="w-full inline-block px-6 py-2.5 bg-black text-[#F3C74E] font-semibold text-sm font-roobert leading-tight rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
@@ -126,14 +129,16 @@ function Institutions() {
                   <h5 class="text-white text-3xl font-medium mb-2 font-codec">
                     Zoth FaaS
                   </h5>
-                  <p class="text-gray-500 text-base mb-8 font-roobert">
-                    Zoth through FaaS (Fund-as-a-Service) it’s enables
-                    institutions and funds to invest in pre-vetted pools of
-                    tokenized assets and liquidity pools. These pools consist of
-                    high-quality digital assets that have been sourced from
-                    reputable locations and have been carefully selected to
-                    provide competitive returns.
-                  </p>
+                  <div className="sm:h-[230px]">
+                    <p class="text-gray-500 text-base mb-8 font-roobert">
+                      Zoth through FaaS (Fund-as-a-Service) it’s enables
+                      institutions and funds to invest in pre-vetted pools of
+                      tokenized assets and liquidity pools. These pools consist
+                      of high-quality digital assets that have been sourced from
+                      reputable locations and have been carefully selected to
+                      provide competitive returns.
+                    </p>
+                  </div>
                   <button
                     type="button"
                     class="w-full inline-block px-6 py-2.5 bg-black text-[#F3C74E] font-semibold text-sm font-roobert leading-tight rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
@@ -158,13 +163,15 @@ function Institutions() {
                   <h5 class="text-white text-3xl font-medium mb-2 font-codec">
                     Zoth DeFi
                   </h5>
-                  <p class="text-gray-500 text-base mb-8 font-roobert">
-                    Zoth DeFi enables institutions and individuals to invest in
-                    exclusive and proprietary liquidity pools, which are focused
-                    on creating liquidity for on-chain real-world assets. Our
-                    pools are designed to provide a stable and secure investment
-                    opportunity for our clients.
-                  </p>
+                  <div className="sm:h-[230px]">
+                    <p class="text-gray-500 text-base mb-8 font-roobert">
+                      Zoth DeFi enables institutions and individuals to invest
+                      in exclusive and proprietary liquidity pools, which are
+                      focused on creating liquidity for on-chain real-world
+                      assets. Our pools are designed to provide a stable and
+                      secure investment opportunity for our clients.
+                    </p>
+                  </div>
                   <button
                     type="button"
                     class="w-full inline-block px-6 py-2.5 bg-black text-[#F3C74E] font-semibold text-sm font-roobert leading-tight rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
@@ -204,14 +211,15 @@ function Institutions() {
 
           {/* first */}
 
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-between p-8 sm:my-40 ">
             <motion.div
               variants={slideIn("up", "tween", 0.2, 1)}
               initial="hidden"
               whileInView="show"
-              className="col-span-2 self-center mt-2 p-8 "
+              className="col-span-2 self-center mt-2 p-8 w-[400px]"
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              {/* <div className="w-[300px] left-0"> */}
+              <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Raise Capital
               </div>
               <div className="text-lg leading-loose">
@@ -221,6 +229,7 @@ function Institutions() {
                 platform and marketplace. It provides a seamless and efficient
                 solution for raising capital.
               </div>
+              {/* </div> */}
             </motion.div>
 
             <div className="relative col-span-2 w-[300px]">
@@ -245,7 +254,7 @@ function Institutions() {
           </div>
 
           {/* Second */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
@@ -270,9 +279,9 @@ function Institutions() {
               variants={slideIn("up", "tween", 0.2, 1)}
               initial="hidden"
               whileInView="show"
-              className="col-span-2 self-center mt-2 p-8 "
+              className="col-span-2 self-center mt-2 p-8 w-[400px]"
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Tokenize your assets
               </div>
               <div className="text-lg leading-loose sm:w-3/4">
@@ -285,14 +294,14 @@ function Institutions() {
           </div>
 
           {/* third */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
             <motion.div
               variants={slideIn("up", "tween", 0.2, 1)}
               initial="hidden"
               whileInView="show"
-              className="col-span-2 self-center mt-2 p-8 "
+              className="col-span-2 self-center mt-2 p-8 w-[400px]"
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Create liquidity for your assets
               </div>
               <div className="text-lg leading-loose">
@@ -324,7 +333,7 @@ function Institutions() {
           </div>
 
           {/* fourth */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
@@ -349,9 +358,9 @@ function Institutions() {
               variants={slideIn("up", "tween", 0.2, 1)}
               initial="hidden"
               whileInView="show"
-              className="col-span-2 self-center mt-2 p-8 "
+              className="col-span-2 self-center mt-2 p-8 w-[400px]"
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Diversify your asset portfolio
               </div>
               <div className="text-lg leading-loose sm:w-3/4">
@@ -364,14 +373,14 @@ function Institutions() {
           </div>
 
           {/* fifth */}
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
             <motion.div
               variants={slideIn("up", "tween", 0.2, 1)}
               initial="hidden"
               whileInView="show"
-              className="col-span-2 self-center mt-2 p-8 "
+              className="col-span-2 self-center mt-2 p-8 w-[400px]"
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Compliance
               </div>
               <div className="text-lg leading-loose">
@@ -458,7 +467,7 @@ function Institutions() {
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Raise Capital
               </div>
               <div className="text-lg leading-loose">
@@ -499,7 +508,7 @@ function Institutions() {
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Tokenize your assets
               </div>
               <div className="text-lg leading-loose sm:w-3/4">
@@ -539,7 +548,7 @@ function Institutions() {
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Create liquidity for your assets
               </div>
               <div className="text-lg leading-loose">
@@ -578,7 +587,7 @@ function Institutions() {
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Diversify your asset portfolio
               </div>
               <div className="text-lg leading-loose">
@@ -617,7 +626,7 @@ function Institutions() {
               whileInView="show"
               className="col-span-2 self-center mt-2 p-8 "
             >
-              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                 Compliance
               </div>
               <div className="text-lg leading-loose">
@@ -636,9 +645,8 @@ function Institutions() {
 
         {/*footer */}
 
-
         {/* contact */}
-       <Contact_institutions />
+        <Contact_institutions />
 
         {/* footer */}
         <Footer />
