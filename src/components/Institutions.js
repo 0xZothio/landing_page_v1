@@ -32,7 +32,7 @@ function Institutions() {
           <Link to="/">
             <img
               src="/institution/zoth.png"
-              className="w-[266px] h-[96px] mb-10"
+              className="w-[200px] h-[200px] mb-10"
               alt="logo"
             />
           </Link>
