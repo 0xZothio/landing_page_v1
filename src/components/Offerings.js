@@ -26,36 +26,6 @@ const data = [
     description:
       "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
   },
-  {
-    id: 5,
-    topic: "De-fi funds",
-    description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
-  },
-  {
-    id: 6,
-    topic: "exchanges",
-    description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
-  },
-  {
-    id: 7,
-    topic: "Coporate Treasuires",
-    description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
-  },
-  {
-    id: 8,
-    topic: "HNIs / Family offices",
-    description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
-  },
-  {
-    id: 9,
-    topic: "Algorithmic Traders",
-    description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
-  },
 ];
 const Offerings = () => {
   return (

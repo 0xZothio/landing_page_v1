@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import NewsLetter from "./newsletter";
 import Offerings from "./Offerings";
+import { Link } from "react-router-dom";
 function Institutions() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,43 +13,54 @@ function Institutions() {
     <>
       <div
         id="institutions"
-        className="bg-black text-white w-full h-full mt-[60px] py-10"
+        className="bg-black text-white w-full h-full  py-10"
       >
         {/* heading */}
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="mb-28 p-4 sm:p-10"
+          className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10"
         >
-          <div className="text-4xl sm:text-7xl font-codec text-center">
-            Redesigning 
+          {/* <div className="text-4xl sm:text-5xl font-codec text-center">
+            Unlocking the potential of private
           </div>
-          <div className="text-4xl sm:text-7xl font-codec text-center">
-            Financial Markets
-          </div>
+          <div className="text-4xl sm:text-5xl font-codec text-center">
+            & conventionally illiquid assets
+          </div> */}
+          <Link to="/">
+            <img
+              src="/institution/zoth.png"
+              className="w-[266px] h-[96px] mb-10"
+              alt="logo"
+            />
+          </Link>
 
-         {/*  <div className="text-2xl sm:text-4xl font-roobert text-center mb-5">
+          <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-8 text-center leading-snug tracking-wider">
+            {/* <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"> */}
+            Unlocking the potential of conventionally illiquid assets
+          </h1>
+
+          {/*  <div className="text-2xl sm:text-4xl font-roobert text-center mb-5">
             Financial Markets
           </div> */}
 
           <div class="flex space-x-2">
             <button
               type="button"
-              class="inline-block px-6 py-2.5 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
+              class="inline-block px-10 py-4 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
             >
-              Join The Revolution
+              Learn more
             </button>
           </div>
 
-          <div className="sm:w-1/4 font-roobert mt-2 text-center mx-auto">
-            Tokenize, Self-Custody and Trade digital assets on our full stack
-            blockchain financial infrastructure.
+          <div className="sm:w-1/2 font-roobert text-center mx-auto mt-6 leading-8 text-2xl">
+            Join the revolution to bring liquidity to illiquid markets
           </div>
         </motion.div>
 
         {/* offers */}
-        <div className="flex flex-col mt-32  mb-10 px-4 sm:px-24">
+        <div className="flex flex-col mt-52  mb-10 px-4 sm:px-24">
           <motion.div
             variants={fadeIn("up", "tween", 0.2, 1)}
             initial="hidden"
@@ -79,13 +91,15 @@ function Institutions() {
                 </div>
                 <div class="p-6">
                   <h5 class="text-white text-3xl font-medium mb-2 font-codec">
-                    Tokenization
+                    Zoth TaaS
                   </h5>
                   <p class="text-gray-500 text-base mb-8 font-roobert">
-                    Zoth Tokenization as a Service (TAAS) platform provides
-                    tokens that are compliant across several jurisdictions
-                    globally.Zoth has third party partners that audit the
-                    tokenization process regularly.
+                    By utilizing the cutting-edge blockchain technology, Zoth's
+                    TaaS (Tokenization-as-a-Service)platform allows for a secure
+                    and transparent way to invest in tokenized assets. With its
+                    commitment to compliance and its ability to offer
+                    high-yielding investment opportunities, Zoth is transforming
+                    the field of tokenization and asset management.
                   </p>
                   <button
                     type="button"
@@ -103,18 +117,21 @@ function Institutions() {
                 <div>
                   <img
                     class="rounded-t-lg px-4 py-8"
-                    src="institution/custody.png"
+                    src="institution/xchange.png"
                     alt=""
                   />
                 </div>
                 <div class="p-6">
                   <h5 class="text-white text-3xl font-medium mb-2 font-codec">
-                    Custody
+                    Zoth FaaS
                   </h5>
                   <p class="text-gray-500 text-base mb-8 font-roobert">
-                    Zoth TAAS platform provides tokens that are compliant across
-                    several jurisdictions globally.Zoth has third party partners
-                    that audit the tokenization process regularly.
+                    Zoth through FaaS (Fund-as-a-Service) it’s enables
+                    institutions and funds to invest in pre-vetted pools of
+                    tokenized assets and liquidity pools. These pools consist of
+                    high-quality digital assets that have been sourced from
+                    reputable locations and have been carefully selected to
+                    provide competitive returns.
                   </p>
                   <button
                     type="button"
@@ -132,19 +149,20 @@ function Institutions() {
                 <div>
                   <img
                     class="rounded-t-lg px-4 py-8"
-                    src="institution/xchange.png"
+                    src="institution/custody.png"
                     alt=""
                   />
                 </div>
                 <div class="p-6">
                   <h5 class="text-white text-3xl font-medium mb-2 font-codec">
-                    Exchange
+                    Zoth DeFi
                   </h5>
                   <p class="text-gray-500 text-base mb-8 font-roobert">
-                    Zoth allows institutions and funds to invest in the
-                    tokenized asset pools and liquidity pools. Zoth curates
-                    these assets from quality locations that provide competitive
-                    yield.
+                    Zoth DeFi enables institutions and individuals to invest in
+                    exclusive and proprietary liquidity pools, which are focused
+                    on creating liquidity for on-chain real-world assets. Our
+                    pools are designed to provide a stable and secure investment
+                    opportunity for our clients.
                   </p>
                   <button
                     type="button"
@@ -166,10 +184,10 @@ function Institutions() {
             whileInView="show"
             className="text-[50px] text-center sm:text-6xl font-codec font-extrabold mb-10"
           >
+            Bridging the gap between{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-              Recreating markets
+              CeFi and DeFi{" "}
             </span>{" "}
-            block by block
           </motion.div>
 
           <motion.div
@@ -178,8 +196,9 @@ function Institutions() {
             whileInView="show"
             className="w-1/2 mb-4 leading-8 text-center font-roobert text-2xl"
           >
-            Rooba’s stage-by-stage elimination of redundancies and inefficient
-            processes from a trade’s life cycle.
+            Zoth unlocks the institutional potential of digital assets through
+            our full stack blockchain based asset tokenization infrastructure
+            combined with FaaS (Fund-as-a-Service) and DeFi platforms.
           </motion.div>
 
           {/* first */}
@@ -192,14 +211,14 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Pre-Trade
+                Raise Capital
               </div>
               <div className="text-lg leading-loose">
-                Counterparties, regulators and market researchers are assured
-                complete transparency through verification of holdings. Our
-                robust pre-trade processes ensure transparency through
-                verification of holdings. Our automated KYC/KYB and AML checks
-                make for zero counterparty risks and quick onboarding.
+                Zoth allows institutions and asset owners to raise capital from
+                investors across different regions in a secure and compliant
+                manner through its proprietary TaaS (Tokenization-as-a-Service)
+                platform and marketplace. It provides a seamless and efficient
+                solution for raising capital.
               </div>
             </motion.div>
 
@@ -208,21 +227,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* <motion.div
+              <motion.div
                 variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
-                <video
-                  src="/features/loyalty.mp4"
-                  autoplay="{true}"
-                  loop
-                  muted
+                <img
+                  src="/institution/Tokenization.gif"
+                  alt="tokenization"
                   className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-                ></video>
-              </motion.div> */}
+                />
+              </motion.div>
             </div>
           </div>
 
@@ -233,22 +250,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* animation */}
-              {/* <motion.div
-              variants={fadeIn("up", "tween", 0.2, 1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover "
-            >
-              <video
-                src="/features/reward.mp4"
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-              ></video>
-            </motion.div> */}
+              <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <img
+                  src="/institution/plugin.gif"
+                  alt="tokenization"
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                />
+              </motion.div>
             </div>
 
             <motion.div
@@ -258,11 +272,13 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Trade
+                Tokenize your assets
               </div>
               <div className="text-lg leading-loose sm:w-3/4">
-                Secure transaction mapping accomplished in real-time provides
-                for immediate settlement and irrefutable data.
+                Zoth helps you tokenize an asset with ease and in a fully
+                compliant way. Zoth is blockchain agnostic and is compatible
+                with public, private, and permissioned blockchains, such as
+                Ethereum, Polygon, Solana, etc
               </div>
             </motion.div>
           </div>
@@ -276,13 +292,12 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Post-Trade
+                Create liquidity for your assets
               </div>
               <div className="text-lg leading-loose">
-                Regular reporting and supervision of the entire market is made
-                redundant due to the presence of an immutable transaction
-                database. Multiple rounds of cross-system reconciliation are
-                obviated.
+                Zoth offers a solution for investors and institutions to invest
+                in liquidity pools through its proprietary technology providing
+                liquidity to your assets
               </div>
             </motion.div>
 
@@ -291,21 +306,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* <motion.div
+              <motion.div
                 variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
-                <video
-                  src="/features/loyalty.mp4"
-                  autoplay="{true}"
-                  loop
-                  muted
+                <img
+                  src="/institution/liquidity.gif"
+                  alt="tokenization"
                   className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-                ></video>
-              </motion.div> */}
+                />
+              </motion.div>
             </div>
           </div>
 
@@ -316,22 +329,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* animation */}
-              {/* <motion.div
-              variants={fadeIn("up", "tween", 0.2, 1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover "
-            >
-              <video
-                src="/features/reward.mp4"
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-              ></video>
-            </motion.div> */}
+              <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <img
+                  src="/institution/fund.gif"
+                  alt="tokenization"
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                />
+              </motion.div>
             </div>
 
             <motion.div
@@ -341,15 +351,56 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Custody/Security Services
+                Diversify your asset portfolio
               </div>
               <div className="text-lg leading-loose sm:w-3/4">
-                Regular reporting and supervision of the entire market is made
-                redundant due to the presence of an immutable transaction
-                database. Multiple rounds of cross-system reconciliation are
-                obviated.
+                Zoth FaaS (Fund-as-a-Service) model allows institutions to
+                invest in diversified and exclusive baskets of assets, providing
+                stable returns. All transactions are recorded on the blockchain
+                for complete transparency.
               </div>
             </motion.div>
+          </div>
+
+          {/* fifth */}
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:my-40">
+            <motion.div
+              variants={slideIn("up", "tween", 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              className="col-span-2 self-center mt-2 p-8 "
+            >
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+                Compliance
+              </div>
+              <div className="text-lg leading-loose">
+                Zoth partners with third-party auditors to ensure tokenization
+                process adheres to global regulations. This includes compliance
+                with laws and regulations related to AML, KYC, securities laws
+                and regulations. Zoth ensures compliance and legal requirements
+                are met through smart contracts and jurisdictional restrictions.
+              </div>
+            </motion.div>
+
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
+
+              <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <img
+                  src="/institution/compliant.gif"
+                  alt="tokenization"
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
 
@@ -361,10 +412,10 @@ function Institutions() {
             whileInView="show"
             className="text-4xl p-4 text-center sm:text-6xl font-codec font-extrabold mb-10"
           >
+            Bridging the gap between{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-              Recreating markets
+              CeFi and DeFi
             </span>{" "}
-            block by block
           </motion.div>
 
           <motion.div
@@ -373,8 +424,9 @@ function Institutions() {
             whileInView="show"
             className="sm:w-1/2 mb-4 leading-8 text-center font-roobert text-2xl"
           >
-            Rooba’s stage-by-stage elimination of redundancies and inefficient
-            processes from a trade’s life cycle.
+            Zoth unlocks the institutional potential of digital assets through
+            our full stack blockchain based asset tokenization infrastructure
+            combined with FaaS (Fund-as-a-Service) and DeFi platforms.
           </motion.div>
 
           {/* first */}
@@ -385,21 +437,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* <motion.div
+              <motion.div
                 variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
-                <video
-                  src="/features/loyalty.mp4"
-                  autoplay="{true}"
-                  loop
-                  muted
+                <img
+                  src="/institution/Tokenization.gif"
+                  alt="tokenization"
                   className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-                ></video>
-              </motion.div> */}
+                />
+              </motion.div>
             </div>
             <motion.div
               variants={slideIn("up", "tween", 0.2, 0.8)}
@@ -408,14 +458,14 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Pre-Trade
+                Raise Capital
               </div>
               <div className="text-lg leading-loose">
-                Counterparties, regulators and market researchers are assured
-                complete transparency through verification of holdings. Our
-                robust pre-trade processes ensure transparency through
-                verification of holdings. Our automated KYC/KYB and AML checks
-                make for zero counterparty risks and quick onboarding.
+                Zoth allows institutions and asset owners to raise capital from
+                investors across different regions in a secure and compliant
+                manner through its proprietary TaaS (Tokenization-as-a-Service)
+                platform and marketplace. It provides a seamless and efficient
+                solution for raising capital.
               </div>
             </motion.div>
           </div>
@@ -427,22 +477,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* animation */}
-              {/* <motion.div
-              variants={fadeIn("up", "tween", 0.2, 1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover "
-            >
-              <video
-                src="/features/reward.mp4"
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-              ></video>
-            </motion.div> */}
+              <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <img
+                  src="/institution/plugin.gif"
+                  alt="tokenization"
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                />
+              </motion.div>
             </div>
 
             <motion.div
@@ -452,11 +499,13 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Trade
+                Tokenize your assets
               </div>
               <div className="text-lg leading-loose sm:w-3/4">
-                Secure transaction mapping accomplished in real-time provides
-                for immediate settlement and irrefutable data.
+                Zoth helps you tokenize an asset with ease and in a fully
+                compliant way. Zoth is blockchain agnostic and is compatible
+                with public, private, and permissioned blockchains, such as
+                Ethereum, Polygon, Solana, etc
               </div>
             </motion.div>
           </div>
@@ -468,21 +517,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* <motion.div
+              <motion.div
                 variants={fadeIn("left", "tween", 0.8, 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
                 className="absolute top-5 object-cover "
               >
-                <video
-                  src="/features/loyalty.mp4"
-                  autoplay="{true}"
-                  loop
-                  muted
+                <img
+                  src="/institution/liquidity.gif"
+                  alt="tokenization"
                   className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-                ></video>
-              </motion.div> */}
+                />
+              </motion.div>
             </div>
 
             <motion.div
@@ -492,13 +539,12 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Post-Trade
+                Create liquidity for your assets
               </div>
               <div className="text-lg leading-loose">
-                Regular reporting and supervision of the entire market is made
-                redundant due to the presence of an immutable transaction
-                database. Multiple rounds of cross-system reconciliation are
-                obviated.
+                Zoth offers a solution for investors and institutions to invest
+                in liquidity pools through its proprietary technology providing
+                liquidity to your assets
               </div>
             </motion.div>
           </div>
@@ -510,22 +556,19 @@ function Institutions() {
                 <img src="/frame.png" alt="frame" />
               </div>
 
-              {/* animation */}
-              {/* <motion.div
-              variants={fadeIn("up", "tween", 0.2, 1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover "
-            >
-              <video
-                src="/features/reward.mp4"
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
-              ></video>
-            </motion.div> */}
+              <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <img
+                  src="/institution/fund.gif"
+                  alt="tokenization"
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                />
+              </motion.div>
             </div>
 
             <motion.div
@@ -535,13 +578,53 @@ function Institutions() {
               className="col-span-2 self-center mt-2 p-8 "
             >
               <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-                Custody/Security Services
+                Diversify your asset portfolio
               </div>
               <div className="text-lg leading-loose">
-                Regular reporting and supervision of the entire market is made
-                redundant due to the presence of an immutable transaction
-                database. Multiple rounds of cross-system reconciliation are
-                obviated.
+                Zoth FaaS (Fund-as-a-Service) model allows institutions to
+                invest in diversified and exclusive baskets of assets, providing
+                stable returns. All transactions are recorded on the blockchain
+                for complete transparency.
+              </div>
+            </motion.div>
+          </div>
+
+          {/* fifth */}
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 my-20">
+            <div className="relative col-span-2 w-[300px]">
+              <div className="w-[300px]">
+                <img src="/frame.png" alt="frame" />
+              </div>
+
+              <motion.div
+                variants={fadeIn("left", "tween", 0.8, 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.8 }}
+                className="absolute top-5 object-cover "
+              >
+                <img
+                  src="/institution/compliant.gif"
+                  alt="tokenization"
+                  className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+                />
+              </motion.div>
+            </div>
+            <motion.div
+              variants={slideIn("up", "tween", 0.2, 0.8)}
+              initial="hidden"
+              whileInView="show"
+              className="col-span-2 self-center mt-2 p-8 "
+            >
+              <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
+                Compliance
+              </div>
+              <div className="text-lg leading-loose">
+                Zoth partners with third-party auditors to ensure tokenization
+                process adheres to global regulations. This includes compliance
+                with laws and regulations related to AML, KYC, securities laws
+                and regulations. Zoth ensures compliance and legal requirements
+                are met through smart contracts and jurisdictional restrictions.
               </div>
             </motion.div>
           </div>
@@ -551,27 +634,41 @@ function Institutions() {
         <Offerings />
 
         {/* contact */}
+
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
           className="text-[50px] text-center sm:text-6xl font-codec font-extrabold mt-32 mb-10"
         >
-          Interested in{" "}
+          Invest with{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-            Partnering
+            Zoth
           </span>{" "}
-          With Us?
-          {/* button */}
-          <div class="flex justify-center items-center space-x-2">
-            <button
-              type="button"
-              class="font-roobert inline-block px-6 py-2.5 m-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
-            >
-              Contact Us
-            </button>
-          </div>
+          today
         </motion.div>
+
+        <motion.div
+          variants={fadeIn("up", "tween", 0.3, 1)}
+          initial="hidden"
+          whileInView="show"
+          className="mx-auto sm:w-3/4 mb-4 leading-8 text-center font-roobert text-2xl"
+        >
+          Zoth enables investors and institutions to tap into previously
+          untapped markets, giving them access to a wider range of investment
+          opportunities and the ability to drive liquidity in those markets.
+          Don't miss out on the chance to capitalize on these markets.
+        </motion.div>
+
+        {/* button */}
+        <div class="flex justify-center items-center space-x-2">
+          <button
+            type="button"
+            class="font-roobert inline-block px-6 py-2.5 m-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Contact Us
+          </button>
+        </div>
 
         {/* footer */}
         <Footer />
