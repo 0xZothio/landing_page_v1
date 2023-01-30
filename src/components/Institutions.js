@@ -21,24 +21,27 @@ function Institutions() {
           whileInView="show"
           className="mb-28 p-4 sm:p-10"
         >
-          <div className="text-4xl sm:text-8xl font-codec text-left">
-            Redesigning
+          <div className="text-4xl sm:text-7xl font-codec text-center">
+            Redesigning 
           </div>
-
-          <div className="text-2xl sm:text-4xl font-roobert text-left mb-5">
+          <div className="text-4xl sm:text-7xl font-codec text-center">
             Financial Markets
           </div>
+
+         {/*  <div className="text-2xl sm:text-4xl font-roobert text-center mb-5">
+            Financial Markets
+          </div> */}
 
           <div class="flex space-x-2">
             <button
               type="button"
-              class="inline-block px-6 py-2.5 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
+              class="inline-block px-6 py-2.5 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
             >
               Join The Revolution
             </button>
           </div>
 
-          <div className="sm:w-1/4 font-roobert mt-4">
+          <div className="sm:w-1/4 font-roobert mt-2 text-center mx-auto">
             Tokenize, Self-Custody and Trade digital assets on our full stack
             blockchain financial infrastructure.
           </div>
