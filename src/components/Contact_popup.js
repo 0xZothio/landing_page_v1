@@ -7,6 +7,8 @@ export default function Contact_popup({ setIsVisible }) {
       first_name: "",
       email: "",
       mobile: "",
+      comapany_name: "",
+      message:""
     });
 
   const [formErrors, setFormErrors] = useState({});
@@ -70,6 +72,10 @@ export default function Contact_popup({ setIsVisible }) {
       errors.mobile = "* Mobile no. is required";
     }
 
+    if (!values.comapany_name) {
+      errors.comapany_name = "* company_name is required";
+    }
+
     return errors;
   };
 
@@ -101,7 +107,7 @@ export default function Contact_popup({ setIsVisible }) {
             <img
               src="contact_popup_image.png"
               alt="invite"
-              className="hidden sm:flex w-1/4 h-[650px]"
+              className="hidden sm:flex w-1/4 h-[670px]"
             />
 
             {message ? (
@@ -181,11 +187,11 @@ export default function Contact_popup({ setIsVisible }) {
                         placeholder=""
                         className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         required={true}
-                        value={inviteData.mobile}
+                        value={inviteData.comapany_name}
                         onChange={(e) => onChangeData(e)}
                       />
                       <p className="text-sm text-red-500 ">
-                        {formErrors.mobile}
+                        {formErrors.comapany_name}
                       </p>
                     </div>
                     <div>
@@ -221,13 +227,19 @@ export default function Contact_popup({ setIsVisible }) {
                           color: "white",
                           background: "#202020",
                         }}
-                        
                         containerStyle={{ background: "#202020" }}
-                        dropdownStyle={{ background: "#202020", color:"white !important", hover:"none" }}
+                        dropdownStyle={{
+                          background: "#202020",
+                          color: "white !important",
+                          hover: "none",
+                        }}
                         // className="bg-[#202020] text-white"
                         required={true}
                         value={inviteData.mobile}
-                        onChange={(e) => onChangeData(e)}
+                        // handleOnChange={(value, data, e, formatted)=>{setInviteData({...inviteData, mobile:value})}}
+                        onChange={(value) =>
+                          {setInviteData({ ...inviteData, mobile: value })}
+                        }
                       />
                       {/* </div> */}
                       <p className="text-sm text-red-500 ">
@@ -248,10 +260,9 @@ export default function Contact_popup({ setIsVisible }) {
                       id="message"
                       placeholder=""
                       className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-40 p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                      value={inviteData.mobile}
+                      value={inviteData.message}
                       onChange={(e) => onChangeData(e)}
                     />
-                    <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
                   </div>
                   <div className="w-1/2 mx-auto mt-4">
                     {isLoading ? (
