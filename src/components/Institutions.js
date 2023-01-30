@@ -23,13 +23,13 @@ function Institutions() {
           className="mb-28 p-4 sm:p-10"
         >
           <div className="text-4xl sm:text-7xl font-codec text-center">
-            Redesigning 
+            Redesigning
           </div>
           <div className="text-4xl sm:text-7xl font-codec text-center">
             Financial Markets
           </div>
 
-         {/*  <div className="text-2xl sm:text-4xl font-roobert text-center mb-5">
+          {/*  <div className="text-2xl sm:text-4xl font-roobert text-center mb-5">
             Financial Markets
           </div> */}
 
@@ -550,12 +550,12 @@ function Institutions() {
 
         {/* offerings */}
         <Offerings />
-        <Contact_institutions/>
+
         {/* Newsletter and footer */}
         <NewsLetter />
 
         {/* contact */}
-        
+        <Contact_institutions />
 
         {/* footer */}
         <Footer />

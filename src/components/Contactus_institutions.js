@@ -10,28 +10,27 @@ const Contact_institutions = () => {
       {isVisible && <Contact_popup setIsVisible={setIsVisible} />}
 
       <motion.div
-        variants={fadeIn("up", "tween", 0.3, 1)}
+        variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
+        className="text-[50px] text-center sm:text-6xl font-codec font-extrabold mt-32 mb-10"
       >
-        <div className="mt-12 font-codec">
-          <h1 className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-            Interested in{" "}
-            <span className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-              Patterning
-            </span>{" "}
-            With Us?
-          </h1>
+        Interested in{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          Partnering
+        </span>{" "}
+        With Us?
+        {/* button */}
+        <div class="flex justify-center items-center space-x-2">
+          <button
+            type="button"
+            class="font-roobert inline-block px-6 py-2.5 m-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
+            onClick={() => setIsVisible(!isVisible)}
+          >
+            Contact Us
+          </button>
         </div>
       </motion.div>
-      <div className="justify-center flex items-center">
-        <button
-          className="inline-block rounded-sm px-12 py-4 text-base font-semibold shadow-sm bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 my-12"
-          onClick={() => setIsVisible(true)}
-        >
-          Contact Us{" "}
-        </button>
-      </div>
     </div>
   );
 };
