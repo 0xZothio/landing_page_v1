@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 export default function Contact_popup({ setIsVisible }) {
-  const [inviteData, setInviteData] = useState({
-    email: "",
-    mobile: "",
-  });
+    const [inviteData, setInviteData] = useState({
+      first_name: "",
+      email: "",
+      mobile: "",
+    });
 
   const [formErrors, setFormErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -56,6 +57,10 @@ export default function Contact_popup({ setIsVisible }) {
   // validation
   const validate = (values) => {
     const errors = {};
+
+      if (!values.first_name) {
+        errors.name = "* Name is required";
+      }
 
     if (!values.email) {
       errors.email = "* Email is required";
@@ -114,11 +119,30 @@ export default function Contact_popup({ setIsVisible }) {
                   Contact Us
                 </h3>
 
-                <h3 className="mb-4 text-1xl text-gray-300">
+                <h3 className="text-1xl text-gray-300">
                   Our Team Will Contact You soon 🙂
                 </h3>
 
                 <form className="space-y-6 mt-20">
+                  <div>
+                    <label
+                      htmlFor="first_name"
+                      className="block mb-2 text-sm   text-gray-300"
+                    >
+                      Enter Your Name
+                    </label>
+                    <input
+                      type="text"
+                      name="first_name"
+                      id="first_name"
+                      className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      placeholder=""
+                      required={true}
+                      value={inviteData.first_name}
+                      onChange={(e) => onChangeData(e)}
+                    />
+                    <p className="text-sm text-red-500 ">{formErrors.name}</p>
+                  </div>
                   <div>
                     <label
                       htmlFor="email"
