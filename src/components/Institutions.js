@@ -21,7 +21,7 @@ function Institutions() {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10"
+          className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10 z-50"
         >
           {/* <div className="text-4xl sm:text-5xl font-codec text-center">
             Unlocking the potential of private
@@ -29,15 +29,25 @@ function Institutions() {
           <div className="text-4xl sm:text-5xl font-codec text-center">
             & conventionally illiquid assets
           </div> */}
-          <Link to="/">
+          <Link to="/" className="z-50">
             <img
               src="/institution/zoth.png"
-              className="w-[200px] h-[200px] mb-10"
+              className="w-[200px] h-[200px] mb-10 z-50"
               alt="logo"
             />
           </Link>
 
-          <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-8 text-center leading-snug tracking-wider">
+          <div className="absolute sm:top-5 flex justify-center items-center z-0">
+            {/* <video
+            src="https://resources.zoth.in/landingpage/wave.mp4"
+            autoPlay="{true}"
+            loop
+            muted
+            className=""
+          ></video> */}
+            <img src="/wave.gif" alt="" />
+          </div>
+          <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-8 text-center leading-snug tracking-wider z-50">
             {/* <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"> */}
             Unlocking the potential of conventionally illiquid assets
           </h1>
@@ -49,13 +59,13 @@ function Institutions() {
           <div class="flex space-x-2">
             <button
               type="button"
-              class="inline-block px-10 py-4 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
+              class="z-50 inline-block px-10 py-4 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
             >
               Learn more
             </button>
           </div>
 
-          <div className="sm:w-1/2 font-roobert text-center mx-auto mt-6 leading-8 text-2xl">
+          <div className="z-50 sm:w-1/2 font-roobert text-center mx-auto mt-6 leading-8 text-2xl">
             Join the revolution to bring liquidity to illiquid markets
           </div>
         </motion.div>
