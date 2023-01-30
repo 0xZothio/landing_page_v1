@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-
+import PhoneInput from "react-phone-input-2";
 export default function Contact_popup({ setIsVisible }) {
     const [inviteData, setInviteData] = useState({
       first_name: "",
@@ -195,18 +195,40 @@ export default function Contact_popup({ setIsVisible }) {
                       >
                         Enter Your Phone No.
                       </label>
-                      <input
+                      {/* <div className="bg-[#202020] text-white"> */}
+                      <PhoneInput
+                        enableSearch={true}
                         type="number"
                         name="mobile"
                         id="mobile"
                         placeholder=""
-                        className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        country="in"
+                        inputClass="bg-[#202020] text-white w-full"
+                        // dropdownClass="bg-[#202020] text-white"
+                        // style={{backgroundColor:"#202020"}}
+                        inputStyle={{
+                          color: "white ",
+                          background: "#202020",
+                          width: "100%",
+                          border: "none",
+                          hover: "none",
+                        }}
+                        buttonStyle={{
+                          color: "white !important",
+                          background: "#202020",
+                        }}
+                        searchStyle={{
+                          color: "white",
+                          background: "#202020",
+                        }}
+                        containerStyle={{ background: "#202020" }}
+                        dropdownStyle={{ background: "#202020", color:"white !important", hover:"none" }}
+                        // className="bg-[#202020] text-white"
                         required={true}
-                        max="10"
-                        min="10"
                         value={inviteData.mobile}
                         onChange={(e) => onChangeData(e)}
                       />
+                      {/* </div> */}
                       <p className="text-sm text-red-500 ">
                         {formErrors.mobile}
                       </p>
@@ -225,7 +247,6 @@ export default function Contact_popup({ setIsVisible }) {
                       id="message"
                       placeholder=""
                       className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-40 p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                      
                       value={inviteData.mobile}
                       onChange={(e) => onChangeData(e)}
                     />
