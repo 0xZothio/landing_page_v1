@@ -121,7 +121,7 @@ function Institutions() {
               <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
                 <div>
                   <img
-                    class="rounded-t-lg px-4 py-8"
+                    class="rounded-t-lg px-20 sm:px-24 py-8 "
                     src="institution/tokenization.png"
                     alt=""
                   />
@@ -156,7 +156,7 @@ function Institutions() {
               <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
                 <div>
                   <img
-                    class="rounded-t-lg px-4 py-8"
+                    class="rounded-t-lg px-20 sm:px-24 py-8"
                     src="institution/xchange.png"
                     alt=""
                   />
@@ -190,7 +190,7 @@ function Institutions() {
               <div class="rounded-3xl shadow-lg bg-black border border-slate-500 max-w-sm">
                 <div>
                   <img
-                    class="rounded-t-lg px-4 py-8"
+                    class="rounded-t-lg px-10 sm:px-24 py-8"
                     src="institution/custody.png"
                     alt=""
                   />
