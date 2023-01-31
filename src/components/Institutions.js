@@ -7,6 +7,7 @@ import NewsLetter from "./newsletter";
 import Offerings from "./Offerings";
 import { Link } from "react-router-dom";
 import Contact_institutions from "./Contactus_institutions";
+import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 function Institutions() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,7 +33,7 @@ function Institutions() {
           <Link to="/" className="z-50">
             <img
               src="/institution/zoth.png"
-              className="w-[200px] h-[200px] mb-10 z-50"
+              className="w-[250px] h-[250px] z-50"
               alt="logo"
             />
           </Link>
@@ -45,7 +46,7 @@ function Institutions() {
             muted
             className=""
            ></video> */}
-            <img src="institution/network.gif" className="w-screen h-screen" alt="network" />
+            <img src="institution/homescreen.gif"  alt="network" />
           </div>
           <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-8 text-center leading-snug tracking-wider z-50">
             {/* <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"> */}
@@ -67,6 +68,31 @@ function Institutions() {
 
           <div className="z-50 sm:w-1/2 font-roobert text-center mx-auto mt-6 leading-8 text-2xl">
             Join the revolution to bring liquidity to illiquid markets
+
+            <ul className="flex gap-6 mx-32 sm:mx-72 mt-6  justify-items-center content-center">
+                      <li>
+                        <a
+                          href="https://t.me/+nFUrC_I1hA1iNWU9"
+                          rel="noreferrer"
+                          target="_blank"
+                          className="text-gray-700 transition hover:opacity-75"
+                        >
+                          <span className="sr-only">Telegram</span>
+                          <FaTelegramPlane size={40} color="white" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://twitter.com/zothio"
+                          rel="noreferrer"
+                          target="_blank"
+                          className="text-gray-700 transition hover:opacity-75"
+                        >
+                          <span className="sr-only">Twitter</span>
+                          <FaTwitter size={40} color="white" />
+                        </a>
+                      </li>
+                    </ul>
           </div>
         </motion.div>
 
@@ -117,7 +143,7 @@ function Institutions() {
                   </div>
                   <button
                     type="button"
-                    class="w-full inline-block px-6 py-2.5 bg-black text-[#F3C74E] font-semibold text-sm font-roobert leading-tight rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
+                    class="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
                   >
                     Know More
                   </button>
@@ -151,7 +177,7 @@ function Institutions() {
                   </div>
                   <button
                     type="button"
-                    class="w-full inline-block px-6 py-2.5 bg-black text-[#F3C74E] font-semibold text-sm font-roobert leading-tight rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
+                    class="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
                   >
                     Know More
                   </button>
@@ -161,7 +187,7 @@ function Institutions() {
 
             {/* cards 3 */}
             <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out">
-              <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
+              <div class="rounded-3xl shadow-lg bg-black border border-slate-500 max-w-sm">
                 <div>
                   <img
                     class="rounded-t-lg px-4 py-8"
@@ -184,7 +210,7 @@ function Institutions() {
                   </div>
                   <button
                     type="button"
-                    class="w-full inline-block px-6 py-2.5 bg-black text-[#F3C74E] font-semibold text-sm font-roobert leading-tight rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
+                    class="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
                   >
                     Know More
                   </button>
