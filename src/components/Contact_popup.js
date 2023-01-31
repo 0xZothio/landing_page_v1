@@ -30,7 +30,7 @@ export default function Contact_popup({ setIsVisible }) {
 
     try {
       let res = await axios.post(
-        `https://script.google.com/macros/s/AKfycbz1wTUy2M-ChUqGgSVfAapfFT_ZXoreUU1N_PwWkSPaciNf0-sKK3FPjKDaRULNYG-Y1Q/exec?first_name=${inviteData.first_name}&last_name=${inviteData.last_name}&mobile=${inviteData.mobile}&email=${inviteData.email}&function=subscribe`
+        `https://script.google.com/macros/s/AKfycbxhvE601o5lKxfp2Zj6IV6EeqRdE0eVXgpAIr4ibKPwJpID7Wth0SIVX10s-U6mitP5Rg/exec?name=${inviteData.first_name}&email=${inviteData.email}&company=${inviteData.company_name}&phone_no=${inviteData.mobile}&query=test test test test test`
       );
 
       if (res.data.result === "success") {
