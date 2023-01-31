@@ -14,7 +14,7 @@ function Institutions() {
     <>
       <div
         id="institutions"
-        className="bg-black text-white w-full h-full  py-10"
+        className="bg-black text-white w-full h-full "
       >
         {/* heading */}
         <motion.div
@@ -44,8 +44,8 @@ function Institutions() {
             loop
             muted
             className=""
-          ></video> */}
-            <img src="/wave.gif" alt="" />
+           ></video> */}
+            <img src="institution/network.gif" className="w-screen h-screen" alt="network" />
           </div>
           <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-8 text-center leading-snug tracking-wider z-50">
             {/* <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"> */}
