@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 export default function Contact_popup({ setIsVisible }) {
-    const [inviteData, setInviteData] = useState({
-      first_name: "",
-      email: "",
-      mobile: "",
-      comapany_name: "",
-      message:""
-    });
+  const [inviteData, setInviteData] = useState({
+    first_name: "",
+    email: "",
+    mobile: "",
+    company_name: "",
+    message: "",
+  });
 
   const [formErrors, setFormErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -26,6 +26,7 @@ export default function Contact_popup({ setIsVisible }) {
     e.preventDefault();
     setIsLoading(true);
     setFormErrors(validate(inviteData));
+    console.log("institute data", inviteData);
 
     try {
       let res = await axios.post(
@@ -60,9 +61,9 @@ export default function Contact_popup({ setIsVisible }) {
   const validate = (values) => {
     const errors = {};
 
-      if (!values.first_name) {
-        errors.name = "* Name is required";
-      }
+    if (!values.first_name) {
+      errors.name = "* Name is required";
+    }
 
     if (!values.email) {
       errors.email = "* Email is required";
@@ -72,8 +73,8 @@ export default function Contact_popup({ setIsVisible }) {
       errors.mobile = "* Mobile no. is required";
     }
 
-    if (!values.comapany_name) {
-      errors.comapany_name = "* company_name is required";
+    if (!values.company_name) {
+      errors.company_name = "* Company name is required";
     }
 
     return errors;
@@ -187,11 +188,11 @@ export default function Contact_popup({ setIsVisible }) {
                         placeholder=""
                         className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         required={true}
-                        value={inviteData.comapany_name}
+                        value={inviteData.company_name}
                         onChange={(e) => onChangeData(e)}
                       />
                       <p className="text-sm text-red-500 ">
-                        {formErrors.comapany_name}
+                        {formErrors.company_name}
                       </p>
                     </div>
                     <div>
@@ -237,9 +238,9 @@ export default function Contact_popup({ setIsVisible }) {
                         required={true}
                         value={inviteData.mobile}
                         // handleOnChange={(value, data, e, formatted)=>{setInviteData({...inviteData, mobile:value})}}
-                        onChange={(value) =>
-                          {setInviteData({ ...inviteData, mobile: value })}
-                        }
+                        onChange={(value) => {
+                          setInviteData({ ...inviteData, mobile: value });
+                        }}
                       />
                       {/* </div> */}
                       <p className="text-sm text-red-500 ">
