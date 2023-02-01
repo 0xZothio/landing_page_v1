@@ -4,27 +4,27 @@ import { fadeIn, slideIn } from "../utils/motion";
 const data = [
   {
     id: 1,
-    topic: "Banks",
+    topic: "De-Fi Pools",
     description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
+      "Invest in Zoth's DeFi Pools for access to a curated portfolio of secure and stable assets, offering high fixed returns on your investments",
   },
   {
     id: 2,
-    topic: "Commodity Traders",
+    topic: "Crypto Funds",
     description:
-      "Tokenize your commodities yo hedge your risks - trade in commodity derivates and avail unbroken chain of custody from off-chain to on-chain.",
+      "Experience steady yield with Zoth's FaaS (Fund-as-a-Service) platform. Our innovative solution offers crypto funds the unique opportunity to invest in tokenized real-world assets, providing a new level of stability to your portfolio.",
   },
   {
     id: 3,
-    topic: "Real estate industry",
+    topic: "Institutions",
     description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
+      "Unlock the full potential of your real-world assets with Zoth's innovative tokenization solution. Our platform allows institutions to customize the tokenization process to their specific needs, ensuring full compliance with regulatory requirements. The resulting tokens are chain agnostic offering unparalleled versatility and flexibility.",
   },
   {
     id: 4,
-    topic: "hegde funds",
+    topic: "Exchanges and Traders",
     description:
-      "We provide a secure and complaint infrastructure for you to deliver web 3 benefits to your clients while maintaining your feduciary obligations",
+      "Maximize your trading potential with Zoth's secure liquidity pools across multiple exchanges. Our platform provides a seamless way for traders to earn weekly rewards by staking in secure liquidity pools.",
   },
 ];
 const Offerings = () => {
