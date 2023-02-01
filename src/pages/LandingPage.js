@@ -80,7 +80,7 @@ function LandingPage() {
         <Welcome />
         <Assets />
         <Features />
-        <Institutions />
+        {/* <Institutions /> */}
         <About />
         <HowToInvest />
         <Testimonials />

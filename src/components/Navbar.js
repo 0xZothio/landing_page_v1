@@ -4,6 +4,7 @@ import logo from "../assets/images/newlogo.png";
 import { FiAlignJustify } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
+import { Link } from "react-router-dom";
 const navigation = [
   { name: "About", href: "#about" },
   { name: "How it works", href: "#howItWorks" },
@@ -14,7 +15,7 @@ const navigation = [
 const Navbar = ({ setIsVisible }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [section, setSection] = useState(false);
-  
+
   // const windowheight = 1 * window.innerHeight;
   // const element = document.documentElement;
   // const handleScroll = (length) => {
@@ -26,9 +27,9 @@ const Navbar = ({ setIsVisible }) => {
   //   setTimeout(() => {
   //     element.scrollTo(0, length + windowheight);
   //   }, 100);
-    
-    // const contactform = document.querySelector("about");
-    // contactform.scrollIntoView({ behavior: "smooth" });
+
+  // const contactform = document.querySelector("about");
+  // contactform.scrollIntoView({ behavior: "smooth" });
   // };
   // const handleContactScroll = (length) => {
   //   element.scrollTo(0, length);
@@ -60,7 +61,7 @@ const Navbar = ({ setIsVisible }) => {
           aria-label="Global"
         >
           <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Zoth.io</span>
               <img className="h-8" src="/logo.png" alt="" />
             </a>
@@ -95,14 +96,14 @@ const Navbar = ({ setIsVisible }) => {
               How it Works
             </a>
 
-            <a
-              href="#institutions"
+            <Link
+              to="/institutions"
               className="font-semibold hover:text-gray-100"
-              onClick={() => setSection(true)}
+              // onClick={() => setSection(true)}
             >
               Institutions{" "}
               <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
-            </a>
+            </Link>
 
             <a
               href="#contact"
