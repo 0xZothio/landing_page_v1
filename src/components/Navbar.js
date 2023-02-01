@@ -102,7 +102,7 @@ const Navbar = ({ setIsVisible }) => {
               // onClick={() => setSection(true)}
             >
               Institutions{" "}
-              <span className="inline-flex text-sm px-2"> (Coming Soon) </span>
+              {/* <span className="inline-flex text-sm px-2"> (Coming Soon) </span> */}
             </Link>
 
             <a
