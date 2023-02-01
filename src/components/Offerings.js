@@ -37,16 +37,19 @@ const Offerings = () => {
       >
         <div>
           <p className="mt-6 leading-8 text-center font-roobert text-2xl">
-            Our Offerings across Sectors
+            We offer our solutions to diversified sectors
           </p>
         </div>
         <div className="mt-12 font-codec">
           <h1 className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-            We Enable{" "}
+          Empowering{" "}
             <span className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-              Our Clients
+            Institutions
             </span>{" "}
-            To Manage And Trade Their Digital Assets
+            to capitalize on the growth real world {" "} 
+            <span className="text-2xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+            on-chain assets 
+            </span>{" "}
           </h1>
         </div>
       </motion.div>
