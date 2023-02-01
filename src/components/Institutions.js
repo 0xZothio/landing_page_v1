@@ -50,7 +50,7 @@ function Institutions() {
           </div>
           <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-8 text-center leading-snug tracking-wider z-50">
             {/* <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"> */}
-            Unlocking the potential of conventionally illiquid assets
+            Unlocking the potential of private illiquid markets
           </h1>
 
           {/*  <div className="text-2xl sm:text-4xl font-roobert text-center mb-5">
