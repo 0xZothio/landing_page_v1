@@ -45,92 +45,8 @@ function Features() {
     },
   ]);
 
-  const [num, setNum] = useState(0);
-
-  const [scrollvalue, setScrollValue] = useState(0);
-
-  const variants = {
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0.3,
-      },
-    },
-    hidden: { opacity: 0 },
-  };
-  useEffect(() => {
-    const element = document.querySelector("#section-1");
-    const handleScroll = () => {
-      console.log("scrollToTop", element.scrollTop);
-      setScrollValue(element.scrollTop);
-      // const viewportHeight = window.innerHeight;
-
-      if (scrollvalue > 2000) {
-        setNum(4);
-      } else if (scrollvalue > 1500) {
-        setNum(3);
-      } else if (scrollvalue > 1000) {
-        setNum(2);
-      } else if (scrollvalue > 500) {
-        setNum(1);
-      } else {
-        setNum(0);
-      }
-    };
-
-    element.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => element.removeEventListener("scroll", handleScroll);
-  }, [scrollvalue]);
-
-  // const windowheight = 1 * window.innerHeight;
-  // useEffect(() => {
-  //   const element = document.documentElement;
-  //   // const element = document.querySelector("#section-3");
-  //   const handleScroll = () => {
-  //     // console.log("windowscrollToTop", element.scrollTop);
-  //     setScrollValue(element.scrollTop);
-
-  //     if (scrollvalue > 12 * windowheight) {
-  //       setNum(4);
-  //     } else if (scrollvalue > 11 * windowheight) {
-  //       setNum(3);
-  //     } else if (scrollvalue > 10 * windowheight) {
-  //       setNum(2);
-  //     } else if (scrollvalue > 9 * windowheight) {
-  //       setNum(1);
-  //     } else if (scrollvalue > 8 * windowheight) {
-  //       setNum(0);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   handleScroll();
-
-  //   // return () => element.removeEventListener("scroll", handleScroll);
-  // }, [scrollvalue]);
   return (
     <div>
-      {/* <div className="flex flex-col justify-center items-center sm:mt-0 mt-40"> */}
-      {/* <motion.div
-          variants={fadeIn("up", "tween", 0.2, 1)}
-          initial="hidden"
-          whileInView="show"
-          className="text-[55px] text-center sm:text-[80px] font-codec font-bold"
-        >
-          Welcome to the
-        </motion.div> */}
-
-      {/* <motion.div
-          variants={fadeIn("down", "tween", 0.5, 1)}
-          initial="hidden"
-          whileInView="show"
-        >
-          <img src="/club.png" alt="Zoth Club" />
-        </motion.div> */}
-      {/* </div> */}
-
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
@@ -143,270 +59,224 @@ function Features() {
         </span>
       </motion.div>
 
-      {/* feature 1*/}
+      {/* feature */}
+      <div className="sm:flex flex-col items-center justify-center mt-32 mb-10 hidden">
+        {/* first */}
 
-      <div
-        className="absolute bg-transparent w-full h-screen overflow-y-scroll z-10 scrollbar-hide mt-40"
-        ref={ref}
-        id="section-1"
-      >
-        <div className="h-screen w-full"></div>
-        <div className="h-screen w-full"></div>
-        <div className="h-screen w-full"></div>
-        <div className="h-screen w-full"></div>
-      </div>
+        <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-between p-8 sm:my-40 ">
+          <motion.div
+            variants={slideIn("up", "tween", 0, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-8 w-[400px]"
+          >
+            {/* <div className="w-[300px] left-0"> */}
+            <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4">
+              Earn Zoth Coins for investing in your assets
+            </div>
+            <div className="text-lg leading-loose">
+              Every time you invest on Zoth, you receive Zoth coins. You can use
+              these to win exclusive rewards or get special access to curated
+              products and experiences.
+            </div>
+            {/* </div> */}
+          </motion.div>
 
-      <div className="sm:grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center px-8 sm:mt-20 hidden">
-        <div className="relative col-span-2 w-[300px]">
-          <div className="w-[300px]">
-            <img src="/frame.png" alt="frame" />
+          <div className="relative col-span-2 w-[300px]">
+            <div className="w-[300px]">
+              <img src="/frame.png" alt="frame" />
+            </div>
+
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              // variants={fadeIn("left", "tween", 0.8, 0.2)}
+              // initial="hidden"
+              // whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover "
+            >
+              <img
+                src="https://resources.zoth.in/landingpage/reward.gif"
+                alt="tokenization"
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              />
+            </motion.div>
           </div>
-
-          {num === 0 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              // variants={featureIn("right", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // initial="hidden"
-              // animate="visible"
-              // variants={variants}
-              // viewport={{amount: 1 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              {/* <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video> */}
-
-              <img
-                src={data[num].video}
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                alt=""
-              />
-            </motion.div>
-          )}
-          {num === 1 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              // variants={featureIn("left", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // initial="hidden"
-              // animate="visible"
-              // variants={variants}
-              // viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              {/* <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video> */}
-              <img
-                src={data[num].video}
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                alt=""
-              />
-            </motion.div>
-          )}
-          {num === 2 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              // variants={featureIn("left", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              {/* <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video> */}
-              <img
-                src={data[num].video}
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                alt=""
-              />
-            </motion.div>
-          )}
-          {num === 3 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              // variants={featureIn("left", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              {/* <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video> */}
-              <img
-                src={data[num].video}
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                alt=""
-              />
-            </motion.div>
-          )}
-          {num === 4 && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              // variants={featureIn("left", "tween", 0.3, 1)}
-              // initial="hidden"
-              // whileInView="show"
-              // viewport={{ once: false, amount: 0.8 }}
-              className="absolute top-5 object-cover z-100"
-            >
-              {/* <img src="eth.png" alt="feature" className="w-full h-full" /> */}
-              {/* <video
-                src={data[num].video}
-                autoplay="{true}"
-                loop
-                muted
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-              ></video> */}
-              <img
-                src={data[num].video}
-                className="w-[300px] h-[530px] rounded-[65px] opacity-80"
-                alt=""
-              />
-            </motion.div>
-          )}
         </div>
 
-        {/* <MyPara topic={data[num].topic } description={data[num].description} /> */}
-        {num === 0 && (
-          <motion.div
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            // variants={slideIn("up", "tween", 0.3, 1)}
-            // initial="hidden"
-            // whileInView="show"
-            className="col-span-2 self-center mt-2 p-4 "
-          >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-              {data[num].topic}
+        {/* Second */}
+        <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
+          <div className="relative col-span-2 w-[300px]">
+            <div className="w-[300px]">
+              <img src="/frame.png" alt="frame" />
             </div>
-            <div className="text-lg leading-loose ">
-              {data[num].description}
-              <br />
+
+            <motion.div
+              // variants={fadeIn("left", "tween", 0.8, 0.2)}
+              // initial="hidden"
+              // whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-5 object-cover "
+            >
+              <img
+                src="https://resources.zoth.in/landingpage/etherium.gif"
+                alt="tokenization"
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              />
+            </motion.div>
+          </div>
+
+          <motion.div
+            variants={slideIn("up", "tween", 0, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-8 w-[400px]"
+          >
+            <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 ">
+              Guaranteed transparency and Easy exit mechanism
+            </div>
+            <div className="text-lg leading-loose sm:w-3/4">
+              On the blockchain, transactions are transparent and verifiable.
+              Zoth provides liquidity for on chain assets through its unique
+              real-time market based exit mechanism.
             </div>
           </motion.div>
-        )}
-        {num === 1 && (
+        </div>
+
+        {/* third */}
+        <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
           <motion.div
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            // variants={slideIn("up", "tween", 0.3, 1)}
-            // initial="hidden"
-            // whileInView="show"
-            className="col-span-2 self-center mt-2 p-4 "
+            variants={slideIn("up", "tween", 0, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-8 w-[400px]"
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-              {data[num].topic}
+            <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4">
+              Governance model for, of and by the users
             </div>
-            <div className="text-lg leading-loose ">
-              {data[num].description}
-              <br />
+            <div className="text-lg leading-loose">
+              Zoth Governance and Loyalty program gives you exclusive access to
+              premium asset classes, special offers on upcoming launches,
+              stay-cations in opulent villas, and more.
             </div>
           </motion.div>
-        )}
-        {num === 2 && (
-          <motion.div
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            // variants={slideIn("up", "tween", 0.3, 1)}
-            // initial="hidden"
-            // whileInView="show"
-            className="col-span-2 self-center mt-2 p-4 "
-          >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-              {data[num].topic}
+
+          <div className="relative col-span-2 w-[300px]">
+            <div className="w-[300px]">
+              <img src="/frame.png" alt="frame" />
             </div>
-            <div className="text-lg leading-loose ">
-              {data[num].description}
-              <br />
+
+            <motion.div
+              // variants={fadeIn("left", "tween", 0.8, 0.2)}
+              // initial="hidden"
+              // whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-5 object-cover "
+            >
+              <img
+                src="https://resources.zoth.in/landingpage/loyalty.gif"
+                alt="tokenization"
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              />
+            </motion.div>
+          </div>
+        </div>
+
+        {/* fourth */}
+        <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
+          <div className="relative col-span-2 w-[300px]">
+            <div className="w-[300px]">
+              <img src="/frame.png" alt="frame" />
+            </div>
+
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              // variants={fadeIn("left", "tween", 0.8, 0.2)}
+              // initial="hidden"
+              // whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover "
+            >
+              <img
+                src="https://resources.zoth.in/landingpage/high.gif"
+                alt="tokenization"
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              />
+            </motion.div>
+          </div>
+
+          <motion.div
+            variants={slideIn("up", "tween", 0, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-8 w-[400px]"
+          >
+            <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4">
+              High Yield, Returns and Portfolio Diversification
+            </div>
+            <div className="text-lg leading-loose sm:w-3/4">
+              Data-driven insights to diversify your portfolio and invest in
+              stable asset classes accessible only to the top 0.1%, to earn
+              lifetime passive income.
             </div>
           </motion.div>
-        )}
-        {num === 3 && (
+        </div>
+
+        {/* fifth */}
+        <div className="grid grid-row-4 sm:grid-cols-4 gap-60 justify-items-center content-center p-8 sm:my-40">
           <motion.div
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            // variants={slideIn("up", "tween", 0.3, 1)}
-            // initial="hidden"
-            // whileInView="show"
-            className="col-span-2 self-center mt-2 p-4 "
+            variants={slideIn("up", "tween", 0, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="col-span-2 self-center mt-2 p-8 w-[400px]"
           >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4">
-              {data[num].topic}
+            <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4">
+              Compliant and Strict Due Diligence
             </div>
-            <div className="text-lg leading-loose ">
-              {data[num].description}
-              <br />
+            <div className="text-lg leading-loose">
+              All our assets are listed after a strict process of due diligence
+              and are compliant with local and other global regulatory bodies.
             </div>
           </motion.div>
-        )}
-        {num === 4 && (
-          <motion.div
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -200, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            // variants={slideIn("up", "tween", 0.3, 1)}
-            // initial="hidden"
-            // whileInView="show"
-            className="col-span-2 self-center mt-2 p-4 "
-          >
-            <div className="sm:text-6xl text-4xl font-extrabold font-codec mb-4 ">
-              {data[num].topic}
+
+          <div className="relative col-span-2 w-[300px]">
+            <div className="w-[300px]">
+              <img src="/frame.png" alt="frame" />
             </div>
-            <div className="text-lg leading-loose ">
-              {data[num].description}
-              <br />
-            </div>
-          </motion.div>
-        )}
+
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              // variants={fadeIn("left", "tween", 0.8, 0.2)}
+              // initial="hidden"
+              // whileInView="show"
+              // viewport={{ once: false, amount: 0.8 }}
+              className="absolute top-5 object-cover "
+            >
+              <img
+                src="https://resources.zoth.in/landingpage/return.gif"
+                alt="tokenization"
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80"
+              />
+            </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* mobile */}
