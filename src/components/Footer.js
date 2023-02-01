@@ -3,6 +3,7 @@ import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { footerVariants } from "../utils/motion";
+import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -58,6 +59,17 @@ const Footer = () => {
                   <FaLinkedin size={20} color="white" />
                 </a>
               </li>
+              <li>
+                        <a
+                          href="https://t.me/+nFUrC_I1hA1iNWU9"
+                          rel="noreferrer"
+                          target="_blank"
+                          className="text-gray-700 transition hover:opacity-75"
+                        >
+                          <span className="sr-only">Telegram</span>
+                          <FaTelegramPlane size={20} color="white" />
+                        </a>
+                      </li>
               {/* <li>
                 <a
                   href="/"
