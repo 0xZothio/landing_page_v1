@@ -110,7 +110,7 @@ function Carousel() {
   return (
     <div
       id="howItWorks"
-      className="bg-white text-black w-screen h-full sm:pb-10 hidden sm:block sm:mt-20"
+      className="bg-black text-white w-screen h-full sm:pb-10 hidden sm:block sm:mt-20"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
@@ -139,7 +139,9 @@ function Carousel() {
             {slides.map((img, indx) => {
               return (
                 <div
-                  className={`slide_main ${indx === current ? "active_main " : ""}${
+                  className={`slide_main ${
+                    indx === current ? "active_main " : ""
+                  }${
                     (indx < current && `prevImg${current - indx}_main`) ||
                     (indx > current && `nextImg${indx - current}_main`) ||
                     (indx === current && "currentImg_main")
@@ -147,9 +149,9 @@ function Carousel() {
                   key={indx}
                   onClick={() => setCurrent(indx)}
                 >
-                  <img src={img.image} alt="travel" className={`Img_main`} />
-                  <div className="text-[30px] text-[#F3C74E] font-semibold text-center font-roobert mt-8 mb-2">
-                    {img.title}
+                  <img src="/wave.gif" alt="travel" className={`Img_main`} />
+                  <div className="text-[50px] text-white font-semibold text-center font-roobert mb-2">
+                    {/* {img.title} */}
                   </div>
                   {current === 0 && (
                     <motion.div
@@ -219,82 +221,20 @@ function Carousel() {
             {slides.map((img, indx) => {
               return (
                 <div
-                  className={`mt-8 slide ${indx === current ? "active " : ""}${
+                  className={`mt-12 py-8 slide ${indx === current ? "active " : ""}${
                     (indx < current && `prevImg${current - indx}`) ||
                     (indx > current && `nextImg${indx - current}`) ||
                     (indx === current && "currentImg")
-                  } cursor-pointer`}
+                  } cursor-pointer `}
                   key={indx}
                   onClick={() => setCurrent(indx)}
                 >
                   <img
                     src={img.image}
                     alt="travel"
-                    className={`Img rounded-full`}
+                    className={`Img rounded-full ring-white ring-1 mx-auto my-auto`}
                   />
-                  {/* <div className="text-[30px] text-[#F3C74E] font-semibold text-center font-roobert mt-8 mb-2">
-                    {img.title}
-                  </div> */}
-                  {/* {current === 0 && (
-                    <motion.div
-                      initial={{ y: 200, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: -200, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={
-                        current === indx
-                          ? "text-center font-roobert w-2/3 mx-auto"
-                          : "text-center font-roobert w-2/3 mx-auto hidden"
-                      }
-                    >
-                      {img.description}
-                    </motion.div>
-                  )} */}
-                  {/* {current === 1 && (
-                    <motion.div
-                      initial={{ y: 200, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: -200, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={
-                        current === indx
-                          ? "text-center font-roobert w-1/2 mx-auto"
-                          : "text-center font-roobert w-1/2 mx-auto hidden"
-                      }
-                    >
-                      {img.description}
-                    </motion.div>
-                  )} */}
-                  {/* {current === 2 && (
-                    <motion.div
-                      initial={{ y: 200, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: -200, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={
-                        current === indx
-                          ? "text-center font-roobert w-1/2 mx-auto"
-                          : "text-center font-roobert w-1/2 mx-auto hidden"
-                      }
-                    >
-                      {img.description}
-                    </motion.div>
-                  )} */}
-                  {/* {current === 3 && (
-                    <motion.div
-                      initial={{ y: 200, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: -200, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={
-                        current === indx
-                          ? "text-center font-roobert w-1/2 mx-auto text-sm"
-                          : "text-center font-roobert w-1/2 mx-auto hidden"
-                      }
-                    >
-                      {img.description}
-                    </motion.div>
-                  )} */}
+                  
                 </div>
               );
             })}
