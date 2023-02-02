@@ -9,7 +9,7 @@ const navigation = [
   { name: "About", href: "#about" },
   { name: "How it works", href: "#howItWorks" },
   { name: "Contact", href: "#contact" },
-  { name: "Institutions (Coming Soon)", href: "#" },
+  { name: "Institutions", href: "/institutions" },
 ];
 
 const Navbar = ({ setIsVisible }) => {
@@ -105,10 +105,7 @@ const Navbar = ({ setIsVisible }) => {
               {/* <span className="inline-flex text-sm px-2"> (Coming Soon) </span> */}
             </Link>
 
-            <a
-              href="#contact"
-              className="font-semibold hover:text-gray-100"
-            >
+            <a href="#contact" className="font-semibold hover:text-gray-100">
               Contact
             </a>
 
