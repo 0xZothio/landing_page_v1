@@ -135,11 +135,91 @@ function Carousel() {
       </div> */}
       <div className="hidden sm:flex">
         <div className="Carousel mt-6 hidden flex flex-col align-items justify-center">
+          <section className="slider_main">
+            {slides.map((img, indx) => {
+              return (
+                <div
+                  className={`slide_main ${indx === current ? "active_main " : ""}${
+                    (indx < current && `prevImg${current - indx}_main`) ||
+                    (indx > current && `nextImg${indx - current}_main`) ||
+                    (indx === current && "currentImg_main")
+                  } cursor-pointer`}
+                  key={indx}
+                  onClick={() => setCurrent(indx)}
+                >
+                  <img src={img.image} alt="travel" className={`Img_main`} />
+                  <div className="text-[30px] text-[#F3C74E] font-semibold text-center font-roobert mt-8 mb-2">
+                    {img.title}
+                  </div>
+                  {current === 0 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-2/3 mx-auto"
+                          : "text-center font-roobert w-2/3 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
+                  {current === 1 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-1/2 mx-auto"
+                          : "text-center font-roobert w-1/2 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
+                  {current === 2 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-1/2 mx-auto"
+                          : "text-center font-roobert w-1/2 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
+                  {current === 3 && (
+                    <motion.div
+                      initial={{ y: 200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={
+                        current === indx
+                          ? "text-center font-roobert w-1/2 mx-auto text-sm"
+                          : "text-center font-roobert w-1/2 mx-auto hidden"
+                      }
+                    >
+                      {img.description}
+                    </motion.div>
+                  )}
+                </div>
+              );
+            })}
+          </section>
           <section className="slider">
             {slides.map((img, indx) => {
               return (
                 <div
-                  className={`mt-80 slide ${indx === current ? "active " : ""}${
+                  className={`mt-8 slide ${indx === current ? "active " : ""}${
                     (indx < current && `prevImg${current - indx}`) ||
                     (indx > current && `nextImg${indx - current}`) ||
                     (indx === current && "currentImg")
@@ -147,7 +227,11 @@ function Carousel() {
                   key={indx}
                   onClick={() => setCurrent(indx)}
                 >
-                  <img src={img.image} alt="travel" className={`Img rounded-full`} />
+                  <img
+                    src={img.image}
+                    alt="travel"
+                    className={`Img rounded-full`}
+                  />
                   {/* <div className="text-[30px] text-[#F3C74E] font-semibold text-center font-roobert mt-8 mb-2">
                     {img.title}
                   </div> */}
@@ -215,25 +299,6 @@ function Carousel() {
               );
             })}
           </section>
-          {/* <section className="slider">
-            {slides.map((img, indx) => {
-              return (
-                <div
-                  className={`slide ${indx === current ? "active " : ""}${
-                    (indx < current && `prevImg${current - indx}`) ||
-                    (indx > current && `nextImg${indx - current}`) ||
-                    (indx === current && "currentImg")
-                  } cursor-pointer`}
-                  key={indx}
-                  onClick={() => setCurrent(indx)}
-                >
-                  <img src={img.image} alt="travel" className={`Img_circle `} />
-                  
-                </div>
-              );
-            })}
-           
-          </section> */}
         </div>
       </div>
 
