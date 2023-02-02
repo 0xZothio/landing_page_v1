@@ -69,7 +69,7 @@ function Institutions() {
           <div className="z-50 sm:w-1/2 font-roobert text-center mx-auto mt-6 leading-8 text-2xl">
             Join the revolution to bring liquidity to illiquid markets
 
-            <ul className="flex gap-6 mx-32 sm:mx-72 mt-6  justify-items-center content-center">
+            <ul className="flex gap-6 mx-32 sm:mx-72 xl:mx-60 2xl:mx-80 mt-6  justify-items-center content-center">
                       <li>
                         <a
                           href="https://t.me/+nFUrC_I1hA1iNWU9"
