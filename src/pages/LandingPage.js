@@ -16,11 +16,11 @@ function LandingPage() {
   // const [current, setCurrent] = useState(0);
   // const [scrollvalue, setScrollValue] = useState(0);
   // const [initialScrollvalue, setInitialScrollValue] = useState(0);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3500);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 3500);
+  // }, []);
 
   // const windowheight = 1 * window.innerHeight;
   // console.log(window.innerHeight, "window.innerHeight");
@@ -73,7 +73,7 @@ function LandingPage() {
   //   });
   return (
     <div className="bg-black">
-      {isLoading ? <div id="loading"></div> : null}
+      {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
         <Hero />
