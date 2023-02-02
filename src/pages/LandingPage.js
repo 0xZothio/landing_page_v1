@@ -10,7 +10,7 @@ import HowToInvest from "../components/HowToInvest";
 import Welcome from "../components/Welcome";
 import "../styles/styles.css";
 import Institutions from "../components/Institutions";
-
+import Carousel from "../components/Carousel";
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
   // const [current, setCurrent] = useState(0);
@@ -77,12 +77,12 @@ function LandingPage() {
 
       {/* <div> */}
         <Hero />
-        <Welcome />
+      <Welcome />
+      <Carousel/>
         <Assets />
         <Features />
         {/* <Institutions /> */}
         <About />
-        <HowToInvest />
         <Testimonials />
         <NewsLetter />
         <Footer />
