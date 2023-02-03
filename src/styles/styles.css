@@ -199,7 +199,7 @@
 .slider_main {
   box-sizing: border-box;
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 30rem;
   margin: 0 auto;
   overflow: hidden;
@@ -288,12 +288,12 @@
   align-items: center;
 }
 
-/* .left-arrow,
+.left-arrow,
 .right-arrow {
   z-index: 10;
   cursor: pointer;
   user-select: none;
-} */
+}
 
 .slide {
   width: 120px;

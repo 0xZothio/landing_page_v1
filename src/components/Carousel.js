@@ -9,7 +9,7 @@ import "../styles/styles.css";
 
 const crouselData = [
   {
-    image: asset_trust,
+    image: "/howtoinvest_asset.png",
     title: "Quality Premium Assets",
     description: "Zoth curates real world assets with high net worth and yield",
   },
@@ -19,12 +19,12 @@ const crouselData = [
     description: "The asset is transferred to a Trust or LLC",
   },
   {
-    image: tokenisation,
+    image: "/howtoinvest_tokenization.png",
     title: "Tokenisation as a Service (TaaS)",
     description: "Trust shares are tokenized using Zoth TaaS module",
   },
   {
-    image: marketplace,
+    image: "/howtoinvest_marketplace.png",
     title: "Zoth Marketplace",
     description: "Provides investors access to aggregated tokenized assets",
   },
@@ -107,6 +107,23 @@ function Carousel() {
   //   // return () => element.removeEventListener("scroll", handleScroll);
   // }, [scrollvalue]);
 
+  const prevSlide = () => {
+    if (current == 0) {
+      console.log("already at first");
+    } else {
+      setCurrent(current - 1);
+    }
+  }
+
+  const nextSlide = () => {
+    if (current == 3) {
+      console.log("already at last");
+    } else {
+      setCurrent(current + 1);
+    }
+  };
+
+
   return (
     <div
       id="howItWorks"
@@ -136,6 +153,12 @@ function Carousel() {
       <div className="hidden sm:flex">
         <div className="Carousel mt-6 hidden flex flex-col align-items justify-center">
           <section className="slider_main">
+            <img
+              className="left-arrow"
+              src="/LeftArrow.svg"
+              alt="left control"
+              onClick={prevSlide}
+            />
             {slides.map((img, indx) => {
               return (
                 <div
@@ -149,7 +172,34 @@ function Carousel() {
                   key={indx}
                   onClick={() => setCurrent(indx)}
                 >
-                  <img src="/wave.gif" alt="travel" className={`Img_main`} />
+                  {current === 0 && (
+                    <img
+                      src="/tokenization.gif"
+                      alt="travel"
+                      className={`Img_main`}
+                    />
+                  )}
+                  {current === 1 && (
+                    <img
+                      src="/howtoinvest_marketplace.gif"
+                      alt="travel"
+                      className={`Img_main`}
+                    />
+                  )}
+                  {current === 2 && (
+                    <img
+                      src="/tokenization.gif"
+                      alt="travel"
+                      className={`Img_main`}
+                    />
+                  )}
+                  {current === 3 && (
+                    <img
+                      src="/howtoinvest_marketplace.gif"
+                      alt="travel"
+                      className={`Img_main`}
+                    />
+                  )}
                   <div className="text-[50px] text-white font-semibold text-center font-roobert mb-2">
                     {/* {img.title} */}
                   </div>
@@ -216,12 +266,20 @@ function Carousel() {
                 </div>
               );
             })}
+            <img
+              className="right-arrow"
+              src="/RightArrow.svg"
+              alt="right control"
+              onClick={nextSlide}
+            />
           </section>
           <section className="slider">
             {slides.map((img, indx) => {
               return (
                 <div
-                  className={`mt-12 py-8 slide ${indx === current ? "active " : ""}${
+                  className={`mt-12 py-8 slide ${
+                    indx === current ? "active " : ""
+                  }${
                     (indx < current && `prevImg${current - indx}`) ||
                     (indx > current && `nextImg${indx - current}`) ||
                     (indx === current && "currentImg")
@@ -234,7 +292,6 @@ function Carousel() {
                     alt="travel"
                     className={`Img rounded-full ring-white ring-1 mx-auto my-auto`}
                   />
-                  
                 </div>
               );
             })}
