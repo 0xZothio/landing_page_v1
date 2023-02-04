@@ -14,7 +14,7 @@ const crouselData = [
     description: "Zoth curates real world assets with high net worth and yield",
   },
   {
-    image: premium_asset,
+    image: "/howtoinvest_marketplace.png",
     title: "Asset Trust",
     description: "The asset is transferred to a Trust or LLC",
   },
@@ -113,7 +113,7 @@ function Carousel() {
     } else {
       setCurrent(current - 1);
     }
-  }
+  };
 
   const nextSlide = () => {
     if (current == 3) {
@@ -122,7 +122,6 @@ function Carousel() {
       setCurrent(current + 1);
     }
   };
-
 
   return (
     <div
@@ -200,7 +199,7 @@ function Carousel() {
                       className={`Img_main`}
                     />
                   )}
-                  <div className="text-[50px] text-white font-semibold text-center font-roobert mb-2">
+                  <div className="text-[50px] text-white font-semibold text-center font-roobert">
                     {/* {img.title} */}
                   </div>
                   {current === 0 && (
@@ -216,6 +215,13 @@ function Carousel() {
                       }
                     >
                       {img.description}
+                      {/* go next */}
+                      <div className="mt-6 animate-bounce">
+                        <div className="font-bold text-lg">Go Next</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                          <img src="/next-arrow.png" alt="go next" />
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                   {current === 1 && (
@@ -231,6 +237,13 @@ function Carousel() {
                       }
                     >
                       {img.description}
+                      {/* go next */}
+                      <div className="mt-6 animate-bounce">
+                        <div className="font-bold text-lg">Go Next</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                          <img src="/next-arrow.png" alt="go next" />
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                   {current === 2 && (
@@ -246,6 +259,13 @@ function Carousel() {
                       }
                     >
                       {img.description}
+                      {/* go next */}
+                      <div className="mt-6 animate-bounce">
+                        <div className="font-bold text-lg">Go Next</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                          <img src="/next-arrow.png" alt="go next" />
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                   {current === 3 && (
@@ -261,6 +281,13 @@ function Carousel() {
                       }
                     >
                       {img.description}
+                      {/* go next */}
+                      <div className="mt-6 animate-bounce">
+                        <div className="font-bold text-lg">Scroll Down</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                          <img src="/down-arrow.png" alt="go next" />
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                 </div>
@@ -277,7 +304,7 @@ function Carousel() {
             {slides.map((img, indx) => {
               return (
                 <div
-                  className={`mt-12 py-8 slide ${
+                  className={`mt-4 py-2 slide ${
                     indx === current ? "active " : ""
                   }${
                     (indx < current && `prevImg${current - indx}`) ||
@@ -290,7 +317,7 @@ function Carousel() {
                   <img
                     src={img.image}
                     alt="travel"
-                    className={`Img rounded-full ring-white ring-1 mx-auto my-auto`}
+                    className={`Img rounded-full ring-white ring-1 mx-auto my-auto `}
                   />
                 </div>
               );
