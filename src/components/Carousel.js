@@ -14,7 +14,7 @@ const crouselData = [
     description: "Zoth curates real world assets with high net worth and yield",
   },
   {
-    image: "/howtoinvest_marketplace.png",
+    image: "/trust.png",
     title: "Asset Trust",
     description: "The asset is transferred to a Trust or LLC",
   },
@@ -173,14 +173,14 @@ function Carousel() {
                 >
                   {current === 0 && (
                     <img
-                      src="/tokenization.gif"
+                      src="/premium_assets.gif"
                       alt="travel"
                       className={`Img_main`}
                     />
                   )}
                   {current === 1 && (
                     <img
-                      src="/howtoinvest_marketplace.gif"
+                      src="/trust.gif"
                       alt="travel"
                       className={`Img_main`}
                     />
