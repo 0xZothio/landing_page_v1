@@ -10,7 +10,7 @@ import HowToInvest from "../components/HowToInvest";
 import Welcome from "../components/Welcome";
 import "../styles/styles.css";
 import Institutions from "../components/Institutions";
-
+import Carousel from "../components/Carousel";
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
   // const [current, setCurrent] = useState(0);
@@ -76,16 +76,17 @@ function LandingPage() {
       {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
-        <Hero />
-        <Welcome />
-        <Assets />
-        <Features />
-        {/* <Institutions /> */}
-        <About />
-        <HowToInvest />
-        <Testimonials />
-        <NewsLetter />
-        <Footer />
+      <Hero />
+      <Welcome />
+
+      <Assets />
+      <Features />
+      {/* <Institutions /> */}
+      <About />
+      <Carousel />
+      <Testimonials />
+      <NewsLetter />
+      <Footer />
       {/* </div> */}
       {/* {scrollvalue > 20 * windowheight && (
         <>
