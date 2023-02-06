@@ -213,8 +213,8 @@ function Carousel() {
                       {img.description}
                       {/* go next */}
                       <div className="mt-12 animate-bounce">
-                        <div className="font-bold text-lg">Go Next</div>
-                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                        <div className="font-bold text-sm">Go Next</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-3 h-3 ">
                           <img src="/next-arrow.png" alt="go next" />
                         </div>
                       </div>
@@ -235,8 +235,8 @@ function Carousel() {
                       {img.description}
                       {/* go next */}
                       <div className="mt-12 animate-bounce">
-                        <div className="font-bold text-lg">Go Next</div>
-                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                        <div className="font-bold text-sm">Go Next</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-3 h-3 ">
                           <img src="/next-arrow.png" alt="go next" />
                         </div>
                       </div>
@@ -257,8 +257,8 @@ function Carousel() {
                       {img.description}
                       {/* go next */}
                       <div className="mt-12 animate-bounce">
-                        <div className="font-bold text-lg">Go Next</div>
-                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                        <div className="font-bold text-sm">Go Next</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-3 h-3 ">
                           <img src="/next-arrow.png" alt="go next" />
                         </div>
                       </div>
@@ -279,8 +279,8 @@ function Carousel() {
                       {img.description}
                       {/* go next */}
                       <div className="mt-12 animate-bounce">
-                        <div className="font-bold text-lg">Scroll Down</div>
-                        <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
+                        <div className="font-bold text-sm">Scroll Down</div>
+                        <div className="text-center mx-auto flex justify-center items-center w-4 h-4 ">
                           <img src="/down-arrow.png" alt="go next" />
                         </div>
                       </div>
