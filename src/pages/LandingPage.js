@@ -76,16 +76,17 @@ function LandingPage() {
       {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
-        <Hero />
+      <Hero />
       <Welcome />
-      <Carousel/>
-        <Assets />
-        <Features />
-        {/* <Institutions /> */}
-        <About />
-        <Testimonials />
-        <NewsLetter />
-        <Footer />
+
+      <Assets />
+      <Features />
+      {/* <Institutions /> */}
+      <About />
+      <Carousel />
+      <Testimonials />
+      <NewsLetter />
+      <Footer />
       {/* </div> */}
       {/* {scrollvalue > 20 * windowheight && (
         <>

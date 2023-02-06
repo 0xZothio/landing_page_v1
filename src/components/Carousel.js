@@ -179,11 +179,7 @@ function Carousel() {
                     />
                   )}
                   {current === 1 && (
-                    <img
-                      src="/trust.gif"
-                      alt="travel"
-                      className={`Img_main`}
-                    />
+                    <img src="/trust.gif" alt="travel" className={`Img_main`} />
                   )}
                   {current === 2 && (
                     <img
@@ -210,13 +206,13 @@ function Carousel() {
                       transition={{ duration: 0.3 }}
                       className={
                         current === indx
-                          ? "text-center font-roobert w-2/3 mx-auto"
+                          ? "text-center font-roobert w-3/4 mx-auto text-[25px]"
                           : "text-center font-roobert w-2/3 mx-auto hidden"
                       }
                     >
                       {img.description}
                       {/* go next */}
-                      <div className="mt-6 animate-bounce">
+                      <div className="mt-12 animate-bounce">
                         <div className="font-bold text-lg">Go Next</div>
                         <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
                           <img src="/next-arrow.png" alt="go next" />
@@ -232,13 +228,13 @@ function Carousel() {
                       transition={{ duration: 0.3 }}
                       className={
                         current === indx
-                          ? "text-center font-roobert w-1/2 mx-auto"
+                          ? "text-center font-roobert w-3/4 mx-auto text-[25px]"
                           : "text-center font-roobert w-1/2 mx-auto hidden"
                       }
                     >
                       {img.description}
                       {/* go next */}
-                      <div className="mt-6 animate-bounce">
+                      <div className="mt-12 animate-bounce">
                         <div className="font-bold text-lg">Go Next</div>
                         <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
                           <img src="/next-arrow.png" alt="go next" />
@@ -254,13 +250,13 @@ function Carousel() {
                       transition={{ duration: 0.3 }}
                       className={
                         current === indx
-                          ? "text-center font-roobert w-1/2 mx-auto"
+                          ? "text-center font-roobert w-3/4 mx-auto text-[25px]"
                           : "text-center font-roobert w-1/2 mx-auto hidden"
                       }
                     >
                       {img.description}
                       {/* go next */}
-                      <div className="mt-6 animate-bounce">
+                      <div className="mt-12 animate-bounce">
                         <div className="font-bold text-lg">Go Next</div>
                         <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
                           <img src="/next-arrow.png" alt="go next" />
@@ -276,13 +272,13 @@ function Carousel() {
                       transition={{ duration: 0.3 }}
                       className={
                         current === indx
-                          ? "text-center font-roobert w-1/2 mx-auto text-sm"
+                          ? "text-center font-roobert w-3/4 mx-auto text-[25px]"
                           : "text-center font-roobert w-1/2 mx-auto hidden"
                       }
                     >
                       {img.description}
                       {/* go next */}
-                      <div className="mt-6 animate-bounce">
+                      <div className="mt-12 animate-bounce">
                         <div className="font-bold text-lg">Scroll Down</div>
                         <div className="text-center mx-auto flex justify-center items-center w-6 h-6 ">
                           <img src="/down-arrow.png" alt="go next" />
@@ -300,11 +296,12 @@ function Carousel() {
               onClick={nextSlide}
             />
           </section>
+          {/*  */}
           <section className="slider">
             {slides.map((img, indx) => {
               return (
                 <div
-                  className={`mt-4 py-2 slide ${
+                  className={`mt-4 py-6 slide ${
                     indx === current ? "active " : ""
                   }${
                     (indx < current && `prevImg${current - indx}`) ||
@@ -317,9 +314,10 @@ function Carousel() {
                   <img
                     src={img.image}
                     alt="travel"
-                    className={`Img rounded-full ring-white ring-1 mx-auto my-auto `}
+                    className={`Img rounded-full ring-white ring-1 mx-auto my-auto ${current===indx?`shadow-[0px_0px_5px_2px_rgb(255,215,0)]`:``} `}
                   />
                 </div>
+                //shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]
               );
             })}
           </section>
