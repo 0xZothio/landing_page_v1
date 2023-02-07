@@ -71,10 +71,10 @@ const scrollData = [
 const MobileScroll = () => {
   const [currentImg, setCurrentImg] = useState(0);
   return (
-    <div className="relative py-80 lg:pt-32 sm:flex max-width_mobilescrolling my-auto hidden">
+    <div className="relative py-80 lg:pt-32 max-w-screen sm:flex max-width_mobilescrolling my-auto hidden">
       <div className="w-3/4">
         {scrollData.map((screen, i) => (
-          <div className="flex justify-center flex-col min-h-screen">
+          <div className="flex justify-center items-center flex-col min-h-screen">
             <ScreenText screen={screen} setCurrentImg={setCurrentImg} i={i} />
           </div>
         ))}
