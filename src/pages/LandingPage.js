@@ -82,14 +82,10 @@ function LandingPage() {
 
       <Assets />
       <Features />
-      {/* <Institutions /> */}
       <About />
       <Carousel />
       <MobileScroll />
       <Features />
-      {/* <Institutions /> */}
-      <About />
-      <HowToInvest />
       <Testimonials />
       <NewsLetter />
       <Footer />

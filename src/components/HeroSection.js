@@ -10,7 +10,7 @@ const Hero = ({ setScrollValue }) => {
   return (
     <div
       className={
-        " bg-black text-white w-full"
+        " bg-black text-white w-full overflow-hidden"
       }
     >
       <div className="px-6 lg:px-8">

@@ -126,7 +126,7 @@ function Carousel() {
   return (
     <div
       id="howItWorks"
-      className="bg-black text-white w-screen h-full sm:pb-10 hidden sm:block sm:mt-20"
+      className="bg-black text-white  h-full sm:pb-10 hidden sm:block sm:mt-20"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}

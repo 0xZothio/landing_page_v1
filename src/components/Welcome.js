@@ -7,7 +7,7 @@ function Welcome() {
   return (
     <>
       {/* welcome */}
-      <div className="mt-24 sm:mt-32">
+      <div className="mt-24 sm:mt-32 overflow-x-hidden">
         <div className="flex flex-col justify-center items-center">
           <motion.div
             variants={fadeIn("up", "tween",0.2, 1)}

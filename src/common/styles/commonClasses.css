@@ -78,9 +78,9 @@
     max-width: 90%;
   }
 
-  .non-mobile {
+  /* .non-mobile {
     display: none !important;
-  }
+  } */
 
   /* .photo-section-heading {
     font-size: 65px;
@@ -107,7 +107,7 @@
   } */
 }
 
-@media all and (min-width: 766px) {
+@media all and (min-width: 600px) {
   .only-mobile {
     display: none !important;
   }
