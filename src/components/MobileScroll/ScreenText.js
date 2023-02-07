@@ -31,9 +31,16 @@ const ScreenText = ({ screen, setCurrentImg, i }) => {
   }, []);
 
   return (
-    <div className={`screen-text ${isVisible ? "text-visible" : ""}`} ref={ref}>
-      <div className="screen-heading">{screen.heading}</div>
-      <div className="mobile-mockup-wrapper only-mobile">
+    <div
+      className={`screen-text_mobilescroll ${
+        isVisible ? "text-visible_mobilescroll" : ""
+      }`}
+      ref={ref}
+    >
+      <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4">
+        {screen.heading}
+      </div>
+      <div className="w-1/2 only-mobile">
         <div className="mobile-mockup ">
           <div className="mobile-mockup-screen flex absolute-center">
             <img
@@ -44,7 +51,7 @@ const ScreenText = ({ screen, setCurrentImg, i }) => {
           </div>
         </div>
       </div>
-      <div className="screen-description">{screen.description}</div>
+      <div className="text-lg leading-loose">{screen.description}</div>
     </div>
   );
 };

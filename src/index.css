@@ -18,7 +18,6 @@
   src: url("../public/fonts/Roobert-Regular.ttf");
 }
 
-@import "./common/styles/fonts.css";
 @import "./common/styles/commonClasses.css";
 @import "./common/styles/variables.css";
 @import "./common/styles/animations.css";

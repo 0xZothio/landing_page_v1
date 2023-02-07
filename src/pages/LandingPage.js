@@ -78,8 +78,9 @@ function LandingPage() {
       {/* <div> */}
       <Hero />
       <Welcome />
-      <MobileScroll />
+
       <Assets />
+      <MobileScroll />
       <Features />
       {/* <Institutions /> */}
       <About />
