@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-black text-white w-full h-full overflow-hidden">
+    <div className="bg-black text-white w-full h-full">
       <Router>
         <Routes>
           <Route exact path="/" element={<LandingPage />}></Route>

@@ -46,7 +46,7 @@ function Features() {
   ]);
 
   return (
-    <div>
+    <div className="sm:hidden block">
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
