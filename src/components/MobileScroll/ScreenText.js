@@ -37,7 +37,7 @@ const ScreenText = ({ screen, setCurrentImg, i }) => {
       }`}
       ref={ref}
     >
-      <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4">
+      <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 text-[#F3C74E]">
         {screen.heading}
       </div>
       <div className="w-1/2 only-mobile">

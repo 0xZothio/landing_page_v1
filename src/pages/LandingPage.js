@@ -81,11 +81,10 @@ function LandingPage() {
       <Welcome />
 
       <Assets />
+      <MobileScroll />
       <Features />
       <About />
       <Carousel />
-      <MobileScroll />
-      <Features />
       <Testimonials />
       <NewsLetter />
       <Footer />
