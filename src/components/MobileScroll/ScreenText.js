@@ -40,17 +40,7 @@ const ScreenText = ({ screen, setCurrentImg, i }) => {
       <div className="sm:text-5xl text-4xl font-extrabold font-codec mb-4 text-[#F3C74E]">
         {screen.heading}
       </div>
-      <div className="w-1/2 only-mobile">
-        <div className="mobile-mockup ">
-          <div className="mobile-mockup-screen flex absolute-center">
-            <img
-              src={screen.mobile_img}
-              className="mobile-screen-img slide-in-right "
-              key={screen.mobile_img}
-            />
-          </div>
-        </div>
-      </div>
+      
       <div className="text-lg leading-loose">{screen.description}</div>
     </div>
   );

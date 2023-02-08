@@ -21,7 +21,7 @@
 
 .mobile-mockup_mobilescrolling {
   position: sticky;
-  top: 8px;
+  top: 20%;
   transform: translateX(30%);
   width: 300px;
   height: 550px;
@@ -101,4 +101,16 @@
   /* .scroll-full-screen-wrapper {
     width: 100%;
   } */
+}
+
+@media screen and ( max-height: 699px ){
+  .mobile-mockup_mobilescrolling{
+    top:8%;
+  }
+}
+
+@media screen and ( min-height: 1500px ){
+  .mobile-mockup_mobilescrolling{
+    top:30%;
+  }
 }
