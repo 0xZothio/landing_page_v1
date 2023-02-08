@@ -4,33 +4,33 @@ import ScreenText from "./ScreenText";
 
 const scrollData = [
   {
-    mobile_img: "https://resources.zoth.in/landingpage/reward.gif",
+    mobile_img: "/features-GIF/reward.gif",
     heading: "Earn Zoth Coins for investing in your assets",
     description:
       "Every time you invest on Zoth, you receive Zoth coins. You can use these to win exclusive rewards or get special access to curated products and experiences.",
   },
 
   {
-    mobile_img: "https://resources.zoth.in/landingpage/etherium.gif",
+    mobile_img: "/features-GIF/etherium.gif",
     heading: "Guaranteed transparency and Easy exit mechanism",
     description:
       "On the blockchain, transactions are transparent and verifiable. Zoth provides liquidity for on chain assets through its unique real-time market based exit mechanism.",
   },
 
   {
-    mobile_img: "https://resources.zoth.in/landingpage/loyalty.gif",
+    mobile_img: "/features-GIF/loyalty.gif",
     heading: "Governance model for, of and by the users ",
     description:
       "Zoth Governance and Loyalty program gives you exclusive access to premium asset classes, special offers on upcoming launches, stay-cations in opulent villas, and more.",
   },
   {
-    mobile_img: "https://resources.zoth.in/landingpage/high.gif",
+    mobile_img: "/features-GIF/high.gif",
     heading: "High Yield, Returns and Portfolio Diversification",
     description:
       "Data-driven insights to diversify your portfolio and invest in stable asset classes accessible only to the top 0.1%, to earn lifetime passive income.",
   },
   {
-    mobile_img: "https://resources.zoth.in/landingpage/return.gif",
+    mobile_img: "/features-GIF/return.gif",
     heading: "Compliant and Strict Due Diligence",
     description:
       "All our assets are listed after a strict process of due diligence and are compliant with local and other global regulatory bodies.",
@@ -79,6 +79,7 @@ const MobileScroll = () => {
           </div>
         ))}
       </div>
+      
       <div className="mx-auto non-mobile">
         <div className="mobile-mockup_mobilescrolling ">
           <div className="mobile-mockup-screen flex absolute-center">
