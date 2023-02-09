@@ -399,7 +399,7 @@ function Institutions() {
                 className="absolute top-5 object-cover "
               >
                 <img
-                  src="/institution/fund.gif"
+                  src="/institution/diversify_your_asset.gif"
                   alt="tokenization"
                   className="w-[300px] h-[530px] rounded-[55px] opacity-80"
                 />
@@ -646,7 +646,7 @@ function Institutions() {
                 className="absolute top-5 object-cover "
               >
                 <img
-                  src="/institution/fund.gif"
+                  src="/institution/diversify_your_asset.gif"
                   alt="tokenization"
                   className="w-[300px] h-[530px] rounded-[55px] opacity-80"
                 />
