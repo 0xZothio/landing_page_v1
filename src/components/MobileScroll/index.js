@@ -79,16 +79,30 @@ const MobileScroll = () => {
           </div>
         ))}
       </div>
-      
+
       <div className="mx-auto non-mobile">
         <div className="mobile-mockup_mobilescrolling ">
-          <div className="mobile-mockup-screen flex absolute-center">
+          <div className="relative w-[300px] overflow-x-hidden">
+            <div className="w-[300px]">
+              <img src="/frame.png" alt="frame" />
+            </div>
+
+            <div className="absolute top-5 object-cover ">
+              <img
+                src={scrollData[currentImg].mobile_img}
+                key={scrollData[currentImg].mobile_img}
+                alt="tokenization"
+                className="w-[300px] h-[530px] rounded-[55px] opacity-80 mobile-screen-img slide-in-right"
+              />
+            </div>
+          </div>
+          {/* <div className="mobile-mockup-screen flex absolute-center">
             <img
               src={scrollData[currentImg].mobile_img}
               className="mobile-screen-img slide-in-right "
               key={scrollData[currentImg].mobile_img}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
