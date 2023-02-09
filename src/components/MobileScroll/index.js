@@ -24,7 +24,7 @@ const scrollData = [
       "Zoth Governance and Loyalty program gives you exclusive access to premium asset classes, special offers on upcoming launches, stay-cations in opulent villas, and more.",
   },
   {
-    mobile_img: "/features-GIF/high.gif",
+    mobile_img: "/features-GIF/diversification.gif",
     heading: "High Yield, Returns and Portfolio Diversification",
     description:
       "Data-driven insights to diversify your portfolio and invest in stable asset classes accessible only to the top 0.1%, to earn lifetime passive income.",

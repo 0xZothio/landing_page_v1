@@ -8,11 +8,7 @@ const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
   
   return (
-    <div
-      className={
-        " bg-black text-white w-full overflow-hidden"
-      }
-    >
+    <div className={" bg-black text-white w-full overflow-hidden"}>
       <div className="px-6 lg:px-8">
         <Navbar setIsVisible={setIsVisible} />
       </div>
@@ -83,7 +79,7 @@ const Hero = ({ setScrollValue }) => {
                       </li>
                       <li>
                         <a
-                          href="https://twitter.com/zothio"
+                          href="https://twitter.com/zothdotio"
                           rel="noreferrer"
                           target="_blank"
                           className="text-gray-700 transition hover:opacity-75"
