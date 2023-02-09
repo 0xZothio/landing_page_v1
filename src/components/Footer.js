@@ -28,7 +28,7 @@ const Footer = () => {
             <ul className="flex gap-2 mt-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start w-6/12 lg:w-full">
               <li>
                 <a
-                  href="https://twitter.com/zothio"
+                  href="https://twitter.com/zothdotio"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
@@ -60,16 +60,16 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                        <a
-                          href="https://t.me/+nFUrC_I1hA1iNWU9"
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-gray-700 transition hover:opacity-75"
-                        >
-                          <span className="sr-only">Telegram</span>
-                          <FaTelegramPlane size={20} color="white" />
-                        </a>
-                      </li>
+                <a
+                  href="https://t.me/+nFUrC_I1hA1iNWU9"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">Telegram</span>
+                  <FaTelegramPlane size={20} color="white" />
+                </a>
+              </li>
               {/* <li>
                 <a
                   href="/"
@@ -111,7 +111,10 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Company" className="mt-5">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="mailto:contact@zoth.io" className=" transition hover:opacity-75">
+                    <a
+                      href="mailto:contact@zoth.io"
+                      className=" transition hover:opacity-75"
+                    >
                       Email: contactus@zoth.io
                     </a>
                   </li>
@@ -123,12 +126,19 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Company" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="#howItWorks" className=" transition hover:opacity-75">
+                    <a
+                      href="#howItWorks"
+                      className=" transition hover:opacity-75"
+                    >
                       How it works?
                     </a>
                   </li>
                   <li>
-                    <a href="https://zoth.notion.site/Risk-Disclosure-09fda36daa224ea286b3b96c2a735da4" target="_blank" className=" transition hover:opacity-75">
+                    <a
+                      href="https://zoth.notion.site/Risk-Disclosure-09fda36daa224ea286b3b96c2a735da4"
+                      target="_blank"
+                      className=" transition hover:opacity-75"
+                    >
                       Risk Disclosure
                     </a>
                   </li>
@@ -150,7 +160,11 @@ const Footer = () => {
               <nav aria-label="Footer Navigation - Legal" className="mt-6">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a href="https://zoth.notion.site/Work-at-Zoth-io-f4a20295a7564b619aab50624d798b0b" target="_blank" className=" transition hover:opacity-75">
+                    <a
+                      href="https://zoth.notion.site/Work-at-Zoth-io-f4a20295a7564b619aab50624d798b0b"
+                      target="_blank"
+                      className=" transition hover:opacity-75"
+                    >
                       Work with us
                     </a>
                   </li>
@@ -165,14 +179,16 @@ const Footer = () => {
             <p className="text-sm">
               <a
                 className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                href="https://zoth.notion.site/Privacy-Policy-256a0366ab6748a0bed9b0f336ecc6ef" target="_blank"
+                href="https://zoth.notion.site/Privacy-Policy-256a0366ab6748a0bed9b0f336ecc6ef"
+                target="_blank"
               >
                 Privacy Policy
               </a>
               <span>{" | "}</span>
               <a
                 className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                href="https://zoth.notion.site/Terms-of-Use-a4023cc1e3c14a6ebf905499fe3bb24e" target="_blank"
+                href="https://zoth.notion.site/Terms-of-Use-a4023cc1e3c14a6ebf905499fe3bb24e"
+                target="_blank"
               >
                 Terms of use
               </a>
