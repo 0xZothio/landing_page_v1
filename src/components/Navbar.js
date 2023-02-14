@@ -162,7 +162,7 @@ const Navbar = ({ setIsVisible }) => {
               className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
               onClick={() => setIsVisible(true)}
             >
-              Get Exclusive Invite{" "}
+              Join waitlist{" "}
             </button>
           </div>
         </motion.nav>

@@ -144,6 +144,7 @@ const Hero = ({ setScrollValue }) => {
                       </div>
                       <button
                         type="button"
+                        onClick={() => setIsVisible(true)}
                         className="w-1/2 rounded-sm px-4 py-4 mt-8 z-100 text-[#007AFF] font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 ring-[#007AFF] mb-12"
                       >
                         Join Waitlist
