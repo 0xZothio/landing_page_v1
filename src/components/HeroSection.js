@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { useState } from "react";
 import Invite from "./Invite";
+import "../styles/styles.css"
+// import ReactAnimationCarousel from "react-animation-carousel";
+// const data = [img1, img2, img3, img4, img5, img6];
+
 const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   return (
     <div className={" bg-black text-white w-full overflow-hidden"}>
       <div className="px-6 lg:px-8">
@@ -43,13 +47,13 @@ const Hero = ({ setScrollValue }) => {
                   </span>{" "}
                   Investment Platform
                 </h1>
-                <p className="mt-6 leading-8 text-center text-2xl">
+                {/* <p className="mt-6 leading-8 text-center text-2xl">
                   Join the{" "}
                   <span className="text-[#F3C74E] font-bold ">Zoth Club</span>{" "}
                   and let your investments work for you
-                </p>
+                </p> */}
                 <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
-                  <div className="flex gap-x-4 pointer-events-auto">
+                  {/* <div className="flex gap-x-4 pointer-events-auto">
                     <div className="inline-block rounded-full py-2 text-base font-semibold leading-7 text-black shadow-sm bg-transparent h-8/12">
                       <button
                         className="bg-white rounded-full px-8 sm:px-4 py-2 mt-2 z-100"
@@ -60,7 +64,7 @@ const Hero = ({ setScrollValue }) => {
                       </button>
                     </div>
                     <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600 "></p>
-                  </div>
+                  </div> */}
                   <div>
                     <p className=" text-md mx-4 sm:text-center">
                       Join Our Community
@@ -91,12 +95,68 @@ const Hero = ({ setScrollValue }) => {
                     </ul>
                   </div>
                 </div>
-                <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
+                <div class="relative flex justify-center my-2 mx-auto items-center z-50">
+                  <div class="rounded-3xl shadow-lg bg-black border border-slate-500 w-1/2 flex justify-center items-center">
+                    <div class=" marquee-container d-none d-sm-block z-0">
+                      <div class="marquee d-flex justify-content-around">
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                      </div>
+                      <div class="marquee marquee2 d-flex justify-content-around">
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                      </div>
+                    </div>
+                    <div class="w-full text-center z-50 rounded-3xl bg-black">
+                      <div class="rounded-3xl shadow-lg bg-[#252525] w-full text-center p-8">
+                        <h5 class="text-white text-2xl font-medium mb-4">
+                          Invest in Real Estate Opportunity with just
+                        </h5>
+                        <h5 class="text-white text-3xl font-medium mb-2">
+                          ₹ 1 Lakh !
+                        </h5>
+                      </div>
+                      <div className="h-full">
+                        <h5 class="text-white text-2xl font-medium mb-2 font-codec mt-12">
+                          Investors in Line
+                        </h5>
+                        <p class="text-white text-6xl font-medium mb-2 mt-2">
+                          0573
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        className="w-1/2 rounded-sm px-4 py-4 mt-8 z-100 text-[#007AFF] font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 ring-[#007AFF] mb-12"
+                      >
+                        Join Waitlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                {/* <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
                   Accept your early invite to earn{" "}
                   <span className="text-[#F3C74E] font-medium ">
                     $100 worth Zoth coins
                   </span>
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

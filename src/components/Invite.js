@@ -7,6 +7,7 @@ export default function Invite({ setIsVisible }) {
     first_name: "",
     email: "",
     mobile: "",
+    amount:0,
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -19,6 +20,10 @@ export default function Invite({ setIsVisible }) {
 
     setInviteData({ ...inviteData, [name]: value });
   };
+
+  const changeAmount = (num) => {
+    setInviteData({...inviteData, amount:num});
+  }
 
   const invite = async (e) => {
     e.preventDefault();
@@ -74,8 +79,8 @@ export default function Invite({ setIsVisible }) {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
-      <div className="relative w-3/3 h-full  md:h-auto">
+    <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
+      <div className="relative w-3/3 h-full  md:h-auto md:mt-20">
         <div className="relative  rounded shadow bg-[#171717]">
           <button
             type="button"
@@ -99,32 +104,89 @@ export default function Invite({ setIsVisible }) {
 
           <div className="flex flex-col sm:flex-row justify-center items-center">
             <img
-              src="invite.png"
+              src="waitlist.png"
               alt="invite"
               className="hidden sm:flex w-[485px] h-[585px]"
             />
 
             {message ? (
               <div className="flex flex-col justify-center items-center ">
-                <div className="text-4xl font-codec text-[#F3C74E]">Thank you!</div>
+                <div className="text-4xl font-codec text-[#F3C74E]">
+                  Thank you!
+                </div>
                 <div className="text-xl p-4 font-roobert">
                   Our Team Will Contact You soon.
                 </div>
               </div>
             ) : (
               <div className="px-6 py-6 lg:px-8">
-                <h3 className="mb-4 text-3xl font-semibold  text-white">
-                  Start your journey into
-                </h3>
-                <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
-                  Sustainable Long Term
-                </h3>
-                <h3 className="mb-4 text-3xl font-semibold  text-[#F3C74E]">
-                  Wealth Creation!
+                <h3 className="mb-4 text-4xl font-semibold  text-white w-3/4 leading-normal text-[#007AFF]">
+                  Join the Waitlist to earn an IRR of 12%.
                 </h3>
 
+                <p className="my-4">
+                  <span className="bg-white">
+                    {/* <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg> */}
+                  </span>
+                  <span>Asset backed investment</span>
+                </p>
+                <p className="my-4">Asset backed investment</p>
+                <p className="my-4">Asset backed investment</p>
                 <form className="space-y-6">
-                  <div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="first_name"
+                        className="block mb-2 text-sm   text-gray-300"
+                      >
+                        Enter Your Name
+                      </label>
+                      <input
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                        className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        placeholder=""
+                        required={true}
+                        value={inviteData.first_name}
+                        onChange={(e) => onChangeData(e)}
+                      />
+                      <p className="text-sm text-red-500 ">{formErrors.name}</p>
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block mb-2 text-sm text-gray-300"
+                      >
+                        Enter Your Phone no
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        placeholder=""
+                        required={true}
+                        value={inviteData.email}
+                        onChange={(e) => onChangeData(e)}
+                      />
+                      <p className="text-sm text-red-500 ">
+                        {formErrors.email}
+                      </p>
+                    </div>
+                  </div>
+                  {/* <div>
                     <label
                       htmlFor="first_name"
                       className="block mb-2 text-sm   text-gray-300"
@@ -142,7 +204,7 @@ export default function Invite({ setIsVisible }) {
                       onChange={(e) => onChangeData(e)}
                     />
                     <p className="text-sm text-red-500 ">{formErrors.name}</p>
-                  </div>
+                  </div> */}
 
                   <div>
                     <label
@@ -169,41 +231,60 @@ export default function Invite({ setIsVisible }) {
                       htmlFor="mobile"
                       className="block mb-2 text-sm text-gray-300"
                     >
-                      Enter Your Phone No.
+                      Enter Amount you want to Invest
                     </label>
-                    <input
-                      type="number"
-                      name="mobile"
-                      id="mobile"
-                      placeholder=""
-                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                      required={true}
-                      max="10"
-                      min="10"
-                      value={inviteData.mobile}
-                      onChange={(e) => onChangeData(e)}
-                    />
+                    <div className="flex space-x-6">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          changeAmount(100);
+                        }}
+                        className=" bg-white rounded-full px-12 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                      >
+                        100k
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          changeAmount(200);
+                        }}
+                        className=" bg-white rounded-full px-12 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                      >
+                        200k
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          changeAmount(300);
+                        }}
+                        className=" bg-white rounded-full px-12 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                      >
+                        300k
+                      </button>
+                    </div>
                     <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
                   </div>
 
-                  {isLoading ? (
-                    <button
-                      type="button"
-                      className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
-                    >
-                      <div class="flex items-center justify-center ">
-                        <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
-                      </div>
-                    </button>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={invite}
-                      className="w-full bg-[#F3C74E] rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
-                    >
-                      Enter the Zoth Club
-                    </button>
-                  )}
+                  <div className="flex justify-center items-center">
+                    {isLoading ? (
+                      <button
+                        type="button"
+                        className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                      >
+                        <div class="flex items-center justify-center ">
+                          <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                        </div>
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={invite}
+                        className="w-1/2 bg-[#007AFF] rounded-sm px-4 py-4 mt-2 z-100 text-black font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 ring-white"
+                      >
+                        Submit
+                      </button>
+                    )}
+                  </div>
                 </form>
               </div>
             )}
