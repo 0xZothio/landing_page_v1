@@ -80,7 +80,7 @@ export default function Invite({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-3/3 h-full  md:h-auto md:mt-20">
+      <div className="relative w-2/3 h-full  md:h-auto md:mt-40">
         <div className="relative  rounded shadow bg-[#171717]">
           <button
             type="button"
@@ -106,11 +106,11 @@ export default function Invite({ setIsVisible }) {
             <img
               src="waitlist.png"
               alt="invite"
-              className="hidden sm:flex w-[485px] h-[585px]"
+              className="hidden sm:flex w-1/2 h-full"
             />
 
             {message ? (
-              <div className="flex flex-col justify-center items-center w-1/3">
+              <div className="flex flex-col justify-center items-center w-1/2">
                 <div className="text-4xl font-codec text-[#F3C74E]">
                   Thank you!
                 </div>
@@ -119,8 +119,8 @@ export default function Invite({ setIsVisible }) {
                 </div>
               </div>
             ) : (
-              <div className="px-6 py-6 lg:px-8 w-1/3">
-                <h3 className="mb-4 text-4xl font-semibold  text-white w-3/4 leading-normal text-[#007AFF]">
+              <div className="px-6 py-6 lg:px-8 w-1/2 mt-4">
+                <h3 className="mb-4 text-3xl font-semibold  text-white leading-normal text-[#007AFF]">
                   Join the Waitlist to earn an IRR of 12%.
                 </h3>
 
@@ -233,33 +233,42 @@ export default function Invite({ setIsVisible }) {
                     >
                       Enter Amount you want to Invest
                     </label>
-                    <div className="flex space-x-6">
+                    <div className="flex space-x-2">
                       <button
                         type="button"
                         onClick={() => {
                           changeAmount(100);
                         }}
-                        className=" bg-white rounded-full px-12 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        100k
+                        1000
                       </button>
                       <button
                         type="button"
                         onClick={() => {
                           changeAmount(200);
                         }}
-                        className=" bg-white rounded-full px-12 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        200k
+                        3000
                       </button>
                       <button
                         type="button"
                         onClick={() => {
                           changeAmount(300);
                         }}
-                        className=" bg-white rounded-full px-12 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
+                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        300k
+                        5000
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          changeAmount(400);
+                        }}
+                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                      >
+                        10000+
                       </button>
                     </div>
                     <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
