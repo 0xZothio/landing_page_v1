@@ -35,15 +35,14 @@ const Hero = ({ setScrollValue }) => {
           <div className="mx-auto pt-10 sm:pt-20">
             <div>
               <div className="flex justify-center flex-col md:flex-row">
-                <div className="md:w-1/2 w-full">
-                  <h1 className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center md:text-left  leading-snug tracking-wider">
-                    <span className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-                      A Revolutionary New Age
-                    </span>{" "}
-                    Investment Platform
+                <div className="md:w-3/5 w-full">
+                  <h1 className="text-4xl font-codec text-[#007AFF] sm:text-[60px] font-extrabold leading-8 text-center md:text-left  leading-snug tracking-wider mt-8">
+                    A Revolutionary New Age Investment Platform
                   </h1>
-                  
-                  <div className="flex mt-4 justify-center flex-wrap items-center">
+                  <p className="mt-6 leading-8 text-center md:text-left text-2xl">
+                    Join the Zoth Club and let your investments work for you
+                  </p>
+                  {/* <div className="flex mt-4 justify-center flex-wrap items-center">
                     <div>
                       <p className=" text-md mx-4 sm:text-center">
                         Join Our Community
@@ -73,11 +72,11 @@ const Hero = ({ setScrollValue }) => {
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-                <div class="relative flex justify-center my-2 mx-auto items-center z-50 mt-8 md:w-1/2 md:mt-0 w-full">
+                <div class="relative flex justify-center my-2 mx-auto items-center z-50 mt-8 md:w-2/5 md:mt-0 w-full">
                   <div class="rounded-3xl shadow-lg bg-black border border-slate-500 flex justify-center items-center">
-                    <div class=" marquee-container d-none d-sm-block z-0 hidden">
+                    {/* <div class=" marquee-container d-none d-sm-block z-0 hidden">
                       <div class="marquee d-flex justify-content-around">
                         <span>Upcoming Launch !</span>
                         <span>200 slots left</span>
@@ -104,7 +103,7 @@ const Hero = ({ setScrollValue }) => {
                         <span>Upcoming Launch !</span>
                         <span>200 slots left</span>
                       </div>
-                    </div>
+                    </div> */}
                     <div class="w-full text-center z-50 rounded-3xl bg-black">
                       <div class="rounded-3xl shadow-lg bg-[#252525] w-full text-center p-4">
                         <h5 class="text-white text-xl font-medium mb-4">
@@ -132,7 +131,6 @@ const Hero = ({ setScrollValue }) => {
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
