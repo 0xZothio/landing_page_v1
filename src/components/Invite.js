@@ -110,7 +110,7 @@ export default function Invite({ setIsVisible }) {
             />
 
             {message ? (
-              <div className="flex flex-col justify-center items-center ">
+              <div className="flex flex-col justify-center items-center w-1/3">
                 <div className="text-4xl font-codec text-[#F3C74E]">
                   Thank you!
                 </div>
@@ -119,7 +119,7 @@ export default function Invite({ setIsVisible }) {
                 </div>
               </div>
             ) : (
-              <div className="px-6 py-6 lg:px-8">
+              <div className="px-6 py-6 lg:px-8 w-1/3">
                 <h3 className="mb-4 text-4xl font-semibold  text-white w-3/4 leading-normal text-[#007AFF]">
                   Join the Waitlist to earn an IRR of 12%.
                 </h3>

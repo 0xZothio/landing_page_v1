@@ -6,6 +6,16 @@
     #061f5b 107.35%
   );
 }
+
+.herograd{
+  background-image: linear-gradient(to right bottom, #000000, #000000, #000000, #000000, #000000, #040404, #080808, #0c0c0c, #131313, #191919, #1e1e1e, #232323);
+}
+
+.herotext{
+  background: -webkit-linear-gradient(0deg, #1A88FF 1.86%, rgba(26, 136, 255, 0) 163.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
   .assettext:before{
 	content: ' ';
     position: absolute;
@@ -407,6 +417,12 @@
     left: 0;
     transform: translateX(0%);
   }
+
+  .herotext{
+  background: #1A88FF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 }
 
 
