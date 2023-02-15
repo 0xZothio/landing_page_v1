@@ -239,7 +239,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(100);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         1000
                       </button>
@@ -248,7 +248,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(200);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         3000
                       </button>
@@ -257,7 +257,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(300);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         5000
                       </button>
@@ -266,7 +266,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(400);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-black focus:ring-4 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         10000+
                       </button>

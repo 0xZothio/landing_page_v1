@@ -44,14 +44,14 @@ const Navbar = ({ setIsVisible }) => {
   // }
 
   return (
-    <div
-      className={
-        section
-          ? "bg-black text-white z-50 pt-20 relative"
-          : "bg-black text-white z-50 pt-8 relative"
-      }
-    >
+    <div className={"bg-black text-white z-10 pt-8 relative mt-6"}>
       {console.log(section)}
+      <div class="fixed top-0 left-0 shadow-lg bg-[#007AFF] z-50 w-screen text-center p-2 px-4">
+        <h5 class="text-white text-md font-normal underline underline-offset-8">
+          Launching Soon! A Real Estate Investment Opportunity with just ₹ 2.5
+          lac. <span className="font-extrabold">Join the Waitlist!</span>
+        </h5>
+      </div>
       {!mobileMenuOpen && (
         <motion.nav
           variants={navVariants}
