@@ -38,11 +38,11 @@ const Hero = ({ setScrollValue }) => {
           whileInView="show"
           className="relative px-6 lg:px-8"
         >
-          <div className="mx-auto pt-10 sm:pt-32 ">
+          <div className="mx-auto pt-10 sm:pt-20 ">
             <div>
               <div>
-                <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-                  <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                <h1 className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider">
+                  <span className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                     A Revolutionary New Age
                   </span>{" "}
                   Investment Platform
@@ -52,19 +52,8 @@ const Hero = ({ setScrollValue }) => {
                   <span className="text-[#F3C74E] font-bold ">Zoth Club</span>{" "}
                   and let your investments work for you
                 </p> */}
-                <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
-                  {/* <div className="flex gap-x-4 pointer-events-auto">
-                    <div className="inline-block rounded-full py-2 text-base font-semibold leading-7 text-black shadow-sm bg-transparent h-8/12">
-                      <button
-                        className="bg-white rounded-full px-8 sm:px-4 py-2 mt-2 z-100"
-                        type="button"
-                        onClick={() => setIsVisible(true)}
-                      >
-                        Get Exclusive Invite
-                      </button>
-                    </div>
-                    <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600 "></p>
-                  </div> */}
+                <div className="flex gap-x-4 mt-4 justify-center flex-wrap items-center">
+                  
                   <div>
                     <p className=" text-md mx-4 sm:text-center">
                       Join Our Community
@@ -95,8 +84,8 @@ const Hero = ({ setScrollValue }) => {
                     </ul>
                   </div>
                 </div>
-                <div class="relative flex justify-center my-2 mx-auto items-center z-50">
-                  <div class="rounded-3xl shadow-lg bg-black border border-slate-500 w-1/2 flex justify-center items-center">
+                <div class="relative flex justify-center my-2 mx-auto items-center z-50 mt-8">
+                  <div class="rounded-3xl shadow-lg bg-black border border-slate-500 w-2/5 flex justify-center items-center">
                     <div class=" marquee-container d-none d-sm-block z-0">
                       <div class="marquee d-flex justify-content-around">
                         <span>Upcoming Launch !</span>
@@ -126,8 +115,8 @@ const Hero = ({ setScrollValue }) => {
                       </div>
                     </div>
                     <div class="w-full text-center z-50 rounded-3xl bg-black">
-                      <div class="rounded-3xl shadow-lg bg-[#252525] w-full text-center p-8">
-                        <h5 class="text-white text-2xl font-medium mb-4">
+                      <div class="rounded-3xl shadow-lg bg-[#252525] w-full text-center p-4">
+                        <h5 class="text-white text-xl font-medium mb-4">
                           Invest in Real Estate Opportunity with just
                         </h5>
                         <h5 class="text-white text-3xl font-medium mb-2">
@@ -135,17 +124,17 @@ const Hero = ({ setScrollValue }) => {
                         </h5>
                       </div>
                       <div className="h-full">
-                        <h5 class="text-white text-2xl font-medium mb-2 font-codec mt-12">
+                        <h5 class="text-white text-xl mb-2 font-semibold mt-6">
                           Investors in Line
                         </h5>
-                        <p class="text-white text-6xl font-medium mb-2 mt-2">
+                        <p class="text-white text-2xl font-extrabold mb-2 mt-2">
                           0573
                         </p>
                       </div>
                       <button
                         type="button"
                         onClick={() => setIsVisible(true)}
-                        className="w-1/2 rounded-sm px-4 py-4 mt-8 z-100 text-[#007AFF] font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 ring-[#007AFF] mb-12"
+                        className="w-1/2 rounded-sm px-2 py-4 mt-2 z-100 text-[#007AFF] font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 ring-[#007AFF] mb-12"
                       >
                         Join Waitlist
                       </button>
