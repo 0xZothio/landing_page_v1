@@ -18,16 +18,10 @@ const Hero = ({ setScrollValue }) => {
       </div>
 
       <main>
-        <div className="absolute sm:top-5 flex justify-center items-center z-0">
-          {/* <video
-            src="https://resources.zoth.in/landingpage/wave.mp4"
-            autoPlay="{true}"
-            loop
-            muted
-            className=""
-          ></video> */}
+        {/* <div className="absolute sm:top-5 flex justify-center items-center z-0">
+          
           <img src="/wave.gif" alt="" />
-        </div>
+        </div> */}
 
         {/* signup popup */}
         {isVisible && <Invite setIsVisible={setIsVisible} />}
@@ -38,55 +32,52 @@ const Hero = ({ setScrollValue }) => {
           whileInView="show"
           className="relative px-6 lg:px-8"
         >
-          <div className="mx-auto pt-10 sm:pt-20 ">
+          <div className="mx-auto pt-10 sm:pt-20">
             <div>
-              <div>
-                <h1 className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-                  <span className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-                    A Revolutionary New Age
-                  </span>{" "}
-                  Investment Platform
-                </h1>
-                {/* <p className="mt-6 leading-8 text-center text-2xl">
-                  Join the{" "}
-                  <span className="text-[#F3C74E] font-bold ">Zoth Club</span>{" "}
-                  and let your investments work for you
-                </p> */}
-                <div className="flex gap-x-4 mt-4 justify-center flex-wrap items-center">
+              <div className="flex justify-center flex-col md:flex-row">
+                <div className="md:w-1/2 w-full">
+                  <h1 className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center md:text-left  leading-snug tracking-wider">
+                    <span className="text-4xl font-codec sm:text-[60px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                      A Revolutionary New Age
+                    </span>{" "}
+                    Investment Platform
+                  </h1>
                   
-                  <div>
-                    <p className=" text-md mx-4 sm:text-center">
-                      Join Our Community
-                    </p>
-                    <ul className="flex gap-6 mx-8 ">
-                      <li>
-                        <a
-                          href="https://t.me/+nFUrC_I1hA1iNWU9"
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-gray-700 transition hover:opacity-75"
-                        >
-                          <span className="sr-only">Telegram</span>
-                          <FaTelegramPlane size={40} color="white" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://twitter.com/zothdotio"
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-gray-700 transition hover:opacity-75"
-                        >
-                          <span className="sr-only">Twitter</span>
-                          <FaTwitter size={40} color="white" />
-                        </a>
-                      </li>
-                    </ul>
+                  <div className="flex mt-4 justify-center flex-wrap items-center">
+                    <div>
+                      <p className=" text-md mx-4 sm:text-center">
+                        Join Our Community
+                      </p>
+                      <ul className="flex gap-6 mx-8 ">
+                        <li>
+                          <a
+                            href="https://t.me/+nFUrC_I1hA1iNWU9"
+                            rel="noreferrer"
+                            target="_blank"
+                            className="text-gray-700 transition hover:opacity-75"
+                          >
+                            <span className="sr-only">Telegram</span>
+                            <FaTelegramPlane size={40} color="white" />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://twitter.com/zothdotio"
+                            rel="noreferrer"
+                            target="_blank"
+                            className="text-gray-700 transition hover:opacity-75"
+                          >
+                            <span className="sr-only">Twitter</span>
+                            <FaTwitter size={40} color="white" />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div class="relative flex justify-center my-2 mx-auto items-center z-50 mt-8">
-                  <div class="rounded-3xl shadow-lg bg-black border border-slate-500 w-2/5 flex justify-center items-center">
-                    <div class=" marquee-container d-none d-sm-block z-0">
+                <div class="relative flex justify-center my-2 mx-auto items-center z-50 mt-8 md:w-1/2 md:mt-0 w-full">
+                  <div class="rounded-3xl shadow-lg bg-black border border-slate-500 flex justify-center items-center">
+                    <div class=" marquee-container d-none d-sm-block z-0 hidden">
                       <div class="marquee d-flex justify-content-around">
                         <span>Upcoming Launch !</span>
                         <span>200 slots left</span>
@@ -141,12 +132,7 @@ const Hero = ({ setScrollValue }) => {
                     </div>
                   </div>
                 </div>
-                {/* <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
-                  Accept your early invite to earn{" "}
-                  <span className="text-[#F3C74E] font-medium ">
-                    $100 worth Zoth coins
-                  </span>
-                </p> */}
+                
               </div>
             </div>
           </div>
