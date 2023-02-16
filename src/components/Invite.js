@@ -1,13 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-
+import waitlist from "../assets/images/waitlist2.png";
 export default function Invite({ setIsVisible }) {
   const [inviteData, setInviteData] = useState({
     first_name: "",
     email: "",
     mobile: "",
-    amount:0,
+    amount: 0,
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -22,8 +22,8 @@ export default function Invite({ setIsVisible }) {
   };
 
   const changeAmount = (num) => {
-    setInviteData({...inviteData, amount:num});
-  }
+    setInviteData({ ...inviteData, amount: num });
+  };
 
   const invite = async (e) => {
     e.preventDefault();
@@ -102,12 +102,20 @@ export default function Invite({ setIsVisible }) {
             <span className="sr-only">Close modal</span>
           </button>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center">
-            <img
-              src="waitlist.png"
-              alt="invite"
-              className="hidden sm:flex w-1/2 h-full"
-            />
+          <div className="flex flex-col sm:flex-row justify-center items-center ">
+            <div className="m-hidden" style={{ position: "relative" }}>
+              <h3 class="text-overlay p-6 text-center py-16" style={{fontWeight:"500"}}>
+                Invest in pre-leased Commercial <br /> Real Estate starting with{" "}
+                <br />
+                <span className="font-bold mt-4" style={{fontSize:"40px"}}>just 1 Lakh</span>
+              </h3>
+              <img
+                src={waitlist}
+                alt="invite"
+                width="100"
+                className="hidden sm:flex w-full h-full"
+              />
+            </div>
 
             {message ? (
               <div className="flex flex-col justify-center items-center w-1/2">
@@ -124,7 +132,7 @@ export default function Invite({ setIsVisible }) {
                   Join the Waitlist to earn an IRR of 12%.
                 </h3>
 
-                <p className="my-4">
+                <p className="my-4 mt-4">
                   <span className="bg-white">
                     {/* <svg
                       className="w-5 h-5"
@@ -139,11 +147,13 @@ export default function Invite({ setIsVisible }) {
                       />
                     </svg> */}
                   </span>
-                  <span>Asset backed investment</span>
+                  <span> ✅ Secure asset-backed investment</span>
                 </p>
-                <p className="my-4">Asset backed investment</p>
-                <p className="my-4">Asset backed investment</p>
-                <form className="space-y-6">
+                <p className="my-4"> ✅ 100% higher returns than FD</p>
+                <p className="my-4">
+                  ✅ Generate passive income with monthly repayments
+                </p>
+                <form className="space-y-6" style={{ marginTop: "30px" }}>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label

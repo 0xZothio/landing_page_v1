@@ -110,3 +110,34 @@ transform:translateY(-4px);
 
 
 
+.icon:hover{
+  font-size: 50px !important;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.5) rotateZ(0.05turn);
+  
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  backdrop-filter: blur(1.5px) brightness(65%);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .text-overlay{
+    display: none !important;
+  }
+  .icon-bar {
+    position: fixed;
+    right:27%;
+    bottom: 5%;
+    
+  }
+}

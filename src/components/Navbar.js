@@ -48,11 +48,10 @@ const Navbar = ({ setIsVisible }) => {
       {console.log(section)}
       <div class="fixed top-0 left-0 shadow-lg bg-[#007AFF] z-50 w-screen text-center px-4">
         <h5
-          class="text-white text-[1rem] font-normal underline cursor-pointer"
+          class="text-white text-[1rem] font-normal underline cursor-pointer p-1"
           onClick={() => setIsVisible(true)}
         >
-          Launching Soon! A Real Estate Investment Opportunity with just ₹ 2.5
-          lac. <span className="font-extrabold">Join the Waitlist!</span>
+          🔜 Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh 🤑. <span className="font-extrabold"> Join the Waitlist! ⏳ </span>
         </h5>
       </div>
       {!mobileMenuOpen && (
@@ -215,7 +214,7 @@ const Navbar = ({ setIsVisible }) => {
                   className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
                   onClick={() => setIsVisible(true)}
                 >
-                  Get Exclusive Invite{" "}
+                 Join Waitlist
                 </button>
               </div>
             </div>

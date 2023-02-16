@@ -82,7 +82,7 @@ function LandingPage() {
       {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
-      <div className="fixed z-50 bottom-20 right-20 bg-gray-900 rounded-3xl text-black">
+      <div className="fixed z-50 bottom-20 right-10 icon-bar  bg-gray-900 rounded-3xl text-black">
         <ul className="flex gap-6 my-2 py-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start px-8">
           <li>
             <a
@@ -92,7 +92,7 @@ function LandingPage() {
               className="text-gray-700 transition hover:opacity-75 rounded-full"
             >
               <span className="sr-only">Twitter</span>
-              <AiFillTwitterCircle size={20} color="white" />
+              <AiFillTwitterCircle size={30} className="icon"  color="white" />
             </a>
           </li>
           <li>
@@ -103,7 +103,7 @@ function LandingPage() {
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
                 >
                   <span className="sr-only">Instagram</span>
-                  <FaInstagramSquare size={20} color="white" />
+                  <FaInstagramSquare size={30} className="icon" color="white" />
                 </a>
               </li>
           <li>
@@ -114,7 +114,7 @@ function LandingPage() {
               className="text-gray-700 transition hover:opacity-75 rounded-full"
             >
               <span className="sr-only">LinkeldIn</span>
-              <FaLinkedin size={20} color="white" />
+              <FaLinkedin size={30} className="icon" color="white" />
             </a>
           </li>
           <li>
@@ -125,7 +125,7 @@ function LandingPage() {
               className="text-gray-700 transition hover:opacity-75"
             >
               <span className="sr-only">Telegram</span>
-              <FaTelegramPlane size={20} color="white" />
+              <FaTelegramPlane size={30} className="icon" color="white" />
             </a>
           </li>
           {/* <li>
