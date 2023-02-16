@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import PhoneInput from "react-phone-input-2";
 import waitlist from "../assets/images/waitlist2.png";
 export default function Invite({ setIsVisible }) {
   const [inviteData, setInviteData] = useState({
@@ -12,7 +13,7 @@ export default function Invite({ setIsVisible }) {
 
   const [formErrors, setFormErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const [message, showMessage] = useState(false);
+  const [message, showMessage] = useState(0);
 
   const onChangeData = async (e) => {
     let name = e.target.name;
@@ -29,33 +30,27 @@ export default function Invite({ setIsVisible }) {
     e.preventDefault();
     setIsLoading(true);
     setFormErrors(validate(inviteData));
-
     try {
-      let res = await axios.post(
-        `https://script.google.com/macros/s/AKfycbz1wTUy2M-ChUqGgSVfAapfFT_ZXoreUU1N_PwWkSPaciNf0-sKK3FPjKDaRULNYG-Y1Q/exec?first_name=${inviteData.first_name}&last_name=${inviteData.last_name}&mobile=${inviteData.mobile}&email=${inviteData.email}&function=subscribe`
-      );
-
-      if (res.data.result === "success") {
-        console.log("invite success");
-        toast.success("Go Ahead !!! Sucess", {
-          theme: "dark",
+      
+      if (inviteData.email && inviteData.mobile) {
+        await axios.post(`http://c697-114-79-165-153.ngrok.io/sendEmail`, {
+          email: inviteData.email,
         });
+        await axios.post(`http://c697-114-79-165-153.ngrok.io/sendSMS`, {
+          phone : "+" + inviteData.mobile,
+        });
+        showMessage(1);
         setIsLoading(false);
-        // setIsVisible(false);
-        showMessage(true);
         return;
-      } else {
+      }else {
         setIsLoading(false);
-
-        toast.error("Go Ahead !!! Error", {
-          theme: "dark",
-        });
+        showMessage(2);
+        
       }
     } catch (error) {
       console.log("error", error);
-      toast.error("Go Ahead !!! Error", {
-        theme: "dark",
-      });
+      showMessage(2);
+      
     }
   };
 
@@ -104,10 +99,15 @@ export default function Invite({ setIsVisible }) {
 
           <div className="flex flex-col sm:flex-row justify-center items-center ">
             <div className="m-hidden" style={{ position: "relative" }}>
-              <h3 className="text-overlay p-6 text-center py-16" style={{fontWeight:"500"}}>
+              <h3
+                className="text-overlay p-6 text-center py-16"
+                style={{ fontWeight: "500" }}
+              >
                 Invest in pre-leased Commercial <br /> Real Estate starting with{" "}
                 <br />
-                <span className="font-bold mt-4" style={{fontSize:"40px"}}>just 1 Lakh</span>
+                <span className="font-bold mt-4" style={{ fontSize: "40px" }}>
+                  just 1 Lakh
+                </span>
               </h3>
               <img
                 src={waitlist}
@@ -117,13 +117,22 @@ export default function Invite({ setIsVisible }) {
               />
             </div>
 
-            {message ? (
+            {message == 1 ? (
               <div className="flex flex-col justify-center items-center w-1/2">
                 <div className="text-4xl font-codec text-[#F3C74E]">
                   Thank you!
                 </div>
                 <div className="text-xl p-4 font-roobert">
-                  Our Team Will Contact You soon.
+                  Congratulations! You have been added to waitlist
+                </div>
+              </div>
+            ) : message == 2 ? (
+              <div className="flex flex-col justify-center items-center w-1/2">
+                <div className="text-4xl font-codec text-[#F3C74E] p-2">
+                  Hey !!!
+                </div>
+                <div className="text-xl p-4 font-roobert">
+                  You have already joined waitlist
                 </div>
               </div>
             ) : (
@@ -175,7 +184,7 @@ export default function Invite({ setIsVisible }) {
                       <p className="text-sm text-red-500 ">{formErrors.name}</p>
                     </div>
                     <div>
-                      <label
+                      {/* <label
                         htmlFor="email"
                         className="block mb-2 text-sm text-gray-300"
                       >
@@ -190,6 +199,45 @@ export default function Invite({ setIsVisible }) {
                         required={true}
                         value={inviteData.mobile}
                         onChange={(e) => onChangeData(e)}
+                      /> */}
+                      <PhoneInput
+                        enableSearch={true}
+                        type="number"
+                        name="mobile"
+                        id="mobile"
+                        placeholder=""
+                        country="in"
+                        inputclassName="bg-[#202020] text-white w-full"
+                        // dropdownclassName="bg-[#202020] text-white"
+                        // style={{backgroundColor:"#202020"}}
+                        inputStyle={{
+                          color: "white ",
+                          background: "#202020",
+                          width: "100%",
+                          border: "none",
+                          hover: "none",
+                        }}
+                        buttonStyle={{
+                          color: "white !important",
+                          background: "#202020",
+                        }}
+                        searchStyle={{
+                          color: "white",
+                          background: "#202020",
+                        }}
+                        containerStyle={{ background: "#202020" }}
+                        dropdownStyle={{
+                          background: "#202020",
+                          color: "white !important",
+                          hover: "none",
+                        }}
+                        // className="bg-[#202020] text-white"
+                        required={true}
+                        value={inviteData.mobile}
+                        // handleOnChange={(value, data, e, formatted)=>{setInviteData({...inviteData, mobile:value})}}
+                        onChange={(value) => {
+                          setInviteData({ ...inviteData, mobile: value });
+                        }}
                       />
                       <p className="text-sm text-red-500 ">
                         {formErrors.mobile}
@@ -281,7 +329,6 @@ export default function Invite({ setIsVisible }) {
                         10000+
                       </button>
                     </div>
-                    
                   </div>
 
                   <div className="flex justify-center items-center">
