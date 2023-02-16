@@ -15,7 +15,7 @@ function About() {
           whileInView="show"
           className="text-[60px] sm:text-[80px] text-center font-codec font-bold"
         >
-          About <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Us</span>
+          About <span className="bg-clip-text text-[#1A88FF]">Us</span>
         </motion.div>
        {/*  <div className="mt-6">
           <motion.p
