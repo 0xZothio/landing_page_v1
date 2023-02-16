@@ -80,7 +80,7 @@ export default function Invite({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-2/3 h-full  md:h-auto md:mt-40">
+      <div className="relative w-full sm:w-2/3 h-full  md:h-auto">
         <div className="relative  rounded shadow bg-[#171717]">
           <button
             type="button"
@@ -119,7 +119,7 @@ export default function Invite({ setIsVisible }) {
                 </div>
               </div>
             ) : (
-              <div className="px-6 py-6 lg:px-8 w-1/2 mt-4">
+              <div className="px-6 py-6 lg:px-8 w-full sm:w-1/2 mt-4">
                 <h3 className="mb-4 text-3xl font-semibold  text-white leading-normal text-[#007AFF]">
                   Join the Waitlist to earn an IRR of 12%.
                 </h3>
@@ -172,17 +172,17 @@ export default function Invite({ setIsVisible }) {
                         Enter Your Phone no
                       </label>
                       <input
-                        type="email"
-                        name="email"
-                        id="email"
+                        type="mobile"
+                        name="mobile"
+                        id="mobile"
                         className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         placeholder=""
                         required={true}
-                        value={inviteData.email}
+                        value={inviteData.mobile}
                         onChange={(e) => onChangeData(e)}
                       />
                       <p className="text-sm text-red-500 ">
-                        {formErrors.email}
+                        {formErrors.mobile}
                       </p>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(100);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         1000
                       </button>
@@ -248,7 +248,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(200);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         3000
                       </button>
@@ -257,7 +257,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(300);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         5000
                       </button>
@@ -266,7 +266,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(400);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         10000+
                       </button>

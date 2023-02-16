@@ -44,10 +44,13 @@ const Navbar = ({ setIsVisible }) => {
   // }
 
   return (
-    <div className={"bg-black text-white z-10 pt-8 relative mt-6"}>
+    <div className={"bg-black text-white z-10 pt-8 sm:pt-4 relative mt-6"}>
       {console.log(section)}
-      <div class="fixed top-0 left-0 shadow-lg bg-[#007AFF] z-50 w-screen text-center p-2 px-4">
-        <h5 class="text-white text-md font-normal underline underline-offset-8">
+      <div class="fixed top-0 left-0 shadow-lg bg-[#007AFF] z-50 w-screen text-center px-4">
+        <h5
+          class="text-white text-[1rem] font-normal underline cursor-pointer"
+          onClick={() => setIsVisible(true)}
+        >
           Launching Soon! A Real Estate Investment Opportunity with just ₹ 2.5
           lac. <span className="font-extrabold">Join the Waitlist!</span>
         </h5>
@@ -159,7 +162,7 @@ const Navbar = ({ setIsVisible }) => {
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
             <button
-              className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
+              className="inline-block rounded-full px-6 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
               onClick={() => setIsVisible(true)}
             >
               Join waitlist{" "}
