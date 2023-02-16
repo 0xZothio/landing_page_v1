@@ -57,10 +57,10 @@ function Institutions() {
             Financial Markets
           </div> */}
 
-          <div class="flex space-x-2">
+          <div className="flex space-x-2">
             <button
               type="button"
-              class="z-50 inline-block px-10 py-4 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
+              className="z-50 inline-block px-10 py-4 mb-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mx-auto mt-6"
             >
               Learn more
             </button>
@@ -117,21 +117,21 @@ function Institutions() {
             className="flex flex-col justify-between  sm:flex-row mb-10"
           >
             {/* cards 1 */}
-            <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out ">
-              <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
+            <div className="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out ">
+              <div className="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
                 <div>
                   <img
-                    class="rounded-t-lg px-20 sm:px-24 py-8 "
+                    className="rounded-t-lg px-20 sm:px-24 py-8 "
                     src="institution/tokenization.png"
                     alt=""
                   />
                 </div>
-                <div class="p-6">
-                  <h5 class="text-white text-3xl font-medium mb-2 font-codec">
+                <div className="p-6">
+                  <h5 className="text-white text-3xl font-medium mb-2 font-codec">
                     Zoth TaaS
                   </h5>
                   <div className="sm:h-[230px]">
-                    <p class="text-gray-500 text-base mb-8 font-roobert h-4/5">
+                    <p className="text-gray-500 text-base mb-8 font-roobert h-4/5">
                       By utilizing the cutting-edge blockchain technology,
                       Zoth's TaaS (Tokenization-as-a-Service)platform allows for
                       a secure and transparent way to invest in tokenized
@@ -143,7 +143,7 @@ function Institutions() {
                   </div>
                   <button
                     type="button"
-                    class="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
+                    className="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
                   >
                     Know More
                   </button>
@@ -152,21 +152,21 @@ function Institutions() {
             </div>
 
             {/* cards 2 */}
-            <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out">
-              <div class="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
+            <div className="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out">
+              <div className="rounded-3xl shadow-lg bg-black border border-slate-500	 max-w-sm">
                 <div>
                   <img
-                    class="rounded-t-lg px-20 sm:px-24 py-8"
+                    className="rounded-t-lg px-20 sm:px-24 py-8"
                     src="institution/xchange.png"
                     alt=""
                   />
                 </div>
-                <div class="p-6">
-                  <h5 class="text-white text-3xl font-medium mb-2 font-codec">
+                <div className="p-6">
+                  <h5 className="text-white text-3xl font-medium mb-2 font-codec">
                     Zoth FaaS
                   </h5>
                   <div className="sm:h-[230px]">
-                    <p class="text-gray-500 text-base mb-8 font-roobert">
+                    <p className="text-gray-500 text-base mb-8 font-roobert">
                       Zoth through FaaS (Fund-as-a-Service) it’s enables
                       institutions and funds to invest in pre-vetted pools of
                       tokenized assets and liquidity pools. These pools consist
@@ -177,7 +177,7 @@ function Institutions() {
                   </div>
                   <button
                     type="button"
-                    class="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
+                    className="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
                   >
                     Know More
                   </button>
@@ -186,21 +186,21 @@ function Institutions() {
             </div>
 
             {/* cards 3 */}
-            <div class="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out">
-              <div class="rounded-3xl shadow-lg bg-black border border-slate-500 max-w-sm">
+            <div className="flex justify-center my-2 mx-4 hover:scale-105 transition duration-700 ease-in-out">
+              <div className="rounded-3xl shadow-lg bg-black border border-slate-500 max-w-sm">
                 <div>
                   <img
-                    class="rounded-t-lg px-10 sm:px-24 py-8"
+                    className="rounded-t-lg px-10 sm:px-24 py-8"
                     src="institution/custody.png"
                     alt=""
                   />
                 </div>
-                <div class="p-6">
-                  <h5 class="text-white text-3xl font-medium mb-2 font-codec">
+                <div className="p-6">
+                  <h5 className="text-white text-3xl font-medium mb-2 font-codec">
                     Zoth DeFi
                   </h5>
                   <div className="sm:h-[230px]">
-                    <p class="text-gray-500 text-base mb-8 font-roobert">
+                    <p className="text-gray-500 text-base mb-8 font-roobert">
                       Zoth DeFi enables institutions and individuals to invest
                       in exclusive and proprietary liquidity pools, which are
                       focused on creating liquidity for on-chain real-world
@@ -210,7 +210,7 @@ function Institutions() {
                   </div>
                   <button
                     type="button"
-                    class="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
+                    className="w-full inline-block px-6 pt-6 bg-black text-[#F3C74E] font-semibold text-xl font-roobert leading-tight rounded shadow-md focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out border-t-2 border-slate-700	"
                   >
                     Know More
                   </button>

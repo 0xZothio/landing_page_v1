@@ -78,10 +78,10 @@ const Hero = ({ setScrollValue }) => {
                     </div>
                   </div> */}
               </div>
-              <div class="relative flex justify-center my-2 mx-auto items-center z-50 mt-12 md:w-2/5 md:mt-0 w-full">
-                <div class="rounded-xl shadow-lg shadow-[#007AFF] bg-black border border-slate-500 flex justify-center items-center">
-                  {/* <div class=" marquee-container d-none d-sm-block z-0 hidden">
-                      <div class="marquee d-flex justify-content-around">
+              <div className="relative flex justify-center my-2 mx-auto items-center z-50 mt-12 md:w-2/5 md:mt-0 w-full">
+                <div className="rounded-xl shadow-lg shadow-[#007AFF] bg-black border border-slate-500 flex justify-center items-center">
+                  {/* <div className=" marquee-container d-none d-sm-block z-0 hidden">
+                      <div className="marquee d-flex justify-content-around">
                         <span>Upcoming Launch !</span>
                         <span>200 slots left</span>
                         <span>Upcoming Launch !</span>
@@ -94,7 +94,7 @@ const Hero = ({ setScrollValue }) => {
                         <span>200 slots left</span>
                         <span>Upcoming Launch !</span>
                       </div>
-                      <div class="marquee marquee2 d-flex justify-content-around">
+                      <div className="marquee marquee2 d-flex justify-content-around">
                         <span>200 slots left</span>
                         <span>Upcoming Launch !</span>
                         <span>200 slots left</span>
@@ -108,20 +108,20 @@ const Hero = ({ setScrollValue }) => {
                         <span>200 slots left</span>
                       </div>
                     </div> */}
-                  <div class="w-full text-center z-50 rounded-3xl bg-black">
-                    <div class="rounded-xl shadow-lg bg-[#252525] w-full text-center p-2 px-4">
-                      <h5 class="text-white text-md font-normal mb-4">
+                  <div className="w-full text-center z-50 rounded-3xl bg-black">
+                    <div className="rounded-xl shadow-lg bg-[#252525] w-full text-center p-2 px-4">
+                      <h5 className="text-white text-md font-normal mb-4">
                         Invest in Real Estate Opportunity with just
                       </h5>
-                      <h5 class="text-white text-3xl font-medium mb-2">
+                      <h5 className="text-white text-3xl font-medium mb-2">
                         ₹ 1 Lakh !
                       </h5>
                     </div>
                     <div className="h-full">
-                      <h5 class="text-white text-xl mb-2 font-semibold mt-6">
+                      <h5 className="text-white text-xl mb-2 font-semibold mt-6">
                         Investors in Line
                       </h5>
-                      <p class="text-white text-4xl font-extrabold mb-6 mt-2">
+                      <p className="text-white text-4xl font-extrabold mb-6 mt-2">
                         0573
                       </p>
                     </div>

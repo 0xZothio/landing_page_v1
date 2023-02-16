@@ -26,10 +26,11 @@ function Team() {
               initial="hidden"
               whileInView="show"
               className="flex flex-col justify-center m-6"
+              key={index}
             >
               <a href={member.linkedIn} target="_blank" rel="noreferrer">
                 <img
-                  class="max-w-lg rounded-full w-30 h-30 object-cover transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                  className="max-w-lg rounded-full w-30 h-30 object-cover transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
                   src={member.photo}
                   alt="member"
                 />

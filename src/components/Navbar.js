@@ -46,9 +46,9 @@ const Navbar = ({ setIsVisible }) => {
   return (
     <div className={"bg-black text-white z-10 pt-8 sm:pt-4 relative mt-6"}>
       {console.log(section)}
-      <div class="fixed top-0 left-0 shadow-lg bg-[#007AFF] z-50 w-screen text-center px-4">
+      <div className="fixed top-0 left-0 shadow-lg bg-[#007AFF] z-50 w-screen text-center px-4">
         <h5
-          class="text-white text-[1rem] font-normal underline cursor-pointer p-1"
+          className="text-white text-[1rem] font-normal underline cursor-pointer p-1"
           onClick={() => setIsVisible(true)}
         >
           🔜 Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh 🤑. <span className="font-extrabold"> Join the Waitlist! ⏳ </span>

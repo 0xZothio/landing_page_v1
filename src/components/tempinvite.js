@@ -193,8 +193,8 @@ export default function Invite({ setIsVisible }) {
                       type="button"
                       className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
                     >
-                      <div class="flex items-center justify-center ">
-                        <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                      <div className="flex items-center justify-center ">
+                        <div className="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
                       </div>
                     </button>
                   ) : (

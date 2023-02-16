@@ -34,10 +34,10 @@ const Contact_institutions = () => {
         the chance to capitalize on these markets.
       </motion.div>
       {/* button */}
-      <div class="flex justify-center items-center space-x-2">
+      <div className="flex justify-center items-center space-x-2">
         <button
           type="button"
-          class="font-roobert inline-block px-6 py-2.5 m-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
+          className="font-roobert inline-block px-6 py-2.5 m-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-lg leading-tight  rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
           onClick={() => setIsVisible(!isVisible)}
         >
           Contact Us

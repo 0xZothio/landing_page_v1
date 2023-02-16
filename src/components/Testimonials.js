@@ -40,17 +40,17 @@ function Testimonials() {
 
           <div className="border-t-2 border-gray-500 m-4"></div>
 
-          <div class="inline-flex items-center mt-2">
+          <div className="inline-flex items-center mt-2">
             <img
               alt="testimonial"
               src="/testimonial/suresh.png"
-              class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+              className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
             />
-            <span class="flex-grow flex flex-col pl-4">
-              <span class="title-font font-medium text-white">
+            <span className="flex-grow flex flex-col pl-4">
+              <span className="title-font font-medium text-white">
                 Suresh Kumar
               </span>
-              <span class="text-gray-500 text-sm">
+              <span className="text-gray-500 text-sm">
                 Real Estate, start-up, stocks
               </span>
             </span>
@@ -71,15 +71,15 @@ function Testimonials() {
 
           <div className="border-t-2 border-gray-500 m-4"></div>
 
-          <div class="inline-flex items-center mt-2">
+          <div className="inline-flex items-center mt-2">
             <img
               alt="testimonial"
               src="/testimonial/ali.png"
-              class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+              className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
             />
-            <span class="flex-grow flex flex-col pl-4">
-              <span class="title-font font-medium text-white">Naresh Rati</span>
-              <span class="text-gray-500 text-sm">
+            <span className="flex-grow flex flex-col pl-4">
+              <span className="title-font font-medium text-white">Naresh Rati</span>
+              <span className="text-gray-500 text-sm">
                 Top property developer in dubai
               </span>
             </span>
@@ -100,17 +100,17 @@ function Testimonials() {
 
           <div className="border-t-2 border-gray-500 m-4"></div>
 
-          <div class="inline-flex items-center mt-2">
+          <div className="inline-flex items-center mt-2">
             <img
               alt="testimonial"
               src="/testimonial/namrata.png"
-              class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+              className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
             />
-            <span class="flex-grow flex flex-col pl-4">
-              <span class="title-font font-medium text-white">
+            <span className="flex-grow flex flex-col pl-4">
+              <span className="title-font font-medium text-white">
                 Namrata Rajesh
               </span>
-              <span class="text-gray-500 text-sm">
+              <span className="text-gray-500 text-sm">
                 FD, RD, Stocks, MF and crypto.
               </span>
             </span>
