@@ -281,7 +281,7 @@ export default function Invite({ setIsVisible }) {
                         10000+
                       </button>
                     </div>
-                    <p className="text-sm text-red-500 ">{formErrors.mobile}</p>
+                    
                   </div>
 
                   <div className="flex justify-center items-center">
