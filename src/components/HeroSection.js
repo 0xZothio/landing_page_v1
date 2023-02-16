@@ -12,14 +12,20 @@ const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className={" bg-black text-white w-full overflow-hidden min-h-screen"}>
+    <div
+      className={
+        " bg-transparent text-white w-full overflow-hidden min-h-screen z-50"
+      }
+    >
       <div className="px-6 lg:px-8">
         <Navbar setIsVisible={setIsVisible} />
       </div>
 
       <main>
-        <div className="absolute top-0 md:flex justify-center items-center z-0 h-1/2 hidden">
-          <img src="/wave.gif" alt="" />
+        <div className="absolute top-0 md:flex justify-center items-center hidden">
+          <div>
+            <img src="/wave.gif" alt="" />
+          </div>
         </div>
 
         {/* signup popup */}
