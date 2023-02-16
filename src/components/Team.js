@@ -14,7 +14,7 @@ function Team() {
           className="text-3xl font-bold tracking-tight sm:text-4xl text-center"
         >
           Meet Our{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          <span className="bg-clip-text text-[#1A88FF]">
             Team
           </span>
         </motion.div>
