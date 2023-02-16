@@ -184,13 +184,13 @@ export default function Invite({ setIsVisible }) {
                       <p className="text-sm text-red-500 ">{formErrors.name}</p>
                     </div>
                     <div>
-                      {/* <label
+                      <label
                         htmlFor="email"
                         className="block mb-2 text-sm text-gray-300"
                       >
                         Enter Your Phone no
                       </label>
-                      <input
+                      {/* <input
                         type="mobile"
                         name="mobile"
                         id="mobile"
