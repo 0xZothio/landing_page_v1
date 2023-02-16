@@ -24,7 +24,7 @@ const Hero = ({ setScrollValue }) => {
       <main>
         <div className="absolute top-0 md:flex justify-center items-center hidden">
           <div>
-            <img src="/wave.gif" alt="" />
+            {/* <img src="/wave.gif" alt="" /> */}
           </div>
         </div>
 
@@ -40,7 +40,7 @@ const Hero = ({ setScrollValue }) => {
           <div className="mx-auto min-h-screen flex justify-center items-center">
             <div className=" flex justify-center flex-col md:flex-row z-50 h-full">
               <div className="md:w-3/5 w-full md:ml-12">
-                <h1 className="text-4xl font-codec sm:text-[60px] font-extrabold leading-tight text-center md:text-left tracking-normal mt-2 herotext">
+                <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-tight text-center md:text-left tracking-normal herotext">
                   A Revolutionary New Age Investment Platform
                 </h1>
                 <p className="md:mt-6 leading-8 text-center md:text-left text-2xl mt-8">
