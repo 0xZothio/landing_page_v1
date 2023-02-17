@@ -135,10 +135,10 @@ export default function Invite({ setIsVisible }) {
             ) : message == 2 ? (
               <div className="flex flex-col justify-center items-center w-1/2">
                 <div className="text-4xl font-codec text-[#F3C74E] p-2">
-                  Hey !!!
+                Thank you!
                 </div>
                 <div className="text-xl p-4 font-roobert">
-                  You have already joined waitlist
+                Congratulations! You have been added to waitlist
                 </div>
               </div>
             ) : (
@@ -190,13 +190,13 @@ export default function Invite({ setIsVisible }) {
                       <p className="text-sm text-red-500 ">{formErrors.name}</p>
                     </div>
                     <div>
-                      {/* <label
+                      <label
                         htmlFor="email"
                         className="block mb-2 text-sm text-gray-300"
                       >
                         Enter Your Phone no
                       </label>
-                      <input
+                      {/* <input
                         type="mobile"
                         name="mobile"
                         id="mobile"
