@@ -101,25 +101,13 @@ export default function Invite({ setIsVisible }) {
             <span className="sr-only">Close modal</span>
           </button>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center ">
-            <div
-              className="m-hidden px-6 mb-2"
-              style={{ position: "relative" }}
-            >
-              <h3 className="text-overlay p-6 text-center py-8 font-medium text-2xl leading-normal">
-                Invest in pre-leased Commercial <br /> Real Estate starting with{" "}
-                {/* <br /> */}
-                <div className="font-bold text-4xl mt-4">Just ₹1 Lakh</div>
-              </h3>
+          {message == 1 ? (
+            <div className="flex flex-col sm:flex-row justify-center items-center ">
               <img
-                src={waitlist}
+                src="invite.png"
                 alt="invite"
-                // width="100"
-                className="hidden sm:flex w-full h-full"
+                className="hidden sm:flex w-[485px] h-[585px]"
               />
-            </div>
-
-            {message == 1 ? (
               <div className="flex flex-col justify-center items-center w-1/2 sm:w-full  py-4">
                 <div className="text-4xl font-codec text-[#F3C74E]">
                   Thank you!
@@ -128,16 +116,35 @@ export default function Invite({ setIsVisible }) {
                   Congratulations! You have been added to waitlist
                 </div>
               </div>
-            ) : message == 2 ? (
-              <div className="flex flex-col justify-center items-center w-full">
-                <div className="text-4xl font-codec text-[#F3C74E] p-2">
-                  Thank you!
-                </div>
-                <div className="text-xl sm:p-4 font-roobert">
-                  You have already waitlisted!
-                </div>
+            </div>
+          ) : message == 2 ? (
+            <div className="flex flex-col justify-center items-center w-full">
+              <div className="text-4xl font-codec text-[#F3C74E] p-2">
+                Thank you!
               </div>
-            ) : (
+              <div className="text-xl sm:p-4 font-roobert">
+                You have already waitlisted!
+              </div>
+            </div>
+          ) : (
+            <div className="flex flex-col sm:flex-row justify-center items-center ">
+              <div
+                className="m-hidden px-6 mb-2"
+                style={{ position: "relative" }}
+              >
+                <h3 className="text-overlay p-6 text-center py-8 font-medium text-2xl leading-normal">
+                  Invest in pre-leased Commercial <br /> Real Estate starting
+                  with {/* <br /> */}
+                  <div className="font-bold text-4xl mt-4">Just ₹1 Lakh</div>
+                </h3>
+                <img
+                  src={waitlist}
+                  alt="invite"
+                  // width="100"
+                  className="hidden sm:flex w-full h-full"
+                />
+              </div>
+
               <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4">
                 <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
                   Join The Waitlist To Earn An IRR Of 12%.
@@ -356,8 +363,8 @@ export default function Invite({ setIsVisible }) {
                   </div>
                 </form>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
