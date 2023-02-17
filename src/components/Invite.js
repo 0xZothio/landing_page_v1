@@ -32,16 +32,18 @@ export default function Invite({ setIsVisible }) {
     setFormErrors(validate(inviteData));
     try {
       
+      if(inviteData.email && inviteData.mobile && inviteData.first_name){
+        await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
+          name:inviteData.first_name,
+          email:inviteData.email,
+          phone:inviteData.mobile
+        });
+      }
       if (inviteData.email && inviteData.mobile) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendEmail`, {
           email: inviteData.email,
         });
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
-          phone : "+" + inviteData.mobile,
-        });
-        await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
-          name: inviteData.name,
-          email: inviteData.email,
           phone : "+" + inviteData.mobile,
         });
         showMessage(1);
