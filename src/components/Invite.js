@@ -31,12 +31,18 @@ export default function Invite({ setIsVisible }) {
     setIsLoading(true);
     setFormErrors(validate(inviteData));
     try {
-      
+      if(inviteData.email && inviteData.mobile && inviteData.first_name){
+        await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
+          name:inviteData.first_name,
+          email:inviteData.email,
+          phone:inviteData.mobile
+        });
+      }
       if (inviteData.email && inviteData.mobile) {
-        await axios.post(`http://c697-114-79-165-153.ngrok.io/sendEmail`, {
+        await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendEmail`, {
           email: inviteData.email,
         });
-        await axios.post(`http://c697-114-79-165-153.ngrok.io/sendSMS`, {
+        await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
           phone : "+" + inviteData.mobile,
         });
         showMessage(1);
@@ -216,6 +222,7 @@ export default function Invite({ setIsVisible }) {
                           width: "100%",
                           border: "none",
                           hover: "none",
+                          
                         }}
                         buttonStyle={{
                           color: "white !important",
