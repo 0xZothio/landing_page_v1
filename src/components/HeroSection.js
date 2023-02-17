@@ -119,16 +119,16 @@ const Hero = ({ setScrollValue }) => {
                     </div>
                     <div className="h-full">
                       <h5 className="text-white text-xl mb-2 font-semibold mt-6">
-                        Investors in Line
+                        Slots Available
                       </h5>
                       <p className="text-white text-4xl font-extrabold mb-6 mt-2">
-                        0573
+                        200
                       </p>
                     </div>
                     <button
                       type="button"
                       onClick={() => setIsVisible(true)}
-                      className="w-2/3 rounded-sm px-2 py-2 mt-2 z-100 text-black font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 bg-[#007AFF] mb-8"
+                      className="w-2/3 rounded-sm px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                     >
                       Join Waitlist
                     </button>

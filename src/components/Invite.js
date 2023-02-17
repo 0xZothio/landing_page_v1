@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
-import waitlist from "../assets/images/waitlist2.png";
+import waitlist from "../assets/images/waitlist.png";
+
 export default function Invite({ setIsVisible }) {
   const [inviteData, setInviteData] = useState({
     first_name: "",
@@ -31,11 +32,11 @@ export default function Invite({ setIsVisible }) {
     setIsLoading(true);
     setFormErrors(validate(inviteData));
     try {
-      if(inviteData.email && inviteData.mobile && inviteData.first_name){
+      if (inviteData.email && inviteData.mobile && inviteData.first_name) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
-          name:inviteData.first_name,
-          email:inviteData.email,
-          phone:inviteData.mobile
+          name: inviteData.first_name,
+          email: inviteData.email,
+          phone: inviteData.mobile,
         });
       }
       if (inviteData.email && inviteData.mobile) {
@@ -43,20 +44,16 @@ export default function Invite({ setIsVisible }) {
           email: inviteData.email,
         });
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
-          phone : "+" + inviteData.mobile,
+          phone: "+91" + inviteData.mobile,
         });
         showMessage(1);
         setIsLoading(false);
         return;
-      }else {
-        setIsLoading(false);
-        showMessage(2);
-        
       }
     } catch (error) {
       console.log("error", error);
-      showMessage(2);
-      
+      setIsLoading(false);
+      // showMessage(2);
     }
   };
 
@@ -64,6 +61,7 @@ export default function Invite({ setIsVisible }) {
   const validate = (values) => {
     const errors = {};
 
+    console.log("validate values", values);
     if (!values.first_name) {
       errors.name = "* Name is required";
     }
@@ -75,7 +73,7 @@ export default function Invite({ setIsVisible }) {
     if (!values.mobile) {
       errors.mobile = "* Mobile no. is required";
     }
-
+    setIsLoading(false);
     return errors;
   };
 
@@ -104,47 +102,45 @@ export default function Invite({ setIsVisible }) {
           </button>
 
           <div className="flex flex-col sm:flex-row justify-center items-center ">
-            <div className="m-hidden" style={{ position: "relative" }}>
-              <h3
-                className="text-overlay p-6 text-center py-16"
-                style={{ fontWeight: "500" }}
-              >
+            <div
+              className="m-hidden px-6 mb-2"
+              style={{ position: "relative" }}
+            >
+              <h3 className="text-overlay p-6 text-center py-8 font-medium text-2xl leading-normal">
                 Invest in pre-leased Commercial <br /> Real Estate starting with{" "}
-                <br />
-                <span className="font-bold mt-4" style={{ fontSize: "40px" }}>
-                  just 1 Lakh
-                </span>
+                {/* <br /> */}
+                <div className="font-bold text-4xl mt-4">Just ₹1 Lakh</div>
               </h3>
               <img
                 src={waitlist}
                 alt="invite"
-                width="100"
+                // width="100"
                 className="hidden sm:flex w-full h-full"
               />
             </div>
 
             {message == 1 ? (
-              <div className="flex flex-col justify-center items-center w-1/2">
+              <div className="flex flex-col justify-center items-center w-1/2 sm:w-full  py-4">
                 <div className="text-4xl font-codec text-[#F3C74E]">
                   Thank you!
                 </div>
-                <div className="text-xl p-4 font-roobert">
+                <div className="text-xl py-4 font-roobert">
                   Congratulations! You have been added to waitlist
                 </div>
               </div>
             ) : message == 2 ? (
-              <div className="flex flex-col justify-center items-center w-1/2">
+              <div className="flex flex-col justify-center items-center w-full">
                 <div className="text-4xl font-codec text-[#F3C74E] p-2">
-                Thank you!
+                  Thank you!
                 </div>
-                <div className="text-xl p-4 font-roobert">
-                Congratulations! You have been added to waitlist
+                <div className="text-xl sm:p-4 font-roobert">
+                  You have already waitlisted!
                 </div>
               </div>
             ) : (
-              <div className="px-6 py-6 lg:px-8 w-full sm:w-1/2 mt-4">
-                <h3 className="mb-4 text-3xl font-semibold  text-white leading-normal text-[#007AFF]">
-                  Join the Waitlist to earn an IRR of 12%.
+              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4">
+                <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
+                  Join The Waitlist To Earn An IRR Of 12%.
                 </h3>
 
                 <p className="my-4 mt-4">
@@ -181,7 +177,7 @@ export default function Invite({ setIsVisible }) {
                         type="text"
                         name="first_name"
                         id="first_name"
-                        className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        className=" border  text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         placeholder=""
                         required={true}
                         value={inviteData.first_name}
@@ -194,19 +190,19 @@ export default function Invite({ setIsVisible }) {
                         htmlFor="email"
                         className="block mb-2 text-sm text-gray-300"
                       >
-                        Enter Your Phone no
+                        Enter Your Mobile no.
                       </label>
-                      {/* <input
+                      <input
                         type="mobile"
                         name="mobile"
                         id="mobile"
-                        className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         placeholder=""
                         required={true}
                         value={inviteData.mobile}
                         onChange={(e) => onChangeData(e)}
-                      /> */}
-                      <PhoneInput
+                      />
+                      {/* <PhoneInput
                         enableSearch={true}
                         type="number"
                         name="mobile"
@@ -245,7 +241,7 @@ export default function Invite({ setIsVisible }) {
                         onChange={(value) => {
                           setInviteData({ ...inviteData, mobile: value });
                         }}
-                      />
+                      /> */}
                       <p className="text-sm text-red-500 ">
                         {formErrors.mobile}
                       </p>
@@ -282,7 +278,7 @@ export default function Invite({ setIsVisible }) {
                       type="email"
                       name="email"
                       id="email"
-                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                       placeholder=""
                       required={true}
                       value={inviteData.email}
@@ -294,9 +290,9 @@ export default function Invite({ setIsVisible }) {
                   <div>
                     <label
                       htmlFor="mobile"
-                      className="block mb-2 text-sm text-gray-300"
+                      className="block mb-3 text-sm text-gray-300"
                     >
-                      Enter Amount you want to Invest
+                      Enter Amount You Want To Invest
                     </label>
                     <div className="flex space-x-2">
                       <button
@@ -304,7 +300,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(100);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         1000
                       </button>
@@ -313,7 +309,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(200);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         3000
                       </button>
@@ -322,7 +318,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(300);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         5000
                       </button>
@@ -331,7 +327,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(400);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         10000+
                       </button>
@@ -352,7 +348,7 @@ export default function Invite({ setIsVisible }) {
                       <button
                         type="button"
                         onClick={invite}
-                        className="w-1/2 bg-[#007AFF] rounded-sm px-4 py-4 mt-2 z-100 text-black font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 ring-white"
+                        className="w-1/2 bg-[#007AFF] rounded-lg px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
                       >
                         Submit
                       </button>
