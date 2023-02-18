@@ -46,7 +46,10 @@ export default function Invite({ setIsVisible }) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
           phone: "+91" + inviteData.mobile,
         });
-        showMessage(1);
+        // showMessage(1);
+        showMessage(3);
+        // showMessage(4);
+        // showMessage(5);
         setIsLoading(false);
         return;
       }
@@ -79,7 +82,7 @@ export default function Invite({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-full sm:w-2/3 h-full  md:h-auto">
+      <div className="relative w-full sm:w-2/4 h-full  md:h-auto">
         <div className="relative  rounded shadow bg-[#171717]">
           <button
             type="button"
@@ -119,6 +122,11 @@ export default function Invite({ setIsVisible }) {
             </div>
           ) : message == 2 ? (
             <div className="flex flex-col justify-center items-center w-full">
+              <img
+                src="invite.png"
+                alt="invite"
+                className="hidden sm:flex w-[485px] h-[585px]"
+              />
               <div className="text-4xl font-codec text-[#F3C74E] p-2">
                 Thank you!
               </div>
@@ -126,10 +134,59 @@ export default function Invite({ setIsVisible }) {
                 You have already waitlisted!
               </div>
             </div>
+          ) : message == 3 ? (
+            <div className="flex flex-col w-full">
+              <div className="flex justify-center">
+                <img
+                  src="coupon.png"
+                  alt="coupon"
+                  className="sm:flex p-8 sm:w-[700px] sm:h-[400px] sm:px-10 sm:py-10"
+                />
+              </div>
+              <div className="flex flex-row justify-center items-center mb-10">
+                <div className="underline mr-14 sm:mr-24 text-gray-200 cursor-pointer">
+                 <p onClick={()=>{showMessage(4)}}>No Thanks</p> 
+                </div>
+                <button
+                  type="button"
+                  onClick={invite}
+                  className="bg-[#007AFF] rounded-lg px-10 py-2 z-100 text-white font-bold  focus:outline-none   text-lg text-center ring-gray-300"
+                >
+                  Pay Now
+                </button>
+              </div>
+            </div>
+          ) : message == 4 ? (
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex justify-center">
+                <img src="success.png" alt="coupon" className="w-72 h-72" />
+              </div>
+              <div className="font-bold p-2 text-4xl tracking-wide text-[#007AFF]">
+                Congrats!
+              </div>
+              <div className="p-8 text-lg">
+                You Have Successfully Joined The Waitlist.
+              </div>
+            </div>
+          ) : message == 5 ? (
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex justify-center">
+                <img src="success.png" alt="coupon" className="w-72 h-72" />
+              </div>
+              <div className="font-bold p-2 text-4xl tracking-wide text-[#007AFF]">
+                Congrats!
+              </div>
+              <div className="p-4 text-lg">
+                You Have Successfully Joined The Waitlist.
+              </div>
+              <div className="p-4 text-lg">
+                Coupon Code : <span className="text-[#007AFF] font-bold">EZ0TH1423K</span>
+              </div>
+            </div>
           ) : (
             <div className="flex flex-col sm:flex-row justify-center items-center ">
               <div
-                className="m-hidden px-6 mb-2"
+                className="m-hidden pl-6 mb-2"
                 style={{ position: "relative" }}
               >
                 <h3 className="text-overlay p-6 text-center py-8 font-medium text-2xl leading-normal">
@@ -141,7 +198,7 @@ export default function Invite({ setIsVisible }) {
                   src={waitlist}
                   alt="invite"
                   // width="100"
-                  className="hidden sm:flex w-full h-full"
+                  className="hidden sm:flex w-[900px] h-[550px]"
                 />
               </div>
 
