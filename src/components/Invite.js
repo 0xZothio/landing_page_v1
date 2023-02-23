@@ -82,7 +82,7 @@ export default function Invite({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-full sm:w-2/4 h-full  md:h-auto">
+      <div className="relative w-full sm:w-4/6 h-full  md:h-auto">
         <div className="relative  rounded shadow bg-[#171717]">
           <button
             type="button"
