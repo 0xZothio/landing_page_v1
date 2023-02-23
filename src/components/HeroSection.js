@@ -22,7 +22,7 @@ const Hero = ({ setScrollValue }) => {
           },
         }
       );
-      setWaitlistUsers(res.data.slotsLeft);
+      setWaitlistUsers(res.data.data.slotsLeft);
     })();
   }, []);
   return (

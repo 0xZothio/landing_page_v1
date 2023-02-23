@@ -6,7 +6,14 @@ import { Link } from "react-router-dom";
 export const PaymentPopup = () => {
   const [success, setSuccess] = useState(true);
   const [loader, setLoader] = useState(false);
-  let { order_id, customer_id, order_amount } = useParams();
+  //   let { order_id, customer_id, order_amount } = useParams();
+  const search = window.location.search;
+  const params = new URLSearchParams(search);
+  const order_id = params.get("order_id");
+  const customer_id = params.get("customer_id");
+  const order_amount = params.get("order_amount");
+
+  console.log("order_id", order_id);
 
   useEffect(() => {
     setLoader(true);
@@ -35,8 +42,7 @@ export const PaymentPopup = () => {
     <>
       {loader ? (
         <div class="flex items-center justify-center h-screen">
-         <img src="/loader.gif" alt="loading" />
-         
+          <img src="/loader.gif" alt="loading" />
         </div>
       ) : (
         <div className="fixed top-0 left-0 right-0 bg-[#171717]/80 flex justify-center items-center backdrop-blur z-50 w-full h-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
