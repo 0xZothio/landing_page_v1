@@ -144,9 +144,9 @@ export default function Invite({ setIsVisible }) {
                 />
               </div>
               <div className="flex flex-row justify-center items-center mb-10">
-                <div className="underline mr-14 sm:mr-24 text-gray-200 cursor-pointer">
+                {/* <div className="underline mr-14 sm:mr-24 text-gray-200 cursor-pointer">
                  <p onClick={()=>{showMessage(4)}}>No Thanks</p> 
-                </div>
+                </div> */}
                 <button
                   type="button"
                   onClick={cashfreeOrder}
