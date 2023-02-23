@@ -2,15 +2,27 @@ import Navbar from "./Navbar";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Invite from "./Invite";
-import "../styles/styles.css"
+import "../styles/styles.css";
+import axios from "axios";
 // import ReactAnimationCarousel from "react-animation-carousel";
 // const data = [img1, img2, img3, img4, img5, img6];
 
 const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
-
+  const [waitlistUsers,setWaitlistUsers]=useState(0);
+  useEffect(()=>{
+    (async()=>{
+      let res = await axios("http://localhost:8080/waitlist/getSlotsAvailable",{
+        headers:{
+          "authorization":"eogneqonre398432985823bn5kj32n5"
+        }
+      });
+      setWaitlistUsers(res.data.slotsLeft);
+      
+    })()
+  },[])
   return (
     <div
       className={
@@ -23,9 +35,7 @@ const Hero = ({ setScrollValue }) => {
 
       <main>
         <div className="absolute top-0 md:flex justify-center items-center hidden">
-          <div>
-            {/* <img src="/wave.gif" alt="" /> */}
-          </div>
+          <div>{/* <img src="/wave.gif" alt="" /> */}</div>
         </div>
 
         {/* signup popup */}
@@ -122,12 +132,13 @@ const Hero = ({ setScrollValue }) => {
                         Investors in Line
                       </h5>
                       <p className="text-white text-4xl font-extrabold mb-6 mt-2">
-                        0573
+                        {waitlistUsers ? waitlistUsers : 0}
                       </p>
                     </div>
                     <button
                       type="button"
                       onClick={() => setIsVisible(true)}
+                      // disabled={waitlistUsers ? false : true}
                       className="w-2/3 rounded-sm px-2 py-2 mt-2 z-100 text-black font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 bg-[#007AFF] mb-8"
                     >
                       Join Waitlist
