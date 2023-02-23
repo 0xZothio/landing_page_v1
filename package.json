@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.3",
+    "cashfree-pg-sdk-javascript": "^2.0.5",
     "classnames": "^2.3.2",
     "coinbase-commerce-node": "^1.0.4",
     "framer-motion": "^8.4.3",

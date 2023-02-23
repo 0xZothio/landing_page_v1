@@ -11,18 +11,20 @@ import axios from "axios";
 
 const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [waitlistUsers,setWaitlistUsers]=useState(0);
-  useEffect(()=>{
-    (async()=>{
-      let res = await axios("http://localhost:8080/waitlist/getSlotsAvailable",{
-        headers:{
-          "authorization":"eogneqonre398432985823bn5kj32n5"
+  const [waitlistUsers, setWaitlistUsers] = useState(0);
+  useEffect(() => {
+    (async () => {
+      let res = await axios(
+        "http://localhost:8080/waitlist/getSlotsAvailable",
+        {
+          headers: {
+            authorization: "eogneqonre398432985823bn5kj32n5",
+          },
         }
-      });
+      );
       setWaitlistUsers(res.data.slotsLeft);
-      
-    })()
-  },[])
+    })();
+  }, []);
   return (
     <div
       className={
@@ -129,7 +131,7 @@ const Hero = ({ setScrollValue }) => {
                     </div>
                     <div className="h-full">
                       <h5 className="text-white text-xl mb-2 font-semibold mt-6">
-                        Investors in Line
+                        Slots Available
                       </h5>
                       <p className="text-white text-4xl font-extrabold mb-6 mt-2">
                         {waitlistUsers ? waitlistUsers : 0}
@@ -138,8 +140,7 @@ const Hero = ({ setScrollValue }) => {
                     <button
                       type="button"
                       onClick={() => setIsVisible(true)}
-                      // disabled={waitlistUsers ? false : true}
-                      className="w-2/3 rounded-sm px-2 py-2 mt-2 z-100 text-black font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 bg-[#007AFF] mb-8"
+                      className="w-2/3 rounded-sm px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                     >
                       Join Waitlist
                     </button>

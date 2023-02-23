@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
-import waitlist from "../assets/images/waitlist2.png";
+import waitlist from "../assets/images/waitlist.png";
+import {cashfreeOrder} from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
   const [inviteData, setInviteData] = useState({
     first_name: "",
@@ -25,17 +26,17 @@ export default function Invite({ setIsVisible }) {
   const changeAmount = (num) => {
     setInviteData({ ...inviteData, amount: num });
   };
-
+  
   const invite = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setFormErrors(validate(inviteData));
     try {
-      if(inviteData.email && inviteData.mobile && inviteData.first_name){
+      if (inviteData.email && inviteData.mobile && inviteData.first_name) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
-          name:inviteData.first_name,
-          email:inviteData.email,
-          phone:inviteData.mobile
+          name: inviteData.first_name,
+          email: inviteData.email,
+          phone: inviteData.mobile,
         });
       }
       if (inviteData.email && inviteData.mobile) {
@@ -43,20 +44,19 @@ export default function Invite({ setIsVisible }) {
           email: inviteData.email,
         });
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
-          phone : "+" + inviteData.mobile,
+          phone: "+91" + inviteData.mobile,
         });
-        showMessage(1);
+        // showMessage(1);
+        showMessage(3);
+        // showMessage(4);
+        // showMessage(5);
         setIsLoading(false);
         return;
-      }else {
-        setIsLoading(false);
-        showMessage(2);
-        
       }
     } catch (error) {
       console.log("error", error);
-      showMessage(2);
-      
+      setIsLoading(false);
+      // showMessage(2);
     }
   };
 
@@ -64,6 +64,7 @@ export default function Invite({ setIsVisible }) {
   const validate = (values) => {
     const errors = {};
 
+    console.log("validate values", values);
     if (!values.first_name) {
       errors.name = "* Name is required";
     }
@@ -75,13 +76,13 @@ export default function Invite({ setIsVisible }) {
     if (!values.mobile) {
       errors.mobile = "* Mobile no. is required";
     }
-
+    setIsLoading(false);
     return errors;
   };
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-full sm:w-2/3 h-full  md:h-auto">
+      <div className="relative w-full sm:w-4/6 h-full  md:h-auto">
         <div className="relative  rounded shadow bg-[#171717]">
           <button
             type="button"
@@ -103,48 +104,107 @@ export default function Invite({ setIsVisible }) {
             <span className="sr-only">Close modal</span>
           </button>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center ">
-            <div className="m-hidden" style={{ position: "relative" }}>
-              <h3
-                className="text-overlay p-6 text-center py-16"
-                style={{ fontWeight: "500" }}
-              >
-                Invest in pre-leased Commercial <br /> Real Estate starting with{" "}
-                <br />
-                <span className="font-bold mt-4" style={{ fontSize: "40px" }}>
-                  just 1 Lakh
-                </span>
-              </h3>
+          {message == 1 ? (
+            <div className="flex flex-col sm:flex-row justify-center items-center ">
               <img
-                src={waitlist}
+                src="invite.png"
                 alt="invite"
-                width="100"
-                className="hidden sm:flex w-full h-full"
+                className="hidden sm:flex w-[485px] h-[585px]"
               />
-            </div>
-
-            {message == 1 ? (
-              <div className="flex flex-col justify-center items-center w-1/2">
+              <div className="flex flex-col justify-center items-center w-1/2 sm:w-full  py-4">
                 <div className="text-4xl font-codec text-[#F3C74E]">
                   Thank you!
                 </div>
-                <div className="text-xl p-4 font-roobert">
+                <div className="text-xl py-4 font-roobert">
                   Congratulations! You have been added to waitlist
                 </div>
               </div>
-            ) : message == 2 ? (
-              <div className="flex flex-col justify-center items-center w-1/2">
-                <div className="text-4xl font-codec text-[#F3C74E] p-2">
+            </div>
+          ) : message == 2 ? (
+            <div className="flex flex-col justify-center items-center w-full">
+              <img
+                src="invite.png"
+                alt="invite"
+                className="hidden sm:flex w-[485px] h-[585px]"
+              />
+              <div className="text-4xl font-codec text-[#F3C74E] p-2">
                 Thank you!
-                </div>
-                <div className="text-xl p-4 font-roobert">
-                Congratulations! You have been added to waitlist
-                </div>
               </div>
-            ) : (
-              <div className="px-6 py-6 lg:px-8 w-full sm:w-1/2 mt-4">
-                <h3 className="mb-4 text-3xl font-semibold  text-white leading-normal text-[#007AFF]">
-                  Join the Waitlist to earn an IRR of 12%.
+              <div className="text-xl sm:p-4 font-roobert">
+                You have already waitlisted!
+              </div>
+            </div>
+          ) : message == 3 ? (
+            <div className="flex flex-col w-full">
+              <div className="flex justify-center">
+                <img
+                  src="coupon.png"
+                  alt="coupon"
+                  className="sm:flex p-8 sm:w-[700px] sm:h-[400px] sm:px-10 sm:py-10"
+                />
+              </div>
+              <div className="flex flex-row justify-center items-center mb-10">
+                <div className="underline mr-14 sm:mr-24 text-gray-200 cursor-pointer">
+                 <p onClick={()=>{showMessage(4)}}>No Thanks</p> 
+                </div>
+                <button
+                  type="button"
+                  onClick={cashfreeOrder}
+                  className="bg-[#007AFF] rounded-lg px-10 py-2 z-100 text-white font-bold  focus:outline-none   text-lg text-center ring-gray-300"
+                >
+                  Pay Now
+                </button>
+              </div>
+            </div>
+          ) : message == 4 ? (
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex justify-center">
+                <img src="success.png" alt="coupon" className="w-72 h-72" />
+              </div>
+              <div className="font-bold p-2 text-4xl tracking-wide text-[#007AFF]">
+                Congrats!
+              </div>
+              <div className="p-8 text-lg">
+                You Have Successfully Joined The Waitlist.
+              </div>
+            </div>
+          ) : message == 5 ? (
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex justify-center">
+                <img src="success.png" alt="coupon" className="w-72 h-72" />
+              </div>
+              <div className="font-bold p-2 text-4xl tracking-wide text-[#007AFF]">
+                Congrats!
+              </div>
+              <div className="p-4 text-lg">
+                You Have Successfully Joined The Waitlist.
+              </div>
+              <div className="p-4 text-lg">
+                Coupon Code : <span className="text-[#007AFF] font-bold">EZ0TH1423K</span>
+              </div>
+            </div>
+          ) : (
+            <div className="flex flex-col sm:flex-row justify-center items-center ">
+              <div
+                className="m-hidden pl-6 mb-2"
+                style={{ position: "relative" }}
+              >
+                <h3 className="text-overlay p-6 text-center py-8 font-medium text-2xl leading-normal">
+                  Invest in pre-leased Commercial <br /> Real Estate starting
+                  with {/* <br /> */}
+                  <div className="font-bold text-4xl mt-4">Just ₹1 Lakh</div>
+                </h3>
+                <img
+                  src={waitlist}
+                  alt="invite"
+                  // width="100"
+                  className="hidden sm:flex w-[900px] h-[550px]"
+                />
+              </div>
+
+              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4">
+                <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
+                  Join The Waitlist To Earn An IRR Of 12%.
                 </h3>
 
                 <p className="my-4 mt-4">
@@ -181,7 +241,7 @@ export default function Invite({ setIsVisible }) {
                         type="text"
                         name="first_name"
                         id="first_name"
-                        className=" border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        className=" border  text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         placeholder=""
                         required={true}
                         value={inviteData.first_name}
@@ -194,19 +254,19 @@ export default function Invite({ setIsVisible }) {
                         htmlFor="email"
                         className="block mb-2 text-sm text-gray-300"
                       >
-                        Enter Your Phone no
+                        Enter Your Mobile no.
                       </label>
-                      {/* <input
+                      <input
                         type="mobile"
                         name="mobile"
                         id="mobile"
-                        className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         placeholder=""
                         required={true}
                         value={inviteData.mobile}
                         onChange={(e) => onChangeData(e)}
-                      /> */}
-                      <PhoneInput
+                      />
+                      {/* <PhoneInput
                         enableSearch={true}
                         type="number"
                         name="mobile"
@@ -245,7 +305,7 @@ export default function Invite({ setIsVisible }) {
                         onChange={(value) => {
                           setInviteData({ ...inviteData, mobile: value });
                         }}
-                      />
+                      /> */}
                       <p className="text-sm text-red-500 ">
                         {formErrors.mobile}
                       </p>
@@ -282,7 +342,7 @@ export default function Invite({ setIsVisible }) {
                       type="email"
                       name="email"
                       id="email"
-                      className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                       placeholder=""
                       required={true}
                       value={inviteData.email}
@@ -294,9 +354,9 @@ export default function Invite({ setIsVisible }) {
                   <div>
                     <label
                       htmlFor="mobile"
-                      className="block mb-2 text-sm text-gray-300"
+                      className="block mb-3 text-sm text-gray-300"
                     >
-                      Enter Amount you want to Invest
+                      Enter Amount You Want To Invest
                     </label>
                     <div className="flex space-x-2">
                       <button
@@ -304,7 +364,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(100);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         1000
                       </button>
@@ -313,7 +373,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(200);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         3000
                       </button>
@@ -322,7 +382,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(300);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         5000
                       </button>
@@ -331,7 +391,7 @@ export default function Invite({ setIsVisible }) {
                         onClick={() => {
                           changeAmount(400);
                         }}
-                        className=" h-[20px] bg-white rounded-full px-4 sm:px-6 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
+                        className=" bg-white rounded-full px-4 py-1 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
                         10000+
                       </button>
@@ -352,7 +412,7 @@ export default function Invite({ setIsVisible }) {
                       <button
                         type="button"
                         onClick={invite}
-                        className="w-1/2 bg-[#007AFF] rounded-sm px-4 py-4 mt-2 z-100 text-black font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 ring-white"
+                        className="w-1/2 bg-[#007AFF] rounded-lg px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
                       >
                         Submit
                       </button>
@@ -360,8 +420,8 @@ export default function Invite({ setIsVisible }) {
                   </div>
                 </form>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

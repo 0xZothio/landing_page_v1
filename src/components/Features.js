@@ -54,7 +54,7 @@ function Features() {
         className="text-[60px] sm:text-[80px] text-center font-codec font-bold sm:mt-20"
       >
         Member{" "}
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+        <span className="bg-clip-text text-[#1A88FF]">
           Benefits
         </span>
       </motion.div>
