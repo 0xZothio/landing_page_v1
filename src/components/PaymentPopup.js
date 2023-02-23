@@ -35,17 +35,8 @@ export const PaymentPopup = () => {
     <>
       {loader ? (
         <div class="flex items-center justify-center h-screen">
-          <iframe
-            src="https://giphy.com/embed/3o7bu3XilJ5BOiSGic"
-            width="200"
-            height="200"
-            frameBorder="0"
-            class="giphy-embed"
-            allowFullScreen
-          ></iframe>
-          <p>
-            <a href="https://giphy.com/gifs/youtube-loading-gif-3o7bu3XilJ5BOiSGic"></a>
-          </p>
+         <img src="/loader.gif" alt="loading" />
+         
         </div>
       ) : (
         <div className="fixed top-0 left-0 right-0 bg-[#171717]/80 flex justify-center items-center backdrop-blur z-50 w-full h-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
