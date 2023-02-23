@@ -20,11 +20,16 @@ export const PaymentPopup = () => {
 
     axios
       .get(
-        `http://localhost:8080/payment/cashfreeCallback?order_id=${order_id}&customer_id=${customer_id}&order_amount=${order_amount}&payment_gateway=cashfree`
+        `http://localhost:8080/payment/cashfreeCallback?order_id=${order_id}&customer_id=${customer_id}&order_amount=${order_amount}&payment_gateway=cashfree`,
+        {
+          headers: {
+            authorization: "eogneqonre398432985823bn5kj32n5",
+          },
+        }
       )
       .then((res) => {
         console.log("pay res", res);
-        const order_status = res.data.order_status;
+        const order_status = res.data.data.order_status;
         if (order_status === "PAID") {
           setSuccess(true);
           setLoader(false);
@@ -52,7 +57,7 @@ export const PaymentPopup = () => {
                 <button
                   type="button"
                   className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
-                  // onClick={() => setIsVisible(false)}
+                // onClick={() => setIsVisible(false)}
                 >
                   <svg
                     className="w-5 h-5"
