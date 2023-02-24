@@ -54,7 +54,7 @@ function Features() {
         className="text-[60px] sm:text-[80px] text-center font-codec font-bold sm:mt-20"
       >
         Member{" "}
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+        <span className="bg-clip-text text-[#1A88FF]">
           Benefits
         </span>
       </motion.div>
@@ -282,8 +282,8 @@ function Features() {
       {/* mobile */}
       {/* feature 2*/}
       <div className="mt-32">
-        {data.map((feature) => (
-          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px] sm:hidden">
+        {data.map((feature,i) => (
+          <div className="grid grid-row-4 sm:grid-cols-4 gap-2 justify-items-center content-center p-8 sm:mt-[500px] sm:hidden" key={i}>
             <div className="relative col-span-2 w-[300px]">
               <div className="w-[300px]">
                 <img src="/frame.png" alt="frame" />
