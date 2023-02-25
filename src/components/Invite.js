@@ -1,15 +1,21 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { toast } from "react-toastify";
-import PhoneInput from "react-phone-input-2";
-import waitlist from "../assets/images/waitlist.png";
+// import { toast } from "react-toastify";
+// import PhoneInput from "react-phone-input-2";
+// import waitlist from "../assets/images/waitlist.png";
+
+
+import { Web3Button } from "@web3modal/react";
 import {cashfreeOrder} from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
+
+
   const [inviteData, setInviteData] = useState({
     first_name: "",
     email: "",
     mobile: "",
     amount: 0,
+    linkedin:""
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -82,8 +88,8 @@ export default function Invite({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-full sm:w-4/6 h-full  md:h-auto">
-        <div className="relative  rounded shadow bg-[#171717]">
+      <div className="relative w-full justify-center flex  sm:w-4/6 h-full  md:h-auto">
+        <div className="relative sm:w-1/2 flex justify-center rounded shadow bg-[#171717]">
           <button
             type="button"
             className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
@@ -185,22 +191,6 @@ export default function Invite({ setIsVisible }) {
             </div>
           ) : (
             <div className="flex flex-col sm:flex-row justify-center items-center ">
-              <div
-                className="m-hidden pl-6 mb-2"
-                style={{ position: "relative" }}
-              >
-                <h3 className="text-overlay p-6 text-center py-8 font-medium text-2xl leading-normal">
-                  Invest in pre-leased Commercial <br /> Real Estate starting
-                  with {/* <br /> */}
-                  <div className="font-bold text-4xl mt-4">Just ₹1 Lakh</div>
-                </h3>
-                <img
-                  src={waitlist}
-                  alt="invite"
-                  // width="100"
-                  className="hidden sm:flex w-[900px] h-[550px]"
-                />
-              </div>
 
               <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4">
                 <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
@@ -350,7 +340,24 @@ export default function Invite({ setIsVisible }) {
                     />
                     <p className="text-sm text-red-500 ">{formErrors.email}</p>
                   </div>
-
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm text-gray-300"
+                    >
+                      Enter Your Linkedin
+                    </label>
+                    <input
+                      type="url"
+                      name="linkedin"
+                      id="linkedin"
+                      className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      placeholder=""
+                      value={inviteData.linkedin}
+                      onChange={(e) => onChangeData(e)}
+                    />
+                    <p className="text-sm text-red-500 ">{formErrors.email}</p>
+                  </div>
                   <div>
                     <label
                       htmlFor="mobile"
@@ -409,13 +416,16 @@ export default function Invite({ setIsVisible }) {
                         </div>
                       </button>
                     ) : (
-                      <button
+                      <>
+                        {/* <button
                         type="button"
-                        onClick={invite}
+                        onClick={onClick} disabled={loading}
                         className="w-1/2 bg-[#007AFF] rounded-lg px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
                       >
-                        Submit
-                      </button>
+                        {loading ? 'Loading...' : label}
+                      </button> */}
+                      <Web3Button />
+                      </>
                     )}
                   </div>
                 </form>
