@@ -353,7 +353,7 @@ export default function Invite({ setIsVisible }) {
                       value={inviteData.linkedin}
                       onChange={(e) => onChangeData(e)}
                     />
-                    <p className="text-sm text-red-500 ">{formErrors.email}</p>
+                   
                   </div>
                   <div>
                     <label
