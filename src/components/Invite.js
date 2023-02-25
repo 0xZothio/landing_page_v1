@@ -4,18 +4,15 @@ import React, { useState } from "react";
 // import PhoneInput from "react-phone-input-2";
 // import waitlist from "../assets/images/waitlist.png";
 
-
 import { Web3Button } from "@web3modal/react";
-import {cashfreeOrder} from "../utils/cashfree.js";
+import { cashfreeOrder } from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
-
-
   const [inviteData, setInviteData] = useState({
     first_name: "",
     email: "",
     mobile: "",
     amount: 0,
-    linkedin:""
+    linkedin: "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -32,7 +29,7 @@ export default function Invite({ setIsVisible }) {
   const changeAmount = (num) => {
     setInviteData({ ...inviteData, amount: num });
   };
-  
+
   const invite = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -186,13 +183,13 @@ export default function Invite({ setIsVisible }) {
                 You Have Successfully Joined The Waitlist.
               </div>
               <div className="p-4 text-lg">
-                Coupon Code : <span className="text-[#007AFF] font-bold">EZ0TH1423K</span>
+                Coupon Code :{" "}
+                <span className="text-[#007AFF] font-bold">EZ0TH1423K</span>
               </div>
             </div>
           ) : (
             <div className="flex flex-col sm:flex-row justify-center items-center ">
-
-              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4">
+              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4 h-full">
                 <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
                   Join The Waitlist To Earn An IRR Of 12%.
                 </h3>
@@ -405,7 +402,7 @@ export default function Invite({ setIsVisible }) {
                     </div>
                   </div>
 
-                  <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center flex-col">
                     {isLoading ? (
                       <button
                         type="button"
@@ -417,14 +414,14 @@ export default function Invite({ setIsVisible }) {
                       </button>
                     ) : (
                       <>
-                        {/* <button
-                        type="button"
-                        onClick={onClick} disabled={loading}
-                        className="w-1/2 bg-[#007AFF] rounded-lg px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
-                      >
-                        {loading ? 'Loading...' : label}
-                      </button> */}
-                      <Web3Button />
+                        <Web3Button />
+                        <button
+                          type="button"
+                          onClick={invite}
+                          className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
+                        >
+                          Submit Form
+                        </button>
                       </>
                     )}
                   </div>
