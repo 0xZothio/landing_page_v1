@@ -52,8 +52,8 @@ export default function Invite({ setIsVisible }) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
           phone: "+91" + inviteData.mobile,
         });
-        // showMessage(1);
-        showMessage(3);
+        showMessage(1);
+        // showMessage(3);
         // showMessage(4);
         // showMessage(5);
         setIsLoading(false);
@@ -402,6 +402,7 @@ export default function Invite({ setIsVisible }) {
                         10000+
                       </button>
                     </div>
+                    <div className="flex justify-start mt-5"><ConnectKitButton  /></div>
                   </div>
 
                   <div className="flex justify-center items-center flex-col">
@@ -416,7 +417,7 @@ export default function Invite({ setIsVisible }) {
                       </button>
                     ) : (
                       <>
-                        <ConnectKitButton  />
+                        
                         <button
                           type="button"
                           onClick={invite}
