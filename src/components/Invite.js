@@ -3,16 +3,19 @@ import React, { useState } from "react";
 // import { toast } from "react-toastify";
 // import PhoneInput from "react-phone-input-2";
 // import waitlist from "../assets/images/waitlist.png";
-
-import { Web3Button } from "@web3modal/react";
+import { useAccount } from "wagmi";
+import { ConnectKitButton } from "connectkit";
 import { cashfreeOrder } from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
+  const { address, isConnecting, isDisconnected } = useAccount();
+
   const [inviteData, setInviteData] = useState({
     first_name: "",
     email: "",
     mobile: "",
     amount: 0,
     linkedin: "",
+    address:""
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -353,7 +356,6 @@ export default function Invite({ setIsVisible }) {
                       value={inviteData.linkedin}
                       onChange={(e) => onChangeData(e)}
                     />
-                   
                   </div>
                   <div>
                     <label
@@ -414,7 +416,7 @@ export default function Invite({ setIsVisible }) {
                       </button>
                     ) : (
                       <>
-                        <Web3Button />
+                        <ConnectKitButton  />
                         <button
                           type="button"
                           onClick={invite}
