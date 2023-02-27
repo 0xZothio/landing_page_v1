@@ -88,7 +88,7 @@ export default function Invite({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-full justify-center flex  sm:w-4/6 h-full  md:h-auto">
+      <div className="relative w-full justify-center flex   h-full  md:h-auto">
         <div className="relative sm:w-1/2 flex justify-center rounded shadow bg-[#171717]">
           <button
             type="button"
@@ -115,7 +115,7 @@ export default function Invite({ setIsVisible }) {
               <img
                 src="invite.png"
                 alt="invite"
-                className="hidden sm:flex w-[485px] h-[585px] sm:w-[300px] sm:h-[400px]"
+                className="hidden sm:flex sm:w-1/2 "
               />
               <div className="flex flex-col justify-center items-center w-1/2 sm:w-full  py-4">
                 <div className="text-4xl font-codec text-[#F3C74E] p-2">

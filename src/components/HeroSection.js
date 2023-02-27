@@ -134,7 +134,7 @@ const Hero = ({ setScrollValue }) => {
                         Slots Available
                       </h5>
                       <p className="text-white text-4xl font-extrabold mb-6 mt-2">
-                        {waitlistUsers ? waitlistUsers : 0}
+                        {waitlistUsers ? waitlistUsers : 500}
                       </p>
                     </div>
                     <button
