@@ -7,7 +7,7 @@ import "react-phone-input-2/lib/style.css";
 import { WagmiConfig, createClient } from "wagmi";
 import { ConnectKitProvider, getDefaultClient } from "connectkit";
 
-const alchemyId = "iSoLFoQDND_y0a4IOLotRoJ-ZPy2r5it";
+const alchemyId = process.env.ALCHEMY_PROJECT_ID;
 
 const client = createClient(
   getDefaultClient({
