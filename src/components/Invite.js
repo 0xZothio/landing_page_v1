@@ -15,7 +15,7 @@ export default function Invite({ setIsVisible }) {
     mobile: "",
     amount: 0,
     linkedin: "",
-    address:""
+    address: "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -115,7 +115,7 @@ export default function Invite({ setIsVisible }) {
               <img
                 src="invite.png"
                 alt="invite"
-                className="hidden sm:flex w-[485px] h-[585px] sm:w-[200px] sm:h-[300px]"
+                className="hidden sm:flex w-[485px] h-[585px] sm:w-[300px] sm:h-[400px]"
               />
               <div className="flex flex-col justify-center items-center w-1/2 sm:w-full  py-4">
                 <div className="text-4xl font-codec text-[#F3C74E] p-2">
@@ -402,7 +402,17 @@ export default function Invite({ setIsVisible }) {
                         10000+
                       </button>
                     </div>
-                    <div className="flex justify-start mt-5"><ConnectKitButton  /></div>
+                    {isDisconnected ? (
+                      <div className="flex justify-start mt-5">
+                        <ConnectKitButton label="Connect Wallet" />
+                      </div>
+                    ) : null}
+                    {address ? (
+                      <div className="flex justify-start mt-5">
+                        {" "}
+                        <ConnectKitButton label="Disconnect Wallet" />{" "}
+                      </div>
+                    ) : null}
                   </div>
 
                   <div className="flex justify-center items-center flex-col">
@@ -417,7 +427,6 @@ export default function Invite({ setIsVisible }) {
                       </button>
                     ) : (
                       <>
-                        
                         <button
                           type="button"
                           onClick={invite}
