@@ -115,13 +115,13 @@ export default function Invite({ setIsVisible }) {
               <img
                 src="invite.png"
                 alt="invite"
-                className="hidden sm:flex w-[485px] h-[585px]"
+                className="hidden sm:flex w-[485px] h-[585px] sm:w-[200px] sm:h-[300px]"
               />
               <div className="flex flex-col justify-center items-center w-1/2 sm:w-full  py-4">
-                <div className="text-4xl font-codec text-[#F3C74E]">
+                <div className="text-4xl font-codec text-[#F3C74E] p-2">
                   Thank you!
                 </div>
-                <div className="text-xl py-4 font-roobert">
+                <div className="text-xl p-1 sm:mx-4 font-roobert ">
                   Congratulations! You have been added to waitlist
                 </div>
               </div>
