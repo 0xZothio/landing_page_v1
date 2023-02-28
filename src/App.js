@@ -6,6 +6,7 @@ import Institutions from "./components/Institutions";
 import ReactGA from "react-ga";
 import { useEffect } from "react";
 import { PaymentPopup } from "./components/PaymentPopup";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 const TRACKING_ID = "UA-256346841-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 function App() {
@@ -33,6 +34,11 @@ function App() {
                 exact
                 path="/payment/status"
                 element={<PaymentPopup />}
+              ></Route>
+              <Route
+                exact
+                path="/privacy-policy"
+                element={<PrivacyPolicy />}
               ></Route>
             </Routes>
           </Router>
