@@ -4,13 +4,28 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "react-phone-input-2/lib/style.css";
+import { WagmiConfig, createClient } from "wagmi";
+import { ConnectKitProvider, getDefaultClient } from "connectkit";
+
+const alchemyId = process.env.ALCHEMY_PROJECT_ID;
+
+const client = createClient(
+  getDefaultClient({
+    appName: "Zoth Estate Tokenized",
+    alchemyId,
+  }),
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     
-      {" "}
+    <WagmiConfig client={client}>
+      <ConnectKitProvider>
      <App />
     
+      </ConnectKitProvider>
+    </WagmiConfig>
   </React.StrictMode>
 );
 

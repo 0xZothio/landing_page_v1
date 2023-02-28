@@ -1,15 +1,21 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { toast } from "react-toastify";
-import PhoneInput from "react-phone-input-2";
-import waitlist from "../assets/images/waitlist.png";
-import {cashfreeOrder} from "../utils/cashfree.js";
+// import { toast } from "react-toastify";
+// import PhoneInput from "react-phone-input-2";
+// import waitlist from "../assets/images/waitlist.png";
+import { useAccount } from "wagmi";
+import { ConnectKitButton } from "connectkit";
+import { cashfreeOrder } from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
+  const { address, isConnecting, isDisconnected } = useAccount();
+
   const [inviteData, setInviteData] = useState({
     first_name: "",
     email: "",
     mobile: "",
     amount: 0,
+    linkedin: "",
+    address: "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -26,7 +32,7 @@ export default function Invite({ setIsVisible }) {
   const changeAmount = (num) => {
     setInviteData({ ...inviteData, amount: num });
   };
-  
+
   const invite = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -46,8 +52,8 @@ export default function Invite({ setIsVisible }) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
           phone: "+91" + inviteData.mobile,
         });
-        // showMessage(1);
-        showMessage(3);
+        showMessage(1);
+        // showMessage(3);
         // showMessage(4);
         // showMessage(5);
         setIsLoading(false);
@@ -82,8 +88,8 @@ export default function Invite({ setIsVisible }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center items-center backdrop-blur z-50 w-full  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full">
-      <div className="relative w-full sm:w-4/6 h-full  md:h-auto">
-        <div className="relative  rounded shadow bg-[#171717]">
+      <div className="relative w-full justify-center flex   h-full  md:h-auto">
+        <div className="relative sm:w-1/2 flex justify-center rounded shadow bg-[#171717]">
           <button
             type="button"
             className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
@@ -109,13 +115,13 @@ export default function Invite({ setIsVisible }) {
               <img
                 src="invite.png"
                 alt="invite"
-                className="hidden sm:flex w-[485px] h-[585px]"
+                className="hidden sm:flex sm:w-1/2 "
               />
               <div className="flex flex-col justify-center items-center w-1/2 sm:w-full  py-4">
-                <div className="text-4xl font-codec text-[#F3C74E]">
+                <div className="text-4xl font-codec text-[#F3C74E] p-2">
                   Thank you!
                 </div>
-                <div className="text-xl py-4 font-roobert">
+                <div className="text-xl p-1 sm:mx-4 font-roobert ">
                   Congratulations! You have been added to waitlist
                 </div>
               </div>
@@ -180,29 +186,13 @@ export default function Invite({ setIsVisible }) {
                 You Have Successfully Joined The Waitlist.
               </div>
               <div className="p-4 text-lg">
-                Coupon Code : <span className="text-[#007AFF] font-bold">EZ0TH1423K</span>
+                Coupon Code :{" "}
+                <span className="text-[#007AFF] font-bold">EZ0TH1423K</span>
               </div>
             </div>
           ) : (
             <div className="flex flex-col sm:flex-row justify-center items-center ">
-              <div
-                className="m-hidden pl-6 mb-2"
-                style={{ position: "relative" }}
-              >
-                <h3 className="text-overlay p-6 text-center py-8 font-medium text-2xl leading-normal">
-                  Invest in pre-leased Commercial <br /> Real Estate starting
-                  with {/* <br /> */}
-                  <div className="font-bold text-4xl mt-4">Just ₹1 Lakh</div>
-                </h3>
-                <img
-                  src={waitlist}
-                  alt="invite"
-                  // width="100"
-                  className="hidden sm:flex w-[900px] h-[550px]"
-                />
-              </div>
-
-              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4">
+              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4 h-full">
                 <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
                   Join The Waitlist To Earn An IRR Of 12%.
                 </h3>
@@ -350,7 +340,23 @@ export default function Invite({ setIsVisible }) {
                     />
                     <p className="text-sm text-red-500 ">{formErrors.email}</p>
                   </div>
-
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm text-gray-300"
+                    >
+                      Enter Your Linkedin
+                    </label>
+                    <input
+                      type="url"
+                      name="linkedin"
+                      id="linkedin"
+                      className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      placeholder=""
+                      value={inviteData.linkedin}
+                      onChange={(e) => onChangeData(e)}
+                    />
+                  </div>
                   <div>
                     <label
                       htmlFor="mobile"
@@ -396,9 +402,20 @@ export default function Invite({ setIsVisible }) {
                         10000+
                       </button>
                     </div>
+                    {isDisconnected ? (
+                      <div className="flex justify-start mt-5">
+                        <ConnectKitButton label="Connect Wallet" />
+                      </div>
+                    ) : null}
+                    {address ? (
+                      <div className="flex justify-start mt-5">
+                        {" "}
+                        <ConnectKitButton label="Disconnect Wallet" />{" "}
+                      </div>
+                    ) : null}
                   </div>
 
-                  <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center flex-col">
                     {isLoading ? (
                       <button
                         type="button"
@@ -409,13 +426,15 @@ export default function Invite({ setIsVisible }) {
                         </div>
                       </button>
                     ) : (
-                      <button
-                        type="button"
-                        onClick={invite}
-                        className="w-1/2 bg-[#007AFF] rounded-lg px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
-                      >
-                        Submit
-                      </button>
+                      <>
+                        <button
+                          type="button"
+                          onClick={invite}
+                          className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
+                        >
+                          Submit Form
+                        </button>
+                      </>
                     )}
                   </div>
                 </form>
