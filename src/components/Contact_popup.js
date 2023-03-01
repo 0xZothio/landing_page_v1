@@ -210,8 +210,8 @@ export default function Contact_popup({ setIsVisible }) {
                         id="mobile"
                         placeholder=""
                         country="in"
-                        inputClass="bg-[#202020] text-white w-full"
-                        // dropdownClass="bg-[#202020] text-white"
+                        inputclassName="bg-[#202020] text-white w-full"
+                        // dropdownclassName="bg-[#202020] text-white"
                         // style={{backgroundColor:"#202020"}}
                         inputStyle={{
                           color: "white ",
@@ -271,8 +271,8 @@ export default function Contact_popup({ setIsVisible }) {
                         type="button"
                         className="w-full mx-auto bg-white rounded-full px-4 py-4 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
                       >
-                        <div class="flex items-center justify-center ">
-                          <div class="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                        <div className="flex items-center justify-center ">
+                          <div className="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
                         </div>
                       </button>
                     ) : (

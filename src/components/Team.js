@@ -14,7 +14,7 @@ function Team() {
           className="text-3xl font-bold tracking-tight sm:text-4xl text-center"
         >
           Meet Our{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          <span className="bg-clip-text text-[#1A88FF]">
             Team
           </span>
         </motion.div>
@@ -26,10 +26,11 @@ function Team() {
               initial="hidden"
               whileInView="show"
               className="flex flex-col justify-center m-6"
+              key={index}
             >
               <a href={member.linkedIn} target="_blank" rel="noreferrer">
                 <img
-                  class="max-w-lg rounded-full w-30 h-30 object-cover transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                  className="max-w-lg rounded-full w-30 h-30 object-cover transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
                   src={member.photo}
                   alt="member"
                 />

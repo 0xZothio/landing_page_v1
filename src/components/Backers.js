@@ -14,7 +14,7 @@ function Backers() {
           </p>
         </div>
         <div className="text-[50px] sm:text-[55px] text-center">
-          <p className=" text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          <p className=" text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-[#1A88FF]">
             The World's Best
           </p>
         </div>
@@ -96,6 +96,7 @@ function Backers() {
               initial="hidden"
               whileInView="show"
               className="flex flex-col justify-center m-6"
+              key={index}
             >
               <div className="relative">
                 <a href={member.linkedIn} target="_blank" rel="noreferrer">
@@ -106,7 +107,7 @@ function Backers() {
                   />
 
                   <img
-                    class="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                    className="max-w-lg rounded-full w-30 h-30 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
                     src={member.photo}
                     alt="member"
                   />

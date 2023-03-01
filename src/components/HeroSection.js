@@ -2,27 +2,42 @@ import Navbar from "./Navbar";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Invite from "./Invite";
+import "../styles/styles.css";
+import axios from "axios";
+// import ReactAnimationCarousel from "react-animation-carousel";
+// const data = [img1, img2, img3, img4, img5, img6];
+
 const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
-  
+  const [waitlistUsers, setWaitlistUsers] = useState(0);
+  useEffect(() => {
+    (async () => {
+      let res = await axios(
+        "http://localhost:8080/waitlist/getSlotsAvailable",
+        {
+          headers: {
+            authorization: "eogneqonre398432985823bn5kj32n5",
+          },
+        }
+      );
+      setWaitlistUsers(res.data.data.slotsLeft);
+    })();
+  }, []);
   return (
-    <div className={" bg-black text-white w-full overflow-hidden"}>
+    <div
+      className={
+        " bg-transparent text-white w-full overflow-hidden min-h-screen z-50"
+      }
+    >
       <div className="px-6 lg:px-8">
         <Navbar setIsVisible={setIsVisible} />
       </div>
 
       <main>
-        <div className="absolute sm:top-5 flex justify-center items-center z-0">
-          {/* <video
-            src="https://resources.zoth.in/landingpage/wave.mp4"
-            autoPlay="{true}"
-            loop
-            muted
-            className=""
-          ></video> */}
-          <img src="/wave.gif" alt="" />
+        <div className="absolute top-0 md:flex justify-center items-center hidden">
+          <div>{/* <img src="/wave.gif" alt="" /> */}</div>
         </div>
 
         {/* signup popup */}
@@ -32,71 +47,105 @@ const Hero = ({ setScrollValue }) => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="relative px-6 lg:px-8"
+          className="relative px-6 lg:px-8 h-full"
         >
-          <div className="mx-auto pt-10 sm:pt-32 ">
-            <div>
-              <div>
-                <h1 className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider">
-                  <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-                    A Revolutionary New Age
-                  </span>{" "}
-                  Investment Platform
+          <div className="mx-auto min-h-screen flex justify-center items-center">
+            <div className=" flex justify-center flex-col md:flex-row z-50 h-full pb-20">
+              <div className="md:w-3/5 w-full md:ml-12">
+                <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-tight text-center md:text-left tracking-normal herotext">
+                  A Revolutionary New Age Investment Platform
                 </h1>
-                <p className="mt-6 leading-8 text-center text-2xl">
-                  Join the{" "}
-                  <span className="text-[#F3C74E] font-bold ">Zoth Club</span>{" "}
-                  and let your investments work for you
+                <p className="md:mt-6 leading-8 text-center md:text-left text-2xl mt-8">
+                  Join the Zoth Club and let your investments work for you
                 </p>
-                <div className="flex gap-x-4 mt-8 justify-center flex-wrap items-center">
-                  <div className="flex gap-x-4 pointer-events-auto">
-                    <div className="inline-block rounded-full py-2 text-base font-semibold leading-7 text-black shadow-sm bg-transparent h-8/12">
-                      <button
-                        className="bg-white rounded-full px-8 sm:px-4 py-2 mt-2 z-100"
-                        type="button"
-                        onClick={() => setIsVisible(true)}
-                      >
-                        Get Exclusive Invite
-                      </button>
+                {/* <div className="flex mt-4 justify-center flex-wrap items-center">
+                    <div>
+                      <p className=" text-md mx-4 sm:text-center">
+                        Join Our Community
+                      </p>
+                      <ul className="flex gap-6 mx-8 ">
+                        <li>
+                          <a
+                            href="https://t.me/+nFUrC_I1hA1iNWU9"
+                            rel="noreferrer"
+                            target="_blank"
+                            className="text-gray-700 transition hover:opacity-75"
+                          >
+                            <span className="sr-only">Telegram</span>
+                            <FaTelegramPlane size={40} color="white" />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://twitter.com/zothdotio"
+                            rel="noreferrer"
+                            target="_blank"
+                            className="text-gray-700 transition hover:opacity-75"
+                          >
+                            <span className="sr-only">Twitter</span>
+                            <FaTwitter size={40} color="white" />
+                          </a>
+                        </li>
+                      </ul>
                     </div>
-                    <p className="hidden sm:flex bg-black left-1/2 -ml-0.5 w-0.5 h-100 sm:bg-gray-600 "></p>
-                  </div>
-                  <div>
-                    <p className=" text-md mx-4 sm:text-center">
-                      Join Our Community
-                    </p>
-                    <ul className="flex gap-6 mx-8 ">
-                      <li>
-                        <a
-                          href="https://t.me/+nFUrC_I1hA1iNWU9"
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-gray-700 transition hover:opacity-75"
-                        >
-                          <span className="sr-only">Telegram</span>
-                          <FaTelegramPlane size={40} color="white" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://twitter.com/zothdotio"
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-gray-700 transition hover:opacity-75"
-                        >
-                          <span className="sr-only">Twitter</span>
-                          <FaTwitter size={40} color="white" />
-                        </a>
-                      </li>
-                    </ul>
+                  </div> */}
+              </div>
+              <div className="relative flex justify-center my-2 mx-auto items-center z-50 mt-12 md:w-2/5 md:mt-0 w-full">
+                <div className="rounded-xl shadow-lg shadow-[#007AFF] bg-black border border-slate-500 flex justify-center items-center">
+                  {/* <div className=" marquee-container d-none d-sm-block z-0 hidden">
+                      <div className="marquee d-flex justify-content-around">
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                      </div>
+                      <div className="marquee marquee2 d-flex justify-content-around">
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                        <span>Upcoming Launch !</span>
+                        <span>200 slots left</span>
+                      </div>
+                    </div> */}
+                  <div className="w-full text-center z-50 rounded-3xl bg-black">
+                    <div className="rounded-xl shadow-lg bg-[#252525] w-full text-center p-2 px-4">
+                      <h5 className="text-white text-md font-normal mb-4">
+                        Invest in Real Estate Opportunity with just
+                      </h5>
+                      <h5 className="text-white text-3xl font-medium mb-2">
+                        ₹ 1 Lakh !
+                      </h5>
+                    </div>
+                    <div className="h-full">
+                      <h5 className="text-white text-xl mb-2 font-semibold mt-6">
+                        Slots Available
+                      </h5>
+                      <p className="text-white text-4xl font-extrabold mb-6 mt-2">
+                        {waitlistUsers ? waitlistUsers : 500}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setIsVisible(true)}
+                      className="w-2/3 rounded-sm px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
+                    >
+                      Join Waitlist
+                    </button>
                   </div>
                 </div>
-                <p className="mt-6 text-lg text-slate-300 leading-8 text-center">
-                  Accept your early invite to earn{" "}
-                  <span className="text-[#F3C74E] font-medium ">
-                    $100 worth Zoth coins
-                  </span>
-                </p>
               </div>
             </div>
           </div>

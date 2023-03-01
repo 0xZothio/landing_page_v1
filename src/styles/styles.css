@@ -415,4 +415,10 @@
     left: 0;
     transform: translateX(0%);
   }
+
+  .herotext{
+  background: #1A88FF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 }

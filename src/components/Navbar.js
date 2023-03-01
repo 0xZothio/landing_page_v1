@@ -44,14 +44,16 @@ const Navbar = ({ setIsVisible }) => {
   // }
 
   return (
-    <div
-      className={
-        section
-          ? "bg-black text-white z-50 pt-20 relative"
-          : "bg-black text-white z-50 pt-8 relative"
-      }
-    >
+    <div className={"bg-black text-white z-10 pt-8 sm:pt-4 relative mt-6"}>
       {console.log(section)}
+      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-blue-700 to-cyan-400 z-50 w-full text-center px-4">
+        <h5
+          className="text-white text-xs sm:text-[1rem] font-normal cursor-pointer p-2"
+          onClick={() => setIsVisible(true)}
+        >
+          🔜 Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh 🤑. <span className="font-extrabold"> Join the Waitlist! ⏳ </span>
+        </h5>
+      </div>
       {!mobileMenuOpen && (
         <motion.nav
           variants={navVariants}
@@ -159,10 +161,10 @@ const Navbar = ({ setIsVisible }) => {
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
             <button
-              className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
+              className="inline-block rounded-full px-6 py-1 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
               onClick={() => setIsVisible(true)}
             >
-              Get Exclusive Invite{" "}
+              Join waitlist{" "}
             </button>
           </div>
         </motion.nav>
@@ -212,7 +214,7 @@ const Navbar = ({ setIsVisible }) => {
                   className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
                   onClick={() => setIsVisible(true)}
                 >
-                  Get Exclusive Invite{" "}
+                 Join Waitlist
                 </button>
               </div>
             </div>

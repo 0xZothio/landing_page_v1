@@ -4,16 +4,20 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import LandingPage from "./pages/LandingPage";
 import TermsOfUse from "./pages/TermsOfUse";
 import Institutions from "./components/Institutions";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
 import { useEffect } from "react";
 import Disclaimer from "./pages/Disclaimer";
 import RiskDisclosure from "./pages/RiskDisclosure";
   const TRACKING_ID = "UA-256346841-1"; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
 function App() {
+  
+  
   useEffect(() => {
+   
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
+
 
   return (
     <div className="bg-black text-white w-full h-full">

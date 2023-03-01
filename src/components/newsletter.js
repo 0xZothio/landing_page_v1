@@ -9,7 +9,7 @@ const NewsLetter = () => {
           <video
             className="w-100 min-h-8 "
             src="https://resources.zoth.in/landingpage/footer_video.mp4"
-            autoplay="{true}"
+            autoPlay="{true}"
             loop
             muted
           ></video>

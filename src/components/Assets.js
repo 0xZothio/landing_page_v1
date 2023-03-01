@@ -71,7 +71,7 @@ function Assets({ isHidden }) {
         className="text-[40px] sm:text-[80px] text-center font-roobert font-bold mt-10"
       >
         World Class{" "}
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+        <span className="bg-clip-text text-[#1A88FF]">
           Assets
         </span>
       </motion.div>
