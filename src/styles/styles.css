@@ -416,14 +416,3 @@
     transform: translateX(0%);
   }
 }
-
-li {
-  list-style-type: disc !important;
-}
-
-li li {
-  list-style-type: circle !important;
-}
-li li li {
-  list-style-type: square !important;
-}
