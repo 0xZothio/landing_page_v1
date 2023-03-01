@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <div className="p-4 flex flex-col bg-white text-black sm:px-40 px-8 py-12 ">
-        <h2 className="text-3xl font-extrabold mb-2">Privacy Policy</h2>
+        {/* <h2 className="text-3xl font-extrabold mb-2">Privacy Policy</h2> */}
         <div className="flex justify-center items-center">
           <img width="50%" className="w-[90%] sm:w-[50%]" src={zoth} />
         </div>
