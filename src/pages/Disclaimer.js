@@ -4,7 +4,7 @@ const Disclaimer = () => {
   return (
     <>
       <div className="p-4 flex flex-col bg-white text-black sm:px-80 px-8 py-12 ">
-        <h2 className="text-5xl font-extrabold mb-2">Disclaimer</h2>
+        {/* <h2 className="text-5xl font-extrabold mb-2">Disclaimer</h2> */}
         <div className="flex justify-center items-center">
           <img width="50%" className="w-[90%] sm:w-[50%]" src={zoth} />
         </div>
