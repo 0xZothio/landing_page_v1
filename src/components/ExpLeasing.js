@@ -196,7 +196,7 @@ function ExpLeasing() {
           {/* waitlist */}
           <div className="relative col-span-4 flex justify-center items-center z-50  w-full h-full">
             <div className="sm:fixed sm:top-80 rounded-xl shadow-md bg-gradient-to-b from-[#1A88FF]/30 to-[#1A88FF]/10  flex justify-center items-center">
-              <div className="w-full text-center z-50 rounded-3xl ">
+              <div className="w-full text-center z-50 rounded-3xl p-4">
                 <div className="w-full text-center px-14">
                   <h5 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB2EFF] to-[#4FDCFF] text-3xl font-bold mb-4 p-4">
                     Asset Leasing
