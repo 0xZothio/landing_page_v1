@@ -3,19 +3,19 @@ import React, { useState } from "react";
 // import { toast } from "react-toastify";
 // import PhoneInput from "react-phone-input-2";
 // import waitlist from "../assets/images/waitlist.png";
-import { useAccount } from "wagmi";
-import { ConnectKitButton } from "connectkit";
+import { useAccount , useDisconnect } from "wagmi";
+import { ConnectKitButton  } from "connectkit";
 import { cashfreeOrder } from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
-  const { address, isConnecting, isDisconnected } = useAccount();
-
+  const { address, isDisconnected, status  } = useAccount();
+  const { disconnect } = useDisconnect();
   const [inviteData, setInviteData] = useState({
     first_name: "",
     email: "",
     mobile: "",
     amount: 0,
     linkedin: "",
-    address: "",
+    address: address ? address : "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -37,6 +37,8 @@ export default function Invite({ setIsVisible }) {
     e.preventDefault();
     setIsLoading(true);
     setFormErrors(validate(inviteData));
+    disconnect();
+   
     try {
       if (inviteData.email && inviteData.mobile && inviteData.first_name) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
@@ -52,13 +54,12 @@ export default function Invite({ setIsVisible }) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
           phone: "+91" + inviteData.mobile,
         });
-        showMessage(1);
         // showMessage(3);
         // showMessage(4);
         // showMessage(5);
         setIsLoading(false);
-        return;
       }
+      showMessage(1);
     } catch (error) {
       console.log("error", error);
       setIsLoading(false);
@@ -402,17 +403,11 @@ export default function Invite({ setIsVisible }) {
                         10000+
                       </button>
                     </div>
-                    {isDisconnected ? (
-                      <div className="flex justify-start mt-5">
-                        <ConnectKitButton label="Connect Wallet" />
-                      </div>
-                    ) : null}
-                    {address ? (
-                      <div className="flex justify-start mt-5">
-                        {" "}
-                        <ConnectKitButton label="Disconnect Wallet" />{" "}
-                      </div>
-                    ) : null}
+                    <div className="flex justify-start mt-5">
+                      <ConnectKitButton
+                        label="Connect Wallet"
+                      />
+                    </div>
                   </div>
 
                   <div className="flex justify-center items-center flex-col">
