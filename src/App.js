@@ -1,7 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import LandingPage from "./pages/LandingPage";
+import TermsOfUse from "./pages/TermsOfUse";
 import Institutions from "./components/Institutions";
 import ReactGA from "react-ga";
 import { useEffect } from "react";
