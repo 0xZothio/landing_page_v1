@@ -3,11 +3,11 @@ import React, { useState } from "react";
 // import { toast } from "react-toastify";
 // import PhoneInput from "react-phone-input-2";
 // import waitlist from "../assets/images/waitlist.png";
-import { useAccount , useDisconnect } from "wagmi";
-import { ConnectKitButton  } from "connectkit";
+import { useAccount, useDisconnect } from "wagmi";
+import { ConnectKitButton } from "connectkit";
 import { cashfreeOrder } from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
-  const { address, isDisconnected, status  } = useAccount();
+  const { address, isDisconnected, status } = useAccount();
   const { disconnect } = useDisconnect();
   const [inviteData, setInviteData] = useState({
     first_name: "",
@@ -37,8 +37,7 @@ export default function Invite({ setIsVisible }) {
     e.preventDefault();
     setIsLoading(true);
     setFormErrors(validate(inviteData));
-    disconnect();
-   
+
     try {
       if (inviteData.email && inviteData.mobile && inviteData.first_name) {
         await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
@@ -60,6 +59,7 @@ export default function Invite({ setIsVisible }) {
         setIsLoading(false);
       }
       showMessage(1);
+      disconnect();
     } catch (error) {
       console.log("error", error);
       setIsLoading(false);
@@ -219,7 +219,7 @@ export default function Invite({ setIsVisible }) {
                 <p className="my-4">
                   ✅ Generate passive income with monthly repayments
                 </p>
-                <form className="space-y-6" style={{ marginTop: "30px" }}>
+                <div className="space-y-6" style={{ marginTop: "30px" }}>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label
@@ -404,9 +404,7 @@ export default function Invite({ setIsVisible }) {
                       </button>
                     </div>
                     <div className="flex justify-start mt-5">
-                      <ConnectKitButton
-                        label="Connect Wallet"
-                      />
+                      <ConnectKitButton />
                     </div>
                   </div>
 
@@ -432,7 +430,7 @@ export default function Invite({ setIsVisible }) {
                       </>
                     )}
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           )}
