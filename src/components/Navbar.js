@@ -46,12 +46,12 @@ const Navbar = ({ setIsVisible }) => {
   return (
     <div className={"bg-black text-white z-10 pt-8 sm:pt-4 relative mt-6"}>
       {console.log(section)}
-      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-blue-700 to-cyan-400 z-50 w-full text-center px-4">
+      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2] z-50 w-full text-center px-4">
         <h5
-          className="text-white text-xs sm:text-[1rem] font-normal cursor-pointer p-2"
+          className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
           onClick={() => setIsVisible(true)}
         >
-          🔜 Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh 🤑. <span className="font-extrabold"> Join the Waitlist! ⏳ </span>
+           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span>
         </h5>
       </div>
       {!mobileMenuOpen && (

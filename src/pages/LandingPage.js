@@ -11,11 +11,12 @@ import Welcome from "../components/Welcome";
 import "../styles/styles.css";
 import Institutions from "../components/Institutions";
 import Carousel from "../components/Carousel";
-import MobileScroll from "../components/MobileScroll/index"
+import MobileScroll from "../components/MobileScroll/index";
 import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { AssetsCard, ExpOfferingsCard } from "../components/ExpOfferingsCard";
 
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,7 +79,7 @@ function LandingPage() {
   //     style.transform = 'translateY(' + itemTranslate + 'px)');
   //   });
   return (
-    <div className="bg-black relative">
+    <div className="bg-black relative h-full">
       {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
@@ -92,20 +93,20 @@ function LandingPage() {
               className="text-gray-700 transition hover:opacity-75 rounded-full"
             >
               <span className="sr-only">Twitter</span>
-              <AiFillTwitterCircle size={30} className="icon"  color="white" />
+              <AiFillTwitterCircle size={30} className="icon" color="white" />
             </a>
           </li>
           <li>
-                <a
-                  href="https://twitter.com/zothio"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition hover:opacity-75 rounded-full"
-                >
-                  <span className="sr-only">Instagram</span>
-                  <FaInstagramSquare size={30} className="icon" color="white" />
-                </a>
-              </li>
+            <a
+              href="https://twitter.com/zothio"
+              rel="noreferrer"
+              target="_blank"
+              className="text-gray-700 transition hover:opacity-75 rounded-full"
+            >
+              <span className="sr-only">Instagram</span>
+              <FaInstagramSquare size={30} className="icon" color="white" />
+            </a>
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/company/zoth-io/"
@@ -143,8 +144,8 @@ function LandingPage() {
       </div>
       <div>
         <Hero />
+        <ExpOfferingsCard/>
         <Welcome />
-
         <Assets />
         <MobileScroll />
         <Features />
