@@ -13,10 +13,7 @@ function Institutions() {
 
   return (
     <>
-      <div
-        id="institutions"
-        className="bg-black text-white w-full h-full "
-      >
+      <div id="institutions" className="bg-black text-white w-full h-full ">
         {/* heading */}
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
@@ -46,7 +43,7 @@ function Institutions() {
             muted
             className=""
            ></video> */}
-            <img src="institution/homescreen.gif"  alt="network" />
+            <img src="institution/homescreen.gif" alt="network" />
           </div>
           <h1 className="text-4xl font-codec sm:text-[70px] font-extrabold leading-8 text-center leading-snug tracking-wider z-50">
             {/* <span className="text-4xl font-codec sm:text-[80px] font-extrabold leading-8 text-center leading-snug tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"> */}
@@ -68,31 +65,30 @@ function Institutions() {
 
           <div className="z-50 sm:w-1/2 font-roobert text-center mx-auto mt-6 leading-8 text-2xl">
             Join the revolution to bring liquidity to illiquid markets
-
             <ul className="flex gap-6 mx-auto mt-6  justify-center items-center content-center">
-                      <li>
-                        <a
-                          href="https://t.me/+nFUrC_I1hA1iNWU9"
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-gray-700 transition hover:opacity-75"
-                        >
-                          <span className="sr-only">Telegram</span>
-                          <FaTelegramPlane size={40} color="white" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://twitter.com/zothio"
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-gray-700 transition hover:opacity-75"
-                        >
-                          <span className="sr-only">Twitter</span>
-                          <FaTwitter size={40} color="white" />
-                        </a>
-                      </li>
-                    </ul>
+              <li>
+                <a
+                  href="https://t.me/+nFUrC_I1hA1iNWU9"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">Telegram</span>
+                  <FaTelegramPlane size={40} color="white" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/zothio"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">Twitter</span>
+                  <FaTwitter size={40} color="white" />
+                </a>
+              </li>
+            </ul>
           </div>
         </motion.div>
 

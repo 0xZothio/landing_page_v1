@@ -7,6 +7,8 @@ import ReactGA from "react-ga";
 import { useEffect } from "react";
 import { PaymentPopup } from "./components/PaymentPopup";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ExpInvoice from "./components/ExpInvoice";
+import ExpLeasing from "./components/ExpLeasing";
 const TRACKING_ID = "UA-256346841-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 function App() {
@@ -39,6 +41,16 @@ function App() {
                 exact
                 path="/privacy-policy"
                 element={<PrivacyPolicy />}
+              ></Route>
+               <Route
+                exact
+                path="/invoice-discounting"
+                element={<ExpInvoice />}
+              ></Route>
+               <Route
+                exact
+                path="/asset-leasing"
+                element={<ExpLeasing />}
               ></Route>
             </Routes>
           </Router>

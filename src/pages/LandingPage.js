@@ -16,7 +16,7 @@ import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
-import { AssetsCard } from "../components/AssetsCard";
+import { AssetsCard, ExpOfferingsCard } from "../components/ExpOfferingsCard";
 
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -79,7 +79,7 @@ function LandingPage() {
   //     style.transform = 'translateY(' + itemTranslate + 'px)');
   //   });
   return (
-    <div className="bg-black relative">
+    <div className="bg-black relative h-full">
       {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
@@ -144,7 +144,7 @@ function LandingPage() {
       </div>
       <div>
         <Hero />
-        <AssetsCard />
+        <ExpOfferingsCard/>
         <Welcome />
         <Assets />
         <MobileScroll />
