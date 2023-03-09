@@ -91,58 +91,31 @@ const Hero = ({ setScrollValue }) => {
                   </div> */}
               </div>
               <div className="relative flex justify-center my-2 mx-auto items-center z-50 mt-12 md:w-2/5 md:mt-0 w-full">
-                <div className="rounded-xl shadow-lg shadow-[#007AFF] bg-black border border-slate-500 flex justify-center items-center">
-                  {/* <div className=" marquee-container d-none d-sm-block z-0 hidden">
-                      <div className="marquee d-flex justify-content-around">
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                      </div>
-                      <div className="marquee marquee2 d-flex justify-content-around">
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                        <span>Upcoming Launch !</span>
-                        <span>200 slots left</span>
-                      </div>
-                    </div> */}
+                <div className="rounded-xl shadow-md shadow-[#007AFF] bg-black border border-slate-500 flex justify-center items-center">
+                
                   <div className="w-full text-center z-50 rounded-3xl bg-black">
-                    <div className="rounded-xl shadow-lg bg-[#252525] w-full text-center p-2 px-4">
-                      <h5 className="text-white text-md font-normal mb-4">
-                        Invest in Real Estate Opportunity with just
+                    <div className="rounded-xl shadow-lg bg-gradient-to-b from-[#1A88FF]/50 to-[#1A88FF]/10  w-full text-center p-2 px-4">
+                      <h5 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB2EFF] to-[#4FDCFF] text-xl font-bold mb-4">
+                        Invest In Real Estate Opportunity With Just
                       </h5>
-                      <h5 className="text-white text-3xl font-medium mb-2">
+                      <h5 className="text-[#FB2EFF] text-3xl font-medium mb-2">
                         ₹ 1 Lakh !
                       </h5>
                     </div>
                     <div className="h-full">
-                      <h5 className="text-white text-xl mb-2 font-semibold mt-6">
-                        Slots Available
+                      <h5 className="text-white text-xl tracking-wide  font-semibold mt-6">
+                      Investors In Line
                       </h5>
-                      <p className="text-white text-4xl font-extrabold mb-6 mt-2">
+                      <p className="text-white text-[80px] font-bold mb-6">
                         {waitlistUsers ? waitlistUsers : 500}
                       </p>
                     </div>
                     <button
                       type="button"
                       onClick={() => setIsVisible(true)}
-                      className="w-2/3 rounded-sm px-2 py-2 mt-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
+                      className="w-2/3 rounded-full px-2 py-2 mt-2 z-100 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                     >
-                      Join Waitlist
+                      Join Whitelist 
                     </button>
                   </div>
                 </div>
