@@ -15,7 +15,7 @@ export default function Invite({ setIsVisible }) {
     mobile: "",
     amount: 0,
     linkedin: "",
-    address: "",
+    address: address ? address : "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -402,17 +402,11 @@ export default function Invite({ setIsVisible }) {
                         10000+
                       </button>
                     </div>
-                    {isDisconnected ? (
+                    {address ? null : (
                       <div className="flex justify-start mt-5">
                         <ConnectKitButton label="Connect Wallet" />
                       </div>
-                    ) : null}
-                    {address ? (
-                      <div className="flex justify-start mt-5">
-                        {" "}
-                        <ConnectKitButton label="Disconnect Wallet" />{" "}
-                      </div>
-                    ) : null}
+                    )}
                   </div>
 
                   <div className="flex justify-center items-center flex-col">
