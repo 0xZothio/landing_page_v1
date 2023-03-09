@@ -17,7 +17,7 @@ function ExpInvoice() {
           />
         </Link>
 
-        <div className="grid grid-cols-1 md:grid-cols-8 gap-2 mb-10 p-10 place-content-center place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-8 mb-10 sm:ml-24 p-4 place-content-center place-items-center">
           <div className="col-span-4">
             <div className="text-4xl sm:text-6xl font-codec mb-4">
               What is <br />
