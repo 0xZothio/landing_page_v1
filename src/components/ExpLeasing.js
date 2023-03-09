@@ -16,7 +16,7 @@ function ExpLeasing() {
           />
         </Link>
 
-        <div className="grid grid-cols-1 md:grid-cols-8 gap-2 mb-10 p-10 place-content-center place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-8 mb-10 sm:ml-24 p-4 place-content-center place-items-center">
           <div className="col-span-4">
             <div className="text-4xl sm:text-6xl font-codec mb-4">
               What is <br />
@@ -113,8 +113,10 @@ function ExpLeasing() {
             {/* why zoth */}
             <div>
               <div className="text-4xl font-codec mb-2 flex flex-col justify-center mt-60">
-                Why ZOTH <br />
-                <span className="text-[#1A88FF]">for Asset Leasing?</span>
+                <div className="text-3xl sm:text-4xl">Why ZOTH</div>
+                <span className="text-[#1A88FF] text-3xl sm:text-4xl">
+                  for Asset Leasing?
+                </span>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
