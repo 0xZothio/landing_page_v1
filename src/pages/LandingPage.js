@@ -144,6 +144,7 @@ function LandingPage() {
       </div>
       <div>
         <Hero />
+        <span id="offerings" />
         <ExpOfferingsCard/>
         <Welcome />
         <Assets />

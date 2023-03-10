@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const ExpOfferingsCard = () => {
   return (
-    <div id="offerings" className="bg-black text-white w-full h-full sm:mt-14">
+    <div className="bg-black text-white w-full h-full sm:mt-14">
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
@@ -54,14 +54,15 @@ export const ExpOfferingsCard = () => {
               </div>
             </div>
 
-            <Link
-              to="/asset-leasing"
+            <div
               className="flex justify-center items-center w-full p-4"
             >
-              <button class="w-3/4 bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-blue py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              <button onClick={() => {
+                window.location.href = "/asset-leasing"
+              }} class="w-3/4 bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-blue py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                 Explore
               </button>
-            </Link>
+            </div>
           </div>
         </div>
 
@@ -98,14 +99,15 @@ export const ExpOfferingsCard = () => {
               </div>
             </div>
 
-            <Link
-              to="/invoice-discounting"
+            <div
               className="flex justify-center items-center w-full p-4"
             >
-              <button class="w-3/4 bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              <button onClick={() => {
+                window.location.href = "/invoice-discounting";
+              }} class="w-3/4 bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                 Explore
               </button>
-            </Link>
+            </div>
           </div>
         </div>
 
