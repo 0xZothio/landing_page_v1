@@ -7,6 +7,7 @@ import Invite from "./Invite";
 import "../styles/styles.css";
 import axios from "axios";
 import { ExpOfferingsCard } from "./ExpOfferingsCard";
+import { IoIosWarning } from "react-icons/io";
 // import ReactAnimationCarousel from "react-animation-carousel";
 // const data = [img1, img2, img3, img4, img5, img6];
 
@@ -93,7 +94,6 @@ const Hero = ({ setScrollValue }) => {
               </div>
               <div className="relative flex justify-center my-2 mx-auto items-center mt-12 md:w-2/5 md:mt-0 w-full h-full">
                 <div className="rounded-xl shadow-md  bg-black border border-slate-500 flex justify-center items-center">
-                
                   <div className="w-full text-center rounded-3xl bg-black">
                     <div className="rounded-xl shadow-lg bg-gradient-to-b from-[#1A88FF]/50 to-[#1A88FF]/10  w-full text-center p-2 px-4">
                       <h5 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB2EFF] to-[#4FDCFF] text-xl font-bold mb-4 p-2">
@@ -103,21 +103,28 @@ const Hero = ({ setScrollValue }) => {
                         ₹ 1 Lakh !
                       </h5>
                     </div>
-                    <div className="h-full mb-6">
-                      <h5 className="text-white text-xl tracking-wide  font-semibold mt-6">
-                      Investors In Line
-                      </h5>
-                      <p className="text-white text-5xl font-bold">
-                        {waitlistUsers ? waitlistUsers : 500}
-                      </p>
+                    <div className="flex flex-row justify-center items-center">
+                      <div>
+                        <IoIosWarning className="text-[#f44336] mt-2 text-8xl sm:text-8xl" />
+                      </div>
+
+                      <div className="h-full mb-6">
+                        <h5 className="text-white text-xl tracking-wide  font-semibold mt-6">
+                          Slots Available
+                        </h5>
+                        <p className="text-white text-5xl font-bold">
+                          {waitlistUsers ? waitlistUsers : 500}
+                        </p>
+                      </div>
                     </div>
+
                     <a
                       type="button"
                       href="#offerings"
                       // onClick={() => setIsVisible(true)}
                       className="w-2/3 rounded-full px-2 py-2 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8 border"
                     >
-                      Join Whitelist 
+                      Join Waitlist
                     </a>
                   </div>
                 </div>
@@ -126,8 +133,6 @@ const Hero = ({ setScrollValue }) => {
           </div>
         </motion.div>
       </main>
-
-
     </div>
   );
 };

@@ -24,7 +24,7 @@ function ExpLeasing() {
           onClick={() => setIsVisible(true)}
         >
           Launching soon! An Alternative Investment Opportunity with just ₹1
-          Lakh. <span className="font-semibold"> Join the Whitelist! </span>
+          Lakh. <span className="font-semibold"> Join the Waitlist! </span>
         </h5>
       </div>
 
@@ -223,7 +223,7 @@ function ExpLeasing() {
               </div>
             </div>
 
-            {/* Whitelist */}
+            {/* Waitlist */}
             <div className="relative col-span-4 flex justify-center items-start z-10  w-full h-full">
               <div className="sm:sticky sm:top-10 rounded-xl shadow-md bg-gradient-to-b from-[#1A88FF]/30 to-[#1A88FF]/10  flex justify-center items-center">
                 <div className="w-full text-center rounded-3xl p-4">
@@ -247,14 +247,14 @@ function ExpLeasing() {
                     </div>
                   </div>
 
-                  <div className="mt-2">Ready To Grow Your Investments?</div>
+                  <div className="mt-4">Ready To Grow Your Investments?</div>
 
                   <button
                     type="button"
                     onClick={() => setIsVisible(true)}
-                    className="w-2/3 rounded-full px-2 py-2 mt-2 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
+                    className="w-2/3 rounded-full px-2 py-2 mt-4 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                   >
-                    Join Whitelist
+                    Join Waitlist
                   </button>
                 </div>
               </div>

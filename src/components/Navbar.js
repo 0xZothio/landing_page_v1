@@ -51,7 +51,7 @@ const Navbar = ({ setIsVisible }) => {
           className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2 z-50"
           onClick={() => setIsVisible(true)}
         >
-           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Whitelist! </span>
+           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span>
         </h5>
       </div>
       {!mobileMenuOpen && (
@@ -160,12 +160,12 @@ const Navbar = ({ setIsVisible }) => {
             </div> */}
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
-            <button
+            {/* <button
               className="inline-block rounded-full px-6 py-1 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
               onClick={() => setIsVisible(true)}
             >
-              Join Whitelist{" "}
-            </button>
+              Join Waitlist{" "}
+            </button> */}
           </div>
         </motion.nav>
       )}
@@ -214,7 +214,7 @@ const Navbar = ({ setIsVisible }) => {
                   className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
                   onClick={() => setIsVisible(true)}
                 >
-                 Join Whitelist
+                 Join Waitlist
                 </button>
               </div>
             </div>
