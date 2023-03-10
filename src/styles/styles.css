@@ -389,6 +389,12 @@
   margin: 0 auto;
 }
 
+.herotext{
+  background: #1A88FF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* @media (max-width: 1000px) {
   .slider {
     width: 98%;

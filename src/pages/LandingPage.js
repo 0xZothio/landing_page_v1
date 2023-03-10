@@ -83,7 +83,7 @@ function LandingPage() {
       {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
-      <div className="fixed z-50 bottom-20 right-10 icon-bar  bg-gray-900 rounded-3xl text-black">
+      <div className="hidden sm:block fixed z-50 bottom-20 right-10 icon-bar  bg-gray-900 rounded-3xl text-black">
         <ul className="flex gap-6 my-2 py-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start px-8">
           <li>
             <a
@@ -144,6 +144,7 @@ function LandingPage() {
       </div>
       <div>
         <Hero />
+        <span id="offerings" />
         <ExpOfferingsCard/>
         <Welcome />
         <Assets />

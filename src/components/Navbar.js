@@ -44,14 +44,14 @@ const Navbar = ({ setIsVisible }) => {
   // }
 
   return (
-    <div className={"bg-black text-white z-10 pt-8 sm:pt-4 relative mt-6"}>
+    <div className={"bg-black text-white z-50 pt-8 sm:pt-4 relative mt-6"}>
       {console.log(section)}
       <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2] z-50 w-full text-center px-4">
         <h5
-          className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
+          className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2 z-50"
           onClick={() => setIsVisible(true)}
         >
-           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Whitelist! </span>
         </h5>
       </div>
       {!mobileMenuOpen && (
@@ -164,7 +164,7 @@ const Navbar = ({ setIsVisible }) => {
               className="inline-block rounded-full px-6 py-1 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
               onClick={() => setIsVisible(true)}
             >
-              Join waitlist{" "}
+              Join Whitelist{" "}
             </button>
           </div>
         </motion.nav>
@@ -214,7 +214,7 @@ const Navbar = ({ setIsVisible }) => {
                   className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
                   onClick={() => setIsVisible(true)}
                 >
-                 Join Waitlist
+                 Join Whitelist
                 </button>
               </div>
             </div>
