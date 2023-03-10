@@ -3,11 +3,11 @@ import React, { useState } from "react";
 // import { toast } from "react-toastify";
 // import PhoneInput from "react-phone-input-2";
 // import waitlist from "../assets/images/waitlist.png";
-import { useAccount , useDisconnect } from "wagmi";
-import { ConnectKitButton  } from "connectkit";
+import { useAccount, useDisconnect } from "wagmi";
+import { ConnectKitButton } from "connectkit";
 import { cashfreeOrder } from "../utils/cashfree.js";
 export default function Invite({ setIsVisible }) {
-  const { address, isDisconnected, status  } = useAccount();
+  const { address, isDisconnected, status } = useAccount();
   const { disconnect } = useDisconnect();
   const [inviteData, setInviteData] = useState({
     first_name: "",
@@ -37,29 +37,55 @@ export default function Invite({ setIsVisible }) {
     e.preventDefault();
     setIsLoading(true);
     setFormErrors(validate(inviteData));
-    disconnect();
-   
+    console.log("inviteData", inviteData);
     try {
       if (inviteData.email && inviteData.mobile && inviteData.first_name) {
-        await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
-          name: inviteData.first_name,
-          email: inviteData.email,
-          phone: inviteData.mobile,
-        });
+        let data = await axios.post(
+          `https://backend.zoth.io/waitlist/createUser`,
+          {
+            name: inviteData.first_name,
+            email: inviteData.email,
+            phone: inviteData.mobile.toString(),
+            amount: inviteData.amount.toString(),
+            walletAddress: inviteData.address,
+          },
+          {
+            headers: {
+              authorization: "eogneqonre398432985823bn5kj32n5",
+            },
+          }
+        );
       }
-      if (inviteData.email && inviteData.mobile) {
-        await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendEmail`, {
-          email: inviteData.email,
-        });
-        await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
-          phone: "+91" + inviteData.mobile,
-        });
-        // showMessage(3);
-        // showMessage(4);
-        // showMessage(5);
-        setIsLoading(false);
-      }
+      // if (inviteData.email && inviteData.mobile) {
+      //   await axios.post(
+      //     `https://backend.zoth.io/api/v1/waitlist/sendEmail`,
+      //     {
+      //       headers: {
+      //         authorization: "eogneqonre398432985823bn5kj32n5",
+      //       },
+      //     },
+      //     {
+      //       email: inviteData.email,
+      //     }
+      //   );
+      //   await axios.post(
+      //     `https://backend.zoth.io/api/v1/waitlist/sendSMS`,
+      //     {
+      //       headers: {
+      //         authorization: "eogneqonre398432985823bn5kj32n5",
+      //       },
+      //     },
+      //     {
+      //       phone: "+91" + inviteData.mobile,
+      //     }
+      //   );
+      //   // showMessage(3);
+      //   // showMessage(4);
+      //   // showMessage(5);
+      //   setIsLoading(false);
+      // }
       showMessage(1);
+      disconnect();
     } catch (error) {
       console.log("error", error);
       setIsLoading(false);
@@ -70,8 +96,6 @@ export default function Invite({ setIsVisible }) {
   // validation
   const validate = (values) => {
     const errors = {};
-
-    console.log("validate values", values);
     if (!values.first_name) {
       errors.name = "* Name is required";
     }
@@ -219,7 +243,7 @@ export default function Invite({ setIsVisible }) {
                 <p className="my-4">
                   ✅ Generate passive income with monthly repayments
                 </p>
-                <form className="space-y-6" style={{ marginTop: "30px" }}>
+                <div className="space-y-6" style={{ marginTop: "30px" }}>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label
@@ -404,9 +428,7 @@ export default function Invite({ setIsVisible }) {
                       </button>
                     </div>
                     <div className="flex justify-start mt-5">
-                      <ConnectKitButton
-                        label="Connect Wallet"
-                      />
+                      <ConnectKitButton />
                     </div>
                   </div>
 
@@ -432,7 +454,7 @@ export default function Invite({ setIsVisible }) {
                       </>
                     )}
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           )}

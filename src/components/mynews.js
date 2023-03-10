@@ -53,7 +53,7 @@ const Mynews = () => {
         whileInView="show"
         className="mb-12 text-gray-800 text-center lg:text-left w-3/4 mx-auto border-solid border-2 rounded-xl"
       >
-        <div className="flex flex-wrap justify-center p-6 rounded-xl shadow text-white grad justify-center items-center">
+        <div className="flex flex-wrap justify-center p-6 rounded-xl shadow text-white grad items-center">
           <div className="w-full px-3 justify-center items-center">
             <div className="grid lg:grid-cols-2 gap-x-2 justify-center items-center">
               <div className="mb-10 lg:mb-0 justify-center items-center">
