@@ -10,13 +10,13 @@ function ExpInvoice() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2] w-full text-center px-4">
+      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2] w-full text-center px-4 z-50">
         <h5
           className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
           onClick={() => setIsVisible(true)}
         >
           Launching soon! An Alternative Investment Opportunity with just ₹1
-          Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+          Lakh. <span className="font-semibold"> Join the Whitelist! </span>
         </h5>
       </div>
 
@@ -192,9 +192,9 @@ function ExpInvoice() {
               </div>
             </div>
 
-            {/* waitlist */}
-            <div className="relative col-span-4 flex justify-center items-center   w-full">
-              <div className="sm:fixed sm:top-80 rounded-xl shadow-md bg-gradient-to-b from-[#1A88FF]/30 to-[#1A88FF]/10  flex justify-center items-center">
+            {/* Whitelist */}
+            <div className="relative col-span-4 flex justify-center items-start   w-full">
+              <div className="sm:sticky sm:top-10 rounded-xl shadow-md bg-gradient-to-b from-[#1A88FF]/30 to-[#1A88FF]/10  flex justify-center items-center">
                 <div className="w-full text-center rounded-3xl p-4">
                   <div className="w-full text-center p-4">
                     <h5 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB2EFF] to-[#4FDCFF] text-3xl font-bold mb-4 p-4">
@@ -223,7 +223,7 @@ function ExpInvoice() {
                     onClick={() => setIsVisible(true)}
                     className="w-2/3 rounded-full px-2 py-2 mt-2  bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                   >
-                    Join Waitlist
+                    Join Whitelist
                   </button>
                 </div>
               </div>

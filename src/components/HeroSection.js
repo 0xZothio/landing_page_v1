@@ -53,7 +53,7 @@ const Hero = ({ setScrollValue }) => {
           <div className="mx-auto min-h-screen flex justify-center items-center">
             <div className=" flex justify-center flex-col md:flex-row h-full pb-20">
               <div className="md:w-3/5 w-full md:ml-12">
-                <h1 className="text-4xl font-codec sm:text-[60px] 2xl:text-[70px] font-extrabold leading-tight text-center md:text-left tracking-normal herotext">
+                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A88FF] to-[#1A88FF]/50  text-4xl font-codec sm:text-[60px] 2xl:text-[70px] font-extrabold leading-tight text-center md:text-left tracking-normal ">
                   A Revolutionary New Age Investment Platform
                 </h1>
                 <p className="md:mt-6 leading-8 text-center md:text-left text-2xl mt-8">
