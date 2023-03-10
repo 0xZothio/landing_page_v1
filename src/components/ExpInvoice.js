@@ -23,7 +23,7 @@ function ExpInvoice() {
       {/* invite popup */}
       {isVisible && <Invite setIsVisible={setIsVisible} />}
 
-      <div id="" className="bg-black text-white w-full h-full ">
+      <div  className="bg-black text-white w-full h-full ">
         {/* heading */}
         <div className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10">
           <Link to="/" className="">
@@ -34,7 +34,7 @@ function ExpInvoice() {
             />
           </Link>
 
-          <div className="grid grid-cols-1 md:grid-cols-8 mb-10 sm:ml-24 p-4 place-content-center place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-8 mb-10 sm:ml-24 p-4 ">
             <div className="col-span-4">
               <div className="text-4xl sm:text-6xl font-codec mb-4">
                 What is <br />
@@ -52,63 +52,63 @@ function ExpInvoice() {
               <div>
                 <div className="text-4xl font-codec mb-4 flex flex-col justify-center mt-60">
                   Why invest in an <br />
-                  <span className="text-[#1A88FF]">
+                  <span className="text-[#1A88FF] mt-1">
                     Invoice Discounting Opportunity?
                   </span>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       High returns & low risk
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Invest in invoice discounting for attractive returns.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Diversify your portfolio
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Add invoice discounting as a separate asset class for
                       better returns.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Short investment horizon
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Invest in invoice discounting for attractive returns.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Lower default risk
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Invest in creditworthy companies to minimize default
                       risks.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Control your investments
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Choose which invoices to invest in based on
                       creditworthiness and other factors.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
+                  <div className="  bg-[#111111] rounded-lg p-4">
                     {/* <div className="text-xl text-[#1A88FF] font-semibold text-left">High returns & low risk</div> */}
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-500 p-2">
                       Overall, investing in invoice discounting can be a smart
                       financial decision for investors looking to diversify
                       their portfolios, generate steady income, and potentially
@@ -131,59 +131,59 @@ function ExpInvoice() {
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Minimal Risk
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Every invoice is verified before getting listed on the
                       Zoth platform.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Short-term Maturity
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Earn quick returns within a short time frame of 30-90 days
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Pay Partial or Full
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       You decide your invested amount. No need to pay the
                       invoice in full.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       High Returns
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       On our platform, get returns as high as 15% at low-risk.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Risk Analysis
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       We arrive at a Zoth score for every enrolled borrower
                       after analyzing multiple stages.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Quick and Easy Process
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Easy onboarding and the quick paperless process will save
                       your time and effort.
                     </div>

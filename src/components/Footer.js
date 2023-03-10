@@ -13,13 +13,13 @@ const Footer = () => {
       initial="hidden"
       whileInView="show"
       aria-label="Site Footer"
-      className="relative bg-black text-white z-50"
+      className="relative bg-black text-white z-40"
     >
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-center lg:text-left">
           <div className="w-full lg:w-5/12 px-4 ">
             <div className="flex justify-center items-center sm:justify-start">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Zoth.io</span>
                 <img className="h-8" src="logo.png" alt="" />
               </a>

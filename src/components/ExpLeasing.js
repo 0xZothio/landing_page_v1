@@ -9,20 +9,22 @@ function ExpLeasing() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <>
-     <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2]  w-full text-center px-4">
+    <div>
+      {/* banner */}
+      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2]  w-full text-center px-4">
         <h5
           className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
           onClick={() => setIsVisible(true)}
         >
-           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+          Launching soon! An Alternative Investment Opportunity with just ₹1
+          Lakh. <span className="font-semibold"> Join the Waitlist! </span>
         </h5>
       </div>
 
-        {/* invite popup */}
-        {isVisible && <Invite setIsVisible={setIsVisible} />}
+      {/* invite popup */}
+      {isVisible && <Invite setIsVisible={setIsVisible} />}
 
-      <div id="" className="bg-black text-white w-full h-full ">
+      <div className="bg-black text-white w-full h-full ">
         {/* heading */}
         <div className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10">
           <Link to="/" className="">
@@ -33,7 +35,7 @@ function ExpLeasing() {
             />
           </Link>
 
-          <div className="grid grid-cols-1 md:grid-cols-8 mb-10 sm:ml-24 p-4 place-content-center place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-8 mb-10 sm:ml-24 p-4 ">
             <div className="col-span-4">
               <div className="text-4xl sm:text-6xl font-codec mb-4">
                 What is <br />
@@ -55,68 +57,68 @@ function ExpLeasing() {
               <div>
                 <div className="text-4xl font-codec mb-4 flex flex-col justify-center mt-60">
                   Why invest in an <br />
-                  <span className="text-[#1A88FF]">
+                  <span className="text-[#1A88FF] mt-1">
                     Asset Leasing opportunity?
                   </span>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Steady income stream:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Asset leasing offers a low-risk, high-return investment
                       option.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Diversification:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       By leasing out assets to companies, investors can earn
                       fixed, non-market linked monthly returns.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Limited liability:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Companies benefit from leased assets to scale their
                       business faster
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Potential tax benefits:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Investments start at just ₹10,000 and offer the potential
                       to earn up to 16-20% Pre-Tax IRR.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Lower capital requirements:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Leasing agreements typically have a tenure of 12-36
                       months, providing a reliable source of passive income for
                       investors.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-sm text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-sm text-[#1A88FF] font-semibold text-left p-2">
                       TIP :
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-500 p-2">
                       Overall, investing in asset leasing can be a smart
                       financial decision for investors looking to diversify
                       their portfolios, generate steady income, and potentially
@@ -133,72 +135,72 @@ function ExpLeasing() {
               <div>
                 <div className="text-4xl font-codec mb-2 flex flex-col justify-center mt-60">
                   <div className="text-3xl sm:text-4xl">Why ZOTH</div>
-                  <span className="text-[#1A88FF] text-3xl sm:text-4xl">
+                  <span className="text-[#1A88FF] text-3xl sm:text-4xl mt-1">
                     for Asset Leasing?
                   </span>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Due diligence:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Zoth conducts thorough due diligence on all leasing
                       opportunities to ensure that investors are presented with
                       high-quality investment options.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Risk assessment:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Zoth evaluates the risk profile of each leasing
                       opportunity and presents it to investors in a clear and
                       transparent manner.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Asset quality:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Zoth ensures that the assets being leased out are of high
                       quality and have been verified to be mission-critical or
                       core to the business.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Financial analysis:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Zoth conducts a comprehensive financial analysis of
                       leasing opportunities, including an analysis of annual
                       reports, key contracts, and regulatory concerns.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Diversification:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       Zoth offers a range of asset leasing opportunities,
                       providing investors with the ability to diversify their
                       portfolios and spread their risk.
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-6">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left">
+                  <div className="  bg-[#111111] rounded-lg p-4">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
                       Low investment threshold:
                     </div>
-                    <div className="text-sm">
+                    <div className="text-sm p-2">
                       With investment opportunities starting at just ₹10,000,
                       Zoth makes it easy for investors of all levels to
                       participate in asset leasing.
@@ -255,7 +257,7 @@ function ExpLeasing() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 
