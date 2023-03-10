@@ -16,8 +16,14 @@ export const ExpOfferingsCard = () => {
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 p-10 place-content-center place-items-center ">
+        {/* Leasing */}
         <div className="bg-[#161616] rounded-lg">
+          <div className="px-4 pt-4">
+            <img src="/experimental/leasing.png" className="" alt="leasing" />
+          </div>
+
           <div className="text-white text-3xl font-bold p-4">Asset Leasing</div>
+
           <div className="rounded-lg bg-[#272727]">
             <div className="grid grid-cols-2 gap-2">
               <div className="p-4">
@@ -33,7 +39,9 @@ export const ExpOfferingsCard = () => {
                 </div>
               </div>
               <div className="p-4">
-                <div className="tracking-wide text-sm">Investments starting at</div>
+                <div className="tracking-wide text-sm">
+                  Investments starting at
+                </div>
                 <div className="text-md p-1">
                   <span className="font-extrabold">₹10,000</span>
                 </div>
@@ -59,6 +67,10 @@ export const ExpOfferingsCard = () => {
 
         {/* Invoice */}
         <div className="bg-[#161616] rounded-lg">
+          <div className="px-4 pt-4">
+            <img src="/experimental/invoice.png" className="" alt="invoice" />
+          </div>
+
           <div className="text-white text-3xl font-bold p-4">
             Invoice Discounting
           </div>
@@ -77,7 +89,9 @@ export const ExpOfferingsCard = () => {
                 </div>
               </div>
               <div className="p-4">
-                <div className="tracking-wide text-sm">Investments starting at</div>
+                <div className="tracking-wide text-sm">
+                  Investments starting at
+                </div>
                 <div className="text-md p-1">
                   <span className="font-extrabold">₹10,000</span>
                 </div>
@@ -96,14 +110,20 @@ export const ExpOfferingsCard = () => {
         </div>
 
         {/* CRE */}
-        <div className="bg-[#161616] rounded-lg grayscale ">
+        <div className="bg-[#161616] rounded-lg  ">
+          <div className="px-4 pt-4">
+            <img src="/experimental/cre.png" className="" alt="cre" />
+          </div>
+
           <div className="text-gray-500 text-3xl font-bold p-4">
             Commercial Real Estate
           </div>
           <div className="rounded-lg bg-[#272727]/30">
             <div className="grid grid-cols-2 gap-2">
               <div className="p-4 text-gray-500">
-                <div className="tracking-wide capitalize text-sm">targeted IRR</div>
+                <div className="tracking-wide capitalize text-sm">
+                  targeted IRR
+                </div>
                 <div className="text-md p-1">
                   <span className="font-extrabold">8-12% </span>
                 </div>
@@ -116,7 +136,9 @@ export const ExpOfferingsCard = () => {
               </div>
 
               <div className="p-4 text-gray-500">
-                <div className="tracking-wide text-sm">Investments starting at</div>
+                <div className="tracking-wide text-sm">
+                  Investments starting at
+                </div>
                 <div className="text-md p-1">
                   <span className="font-extrabold">₹50,000</span>
                 </div>
@@ -124,7 +146,7 @@ export const ExpOfferingsCard = () => {
             </div>
 
             <div className="flex justify-center items-center w-full p-4">
-              <button class="w-3/4 bg-transparent hover:bg-blue-500  font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded text-gray-500">
+              <button class="w-3/4 bg-transparent   font-semibold  py-2 px-4 border border-gray-500  rounded text-gray-500">
                 Coming Soon
               </button>
             </div>

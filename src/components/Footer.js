@@ -7,13 +7,13 @@ import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <motion.footer
+    <footer
       id="contact"
       variants={footerVariants}
       initial="hidden"
       whileInView="show"
       aria-label="Site Footer"
-      className="relative bg-black text-white"
+      className="relative bg-black text-white z-50"
     >
       <div className="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-wrap text-center lg:text-left">
@@ -199,7 +199,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 
