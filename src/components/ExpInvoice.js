@@ -66,7 +66,7 @@ function ExpInvoice() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       High returns & low risk
                     </div>
                     <div className="text-sm p-2">
@@ -75,7 +75,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Diversify your portfolio
                     </div>
                     <div className="text-sm p-2">
@@ -85,7 +85,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Short investment horizon
                     </div>
                     <div className="text-sm p-2">
@@ -94,7 +94,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Lower default risk
                     </div>
                     <div className="text-sm p-2">
@@ -104,7 +104,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Control your investments
                     </div>
                     <div className="text-sm p-2">
@@ -139,7 +139,7 @@ function ExpInvoice() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Minimal Risk
                     </div>
                     <div className="text-sm p-2">
@@ -149,7 +149,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Short-term Maturity
                     </div>
                     <div className="text-sm p-2">
@@ -158,7 +158,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Pay Partial or Full
                     </div>
                     <div className="text-sm p-2">
@@ -168,7 +168,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       High Returns
                     </div>
                     <div className="text-sm p-2">
@@ -177,7 +177,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Risk Analysis
                     </div>
                     <div className="text-sm p-2">
@@ -187,7 +187,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Quick and Easy Process
                     </div>
                     <div className="text-sm p-2">
