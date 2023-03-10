@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeIn, slideIn } from "../utils/motion";
 import Footer from "./Footer";
+import Invite from "./Invite";
 
 function ExpLeasing() {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <>
+     <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2]  w-full text-center px-4">
+        <h5
+          className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
+          onClick={() => setIsVisible(true)}
+        >
+           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+        </h5>
+      </div>
+
+        {/* invite popup */}
+        {isVisible && <Invite setIsVisible={setIsVisible} />}
+
       <div id="" className="bg-black text-white w-full h-full ">
         {/* heading */}
-        <div className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10 z-50">
-          <Link to="/" className="z-50">
+        <div className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10">
+          <Link to="/" className="">
             <img
               src="/institution/zoth.png"
-              className="w-[250px] h-[250px] z-50"
+              className="w-[250px] h-[250px]"
               alt="logo"
             />
           </Link>
@@ -200,9 +215,9 @@ function ExpLeasing() {
             </div>
 
             {/* waitlist */}
-            <div className="relative col-span-4 flex justify-center items-center z-50  w-full h-full">
+            <div className="relative col-span-4 flex justify-center items-center   w-full h-full">
               <div className="sm:fixed sm:top-80 rounded-xl shadow-md bg-gradient-to-b from-[#1A88FF]/30 to-[#1A88FF]/10  flex justify-center items-center">
-                <div className="w-full text-center z-50 rounded-3xl p-4">
+                <div className="w-full text-center rounded-3xl p-4">
                   <div className="w-full text-center px-14">
                     <h5 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB2EFF] to-[#4FDCFF] text-3xl font-bold mb-4 p-4">
                       Asset Leasing
@@ -227,7 +242,8 @@ function ExpLeasing() {
 
                   <button
                     type="button"
-                    className="w-2/3 rounded-full px-2 py-2 mt-2 z-100 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
+                    onClick={() => setIsVisible(true)}
+                    className="w-2/3 rounded-full px-2 py-2 mt-2 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                   >
                     Join Waitlist
                   </button>
@@ -237,6 +253,8 @@ function ExpLeasing() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
