@@ -37,27 +37,53 @@ export default function Invite({ setIsVisible }) {
     e.preventDefault();
     setIsLoading(true);
     setFormErrors(validate(inviteData));
-
+    console.log("inviteData", inviteData);
     try {
       if (inviteData.email && inviteData.mobile && inviteData.first_name) {
-        await axios.post(`https://testing.zoth.in/api/v1/waitlist/addUser`, {
-          name: inviteData.first_name,
-          email: inviteData.email,
-          phone: inviteData.mobile,
-        });
+        let data = await axios.post(
+          `https://backend.zoth.io/waitlist/createUser`,
+          {
+            name: inviteData.first_name,
+            email: inviteData.email,
+            phone: inviteData.mobile.toString(),
+            amount: inviteData.amount.toString(),
+            walletAddress: inviteData.address,
+          },
+          {
+            headers: {
+              authorization: "eogneqonre398432985823bn5kj32n5",
+            },
+          }
+        );
       }
-      if (inviteData.email && inviteData.mobile) {
-        await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendEmail`, {
-          email: inviteData.email,
-        });
-        await axios.post(`https://testing.zoth.in/api/v1/waitlist/sendSMS`, {
-          phone: "+91" + inviteData.mobile,
-        });
-        // showMessage(3);
-        // showMessage(4);
-        // showMessage(5);
-        setIsLoading(false);
-      }
+      // if (inviteData.email && inviteData.mobile) {
+      //   await axios.post(
+      //     `https://backend.zoth.io/api/v1/waitlist/sendEmail`,
+      //     {
+      //       headers: {
+      //         authorization: "eogneqonre398432985823bn5kj32n5",
+      //       },
+      //     },
+      //     {
+      //       email: inviteData.email,
+      //     }
+      //   );
+      //   await axios.post(
+      //     `https://backend.zoth.io/api/v1/waitlist/sendSMS`,
+      //     {
+      //       headers: {
+      //         authorization: "eogneqonre398432985823bn5kj32n5",
+      //       },
+      //     },
+      //     {
+      //       phone: "+91" + inviteData.mobile,
+      //     }
+      //   );
+      //   // showMessage(3);
+      //   // showMessage(4);
+      //   // showMessage(5);
+      //   setIsLoading(false);
+      // }
       showMessage(1);
       disconnect();
     } catch (error) {
@@ -70,8 +96,6 @@ export default function Invite({ setIsVisible }) {
   // validation
   const validate = (values) => {
     const errors = {};
-
-    console.log("validate values", values);
     if (!values.first_name) {
       errors.name = "* Name is required";
     }

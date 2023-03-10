@@ -16,7 +16,7 @@ const Hero = ({ setScrollValue }) => {
   useEffect(() => {
     (async () => {
       let res = await axios(
-        "http://localhost:8080/waitlist/getSlotsAvailable",
+        "https://backend.zoth.io/waitlist/getSlotsAvailable",
         {
           headers: {
             authorization: "eogneqonre398432985823bn5kj32n5",
