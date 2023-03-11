@@ -14,6 +14,8 @@ import { IoIosWarning } from "react-icons/io";
 const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [waitlistUsers, setWaitlistUsers] = useState(0);
+  const [amount, setAmount] = useState(10000);
+
   useEffect(() => {
     (async () => {
       let res = await axios(
@@ -27,6 +29,16 @@ const Hero = ({ setScrollValue }) => {
       setWaitlistUsers(res.data.data.slotsLeft);
     })();
   }, []);
+
+  const onChangeData = (e) => {
+    console.log("amount", e.target.value);
+    setAmount(e.target.value);
+  };
+
+  const calculateInterest = () => {
+    console.log("calculateInterest amount", amount);
+  };
+
   return (
     <div
       className={
@@ -81,11 +93,11 @@ const Hero = ({ setScrollValue }) => {
                       placeholder=""
                       required={true}
                       // value={amount}
-                      // onChange={(e) => onChangeData(e)}
+                      onChange={(e) => onChangeData(e)}
                     />
                     <button
                       type="button"
-                      // onClick={}
+                      onClick={calculateInterest}
                       className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-1.5 my-2 text-white font-semibold  focus:outline-none   text-base text-center "
                     >
                       Calculate
@@ -135,13 +147,16 @@ const Hero = ({ setScrollValue }) => {
                       </h5>
                     </div>
 
-                
                     <div className="flex flex-col justify-center items-center border-2 border-[#DF1EFF]  rounded-lg m-5 p-4">
                       <div className="text-6xl font-bold p-2">200</div>
-                      <div className="text-base capitalize">Investors have shown interest</div>
+                      <div className="text-base capitalize">
+                        Investors have shown interest
+                      </div>
                     </div>
 
-                    <div className="m-4 text-lg">Only 100 Slots Available !</div>
+                    <div className="m-4 text-lg">
+                      Only 100 Slots Available !
+                    </div>
 
                     {/* <div className="flex flex-row justify-center items-center">
                       <div>
