@@ -105,17 +105,16 @@ const Hero = ({ setScrollValue }) => {
                         value={amount}
                         onChange={(e) => onChangeData(e)}
                       />
-                      {/* <div className="flex justify-center items-center"> */}
-                      <button
-                        type="button"
-                        onClick={calculateInterest}
-                        className="w-1/2 mt-4 bg-[#007AFF] rounded-lg p-2 py-1.5 my-1 text-white font-semibold  focus:outline-none   text-base text-center "
-                      >
-                        Calculate
-                      </button>
+                      <div className="flex justify-center items-center w-full">
+                        <button
+                          type="button"
+                          onClick={calculateInterest}
+                          className="w-1/2 mt-4 bg-[#007AFF] rounded-lg p-2 py-1.5 my-1 text-white font-semibold  focus:outline-none   text-base text-center "
+                        >
+                          Calculate
+                        </button>
+                      </div>
                     </div>
-
-                    {/* </div> */}
                   </div>
 
                   {/* <div className="col-span-1 hidden sm:block border-r-2 border-gray-500"></div> */}
@@ -132,7 +131,9 @@ const Hero = ({ setScrollValue }) => {
                         </div>
                       </div>
                       <div className="flex flex-col justify-center items-center ml-16 sm:ml-0">
-                        <div className="text-base text-left font-semibold">IRR</div>
+                        <div className="text-base text-left font-semibold">
+                          IRR
+                        </div>
                         <div className="font-bold text-3xl text-[#1A88FF] text-left my-2">
                           18.8%
                         </div>
