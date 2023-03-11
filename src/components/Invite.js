@@ -98,6 +98,9 @@ export default function Invite({ setIsVisible }) {
     const errors = {};
     if (!values.first_name) {
       errors.name = "* Name is required";
+      if ( /[^A-Za-z\d]/.test(values.first_name)) {
+        errors.name = "* No Special Characters is Allowed";
+    }
     }
 
     if (!values.email) {
@@ -106,7 +109,11 @@ export default function Invite({ setIsVisible }) {
 
     if (!values.mobile) {
       errors.mobile = "* Mobile no. is required";
+      if(values.mobile.toString().length!=10){
+        errors.mobile = "* Mobile no. is of 10 Digit ";
+      }
     }
+    
     setIsLoading(false);
     return errors;
   };
