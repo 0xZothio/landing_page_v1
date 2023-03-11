@@ -10,21 +10,23 @@ function ExpLeasing() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    if(searchParams.get("openForm") === "true") {
+    if (searchParams.get("openForm") === "true") {
       setIsVisible(true);
     }
-  }, [])
+  }, []);
 
   return (
     <div>
       {/* banner */}
-      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2]  w-full text-center px-4">
+      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2]  w-full text-center px-4 z-50">
         <h5
           className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
           onClick={() => setIsVisible(true)}
         >
-          Launching soon! An Alternative Investment Opportunity with just ₹1
-          Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+          {/* Launching soon! An Alternative Investment Opportunity with just ₹1
+          Lakh. <span className="font-semibold"> Join the Waitlist! </span> */}
+          Launching Soon! An Alternative Asset Investment Opportunity with just
+          ₹ 9,999. Join the Waitlist!
         </h5>
       </div>
 
@@ -46,7 +48,7 @@ function ExpLeasing() {
             <div className="col-span-4">
               <div className="text-4xl sm:text-6xl font-codec mb-4">
                 What is <br />
-                <span className="text-[#1A88FF]">Assest leasing?</span>
+                <span className="text-[#1A88FF]">Asset Leasing?</span>
               </div>
               <div className="tracking-wide leading-relaxed">
                 Leasing is a simple contractual arrangement calling for the
@@ -71,8 +73,8 @@ function ExpLeasing() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Steady income stream:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Steady income stream
                     </div>
                     <div className="text-sm p-2">
                       Asset leasing offers a low-risk, high-return investment
@@ -81,8 +83,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Diversification:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Diversification
                     </div>
                     <div className="text-sm p-2">
                       By leasing out assets to companies, investors can earn
@@ -91,8 +93,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Limited liability:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Limited liability
                     </div>
                     <div className="text-sm p-2">
                       Companies benefit from leased assets to scale their
@@ -101,18 +103,18 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Potential tax benefits:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Potential tax benefits
                     </div>
                     <div className="text-sm p-2">
                       Investments start at just ₹10,000 and offer the potential
-                      to earn up to 16-20% Pre-Tax IRR.
+                      to earn up to 16-20% Pre Tax IRR.
                     </div>
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Lower capital requirements:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Lower capital requirements
                     </div>
                     <div className="text-sm p-2">
                       Leasing agreements typically have a tenure of 12-36
@@ -122,8 +124,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-sm text-[#1A88FF] font-semibold text-left p-2">
-                      TIP :
+                    <div className="text-sm text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      TIP
                     </div>
                     <div className="text-xs text-gray-500 p-2">
                       Overall, investing in asset leasing can be a smart
@@ -149,8 +151,8 @@ function ExpLeasing() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Due diligence:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Due diligence
                     </div>
                     <div className="text-sm p-2">
                       Zoth conducts thorough due diligence on all leasing
@@ -160,8 +162,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Risk assessment:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Risk assessment
                     </div>
                     <div className="text-sm p-2">
                       Zoth evaluates the risk profile of each leasing
@@ -171,8 +173,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Asset quality:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Asset quality
                     </div>
                     <div className="text-sm p-2">
                       Zoth ensures that the assets being leased out are of high
@@ -182,8 +184,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Financial analysis:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Financial analysis
                     </div>
                     <div className="text-sm p-2">
                       Zoth conducts a comprehensive financial analysis of
@@ -193,8 +195,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Diversification:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Diversification
                     </div>
                     <div className="text-sm p-2">
                       Zoth offers a range of asset leasing opportunities,
@@ -204,8 +206,8 @@ function ExpLeasing() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
-                      Low investment threshold:
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
+                      Low investment threshold
                     </div>
                     <div className="text-sm p-2">
                       With investment opportunities starting at just ₹10,000,
@@ -223,7 +225,7 @@ function ExpLeasing() {
               </div>
             </div>
 
-            {/* waitlist */}
+            {/* Waitlist */}
             <div className="relative col-span-4 flex justify-center items-start z-10  w-full h-full">
               <div className="sm:sticky sm:top-10 rounded-xl shadow-md bg-gradient-to-b from-[#1A88FF]/30 to-[#1A88FF]/10  flex justify-center items-center">
                 <div className="w-full text-center rounded-3xl p-4">
@@ -247,12 +249,12 @@ function ExpLeasing() {
                     </div>
                   </div>
 
-                  <div className="mt-2">Ready To Grow Your Investments?</div>
+                  <div className="mt-4">Ready To Grow Your Investments?</div>
 
                   <button
                     type="button"
                     onClick={() => setIsVisible(true)}
-                    className="w-2/3 rounded-full px-2 py-2 mt-2 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
+                    className="w-2/3 rounded-full px-2 py-2 mt-4 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                   >
                     Join Waitlist
                   </button>

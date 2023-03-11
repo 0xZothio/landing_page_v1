@@ -48,10 +48,11 @@ const Navbar = ({ setIsVisible }) => {
       {console.log(section)}
       <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2] z-50 w-full text-center px-4">
         <h5
-          className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2 z-50"
+          className="text-white capitalize text-xs sm:text-[1rem] font-semibold cursor-pointer p-2 z-50"
           onClick={() => setIsVisible(true)}
         >
-           Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Whitelist! </span>
+           {/* Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span> */}
+           Launching Soon! An Alternative Asset Investment Opportunity with just ₹ 9,999. Join the Waitlist!
         </h5>
       </div>
       {!mobileMenuOpen && (
@@ -160,12 +161,12 @@ const Navbar = ({ setIsVisible }) => {
             </div> */}
           </div>
           <div className="hidden md:flex md:min-w-0 md:flex-1 md:justify-end md:gap-x-6 px-20">
-            <button
+            {/* <button
               className="inline-block rounded-full px-6 py-1 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
               onClick={() => setIsVisible(true)}
             >
-              Join Whitelist{" "}
-            </button>
+              Join Waitlist{" "}
+            </button> */}
           </div>
         </motion.nav>
       )}
@@ -209,14 +210,14 @@ const Navbar = ({ setIsVisible }) => {
                   </a>
                 ))}
               </div>
-              <div className="py-6 space-y-2 text-center">
+              {/* <div className="py-6 space-y-2 text-center">
                 <button
                   className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
                   onClick={() => setIsVisible(true)}
                 >
-                 Join Whitelist
+                 Join Waitlist
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </Dialog.Panel>

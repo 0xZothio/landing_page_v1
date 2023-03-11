@@ -10,27 +10,29 @@ function ExpInvoice() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    if(searchParams.get("openForm") === "true") {
+    if (searchParams.get("openForm") === "true") {
       setIsVisible(true);
     }
-  }, [])
+  }, []);
 
   return (
     <>
-      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2] w-full text-center px-4">
+      <div className="fixed top-0 left-0 shadow-lg bg-gradient-to-r from-[#D44FE9] to-[#3B84D2] w-full text-center px-4 z-50">
         <h5
           className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
           onClick={() => setIsVisible(true)}
         >
-          Launching soon! An Alternative Investment Opportunity with just ₹1
-          Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+          {/* Launching soon! An Alternative Investment Opportunity with just ₹1
+          Lakh. <span className="font-semibold"> Join the Waitlist! </span> */}
+          Launching Soon! An Alternative Asset Investment Opportunity with just
+          ₹ 9,999. Join the Waitlist!
         </h5>
       </div>
 
       {/* invite popup */}
       {isVisible && <Invite setIsVisible={setIsVisible} />}
 
-      <div  className="bg-black text-white w-full h-full ">
+      <div className="bg-black text-white w-full h-full ">
         {/* heading */}
         <div className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10">
           <Link to="/" className="">
@@ -66,7 +68,7 @@ function ExpInvoice() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       High returns & low risk
                     </div>
                     <div className="text-sm p-2">
@@ -75,7 +77,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Diversify your portfolio
                     </div>
                     <div className="text-sm p-2">
@@ -85,7 +87,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Short investment horizon
                     </div>
                     <div className="text-sm p-2">
@@ -94,7 +96,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Lower default risk
                     </div>
                     <div className="text-sm p-2">
@@ -104,7 +106,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Control your investments
                     </div>
                     <div className="text-sm p-2">
@@ -139,7 +141,7 @@ function ExpInvoice() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Minimal Risk
                     </div>
                     <div className="text-sm p-2">
@@ -149,7 +151,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Short-term Maturity
                     </div>
                     <div className="text-sm p-2">
@@ -158,7 +160,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Pay Partial or Full
                     </div>
                     <div className="text-sm p-2">
@@ -168,7 +170,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       High Returns
                     </div>
                     <div className="text-sm p-2">
@@ -177,7 +179,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Risk Analysis
                     </div>
                     <div className="text-sm p-2">
@@ -187,7 +189,7 @@ function ExpInvoice() {
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
-                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2">
+                    <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Quick and Easy Process
                     </div>
                     <div className="text-sm p-2">
@@ -199,7 +201,7 @@ function ExpInvoice() {
               </div>
             </div>
 
-            {/* waitlist */}
+            {/* Waitlist */}
             <div className="relative col-span-4 flex justify-center items-start w-full">
               <div className="sm:sticky sm:top-10 rounded-xl shadow-md bg-gradient-to-b from-[#1A88FF]/30 to-[#1A88FF]/10  flex justify-center items-center">
                 <div className="w-full text-center rounded-3xl p-4">
@@ -223,12 +225,12 @@ function ExpInvoice() {
                     </div>
                   </div>
 
-                  <div className="mt-2">Ready To Grow Your Investments?</div>
+                  <div className="mt-4">Ready To Grow Your Investments?</div>
 
                   <button
                     type="button"
                     onClick={() => setIsVisible(true)}
-                    className="w-2/3 rounded-full px-2 py-2 mt-2  bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
+                    className="w-2/3 rounded-full px-2 py-2 mt-4  bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black bg-[#007AFF] mb-8"
                   >
                     Join Waitlist
                   </button>

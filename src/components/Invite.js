@@ -36,10 +36,27 @@ export default function Invite({ setIsVisible }) {
   const invite = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setFormErrors(validate(inviteData));
-    console.log("inviteData", inviteData);
+    let errorData = validate(inviteData);
+    setFormErrors({ ...errorData });
+
     try {
-      if (inviteData.email && inviteData.mobile && inviteData.first_name) {
+      if (formErrors.first_name || formErrors.email || formErrors.mobile) {
+        console.log("Terminating Request");
+        console.log("form errors", formErrors);
+        return;
+      }
+
+      console.log(
+        "Object.keys(formErrors).length",
+        Object.keys(formErrors).length
+      );
+        
+      if (
+        Object.keys(formErrors).length === 0 &&
+        inviteData.email &&
+        inviteData.mobile &&
+        inviteData.first_name
+      ) {
         let data = await axios.post(
           `https://backend.zoth.io/waitlist/createUser`,
           {
@@ -55,6 +72,8 @@ export default function Invite({ setIsVisible }) {
             },
           }
         );
+        showMessage(1);
+        disconnect();
       }
       // if (inviteData.email && inviteData.mobile) {
       //   await axios.post(
@@ -84,8 +103,6 @@ export default function Invite({ setIsVisible }) {
       //   // showMessage(5);
       //   setIsLoading(false);
       // }
-      showMessage(1);
-      disconnect();
     } catch (error) {
       console.log("error", error);
       setIsLoading(false);
@@ -96,8 +113,20 @@ export default function Invite({ setIsVisible }) {
   // validation
   const validate = (values) => {
     const errors = {};
+    var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    var numFormat = /[0-9]/g;
     if (!values.first_name) {
-      errors.name = "* Name is required";
+      errors.first_name = "* Name is required";
+    }
+
+    if (values.first_name && values.first_name.match(format) ? true : false) {
+      errors.first_name = "* Special characters are not allowed ";
+    }
+
+    if (
+      values.first_name && values.first_name.match(numFormat) ? true : false
+    ) {
+      errors.first_name = "* Numbers are not allowed ";
     }
 
     if (!values.email) {
@@ -105,8 +134,17 @@ export default function Invite({ setIsVisible }) {
     }
 
     if (!values.mobile) {
-      errors.mobile = "* Mobile no. is required";
+      errors.mobile = "* Phone is required";
     }
+    if (values.mobile && values.mobile.match(format) ? true : false) {
+      errors.mobile = "* Special characters are not allowed ";
+    }
+
+    if (values.mobile && values.mobile.length !== 10) {
+      errors.mobile = "* Phone should be 10 digits";
+    }
+
+    console.log("errors", errors);
     setIsLoading(false);
     return errors;
   };
@@ -262,7 +300,11 @@ export default function Invite({ setIsVisible }) {
                         value={inviteData.first_name}
                         onChange={(e) => onChangeData(e)}
                       />
-                      <p className="text-sm text-red-500 ">{formErrors.name}</p>
+                      {formErrors.first_name ? (
+                        <p className="text-sm text-red-500 ">
+                          {formErrors.first_name}
+                        </p>
+                      ) : null}
                     </div>
                     <div>
                       <label
@@ -277,7 +319,7 @@ export default function Invite({ setIsVisible }) {
                         id="mobile"
                         className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         placeholder=""
-                        required={true}
+                        required
                         value={inviteData.mobile}
                         onChange={(e) => onChangeData(e)}
                       />
@@ -321,9 +363,11 @@ export default function Invite({ setIsVisible }) {
                           setInviteData({ ...inviteData, mobile: value });
                         }}
                       /> */}
-                      <p className="text-sm text-red-500 ">
-                        {formErrors.mobile}
-                      </p>
+                      {formErrors.mobile ? (
+                        <p className="text-sm text-red-500 ">
+                          {formErrors.mobile}
+                        </p>
+                      ) : null}
                     </div>
                   </div>
                   {/* <div>
@@ -359,11 +403,15 @@ export default function Invite({ setIsVisible }) {
                       id="email"
                       className=" border text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                       placeholder=""
-                      required={true}
+                      required
                       value={inviteData.email}
                       onChange={(e) => onChangeData(e)}
                     />
-                    <p className="text-sm text-red-500 ">{formErrors.email}</p>
+                    {formErrors.email ? (
+                      <p className="text-sm text-red-500 ">
+                        {formErrors.email}
+                      </p>
+                    ) : null}
                   </div>
                   <div>
                     <label
