@@ -10,10 +10,10 @@ function ExpInvoice() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    if(searchParams.get("openForm") === "true") {
+    if (searchParams.get("openForm") === "true") {
       setIsVisible(true);
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -22,15 +22,17 @@ function ExpInvoice() {
           className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
           onClick={() => setIsVisible(true)}
         >
-          Launching soon! An Alternative Investment Opportunity with just ₹1
-          Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+          {/* Launching soon! An Alternative Investment Opportunity with just ₹1
+          Lakh. <span className="font-semibold"> Join the Waitlist! </span> */}
+          Launching Soon! An Alternative Asset Investment Opportunity with just
+          ₹ 9,999. Join the Waitlist!
         </h5>
       </div>
 
       {/* invite popup */}
       {isVisible && <Invite setIsVisible={setIsVisible} />}
 
-      <div  className="bg-black text-white w-full h-full ">
+      <div className="bg-black text-white w-full h-full ">
         {/* heading */}
         <div className="flex flex-col justify-center items-center mb-4 p-4 sm:p-10">
           <Link to="/" className="">

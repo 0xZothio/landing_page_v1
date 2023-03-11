@@ -52,58 +52,98 @@ const Hero = ({ setScrollValue }) => {
           className="relative px-6 lg:px-8 h-full"
         >
           <div className="mx-auto min-h-screen flex justify-center items-center">
-            <div className=" flex justify-center flex-col md:flex-row h-full pb-20">
-              <div className="md:w-3/5 w-full md:ml-12">
-                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A88FF] to-[#1A88FF]/50  text-4xl font-codec sm:text-[60px] 2xl:text-[70px] font-extrabold leading-tight text-center md:text-left tracking-normal ">
-                  A Revolutionary New Age Investment Platform
-                </h1>
-                <p className="md:mt-6 leading-8 text-center md:text-left text-2xl mt-8">
-                  Join the Zoth Club and let your investments work for you
+            <div className=" flex justify-center items-center flex-col md:flex-row h-full pb-20">
+              <div className="w-full md:ml-14">
+                <div className="text-xl md:text-2xl text-center md:text-left font-semibold mb-2">
+                  Gateway to Alternate Assets:
+                </div>
+                <div className="text-2xl font-codec sm:text-[50px] 2xl:text-[60px] font-extrabold capitalize text-center md:text-left tracking-normal leading-tight">
+                  Invest into generating{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A88FF] to-[#1A88FF]  ">
+                    Sustainable passive income
+                  </span>
+                </div>
+                <p className=" leading-8 text-center md:text-left  md:text-xl text-[#C1C1C1] ">
+                  Join the Zoth waitlist and earn money while you sleep
                 </p>
-                {/* <div className="flex mt-4 justify-center flex-wrap items-center">
-                    <div>
-                      <p className=" text-md mx-4 sm:text-center">
-                        Join Our Community
-                      </p>
-                      <ul className="flex gap-6 mx-8 ">
-                        <li>
-                          <a
-                            href="https://t.me/+nFUrC_I1hA1iNWU9"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="text-gray-700 transition hover:opacity-75"
-                          >
-                            <span className="sr-only">Telegram</span>
-                            <FaTelegramPlane size={40} color="white" />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://twitter.com/zothdotio"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="text-gray-700 transition hover:opacity-75"
-                          >
-                            <span className="sr-only">Twitter</span>
-                            <FaTwitter size={40} color="white" />
-                          </a>
-                        </li>
-                      </ul>
+
+                <div className="grid sm:grid-cols-8 border mt-6 rounded-lg">
+                  {/* Calculate */}
+                  <div className="col-span-3 p-4">
+                    <div className="text-sm">
+                      Calculate Your Expected Returns
                     </div>
-                  </div> */}
+                    <input
+                      type="number"
+                      name="amount"
+                      id="amount"
+                      className=" border text-sm font-bold block rounded w-full my-2 p-1.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      placeholder=""
+                      required={true}
+                      // value={amount}
+                      // onChange={(e) => onChangeData(e)}
+                    />
+                    <button
+                      type="button"
+                      // onClick={}
+                      className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-1.5 my-2 text-white font-semibold  focus:outline-none   text-base text-center "
+                    >
+                      Calculate
+                    </button>
+                  </div>
+
+                  <div className="col-span-1 hidden sm:block border-r-2 border-gray-500"></div>
+
+                  {/* other section */}
+                  <div className="col-span-3 p-4">
+                    <div className="flex flex-row justify-around">
+                      <div className="">
+                        <div className="text-sm">Expected Returns*</div>
+                        <div className="font-bold text-3xl text-center">
+                          ₹12,000
+                        </div>
+                      </div>
+                      <div className="">
+                        <div className="text-sm">IRR</div>
+                        <div className="font-bold text-3xl text-center">
+                          18.8%
+                        </div>
+                      </div>
+                    </div>
+
+                    <a
+                      type="button"
+                      href="#offerings"
+                      // onClick={() => setIsVisible(true)}
+                      className="w-2/3 rounded-full px-2 py-1.5 mt-6 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-semibold ring-[1px] focus:outline-none   text-base text-center hover:bg-gray-200 hover:text-black bg-[#007AFF]  border"
+                    >
+                      Join Waitlist
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="relative flex justify-center my-2 mx-auto items-center mt-12 md:w-2/5 md:mt-0 w-full h-full">
-                <div className="rounded-xl shadow-md  bg-black border border-slate-500 flex justify-center items-center">
-                  <div className="w-full text-center rounded-3xl bg-black">
+
+              <div className="relative flex justify-center my-4 mx-auto items-center md:mt-0 w-full h-full">
+                <div className="rounded-xl shadow-md  bg-[#192A3B]/20  flex justify-center items-center">
+                  <div className="w-full text-center rounded-3xl bg-[#192A3B]/20">
                     <div className="rounded-xl shadow-lg bg-gradient-to-b from-[#1A88FF]/50 to-[#1A88FF]/10  w-full text-center p-2 px-4">
-                      <h5 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB2EFF] to-[#4FDCFF] text-xl font-bold mb-4 p-2">
-                        Invest In Real Estate Opportunity With Just
+                      <h5 className="capitalize text-white  text-xl font-bold mb-4 p-2">
+                        exclusive access to our upcoming deals
                       </h5>
-                      <h5 className="text-[#FB2EFF] text-3xl font-medium mb-2">
-                        ₹ 1 Lakh !
+                      <h5 className="text-white capitalize text-3xl font-medium mb-2">
+                        Start investing With ₹9,999!
                       </h5>
                     </div>
-                    <div className="flex flex-row justify-center items-center">
+
+                
+                    <div className="flex flex-col justify-center items-center border-2 border-[#DF1EFF]  rounded-lg m-5 p-4">
+                      <div className="text-6xl font-bold p-2">200</div>
+                      <div className="text-base capitalize">Investors have shown interest</div>
+                    </div>
+
+                    <div className="m-4 text-lg">Only 100 Slots Available !</div>
+
+                    {/* <div className="flex flex-row justify-center items-center">
                       <div>
                         <IoIosWarning className="text-[#f44336] mt-2 text-8xl sm:text-8xl" />
                       </div>
@@ -113,10 +153,10 @@ const Hero = ({ setScrollValue }) => {
                           Slots Available
                         </h5>
                         <p className="text-white text-5xl font-bold">
-                          {waitlistUsers ? waitlistUsers : 500}
+                          {waitlistUsers ? waitlistUsers : 200}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
 
                     <a
                       type="button"

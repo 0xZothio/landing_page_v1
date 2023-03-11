@@ -10,10 +10,10 @@ function ExpLeasing() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    if(searchParams.get("openForm") === "true") {
+    if (searchParams.get("openForm") === "true") {
       setIsVisible(true);
     }
-  }, [])
+  }, []);
 
   return (
     <div>
@@ -23,8 +23,10 @@ function ExpLeasing() {
           className="text-white text-xs sm:text-[1rem] font-semibold cursor-pointer p-2"
           onClick={() => setIsVisible(true)}
         >
-          Launching soon! An Alternative Investment Opportunity with just ₹1
-          Lakh. <span className="font-semibold"> Join the Waitlist! </span>
+          {/* Launching soon! An Alternative Investment Opportunity with just ₹1
+          Lakh. <span className="font-semibold"> Join the Waitlist! </span> */}
+          Launching Soon! An Alternative Asset Investment Opportunity with just
+          ₹ 9,999. Join the Waitlist!
         </h5>
       </div>
 
@@ -123,7 +125,7 @@ function ExpLeasing() {
 
                   <div className="  bg-[#111111] rounded-lg p-4">
                     <div className="text-sm text-[#1A88FF] font-semibold text-left p-2 capitalize">
-                      TIP 
+                      TIP
                     </div>
                     <div className="text-xs text-gray-500 p-2">
                       Overall, investing in asset leasing can be a smart
