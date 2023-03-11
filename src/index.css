@@ -61,6 +61,13 @@ code {
   width: 350px;
   
 }
+.slot{
+  border-style: solid;
+  border-image: linear-gradient(to bottom, rgba(26, 136, 255, 0.5), rgba(223, 30, 255, 0.5)) 1;
+  
+  
+  /* border-color: linear-gradient(rgba(26, 136, 255, 0.5), rgba(223, 30, 255, 0.5)); */
+}
 
 .card:hover {
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px;
