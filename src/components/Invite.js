@@ -38,14 +38,25 @@ export default function Invite({ setIsVisible }) {
     setIsLoading(true);
     let errorData = validate(inviteData);
     setFormErrors({ ...errorData });
-    
+
     try {
       if (formErrors.first_name || formErrors.email || formErrors.mobile) {
         console.log("Terminating Request");
         console.log("form errors", formErrors);
         return;
       }
-      if (inviteData.email && inviteData.mobile && inviteData.first_name) {
+
+      console.log(
+        "Object.keys(formErrors).length",
+        Object.keys(formErrors).length
+      );
+        
+      if (
+        Object.keys(formErrors).length === 0 &&
+        inviteData.email &&
+        inviteData.mobile &&
+        inviteData.first_name
+      ) {
         let data = await axios.post(
           `https://backend.zoth.io/waitlist/createUser`,
           {
@@ -103,19 +114,20 @@ export default function Invite({ setIsVisible }) {
   const validate = (values) => {
     const errors = {};
     var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    var numFormat= /[0-9]/g
+    var numFormat = /[0-9]/g;
     if (!values.first_name) {
       errors.first_name = "* Name is required";
     }
-    
-    if ( values.first_name && values.first_name.match(format) ? true : false ) {
+
+    if (values.first_name && values.first_name.match(format) ? true : false) {
       errors.first_name = "* Special characters are not allowed ";
     }
 
-    if ( values.first_name && values.first_name.match(numFormat) ? true : false ) {
+    if (
+      values.first_name && values.first_name.match(numFormat) ? true : false
+    ) {
       errors.first_name = "* Numbers are not allowed ";
     }
-
 
     if (!values.email) {
       errors.email = "* Email is required";
@@ -123,13 +135,15 @@ export default function Invite({ setIsVisible }) {
 
     if (!values.mobile) {
       errors.mobile = "* Phone is required";
-      
     }
-    if ( values.mobile && values.mobile.length !== 10) {
+    if (values.mobile && values.mobile.match(format) ? true : false) {
+      errors.mobile = "* Special characters are not allowed ";
+    }
+
+    if (values.mobile && values.mobile.length !== 10) {
       errors.mobile = "* Phone should be 10 digits";
     }
 
-    
     console.log("errors", errors);
     setIsLoading(false);
     return errors;
