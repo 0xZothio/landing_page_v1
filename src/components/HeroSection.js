@@ -13,8 +13,9 @@ import { IoIosWarning } from "react-icons/io";
 
 const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [waitlistUsers, setWaitlistUsers] = useState(0);
+  const [slotsLeft, setSlotsLeft] = useState(0);
   const [amount, setAmount] = useState(10000);
+  const [expReturn, setExpReturn] = useState(12000);
 
   useEffect(() => {
     (async () => {
@@ -26,7 +27,7 @@ const Hero = ({ setScrollValue }) => {
           },
         }
       );
-      setWaitlistUsers(res.data.data.slotsLeft);
+      setSlotsLeft(res.data.data.slotsLeft);
     })();
   }, []);
 
@@ -37,7 +38,15 @@ const Hero = ({ setScrollValue }) => {
 
   const calculateInterest = () => {
     console.log("calculateInterest amount", amount);
+    let interest = amount * 0.2;
+    console.log("interest", interest);
+    let profit = parseInt(amount) + parseInt(interest);
+
+    console.log("profit", typeof profit);
+    setExpReturn(Math.round(profit));
   };
+
+  console.log("expReturn", expReturn);
 
   return (
     <div
@@ -64,7 +73,7 @@ const Hero = ({ setScrollValue }) => {
           className="relative px-6 lg:px-8 h-full"
         >
           <div className="mx-auto min-h-screen flex justify-center items-center">
-            <div className=" flex justify-center items-center flex-col md:flex-row h-full pb-20">
+            <div className=" flex justify-center items-center flex-col md:flex-row h-full pb-20 mt-10 sm:mt-0">
               <div className="w-full md:ml-14">
                 <div className="text-xl md:text-2xl text-center md:text-left font-semibold mb-2">
                   Gateway to Alternate Assets:
@@ -79,58 +88,67 @@ const Hero = ({ setScrollValue }) => {
                   Join the Zoth waitlist and earn money while you sleep
                 </p>
 
-                <div className="grid sm:grid-cols-8 border mt-6 rounded-lg">
+                <div className="grid sm:grid-cols-3 gap-4  sm:w-3/4 border mt-6 rounded-lg">
                   {/* Calculate */}
-                  <div className="col-span-3 p-4">
-                    <div className="text-sm">
-                      Calculate Your Expected Returns
+                  <div className="col-span-2 p-2 border-r-2 border-gray-500">
+                    <div className="flex flex-col justify-center sm:justify-start sm:items-start items-center p-4">
+                      <div className="text-sm ">
+                        Calculate Your Expected Returns
+                      </div>
+                      <input
+                        type="number"
+                        name="amount"
+                        id="amount"
+                        className=" border text-sm font-bold block rounded w-full my-4 p-1.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        placeholder=""
+                        required={true}
+                        value={amount}
+                        onChange={(e) => onChangeData(e)}
+                      />
+                      {/* <div className="flex justify-center items-center"> */}
+                      <button
+                        type="button"
+                        onClick={calculateInterest}
+                        className="w-1/2 mt-4 bg-[#007AFF] rounded-lg p-2 py-1.5 my-1 text-white font-semibold  focus:outline-none   text-base text-center "
+                      >
+                        Calculate
+                      </button>
                     </div>
-                    <input
-                      type="number"
-                      name="amount"
-                      id="amount"
-                      className=" border text-sm font-bold block rounded w-full my-2 p-1.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
-                      placeholder=""
-                      required={true}
-                      // value={amount}
-                      onChange={(e) => onChangeData(e)}
-                    />
-                    <button
-                      type="button"
-                      onClick={calculateInterest}
-                      className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-1.5 my-2 text-white font-semibold  focus:outline-none   text-base text-center "
-                    >
-                      Calculate
-                    </button>
+
+                    {/* </div> */}
                   </div>
 
-                  <div className="col-span-1 hidden sm:block border-r-2 border-gray-500"></div>
+                  {/* <div className="col-span-1 hidden sm:block border-r-2 border-gray-500"></div> */}
 
                   {/* other section */}
-                  <div className="col-span-3 p-4">
-                    <div className="flex flex-row justify-around">
+                  <div className="col-span-1 p-2">
+                    <div className="flex flex-row sm:flex-col justify-center p-4">
                       <div className="">
-                        <div className="text-sm">Expected Returns*</div>
-                        <div className="font-bold text-3xl text-center">
-                          ₹12,000
+                        <div className="text-sm text-left">
+                          Expected Returns*
+                        </div>
+                        <div className="font-bold text-3xl text-[#1A88FF] text-left my-2">
+                          ₹{expReturn || 12000}
                         </div>
                       </div>
-                      <div className="">
-                        <div className="text-sm">IRR</div>
-                        <div className="font-bold text-3xl text-center">
+                      <div className="ml-16 sm:ml-0">
+                        <div className="text-sm text-left">IRR</div>
+                        <div className="font-bold text-3xl text-[#1A88FF] text-left my-2">
                           18.8%
                         </div>
                       </div>
                     </div>
-
-                    <a
-                      type="button"
-                      href="#offerings"
-                      // onClick={() => setIsVisible(true)}
-                      className="w-2/3 rounded-full px-2 py-1.5 mt-6 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-semibold ring-[1px] focus:outline-none   text-base text-center hover:bg-gray-200 hover:text-black bg-[#007AFF]  border"
-                    >
-                      Join Waitlist
-                    </a>
+                    {/* 
+                    <div className="flex justify-center items-center">
+                      <a
+                        type="button"
+                        href="#offerings"
+                        // onClick={() => setIsVisible(true)}
+                        className="w-2/3 rounded-full px-2 py-1.5 mt-6 bg-gradient-to-r from-[#FB2EFF] to-[#1A88FF] text-white tracking-wider font-semibold ring-[1px] focus:outline-none   text-base text-center hover:bg-gray-200 hover:text-black bg-[#007AFF]  border"
+                      >
+                        Join Waitlist
+                      </a>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -147,16 +165,17 @@ const Hero = ({ setScrollValue }) => {
                       </h5>
                     </div>
 
-                
                     <div className="slot flex flex-col justify-center items-center border-2 m-5 p-4">
-                      <div className="text-6xl font-bold p-2">200</div>
+                      <div className="text-6xl font-bold p-2">
+                        {slotsLeft - 200}
+                      </div>
                       <div className="text-base capitalize">
                         Investors have shown interest
                       </div>
                     </div>
 
                     <div className="m-4 text-lg">
-                      Only 100 Slots Available !
+                      Only {slotsLeft} Slots Available !
                     </div>
 
                     {/* <div className="flex flex-row justify-center items-center">
