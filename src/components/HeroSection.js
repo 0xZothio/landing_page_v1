@@ -88,18 +88,18 @@ const Hero = ({ setScrollValue }) => {
                   Join the Zoth waitlist and earn money while you sleep
                 </p>
 
-                <div className="grid sm:grid-cols-3 gap-4  sm:w-3/4 border mt-6 rounded-lg">
+                <div className="grid sm:grid-cols-4 gap-4  sm:w-3/4 border mt-6 rounded-lg">
                   {/* Calculate */}
                   <div className="col-span-2 p-2 border-r-2 border-gray-500">
                     <div className="flex flex-col justify-center sm:justify-start sm:items-start items-center p-4">
-                      <div className="text-sm ">
+                      <div className="text-sm font-semibold ">
                         Calculate Your Expected Returns
                       </div>
                       <input
                         type="number"
                         name="amount"
                         id="amount"
-                        className=" border text-sm font-bold block rounded w-full my-4 p-1.5 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                        className=" border text-sm font-bold block rounded w-full my-4 p-2 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
                         placeholder=""
                         required={true}
                         value={amount}
@@ -121,10 +121,10 @@ const Hero = ({ setScrollValue }) => {
                   {/* <div className="col-span-1 hidden sm:block border-r-2 border-gray-500"></div> */}
 
                   {/* other section */}
-                  <div className="col-span-1 p-2">
+                  <div className="col-span-2 p-2">
                     <div className="flex flex-row sm:flex-col justify-center p-4">
                       <div className="">
-                        <div className="text-sm text-left">
+                        <div className="text-base text-left font-semibold">
                           Expected Returns*
                         </div>
                         <div className="font-bold text-3xl text-[#1A88FF] text-left my-2">
@@ -132,7 +132,7 @@ const Hero = ({ setScrollValue }) => {
                         </div>
                       </div>
                       <div className="ml-16 sm:ml-0">
-                        <div className="text-sm text-left">IRR</div>
+                        <div className="text-base text-left font-semibold">IRR</div>
                         <div className="font-bold text-3xl text-[#1A88FF] text-left my-2">
                           18.8%
                         </div>
@@ -155,7 +155,7 @@ const Hero = ({ setScrollValue }) => {
 
               <div className="relative flex justify-center my-4 mx-auto items-center md:mt-0 w-full h-full">
                 <div className="rounded-xl shadow-md  bg-[#192A3B]/20  flex justify-center items-center">
-                  <div className="w-full text-center rounded-3xl bg-[#192A3B]/20">
+                  <div className="w-full text-center rounded-3xl bg-[#192A3B]/20 ">
                     <div className="rounded-xl shadow-lg bg-gradient-to-b from-[#1A88FF]/50 to-[#1A88FF]/10  w-full text-center p-2 px-4">
                       <h5 className="capitalize text-white  text-xl font-bold mb-4 p-2">
                         exclusive access to our upcoming deals
