@@ -147,7 +147,8 @@ const Hero = ({ setScrollValue }) => {
                       </h5>
                     </div>
 
-                    <div className="flex flex-col justify-center items-center border-2 border-[#DF1EFF]  rounded-lg m-5 p-4">
+                
+                    <div className="slot flex flex-col justify-center items-center border-2 m-5 p-4">
                       <div className="text-6xl font-bold p-2">200</div>
                       <div className="text-base capitalize">
                         Investors have shown interest
