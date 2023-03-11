@@ -210,14 +210,14 @@ const Navbar = ({ setIsVisible }) => {
                   </a>
                 ))}
               </div>
-              <div className="py-6 space-y-2 text-center">
+              {/* <div className="py-6 space-y-2 text-center">
                 <button
                   className="inline-block rounded-full px-3 py-2 text-base font-semibold text-white hover:text-black hover:bg-white shadow-sm ring-1 ring-white hover:ring-white"
                   onClick={() => setIsVisible(true)}
                 >
                  Join Waitlist
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </Dialog.Panel>
