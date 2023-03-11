@@ -123,7 +123,7 @@ const Hero = ({ setScrollValue }) => {
                   {/* other section */}
                   <div className="col-span-2 p-2">
                     <div className="flex flex-row sm:flex-col justify-center p-4">
-                      <div className="">
+                      <div className="flex flex-col justify-center items-center">
                         <div className="text-base text-left font-semibold">
                           Expected Returns*
                         </div>
@@ -131,7 +131,7 @@ const Hero = ({ setScrollValue }) => {
                           ₹{expReturn || 12000}
                         </div>
                       </div>
-                      <div className="ml-16 sm:ml-0">
+                      <div className="flex flex-col justify-center items-center ml-16 sm:ml-0">
                         <div className="text-base text-left font-semibold">IRR</div>
                         <div className="font-bold text-3xl text-[#1A88FF] text-left my-2">
                           18.8%
