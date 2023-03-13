@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { toast } from "react-toastify";
 // import PhoneInput from "react-phone-input-2";
 // import waitlist from "../assets/images/waitlist.png";
@@ -17,8 +17,14 @@ export default function Invite({ setIsVisible }) {
     mobile: "",
     amount: 0,
     linkedin: "",
-    address: address ? address : "",
+    walletAddress: address ? address : "",
   });
+
+  useEffect(() => {
+    setInviteData({ walletAddress: address ? address : "" });
+  }, [address]);
+
+  console.log("address", inviteData.walletAddress);
 
   const [formErrors, setFormErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -62,14 +68,17 @@ export default function Invite({ setIsVisible }) {
         inviteData.mobile &&
         inviteData.first_name
       ) {
+        console.log("inviteData", inviteData);
+
         let data = await axios.post(
           `https://backend.zoth.io/waitlist/createUser`,
           {
             name: inviteData.first_name,
             email: inviteData.email,
-            phone: inviteData.mobile.toString(),
-            amount: inviteData.amount.toString(),
-            walletAddress: inviteData.address,
+            phone: inviteData?.mobile.toString(),
+            amount: inviteData?.amount.toString(),
+            walletAddress: inviteData.walletAddress,
+            linkedIn: inviteData.linkedin,
           },
           {
             headers: {
@@ -273,7 +282,7 @@ export default function Invite({ setIsVisible }) {
             </div>
           ) : (
             <div className="flex flex-col sm:flex-row justify-center items-center ">
-              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4 h-full">
+              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4 h-screen">
                 <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
                   Join The Waitlist To Earn An IRR Of Upto 22%
                 </h3>
@@ -299,7 +308,7 @@ export default function Invite({ setIsVisible }) {
                 <p className="my-2">
                   ✅ Generate passive income with monthly repayments
                 </p>
-                <div className="space-y-6" style={{ marginTop: "30px" }}>
+                <div className="">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label
@@ -514,32 +523,33 @@ export default function Invite({ setIsVisible }) {
                         25000+
                       </button>
                     </div>
+
                     <div className="mb-3">
                       <ConnectKitButton />
                     </div>
                   </div>
 
-                  <div className="flex justify-center items-center flex-col">
-                    {isLoading ? (
-                      <button
-                        type="button"
-                        className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
-                      >
-                        <div className="flex items-center justify-center ">
-                          <div className="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
-                        </div>
-                      </button>
-                    ) : (
-                      <>
+                    <div className="flex justify-center items-center flex-col">
+                      {isLoading ? (
                         <button
                           type="button"
-                          onClick={invite}
-                          className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
+                          className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
                         >
-                          Submit Form
+                          <div className="flex items-center justify-center ">
+                            <div className="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                          </div>
                         </button>
-                      </>
-                    )}
+                      ) : (
+                        <>
+                          <button
+                            type="button"
+                            onClick={invite}
+                            className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
+                          >
+                            Submit Form
+                          </button>
+                        </>
+                      )}
                   </div>
                 </div>
               </div>
