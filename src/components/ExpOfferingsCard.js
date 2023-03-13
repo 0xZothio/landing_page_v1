@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const ExpOfferingsCard = () => {
   return (
-    <div className="bg-black text-white w-full h-full sm:mt-14">
+    <div className="bg-black text-white w-full h-full sm:mt-14 min-h-screen">
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         initial="hidden"
