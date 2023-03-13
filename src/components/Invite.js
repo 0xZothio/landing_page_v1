@@ -21,7 +21,7 @@ export default function Invite({ setIsVisible }) {
   });
 
   useEffect(() => {
-    setInviteData({ walletAddress: address ? address : "" });
+    setInviteData({ ...inviteData, walletAddress: address ? address : "" });
   }, [address]);
 
   console.log("address", inviteData.walletAddress);
