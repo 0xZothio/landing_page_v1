@@ -78,14 +78,14 @@ const Hero = ({ setScrollValue }) => {
                 <div className="text-xl md:text-2xl text-center md:text-left font-semibold mb-2">
                   Gateway to Alternate Assets:
                 </div>
-                <div className="text-2xl font-codec sm:text-[50px] 2xl:text-[60px] font-extrabold capitalize text-center md:text-left tracking-normal leading-tight">
-                  Invest into generating{" "}
+                <div className="text-2xl font-codec sm:text-5xl font-extrabold capitalize text-center md:text-left tracking-normal leading-loose">
+                  Invest into sustainable {/* Invest into generating {" "} */}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A88FF] to-[#1A88FF]  ">
-                    Sustainable passive income
+                    passive income generating assets
                   </span>
                 </div>
-                <p className=" leading-8 text-center md:text-left  md:text-xl text-[#C1C1C1] ">
-                  Join the Zoth waitlist and earn money while you sleep
+                <p className=" leading-8 capitalize text-center md:text-left  md:text-xl text-[#C1C1C1] ">
+                  Join the Zoth waitlist and earn money while you sleep!
                 </p>
 
                 <div className="grid sm:grid-cols-4 gap-4  sm:w-3/4 border mt-6 rounded-lg">
@@ -168,7 +168,7 @@ const Hero = ({ setScrollValue }) => {
 
                     <div className="slot flex flex-col justify-center items-center border-2 m-5 p-4">
                       <div className="text-6xl font-bold p-2">
-                        {slotsLeft - 200}
+                        {200 + 400 - slotsLeft}
                       </div>
                       <div className="text-base capitalize">
                         Investors have shown interest
@@ -176,7 +176,7 @@ const Hero = ({ setScrollValue }) => {
                     </div>
 
                     <div className="m-4 text-lg">
-                      Only {slotsLeft} Slots Available !
+                      Only {slotsLeft - 200} Slots Available !
                     </div>
 
                     {/* <div className="flex flex-row justify-center items-center">

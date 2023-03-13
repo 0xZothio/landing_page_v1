@@ -1,11 +1,13 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { toast } from "react-toastify";
 // import PhoneInput from "react-phone-input-2";
 // import waitlist from "../assets/images/waitlist.png";
 import { useAccount, useDisconnect } from "wagmi";
 import { ConnectKitButton } from "connectkit";
 import { cashfreeOrder } from "../utils/cashfree.js";
+import { FcInfo } from "react-icons/fc";
+
 export default function Invite({ setIsVisible }) {
   const { address, isDisconnected, status } = useAccount();
   const { disconnect } = useDisconnect();
@@ -15,8 +17,14 @@ export default function Invite({ setIsVisible }) {
     mobile: "",
     amount: 0,
     linkedin: "",
-    address: address ? address : "",
+    walletAddress: address ? address : "",
   });
+
+  useEffect(() => {
+    setInviteData({ walletAddress: address ? address : "" });
+  }, [address]);
+
+  console.log("address", inviteData.walletAddress);
 
   const [formErrors, setFormErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -36,35 +44,41 @@ export default function Invite({ setIsVisible }) {
   const invite = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    let errorData = validate(inviteData);
+    let errorData = await validate(inviteData);
+    console.log("errorData", errorData);
     setFormErrors({ ...errorData });
 
-    try {
-      if (formErrors.first_name || formErrors.email || formErrors.mobile) {
-        console.log("Terminating Request");
-        console.log("form errors", formErrors);
-        return;
-      }
+    console.log("invite form errors", formErrors);
+    console.log("errorData length", Object.keys(errorData).length);
 
-      console.log(
-        "Object.keys(formErrors).length",
-        Object.keys(formErrors).length
-      );
-        
+    try {
+      // if (
+      //   formErrors.first_name ||
+      //   formErrors.email ||
+      //   formErrors.mobile ||
+      //   Object.keys(errorData).length !== 0
+      // ) {
+      //   console.log("form errors", formErrors);
+      //   return;
+      // }
+
       if (
-        Object.keys(formErrors).length === 0 &&
+        Object.keys(errorData).length === 0 &&
         inviteData.email &&
         inviteData.mobile &&
         inviteData.first_name
       ) {
+        console.log("inviteData", inviteData);
+
         let data = await axios.post(
           `https://backend.zoth.io/waitlist/createUser`,
           {
             name: inviteData.first_name,
             email: inviteData.email,
-            phone: inviteData.mobile.toString(),
-            amount: inviteData.amount.toString(),
-            walletAddress: inviteData.address,
+            phone: inviteData?.mobile.toString(),
+            amount: inviteData?.amount.toString(),
+            walletAddress: inviteData.walletAddress,
+            linkedIn: inviteData.linkedin,
           },
           {
             headers: {
@@ -72,8 +86,13 @@ export default function Invite({ setIsVisible }) {
             },
           }
         );
-        showMessage(1);
-        disconnect();
+
+        console.log("res data", data);
+
+        if (data.status === 200) {
+          showMessage(1);
+          disconnect();
+        }
       }
       // if (inviteData.email && inviteData.mobile) {
       //   await axios.post(
@@ -104,8 +123,16 @@ export default function Invite({ setIsVisible }) {
       //   setIsLoading(false);
       // }
     } catch (error) {
-      console.log("error", error);
+      console.log("res error", error);
+      if (error.response.status === 303) {
+        setFormErrors({ email: "Email Already Exist" });
+      }
+
+      if (error.response.status === 304) {
+        setFormErrors({ mobile: "Mobile Already Exist" });
+      }
       setIsLoading(false);
+
       // showMessage(2);
     }
   };
@@ -113,7 +140,7 @@ export default function Invite({ setIsVisible }) {
   // validation
   const validate = (values) => {
     const errors = {};
-    var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     var numFormat = /[0-9]/g;
     if (!values.first_name) {
       errors.first_name = "* Name is required";
@@ -255,12 +282,12 @@ export default function Invite({ setIsVisible }) {
             </div>
           ) : (
             <div className="flex flex-col sm:flex-row justify-center items-center ">
-              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4 h-full">
+              <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4 h-screen">
                 <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
-                  Join The Waitlist To Earn An IRR Of 12%.
+                  Join The Waitlist To Earn An IRR Of Upto 22%
                 </h3>
 
-                <p className="my-4 mt-4">
+                <p className="my-2 mt-4">
                   <span className="bg-white">
                     {/* <svg
                       className="w-5 h-5"
@@ -277,11 +304,11 @@ export default function Invite({ setIsVisible }) {
                   </span>
                   <span> ✅ Secure asset-backed investment</span>
                 </p>
-                <p className="my-4"> ✅ 100% higher returns than FD</p>
-                <p className="my-4">
+                <p className="my-2"> ✅ 100% higher returns than FD</p>
+                <p className="my-2">
                   ✅ Generate passive income with monthly repayments
                 </p>
-                <div className="space-y-6" style={{ marginTop: "30px" }}>
+                <div className="">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label
@@ -363,11 +390,14 @@ export default function Invite({ setIsVisible }) {
                           setInviteData({ ...inviteData, mobile: value });
                         }}
                       /> */}
-                      {formErrors.mobile ? (
+                      {/* {formErrors.mobile ? (
                         <p className="text-sm text-red-500 ">
                           {formErrors.mobile}
                         </p>
-                      ) : null}
+                      ) : null} */}
+                      <p className="text-sm text-red-500 ">
+                        {formErrors.mobile}
+                      </p>
                     </div>
                   </div>
                   {/* <div>
@@ -432,75 +462,94 @@ export default function Invite({ setIsVisible }) {
                   </div>
                   <div>
                     <label
-                      htmlFor="mobile"
-                      className="block mb-3 text-sm text-gray-300"
+                      htmlFor=""
+                      className="relative group w-full flex items-center mb-3 text-sm text-gray-300 capitalize w-full"
                     >
-                      Enter Amount You Want To Invest
+                      Enter the amount you would want to invest
+                      {/* <span
+                        className="m-2 text-lg w-full"
+                        // data-te-toggle="tooltip"
+                        // data-te-placement="top"
+                        // title="This amount will not be charged or dedcuted from your account. This is only to collect your investment preference."
+                      > */}
+                      <span class=" mx-2 ">
+                        <FcInfo />
+                        <div class="absolute bottom-0 flex flex-col items-center hidden mb-6 group-hover:flex ">
+                          <span class="relative z-10 p-2 text-xs leading-relaxed text-white whitespace-no-wrap bg-black shadow-lg">
+                            This amount will not be charged or dedcuted from
+                            your account. This is only to collect your
+                            investment preference.
+                          </span>
+                          {/* <div class="w-3 h-3 -mt-2 rotate-45 bg-black"></div> */}
+                        </div>
+                      </span>
+                      {/* </span> */}
                     </label>
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 mb-6">
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(100);
+                          changeAmount(10000);
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        1000
+                        10000
                       </button>
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(200);
+                          changeAmount(15000);
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        3000
+                        15000
                       </button>
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(300);
+                          changeAmount(20000);
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        5000
+                        20000
                       </button>
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(400);
+                          changeAmount(25000);
                         }}
                         className=" bg-white rounded-full px-4 py-1 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        10000+
+                        25000+
                       </button>
                     </div>
-                    <div className="flex justify-start mt-5">
+
+                    <div className="mb-3">
                       <ConnectKitButton />
                     </div>
                   </div>
 
-                  <div className="flex justify-center items-center flex-col">
-                    {isLoading ? (
-                      <button
-                        type="button"
-                        className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
-                      >
-                        <div className="flex items-center justify-center ">
-                          <div className="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
-                        </div>
-                      </button>
-                    ) : (
-                      <>
+                    <div className="flex justify-center items-center flex-col">
+                      {isLoading ? (
                         <button
                           type="button"
-                          onClick={invite}
-                          className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
+                          className="w-full bg-white rounded-full px-4 py-4 mt-2 z-100 text-black font-bold focus:ring-4 focus:outline-none   text-lg text-center hover:bg-gray-200 focus:ring-gary-500"
                         >
-                          Submit Form
+                          <div className="flex items-center justify-center ">
+                            <div className="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                          </div>
                         </button>
-                      </>
-                    )}
+                      ) : (
+                        <>
+                          <button
+                            type="button"
+                            onClick={invite}
+                            className="w-1/2 mt-4 bg-[#007AFF] rounded-lg px-2 py-2 z-100 text-white font-bold ring-[1px] focus:outline-none   text-lg text-center hover:bg-gray-200 hover:text-black ring-gray-300"
+                          >
+                            Submit Form
+                          </button>
+                        </>
+                      )}
                   </div>
                 </div>
               </div>
