@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import { useAccount, useDisconnect } from "wagmi";
 import { ConnectKitButton } from "connectkit";
 import { cashfreeOrder } from "../utils/cashfree.js";
+import { FcInfo } from "react-icons/fc";
+
 export default function Invite({ setIsVisible }) {
   const { address, isDisconnected, status } = useAccount();
   const { disconnect } = useDisconnect();
@@ -36,23 +38,26 @@ export default function Invite({ setIsVisible }) {
   const invite = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    let errorData = validate(inviteData);
+    let errorData = await validate(inviteData);
+    console.log("errorData", errorData);
     setFormErrors({ ...errorData });
 
-    try {
-      if (formErrors.first_name || formErrors.email || formErrors.mobile) {
-        console.log("Terminating Request");
-        console.log("form errors", formErrors);
-        return;
-      }
+    console.log("invite form errors", formErrors);
+    console.log("errorData length", Object.keys(errorData).length);
 
-      console.log(
-        "Object.keys(formErrors).length",
-        Object.keys(formErrors).length
-      );
+    try {
+      // if (
+      //   formErrors.first_name ||
+      //   formErrors.email ||
+      //   formErrors.mobile ||
+      //   Object.keys(errorData).length !== 0
+      // ) {
+      //   console.log("form errors", formErrors);
+      //   return;
+      // }
 
       if (
-        Object.keys(formErrors).length === 0 &&
+        Object.keys(errorData).length === 0 &&
         inviteData.email &&
         inviteData.mobile &&
         inviteData.first_name
@@ -109,8 +114,16 @@ export default function Invite({ setIsVisible }) {
       //   setIsLoading(false);
       // }
     } catch (error) {
-      console.log("error", error);
+      console.log("res error", error);
+      if (error.response.status === 303) {
+        setFormErrors({ email: "Email Already Exist" });
+      }
+
+      if (error.response.status === 304) {
+        setFormErrors({ mobile: "Mobile Already Exist" });
+      }
       setIsLoading(false);
+
       // showMessage(2);
     }
   };
@@ -265,7 +278,7 @@ export default function Invite({ setIsVisible }) {
                   Join The Waitlist To Earn An IRR Of Upto 22%
                 </h3>
 
-                <p className="my-4 mt-4">
+                <p className="my-2 mt-4">
                   <span className="bg-white">
                     {/* <svg
                       className="w-5 h-5"
@@ -282,8 +295,8 @@ export default function Invite({ setIsVisible }) {
                   </span>
                   <span> ✅ Secure asset-backed investment</span>
                 </p>
-                <p className="my-4"> ✅ 100% higher returns than FD</p>
-                <p className="my-4">
+                <p className="my-2"> ✅ 100% higher returns than FD</p>
+                <p className="my-2">
                   ✅ Generate passive income with monthly repayments
                 </p>
                 <div className="space-y-6" style={{ marginTop: "30px" }}>
@@ -368,11 +381,14 @@ export default function Invite({ setIsVisible }) {
                           setInviteData({ ...inviteData, mobile: value });
                         }}
                       /> */}
-                      {formErrors.mobile ? (
+                      {/* {formErrors.mobile ? (
                         <p className="text-sm text-red-500 ">
                           {formErrors.mobile}
                         </p>
-                      ) : null}
+                      ) : null} */}
+                      <p className="text-sm text-red-500 ">
+                        {formErrors.mobile}
+                      </p>
                     </div>
                   </div>
                   {/* <div>
@@ -437,12 +453,20 @@ export default function Invite({ setIsVisible }) {
                   </div>
                   <div>
                     <label
-                      htmlFor="mobile"
-                      className="block mb-3 text-sm text-gray-300"
+                      htmlFor=""
+                      className="flex items-center mb-3 text-sm text-gray-300 capitalize "
                     >
-                      Enter Amount You Want To Invest
+                      Enter the amount you would want to invest
+                      <span
+                        className="m-2 text-lg transititext-blue text-blue transition duration-150 ease-in-out   text-blue-400 hover:text-blue-500 focus:text-blue-500 active:text-blue-600 cursor-pointer"
+                        data-te-toggle="tooltip"
+                        data-te-placement="top"
+                        title="This amount will not be charged or dedcuted from your account. This is only to collect your investment preference."
+                      >
+                        <FcInfo />
+                      </span>
                     </label>
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 mb-6">
                       <button
                         type="button"
                         onClick={() => {
@@ -450,7 +474,7 @@ export default function Invite({ setIsVisible }) {
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        1000
+                        10000
                       </button>
                       <button
                         type="button"
@@ -459,7 +483,7 @@ export default function Invite({ setIsVisible }) {
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        3000
+                        15000
                       </button>
                       <button
                         type="button"
@@ -468,7 +492,7 @@ export default function Invite({ setIsVisible }) {
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        5000
+                        20000
                       </button>
                       <button
                         type="button"
@@ -477,10 +501,10 @@ export default function Invite({ setIsVisible }) {
                         }}
                         className=" bg-white rounded-full px-4 py-1 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
-                        10000+
+                        25000+
                       </button>
                     </div>
-                    <div className="flex justify-start mt-5">
+                    <div className="mb-3">
                       <ConnectKitButton />
                     </div>
                   </div>
