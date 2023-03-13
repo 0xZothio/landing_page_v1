@@ -308,8 +308,8 @@ export default function Invite({ setIsVisible }) {
                 <p className="my-2">
                   ✅ Generate passive income with monthly repayments
                 </p>
-                <div className="">
-                  <div className="grid sm:grid-cols-2 gap-4">
+                <div className="sm:my-6">
+                  <div className="grid sm:grid-cols-2 gap-4 mb-4">
                     <div>
                       <label
                         htmlFor="first_name"
@@ -420,7 +420,7 @@ export default function Invite({ setIsVisible }) {
                     <p className="text-sm text-red-500 ">{formErrors.name}</p>
                   </div> */}
 
-                  <div>
+                  <div className="sm:mb-4">
                     <label
                       htmlFor="email"
                       className="block mb-2 text-sm text-gray-300"
@@ -443,7 +443,7 @@ export default function Invite({ setIsVisible }) {
                       </p>
                     ) : null}
                   </div>
-                  <div>
+                  <div className="sm:mb-4">
                     <label
                       htmlFor="email"
                       className="block mb-2 text-sm text-gray-300"
@@ -460,7 +460,7 @@ export default function Invite({ setIsVisible }) {
                       onChange={(e) => onChangeData(e)}
                     />
                   </div>
-                  <div>
+                  <div className="sm:mb-4">
                     <label
                       htmlFor=""
                       className="relative group w-full flex items-center mb-3 text-sm text-gray-300 capitalize w-full"
@@ -529,7 +529,7 @@ export default function Invite({ setIsVisible }) {
                     </div>
                   </div>
 
-                    <div className="flex justify-center items-center flex-col">
+                    <div className="flex justify-center items-center flex-col sm:mb-4">
                       {isLoading ? (
                         <button
                           type="button"
