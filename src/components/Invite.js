@@ -50,7 +50,7 @@ export default function Invite({ setIsVisible }) {
         "Object.keys(formErrors).length",
         Object.keys(formErrors).length
       );
-        
+
       if (
         Object.keys(formErrors).length === 0 &&
         inviteData.email &&
@@ -72,8 +72,13 @@ export default function Invite({ setIsVisible }) {
             },
           }
         );
-        showMessage(1);
-        disconnect();
+
+        console.log("res data", data);
+
+        if (data.status === 200) {
+          showMessage(1);
+          disconnect();
+        }
       }
       // if (inviteData.email && inviteData.mobile) {
       //   await axios.post(
@@ -257,7 +262,7 @@ export default function Invite({ setIsVisible }) {
             <div className="flex flex-col sm:flex-row justify-center items-center ">
               <div className="px-6 py-6 lg:px-8 w-full sm:w-full mt-4 h-full">
                 <h3 className="mb-4 text-3xl font-bold  text-white leading-normal text-[#007AFF]">
-                  Join The Waitlist To Earn An IRR Of 12%.
+                  Join The Waitlist To Earn An IRR Of Upto 22%
                 </h3>
 
                 <p className="my-4 mt-4">

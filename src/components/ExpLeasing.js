@@ -237,14 +237,14 @@ function ExpLeasing() {
 
                   <div className="flex justify-around bg-[#ffffff]/10 rounded-lg mx-6 p-6">
                     <div>
-                      <div>IRR</div>
+                      <div className="font-bold">IRR</div>
                       <div>10%-14%</div>
                     </div>
 
                     <div className="border-r-2 border-gray-500"></div>
 
                     <div>
-                      <div>Tenure</div>
+                      <div className="font-bold">Tenure</div>
                       <div>1-6 Months</div>
                     </div>
                   </div>
