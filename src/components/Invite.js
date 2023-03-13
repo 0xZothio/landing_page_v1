@@ -131,7 +131,7 @@ export default function Invite({ setIsVisible }) {
   // validation
   const validate = (values) => {
     const errors = {};
-    var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     var numFormat = /[0-9]/g;
     if (!values.first_name) {
       errors.first_name = "* Name is required";
@@ -454,23 +454,33 @@ export default function Invite({ setIsVisible }) {
                   <div>
                     <label
                       htmlFor=""
-                      className="flex items-center mb-3 text-sm text-gray-300 capitalize "
+                      className="relative group w-full flex items-center mb-3 text-sm text-gray-300 capitalize w-full"
                     >
                       Enter the amount you would want to invest
-                      <span
-                        className="m-2 text-lg transititext-blue text-blue transition duration-150 ease-in-out   text-blue-400 hover:text-blue-500 focus:text-blue-500 active:text-blue-600 cursor-pointer"
-                        data-te-toggle="tooltip"
-                        data-te-placement="top"
-                        title="This amount will not be charged or dedcuted from your account. This is only to collect your investment preference."
-                      >
+                      {/* <span
+                        className="m-2 text-lg w-full"
+                        // data-te-toggle="tooltip"
+                        // data-te-placement="top"
+                        // title="This amount will not be charged or dedcuted from your account. This is only to collect your investment preference."
+                      > */}
+                      <span class=" mx-2 ">
                         <FcInfo />
+                        <div class="absolute bottom-0 flex flex-col items-center hidden mb-6 group-hover:flex ">
+                          <span class="relative z-10 p-2 text-xs leading-relaxed text-white whitespace-no-wrap bg-black shadow-lg">
+                            This amount will not be charged or dedcuted from
+                            your account. This is only to collect your
+                            investment preference.
+                          </span>
+                          {/* <div class="w-3 h-3 -mt-2 rotate-45 bg-black"></div> */}
+                        </div>
                       </span>
+                      {/* </span> */}
                     </label>
                     <div className="flex space-x-2 mb-6">
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(100);
+                          changeAmount(10000);
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
@@ -479,7 +489,7 @@ export default function Invite({ setIsVisible }) {
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(200);
+                          changeAmount(15000);
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
@@ -488,7 +498,7 @@ export default function Invite({ setIsVisible }) {
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(300);
+                          changeAmount(20000);
                         }}
                         className=" bg-white rounded-full px-4 py-1  text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
@@ -497,7 +507,7 @@ export default function Invite({ setIsVisible }) {
                       <button
                         type="button"
                         onClick={() => {
-                          changeAmount(400);
+                          changeAmount(25000);
                         }}
                         className=" bg-white rounded-full px-4 py-1 text-[#007AFF] ring-2 focus:outline-none font-semibold  text-sm text-center hover:bg-gray-200 select:bg-[#007AFF] ring-[#007AFF] focus:bg-[#007AFF] focus:text-white"
                       >
