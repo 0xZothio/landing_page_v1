@@ -147,7 +147,7 @@ function LandingPage() {
         <span id="offerings" />
         <ExpOfferingsCard/>
         <Welcome />
-        <Assets />
+        {/* <Assets /> */}
         <MobileScroll />
         <Features />
         <About />
