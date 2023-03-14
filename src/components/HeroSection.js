@@ -8,6 +8,7 @@ import "../styles/styles.css";
 import axios from "axios";
 import { ExpOfferingsCard } from "./ExpOfferingsCard";
 import { IoIosWarning } from "react-icons/io";
+import CurrencyInput from "react-currency-input-field";
 // import ReactAnimationCarousel from "react-animation-carousel";
 // const data = [img1, img2, img3, img4, img5, img6];
 
@@ -15,7 +16,7 @@ const Hero = ({ setScrollValue }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [slotsLeft, setSlotsLeft] = useState(0);
   const [amount, setAmount] = useState(10000);
-  const [expReturn, setExpReturn] = useState(12000);
+  const [expReturn, setExpReturn] = useState("12,000");
 
   useEffect(() => {
     (async () => {
@@ -31,22 +32,31 @@ const Hero = ({ setScrollValue }) => {
     })();
   }, []);
 
-  const onChangeData = (e) => {
-    console.log("amount", e.target.value);
-    setAmount(e.target.value);
-  };
+  const commaSeparators = (num) =>
+    num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
   const calculateInterest = () => {
-    console.log("calculateInterest amount", amount);
     let interest = amount * 0.2;
-    console.log("interest", interest);
     let profit = parseInt(amount) + parseInt(interest);
-
-    console.log("profit", typeof profit);
-    setExpReturn(Math.round(profit));
+    let returnAmount = commaSeparators(Math.round(profit));
+    setExpReturn(returnAmount);
   };
 
   console.log("expReturn", expReturn);
+
+  // ------
+
+  const prefix = "₹ ";
+  const [value, setValue] = useState(0);
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { value = "" } = e.target;
+    const parsedValue = value.replace(/[^\d.]/gi, "");
+    setAmount(parsedValue);
+  };
+  console.log("valuevaluevalue", amount);
+  // const handleOnBlur = () => setValue(Number(value).toFixed(2));
 
   return (
     <div
@@ -95,7 +105,22 @@ const Hero = ({ setScrollValue }) => {
                       <div className="text-sm font-semibold ">
                         Calculate Your Expected Returns
                       </div>
-                      <input
+                      <CurrencyInput
+                        prefix={prefix}
+                        name="currencyInput"
+                        id="currencyInput"
+                        data-number-to-fixed="2"
+                        data-number-stepfactor="100"
+                        value={amount}
+                        placeholder=""
+                        onChange={handleChange}
+                        // onBlur={handleOnBlur}
+                        allowDecimals
+                        decimalsLimit="2"
+                        disableAbbreviations
+                        className=" border text-sm font-bold block rounded w-full my-4 p-2 bg-[#202020] border-gray-700 placeholder-gray-400 text-white"
+                      />
+                      {/* <input
                         type="number"
                         name="amount"
                         id="amount"
@@ -104,7 +129,7 @@ const Hero = ({ setScrollValue }) => {
                         required={true}
                         value={amount}
                         onChange={(e) => onChangeData(e)}
-                      />
+                      /> */}
                       <div className="flex justify-center items-center w-full">
                         <button
                           type="button"
@@ -168,7 +193,7 @@ const Hero = ({ setScrollValue }) => {
 
                     <div className="slot flex flex-col justify-center items-center border-2 m-5 p-4">
                       <div className="text-6xl font-bold p-2">
-                        {200 + 400 - slotsLeft}
+                        {90 + 500 - slotsLeft}
                       </div>
                       <div className="text-base capitalize">
                         Investors have shown interest
@@ -176,7 +201,7 @@ const Hero = ({ setScrollValue }) => {
                     </div>
 
                     <div className="m-4 text-lg">
-                      Only {slotsLeft - 200} Slots Available !
+                      Only {slotsLeft} Slots Available !
                     </div>
 
                     {/* <div className="flex flex-row justify-center items-center">
