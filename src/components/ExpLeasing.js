@@ -54,12 +54,10 @@ function ExpLeasing() {
                 Leasing is a simple contractual arrangement calling for the
                 lessee (user) to pay the lessor (owner) regular payments in
                 exchange for use of an asset over an agreed period of time.
-                Furniture, vehicles and equipment are among the most common
-                assets that are leased investment in leases allows you to invest
-                in an asset (like vehicles, furniture, electronics) and lease it
-                to a company against fixed monthly returns Companies are able to
-                use leased assets to scale faster, while the investors are able
-                to enjoy fixed, non-market linked, monthly returns.
+                Furniture, Vehicles, Land and Equipment are among the most
+                common assets that are leased by companies to scale faster,
+                while the investors are able to enjoy fixed, non-market linked,
+                monthly returns.
               </div>
 
               {/* why invest */}
@@ -78,7 +76,7 @@ function ExpLeasing() {
                     </div>
                     <div className="text-sm p-2">
                       Asset leasing offers a low-risk, high-return investment
-                      option.
+                      option with steady and predictable income streams.
                     </div>
                   </div>
 
@@ -94,17 +92,17 @@ function ExpLeasing() {
 
                   <div className="  bg-[#111111] rounded-lg p-4">
                     <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
-                      Limited liability
+                      Asset Ownership
                     </div>
                     <div className="text-sm p-2">
-                      Companies benefit from leased assets to scale their
-                      business faster
+                      Higher security for investments due to defined ownership
+                      of assets.
                     </div>
                   </div>
 
                   <div className="  bg-[#111111] rounded-lg p-4">
                     <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
-                      Potential tax benefits
+                      Lower Ticket Size & High Yields
                     </div>
                     <div className="text-sm p-2">
                       Investments start at just ₹10,000 and offer the potential
@@ -112,7 +110,7 @@ function ExpLeasing() {
                     </div>
                   </div>
 
-                  <div className="  bg-[#111111] rounded-lg p-4">
+                  {/* <div className="  bg-[#111111] rounded-lg p-4">
                     <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
                       Lower capital requirements
                     </div>
@@ -136,7 +134,7 @@ function ExpLeasing() {
                       evaluate the risks and potential returns before committing
                       capital.
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -238,14 +236,14 @@ function ExpLeasing() {
                   <div className="flex justify-around bg-[#ffffff]/10 rounded-lg mx-6 p-6">
                     <div>
                       <div className="font-bold">IRR</div>
-                      <div>10%-14%</div>
+                      <div>16-20% </div>
                     </div>
 
                     <div className="border-r-2 border-gray-500"></div>
 
                     <div>
                       <div className="font-bold">Tenure</div>
-                      <div>1-6 Months</div>
+                      <div>12-36 Months</div>
                     </div>
                   </div>
 

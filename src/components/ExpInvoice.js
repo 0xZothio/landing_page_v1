@@ -69,10 +69,10 @@ function ExpInvoice() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="  bg-[#111111] rounded-lg p-4">
                     <div className="text-xl text-[#1A88FF] font-semibold text-left p-2 capitalize">
-                      High returns & low risk
+                      High returns
                     </div>
                     <div className="text-sm p-2">
-                      Invest in invoice discounting for attractive returns.
+                      Invest in Invoice Discounting to earn up to 10%-14% IRR.
                     </div>
                   </div>
 
@@ -81,8 +81,9 @@ function ExpInvoice() {
                       Diversify your portfolio
                     </div>
                     <div className="text-sm p-2">
-                      Add invoice discounting as a separate asset class for
-                      better returns.
+                      Add Invoice Discounting as a separate asset class to your
+                      portfolio to invest across different industries and
+                      sectors for better returns.
                     </div>
                   </div>
 

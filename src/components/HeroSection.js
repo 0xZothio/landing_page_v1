@@ -103,7 +103,7 @@ const Hero = ({ setScrollValue }) => {
                   <div className="col-span-2 p-2 border-r-2 border-gray-500">
                     <div className="flex flex-col justify-center sm:justify-start sm:items-start items-center p-4">
                       <div className="text-sm font-semibold ">
-                        Calculate Your Expected Returns
+                      Investment Amount
                       </div>
                       <CurrencyInput
                         prefix={prefix}
@@ -157,7 +157,7 @@ const Hero = ({ setScrollValue }) => {
                       </div>
                       <div className="flex flex-col justify-center items-center ml-16 sm:ml-0">
                         <div className="text-base text-left font-semibold">
-                          IRR
+                          Expected IRR*
                         </div>
                         <div className="font-bold text-3xl text-[#1A88FF] text-left my-2">
                           18.8%

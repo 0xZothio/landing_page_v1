@@ -29,7 +29,7 @@ export const ExpOfferingsCard = () => {
               <div className="p-4">
                 <div className="tracking-wide text-sm">Earn Upto</div>
                 <div className="text-md p-1">
-                  <span className="font-extrabold">16-20% </span> Pre-tax IRR
+                  <span className="font-extrabold">16-20% </span> IRR*
                 </div>
               </div>
               <div className="p-4">
