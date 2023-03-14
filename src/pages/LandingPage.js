@@ -83,65 +83,7 @@ function LandingPage() {
       {/* {isLoading ? <div id="loading"></div> : null} */}
 
       {/* <div> */}
-      <div className="hidden sm:block fixed z-50 bottom-20 right-10 icon-bar  bg-gray-900 rounded-3xl text-black">
-        <ul className="flex gap-6 my-2 py-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start px-8">
-          <li>
-            <a
-              href="https://twitter.com/zothdotio"
-              rel="noreferrer"
-              target="_blank"
-              className="text-gray-700 transition hover:opacity-75 rounded-full"
-            >
-              <span className="sr-only">Twitter</span>
-              <AiFillTwitterCircle size={30} className="icon" color="white" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/zothio"
-              rel="noreferrer"
-              target="_blank"
-              className="text-gray-700 transition hover:opacity-75 rounded-full"
-            >
-              <span className="sr-only">Instagram</span>
-              <FaInstagramSquare size={30} className="icon" color="white" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/company/zoth-io/"
-              rel="noreferrer"
-              target="_blank"
-              className="text-gray-700 transition hover:opacity-75 rounded-full"
-            >
-              <span className="sr-only">LinkeldIn</span>
-              <FaLinkedin size={30} className="icon" color="white" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://t.me/+nFUrC_I1hA1iNWU9"
-              rel="noreferrer"
-              target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
-            >
-              <span className="sr-only">Telegram</span>
-              <FaTelegramPlane size={30} className="icon" color="white" />
-            </a>
-          </li>
-          {/* <li>
-                <a
-                  href="/"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition hover:opacity-75 rounded-full"
-                >
-                  <span className="sr-only">Facebook</span>
-                  <FaFacebook size={20} color="white" />
-                </a>
-              </li> */}
-        </ul>
-      </div>
+     
       <div>
         <Hero />
         <span id="offerings" />

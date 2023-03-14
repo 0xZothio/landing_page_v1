@@ -5,6 +5,10 @@ import { FiAlignJustify } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import { Link } from "react-router-dom";
+import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
+
 const navigation = [
   { name: "About", href: "#about" },
   { name: "How it works", href: "#howItWorks" },
@@ -51,8 +55,9 @@ const Navbar = ({ setIsVisible }) => {
           className="text-white capitalize text-xs sm:text-[1rem] font-semibold cursor-pointer p-2 z-50"
           onClick={() => setIsVisible(true)}
         >
-           {/* Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span> */}
-           Launching Soon! An Alternative Asset Investment Opportunity with just ₹ 9,999. Join the Waitlist!
+          {/* Launching soon! An Alternative Investment Opportunity with just ₹1 Lakh. <span className="font-semibold"> Join the Waitlist! </span> */}
+          Launching Soon! An Alternative Asset Investment Opportunity with just
+          ₹ 9,999. Join the Waitlist!
         </h5>
       </div>
       {!mobileMenuOpen && (
@@ -167,6 +172,69 @@ const Navbar = ({ setIsVisible }) => {
             >
               Join Waitlist{" "}
             </button> */}
+            {/* <div className="hidden sm:block fixed z-50 bottom-20 right-10 icon-bar  bg-gray-900 rounded-3xl text-black"> */}
+            <ul className="flex gap-6 my-2 py-2 mx-auto lg:mx-0 justify-center items-center lg:justify-start px-8">
+              <li>
+                <a
+                  href="https://twitter.com/zothdotio"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75 rounded-full"
+                >
+                  <span className="sr-only">Twitter</span>
+                  <AiFillTwitterCircle
+                    size={30}
+                    className="icon"
+                    color="white"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/zoth.io/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75 rounded-full"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <FaInstagramSquare size={30} className="icon" color="white" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/zoth-io/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75 rounded-full"
+                >
+                  <span className="sr-only">LinkeldIn</span>
+                  <FaLinkedin size={30} className="icon" color="white" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://telegram.me/+nFUrC_I1hA1iNWU9"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">Telegram</span>
+                  <FaTelegramPlane size={30} className="icon" color="white" />
+                </a>
+              </li>
+              {/* <li>
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75 rounded-full"
+                >
+                  <span className="sr-only">Facebook</span>
+                  <FaFacebook size={20} color="white" />
+                </a>
+              </li> */}
+            </ul>
+            {/* </div> */}
           </div>
         </motion.nav>
       )}

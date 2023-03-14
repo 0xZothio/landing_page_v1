@@ -37,9 +37,9 @@ const Footer = () => {
                   <AiFillTwitterCircle size={20} color="white" />
                 </a>
               </li>
-              {/* <li>
+              <li>
                 <a
-                  href="https://twitter.com/zothio"
+                  href="https://www.instagram.com/zoth.io/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 rounded-full"
@@ -47,7 +47,7 @@ const Footer = () => {
                   <span className="sr-only">Instagram</span>
                   <FaInstagramSquare size={20} color="white" />
                 </a>
-              </li> */}
+              </li>
               <li>
                 <a
                   href="https://www.linkedin.com/company/zoth-io/"
@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://t.me/+nFUrC_I1hA1iNWU9"
+                  href="https://telegram.me/+nFUrC_I1hA1iNWU9"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75"
